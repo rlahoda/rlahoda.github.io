@@ -8,8 +8,14 @@ permalink: /projects/lglf.html
 
 
 **Platform:** Drupal 8
+
 **Host:** Pantheon
+
 **Key Modules:** Paragraphs, Mailchimp, Metatag
+
 **Key Technologies:** Flexbox, SVG
+
 **Theme:** Custom
+
 **Base Theme:** Stable
+
