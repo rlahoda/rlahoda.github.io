@@ -1,6 +1,6 @@
 ---
 title: Rob Lahoda - Projects
-permalink: index.html
+permalink: test.html
 ---
 
 # Rob Lahoda
