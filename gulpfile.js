@@ -1,6 +1,6 @@
 var basePaths = {
   src: 'dev/',
-  dest: 'docs/',
+  dest: './',
 };
 var paths = {
   images: {
@@ -55,7 +55,7 @@ var sourcemaps = require('gulp-sourcemaps');
 gulp.task('browser-sync', function() {
   browserSync.init({
     server: {
-      baseDir: "./docs"
+      baseDir: "./"
     }
   });
 });
@@ -72,7 +72,7 @@ gulp.task('twig', function () {
     'use strict';
     return gulp.src('dev/templates/*.twig')
         .pipe(twig())
-        .pipe(gulp.dest('./docs'));
+        .pipe(gulp.dest('./'));
 });
 
 // Adds the data from the JSON files into the Twig templates as they're being compiled
@@ -84,7 +84,7 @@ gulp.task('twig-json', function () {
         }))
 
         .pipe(twig())
-        .pipe(gulp.dest('./docs'));
+        .pipe(gulp.dest('./'));
 });
 
 //PostCSS process and SASS compilation
@@ -112,20 +112,20 @@ gulp.task('css', function() {
 //Copy scripts to appropriate folder, this would be used for scripts you write yourself and just copies them straight over from the dev folder to the docs folder
 gulp.task('scripts', function() {
   gulp.src('./dev/scripts/*.js')
-    .pipe(gulp.dest('./docs/scripts/'));
+    .pipe(gulp.dest('./scripts/'));
 });
 
 
 //Copy vendor packages to appropriate folder, this would be used for 3rd party plugins like bootstrap and just copies them straight over from the dev folder to the docs folder
 gulp.task('vendor', function() {
   gulp.src('./dev/vendor/**/*.*')
-    .pipe(gulp.dest('./docs/vendor/'));
+    .pipe(gulp.dest('./vendor/'));
 });
 
 //Copy images to appropriate folder, this just copies them straight over from the dev folder to the docs folder
 gulp.task('images', function() {
   gulp.src(globs.images)
-    .pipe(gulp.dest('./docs/assets/'));
+    .pipe(gulp.dest('./assets/'));
 });
 
 // Watch task, this watches the different folders and when there's a change, it triggers the appropriate function. The bottom one triggers the page refresh in your browser
@@ -135,7 +135,7 @@ gulp.task('watch', ['browser-sync'], function() {
   gulp.watch(globs.twig, ['twig-json']);
   gulp.watch(globs.vendor, ['vendor']);
   gulp.watch(globs.images, ['images']);
-  gulp.watch('./docs/**/*.*').on('change', browserSync.reload);
+  gulp.watch('./**/*.html').on('change', browserSync.reload);
 });
 
 
