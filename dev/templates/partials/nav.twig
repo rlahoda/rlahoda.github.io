@@ -1,0 +1,23 @@
+<nav class="uk-navbar-container" uk-navbar>
+  <div class="uk-nav-right">
+    <button class="uk-button uk-button-primary uk-margin-small-left uk-hidden@m" type="button" uk-toggle="target: #offcanvas">Menu</button>
+    <a class="uk-hidden@m" href="#skills" uk-icon="icon: chevron-down" uk-scroll>Skills</a>
+    <ul class="uk-navbar-nav uk-visible@m">
+      {% for link in links %}
+      {% if link.subnav %}
+        <li><a href="#" {% if link.icon %}uk-icon="icon: {{ link.icon }}"{% endif %}>{{ link.title }}</a>
+          <div class="uk-navbar-dropdown uk-margin-remove">
+            <ul class="uk-nav uk-navbar-dropdown-nav uk-list uk-list-divider">
+            {% for link in link.sublinks %}
+              <li><a href="{{ link.address }}" {% if link.active %}style="text-indent:-10px;"{% endif %}>{% if link.active %}<span uk-icon="icon: arrow-right"></span>{% endif %}{{ link.title }}</a>
+            {% endfor %}
+          </ul>
+        </div>
+        </li>
+      {% else %}
+      <li {% if link.active %} class="uk-background-secondary"{% endif %}><a {% if link.outbound %}target="_blank"{% endif %} href="{{ link.address }}" {% if link.icon %}uk-icon="icon: {{ link.icon }}"{% endif %} {% if link.outbound %} onclick="trackOutboundLink('{{ link.address }}'); return false;"{% endif %}>{{ link.title }}{% if link.svg %}{% include 'svg.twig' %}{% endif %}</a></li>
+      {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+</nav>

@@ -1,0 +1,73 @@
+{% extends 'base.twig' %}
+
+{% block primarycontent %}
+<div class="uk-section uk-margin-top" uk-grid>
+  <div class="uk-width-1-1 uk-width-3-4@m uk-padding-large uk-padding-remove-right uk-padding-remove-top">
+    <h2 class="uk-margin-small-left">About Me</h2>
+    <div class="uk-column-1-2@s uk-margin-small-left">
+      <p>Hi, I'm Rob Lahoda. I'm a fast-learning Swiss-army-knife kinda guy. What I don't know, I learn. When I run into a problem I research until I find a solution.</p>
+      <p>I taught myself HTML and CSS a decade ago, and more recently, Drupal 8, Javascript, SASS, Gulp, Git, and almost everything I know (except PHP, which I started learning while working on my master's degree).</p>
+      <p>I work with my clients to make sure that the work I do is the right fit for their budget, schedule, and needs. I like to not just meet their expectations, but also exceed them.</p>
+      <p>I'm a mix of technical and creative which works great for me because I get to come up with ideas and then implement them.</p>
+    </div>
+    <div class="uk-margin-top">
+      <h2 class="uk-margin-small-left">Projects</h2>
+      {% for site in contents %}
+      <div class="uk-card uk-card-hover uk-card-default uk-width-1-1 uk-child-width-1-2@s uk-margin-remove" uk-grid>
+      {% if loop.index is odd %}
+        <div style="border: 1px solid #777; background-image: url(assets/img/{{ site.image }}); background-position: top; background-repeat: no-repeat; background-size: cover;" class="uk-card-media-left">
+        </div>
+        {% endif %}
+        <div class="uk-card-body">
+          <h2 class="uk-card-title">{{ site.title }}</h2>
+          <h4><a class="uk-link-heading" href="{{ site.linkaddress }}" uk-icon="icon: link" onclick="trackOutboundLink('{{ site.linkaddress }}'); return false;" target="_blank">{{ site.linktitle }}</a></h4>
+          <table class="uk-table uk-table-striped">
+            {% for row in site.siteinfo %}
+            <tr>
+              <td class="uk-text-bold">{{ row.title }}</td>
+              <td>{{ row.content }}</td>
+            </tr>
+            {% endfor %}
+          </table>
+          <a class="uk-margin-top uk-label" href="{{ site.locallink }}" uk-icon="icon: chevron-right">Read More About This Project</a>
+        </div>
+        {% if loop.index is even %}
+        <div style="border: 1px solid #777; background-image: url(assets/img/{{ site.image }}); background-position: top; background-repeat: no-repeat; background-size: cover;" class="uk-card-media-right">
+        </div>
+        {% endif %}
+      </div>
+      <p></p>
+      {% endfor %}
+    </div>
+  </div>
+  <div id="skills" class="uk-width-1-1 uk-width-1-4@m">
+    <div class=""><div class="uk-width-1-1">
+      <h2>Skills</h2>
+    </div>
+    <div class="uk-width-1-1 uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-1@m" uk-grid>
+
+      <div>
+      <h3 class="uk-margin-remove-top">Experience Level ⭐⭐⭐</h3>
+      <ul class="uk-list uk-list-striped uk-margin-remove-top">
+        {% for skill in skills.threestars %}
+          <li class="uk-text-small">{{ skill }}</li>
+        {% endfor %}
+      </ul></div>
+
+      <div><h3 class="uk-margin-remove-top">Experience Level ⭐⭐</h3>
+      <ul class="uk-list uk-margin-remove-top uk-list-striped">
+        {% for skill in skills.twostars %}
+          <li class="uk-text-small">{{ skill }}</li>
+        {% endfor %}
+      </ul></div>
+
+      <div><h3 class="uk-margin-remove-top">Experience Level ⭐</h3>
+      <ul class="uk-list uk-list-striped uk-margin-remove-top">
+        {% for skill in skills.onestar %}
+          <li class="uk-text-small">{{ skill }}</li>
+        {% endfor %}
+      </ul></div>
+    </div></div>
+  </div>
+</div>
+{% endblock %}

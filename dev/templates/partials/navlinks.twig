@@ -1,0 +1,14 @@
+
+{% for link in links %}
+
+{% if link.subnav %}
+
+{% else %}
+
+<li><a href="{{ link.address }}" {% if link.icon %}uk-icon="icon: {{ link.icon }}"{% endif %} {% if link.outbound %} onclick="trackOutboundLink('{{ link.trackingaddress }}'); return false;"{% endif %}>{{ link.title }}</a></li>
+
+{% endif %}
+
+
+
+{% endfor %}
