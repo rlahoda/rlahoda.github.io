@@ -1,2 +1,19 @@
+html, .uk-h1, .uk-h2, .uk-h3, .uk-h4, .uk-h5, .uk-h6, h1, h2, h3, h4, h5, h6, p, td {
+  font-family: "mr-eaves-xl-modern",sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.05em; }
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 400; }
+  h1::first-letter {
+    text-transform: capitalize; }
+  @media only screen and (min-width: 750px) {
+    h1 {
+      font-size: 2.625rem; } }
+
+.uk-label:hover {
+  color: white; }
 
 /*# sourceMappingURL=styles.css.map */

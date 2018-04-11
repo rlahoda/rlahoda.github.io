@@ -1,0 +1,32 @@
+
+
+html, .uk-h1, .uk-h2, .uk-h3, .uk-h4, .uk-h5, .uk-h6, h1, h2, h3, h4, h5, h6, p, td {
+  font-family: "mr-eaves-xl-modern",sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  // font-size: 17px;
+}
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 400;
+  // font-style: normal;
+
+  &::first-letter {
+    text-transform: capitalize;
+  }
+
+  @include respond-at($bp-small) {
+    // font-size: 3em;
+    font-size: 2.625rem;
+  }
+
+  @include respond-at($bp-large) {
+
+  }
+}
+
+.uk-label:hover {
+  color: white;
+}

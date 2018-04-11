@@ -23,10 +23,17 @@
           <h4><a class="uk-link-heading" href="{{ site.linkaddress }}" uk-icon="icon: link" onclick="trackOutboundLink('{{ site.linkaddress }}'); return false;" target="_blank">{{ site.linktitle }}</a></h4>
           <table class="uk-table uk-table-striped">
             {% for row in site.siteinfo %}
+            {% if loop.first %}
             <tr>
               <td class="uk-text-bold">{{ row.title }}</td>
               <td>{{ row.content }}</td>
             </tr>
+            {% else %}
+            <tr class="uk-visible@s">
+              <td class="uk-text-bold">{{ row.title }}</td>
+              <td>{{ row.content }}</td>
+            </tr>
+            {% endif %}
             {% endfor %}
           </table>
           <a class="uk-margin-top uk-label" href="{{ site.locallink }}" uk-icon="icon: chevron-right">Read More About This Project</a>
