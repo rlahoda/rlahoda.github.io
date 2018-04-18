@@ -1,7 +1,7 @@
 <nav class="uk-navbar-container" uk-navbar>
-  <div class="uk-nav-right">
+  <div class="uk-navbar-left">
     <button class="uk-button uk-button-primary uk-margin-small-left uk-hidden@m" type="button" uk-toggle="target: #offcanvas">Menu</button>
-    <a class="uk-hidden@m" href="#skills" uk-icon="icon: chevron-down" uk-scroll>Skills</a>
+    <a class="uk-hidden@m uk-margin-left" href="#skills" uk-icon="icon: chevron-down" uk-scroll>Skills</a>
     <ul class="uk-navbar-nav uk-visible@m">
       {% for link in links %}
       {% if link.subnav %}
@@ -19,5 +19,8 @@
       {% endif %}
       {% endfor %}
     </ul>
+  </div>
+  <div class="uk-navbar-right">
+    <img src="Drupal_Association_ind_member_80.png" alt="Drupal Association Individual Member">
   </div>
 </nav>
