@@ -332,7 +332,8 @@
       "19": "SVG sprite generation",
       "20": "Front-end frameworks (specifically UIKit)",
       "21": "Pantheon hosting and Dev/Multidev environments",
-      "22": "Slack"
+      "22": "Slack",
+      "23": "UI/UX Development"
     },
     "onestar": {
       "1": "PHP (General experience)",
@@ -341,7 +342,8 @@
       "4": "Docker",
       "5": "AJAX",
       "6": "Composer",
-      "7": "Agile"
+      "7": "Agile",
+      "8": "Salesforce Marketing Cloud"
     }
   }
 }
