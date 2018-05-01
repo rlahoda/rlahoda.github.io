@@ -45,6 +45,10 @@
           "title": "Kristy Lahoda",
           "address": "KristyLahoda.html"
         },
+        "reactcalclock": {
+          "title": "React-based Multilingual Calendar/Clock",
+          "address": "reactcalendarclock.html"
+        },
         "calclock": {
           "title": "Codepen: Multilingual Calendar/Clock",
           "address": "codepencalendarclock.html"

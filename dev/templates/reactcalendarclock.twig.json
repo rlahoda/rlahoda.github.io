@@ -1,10 +1,12 @@
 {
+  "page": {
+    "label": "Codepen: Multilingual Calendar/Clock"
+  },
   "links": {
     "home": {
       "type": "normal",
       "address": "index.html",
       "icon": "home"
-
     },
     "work": {
       "type": "normal",
@@ -43,7 +45,8 @@
         },
         "reactcalclock": {
           "title": "React-based Multilingual Calendar/Clock",
-          "address": "reactcalendarclock.html"
+          "address": "reactcalendarclock.html",
+          "active": "true"
         },
         "calclock": {
           "title": "Codepen: Multilingual Calendar/Clock",
@@ -119,5 +122,27 @@
       "trackingaddress": "linkedin.com/in/robert-lahoda/",
       "icon": "linkedin"
     }
+  },
+  "contents": {
+    "title": "Codepen: Multilingual Calendar/Clock",
+    "linktitle": "reactcalendar.roblahoda.com/",
+    "linkaddress": "http://reactcalendar.roblahoda.com/",
+    "trackingaddress":"http://reactcalendar.roblahoda.com/",
+    "image": "reactclockcalendar-page.jpg",
+    "locallink": "reactcalendarclock.html",
+    "siteinfo": {
+      "1": {
+        "title": "Platform",
+        "content": "HTML"
+      },
+      "2": {
+        "title": "Key Technology",
+        "content": "React, Javascript, Flexbox, AJAX"
+        }
+      },
+      "longdescription": {
+        "1": "This is a multilingual clock and calendar built on React. The user is able to change the interface depending on their preferences. The languages are pulled by AJAX from a Github repository and used to populate the interface. The user can select which day to start the week: Sunday or Monday, and the date order: Month/Day/Year or Day/Month/Year. The reordering is done through state changes in React.",
+        "2": "It is fully responsive, including changing layout to accomodate smaller viewport sizes. This is a rebuild of my original project which is a multilingual clock/calendar built entirely on vanilla JS. By rebuilding in React, I wanted to take advantage of React's ability to change state and reuse components to build the interface. The project uses BEM naming for the structure and SASS for the stylesheet."
+      }
   }
 }

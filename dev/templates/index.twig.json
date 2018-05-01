@@ -45,6 +45,10 @@
           "title": "Kristy Lahoda",
           "address": "KristyLahoda.html"
         },
+        "reactcalclock": {
+          "title": "React-based Multilingual Calendar/Clock",
+          "address": "reactcalendarclock.html"
+        },
         "calclock": {
           "title": "Codepen: Multilingual Calendar/Clock",
           "address": "codepencalendarclock.html"
@@ -259,6 +263,24 @@
           }
       }
     },
+    "reactcalendarclock": {
+      "title": "React-based Multilingual Calendar/Clock",
+      "linktitle": "reactcalendar.roblahoda.com/",
+      "linkaddress": "http://reactcalendar.roblahoda.com/",
+      "trackingaddress":"http://reactcalendar.roblahoda.com/?utm_source=github&utm_medium=github_pages&utm_campaign=github_projects&utm_content=projects",
+      "image": "reactclockcalendar.jpg",
+      "locallink": "reactcalendarclock.html",
+      "siteinfo": {
+        "1": {
+          "title": "Platform",
+          "content": "HTML"
+        },
+        "2": {
+          "title": "Key Technology",
+          "content": "React, Javascript, Flexbox, AJAX"
+          }
+      }
+    },
     "codepencalendarclock": {
       "title": "Codepen: Multilingual Calendar/Clock",
       "linktitle": "Codepen Link",
@@ -337,13 +359,14 @@
     },
     "onestar": {
       "1": "PHP (General experience)",
-      "2": "YML",
-      "3": "Vagrant",
-      "4": "Docker",
-      "5": "AJAX",
-      "6": "Composer",
-      "7": "Agile",
-      "8": "Salesforce Marketing Cloud"
+      "2": "React",
+      "3": "YML",
+      "4": "Vagrant",
+      "5": "Docker",
+      "6": "AJAX",
+      "7": "Composer",
+      "8": "Agile",
+      "9": "Salesforce Marketing Cloud"
     }
   }
 }
