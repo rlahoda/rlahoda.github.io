@@ -329,11 +329,12 @@
       "7": "SASS",
       "8": "Twig",
       "9": "Atom",
-      "10": "Flexbox",
-      "11": "Paragraphs module"
+      "10": "Drupal 8",
+      "11": "Drupal 8 Theming",
+      "12": "Flexbox",
+      "13": "Paragraphs module"
     },
     "twostars": {
-      "1": "Drupal 8",
       "2": "Drupal Views",
       "3": "Drush",
       "4": "Javascript",
