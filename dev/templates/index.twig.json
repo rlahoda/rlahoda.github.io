@@ -359,14 +359,15 @@
     },
     "onestar": {
       "1": "PHP (General experience)",
-      "2": "React",
-      "3": "YML",
-      "4": "Vagrant",
-      "5": "Docker",
-      "6": "AJAX",
-      "7": "Composer",
-      "8": "Agile",
-      "9": "Salesforce Marketing Cloud"
+      "2": "Drupal 7 Theming",
+      "3": "React",
+      "4": "YML",
+      "5": "Vagrant",
+      "6": "Docker",
+      "7": "AJAX",
+      "8": "Composer",
+      "9": "Agile",
+      "10": "Salesforce Marketing Cloud"
     }
   }
 }
