@@ -132,18 +132,22 @@
     "locallink": "kristylahoda.html",
     "siteinfo": {
       "1": {
+        "title": "My Role",
+        "content": "Site Builder, Designer, Themer"
+        },
+      "2": {
         "title": "Platform",
         "content": "Wordpress"
         },
-      "2": {
+      "3": {
         "title": "Key Plugins",
         "content": "All In One SEO Pack, Social Media Floating Icons, Subscribe2"
         },
-      "3": {
+      "4": {
         "title": "Key Technology",
         "content": "Flexbox"
         },
-      "4": {
+      "5": {
         "title": "Theme",
         "content": "Custom"
         }

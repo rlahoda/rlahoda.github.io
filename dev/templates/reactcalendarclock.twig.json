@@ -132,10 +132,14 @@
     "locallink": "reactcalendarclock.html",
     "siteinfo": {
       "1": {
+        "title": "My Role",
+        "content": "Developer, Designer"
+        },
+      "2": {
         "title": "Platform",
         "content": "HTML"
       },
-      "2": {
+      "3": {
         "title": "Key Technology",
         "content": "React, Javascript, Flexbox, AJAX"
         }

@@ -132,10 +132,14 @@
     "locallink": "roblahodamedia.html",
     "siteinfo": {
       "1": {
+        "title": "My Role",
+        "content": "Site Builder, Designer"
+        },
+      "2": {
         "title": "Platform",
         "content": "HTML"
         },
-      "2": {
+      "3": {
         "title": "Key Technology",
         "content": "Twig templating, Gulp compiling workflow, JSON content, Flexbox"
         }

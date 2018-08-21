@@ -1,6 +1,6 @@
 {
   "page": {
-    "label": "Projects",
+    "label": "Front End Web Development Projects",
     "backgroundimage": "chapelle.jpg"
   },
   "links": {
@@ -134,26 +134,30 @@
       "locallink": "hia-oh.html",
       "siteinfo": {
         "1": {
+          "title": "My Role",
+          "content": "Site Builder, Designer, Themer"
+          },
+        "2": {
           "title": "Platform",
           "content": "Drupal 8"
           },
-        "2": {
+        "3": {
           "title": "Host",
           "content": "Pantheon"
           },
-        "3": {
+        "4": {
           "title": "Key Modules",
           "content": "Paragraphs, Webform, Metatag"
           },
-        "4": {
+        "5": {
           "title": "Key Technology",
           "content": "UIKit"
           },
-        "5": {
+        "6": {
           "title": "Theme",
           "content": "Custom"
           },
-        "6": {
+        "7": {
           "title": "Base Theme",
           "content": "UIKit"
           }
@@ -168,26 +172,30 @@
       "locallink": "lglf.html",
       "siteinfo": {
         "1": {
+          "title": "My Role",
+          "content": "Site Builder, Designer, Themer"
+          },
+        "2": {
           "title": "Platform",
           "content": "Drupal 8"
           },
-        "2": {
+        "3": {
           "title": "Host",
           "content": "Pantheon"
           },
-        "3": {
+        "4": {
           "title": "Key Modules",
           "content": "Paragraphs, Mailchimp, Metatag"
           },
-        "4": {
+        "5": {
           "title": "Key Technology",
           "content": "Flexbox, SVG"
           },
-        "5": {
+        "6": {
           "title": "Theme",
           "content": "Custom"
           },
-        "6": {
+        "7": {
           "title": "Base Theme",
           "content": "Stable"
           }
@@ -202,10 +210,14 @@
       "locallink": "roblahodamedia.html",
       "siteinfo": {
         "1": {
+          "title": "My Role",
+          "content": "Site Builder, Designer"
+          },
+        "2": {
           "title": "Platform",
           "content": "HTML"
           },
-        "2": {
+        "3": {
           "title": "Key Technology",
           "content": "Twig templating, Gulp compiling workflow, JSON content, Flexbox"
           }
@@ -220,18 +232,22 @@
       "locallink": "usher.html",
       "siteinfo": {
         "1": {
+          "title": "My Role",
+          "content": "Site Builder, Designer, Themer"
+          },
+        "2": {
           "title": "Platform",
           "content": "Wordpress"
           },
-        "2": {
+        "3": {
           "title": "Key Plugins",
           "content": "Get Custom Field Values, Form Maker Pro"
           },
-        "3": {
+        "4": {
           "title": "Key Technology",
           "content": "Flexbox, Skrollr.js parallax plugin"
         },
-        "4": {
+        "5": {
           "title": "Theme",
           "content": "Custom"
           }
@@ -246,18 +262,22 @@
       "locallink": "kristylahoda.html",
       "siteinfo": {
         "1": {
+          "title": "My Role",
+          "content": "Site Builder, Designer, Themer"
+          },
+        "2": {
           "title": "Platform",
           "content": "Wordpress"
           },
-        "2": {
+        "3": {
           "title": "Key Plugins",
           "content": "All In One SEO Pack, Social Media Floating Icons, Subscribe2"
           },
-        "3": {
+        "4": {
           "title": "Key Technology",
           "content": "Flexbox"
           },
-        "4": {
+        "5": {
           "title": "Theme",
           "content": "Custom"
           }
@@ -272,10 +292,14 @@
       "locallink": "reactcalendarclock.html",
       "siteinfo": {
         "1": {
+          "title": "My Role",
+          "content": "Developer, Designer"
+          },
+        "2": {
           "title": "Platform",
           "content": "HTML"
         },
-        "2": {
+        "3": {
           "title": "Key Technology",
           "content": "React, Javascript, Flexbox, AJAX"
           }
@@ -290,10 +314,14 @@
       "locallink": "codepencalendarclock.html",
       "siteinfo": {
         "1": {
+          "title": "My Role",
+          "content": "Developer, Designer"
+          },
+        "2": {
           "title": "Platform",
           "content": "Codepen"
         },
-        "2": {
+        "3": {
           "title": "Key Technology",
           "content": "Javascript, Flexbox, AJAX"
           }
@@ -308,10 +336,14 @@
       "locallink": "codepenflashcards.html",
       "siteinfo": {
         "1": {
+          "title": "My Role",
+          "content": "Developer, Designer"
+          },
+        "2": {
           "title": "Platform",
           "content": "Codepen"
           },
-        "2": {
+        "3": {
           "title": "Key Technology",
           "content": "Javascript, Flexbox"
           }

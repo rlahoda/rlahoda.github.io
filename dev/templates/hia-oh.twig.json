@@ -132,26 +132,30 @@
     "locallink": "hia-oh.html",
     "siteinfo": {
       "1": {
+        "title": "My Role",
+        "content": "Site Builder, Designer, Themer"
+        },
+      "2": {
         "title": "Platform",
         "content": "Drupal 8"
         },
-      "2": {
+      "3": {
         "title": "Host",
         "content": "Pantheon"
         },
-      "3": {
+      "4": {
         "title": "Key Modules",
         "content": "Paragraphs, Webform, Metatag"
         },
-      "4": {
+      "5": {
         "title": "Key Technology",
         "content": "UIKit"
         },
-      "5": {
+      "6": {
         "title": "Theme",
         "content": "Custom"
         },
-      "6": {
+      "7": {
         "title": "Base Theme",
         "content": "UIKit"
         }

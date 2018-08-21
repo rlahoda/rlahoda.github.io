@@ -132,18 +132,22 @@
     "locallink": "usher.html",
     "siteinfo": {
       "1": {
+        "title": "My Role",
+        "content": "Site Builder, Designer, Themer"
+        },
+      "2": {
         "title": "Platform",
         "content": "Wordpress"
         },
-      "2": {
+      "3": {
         "title": "Key Plugins",
         "content": "Get Custom Field Values, Form Maker Pro"
         },
-      "3": {
+      "4": {
         "title": "Key Technology",
         "content": "Flexbox, Skrollr.js parallax plugin"
       },
-      "4": {
+      "5": {
         "title": "Theme",
         "content": "Custom"
         }
