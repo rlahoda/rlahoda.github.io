@@ -301,14 +301,14 @@
         },
         "3": {
           "title": "Key Technology",
-          "content": "React, Javascript, Flexbox, AJAX"
+          "content": "React, Javascript, CSS Grid, Flexbox, AJAX"
           }
       }
     },
     "codepencalendarclock": {
-      "title": "Codepen: Multilingual Calendar/Clock",
+      "title": "Codepen: Multilingual Calendar/Clock with CSS Grid and Flexbox Fallback",
       "linktitle": "Codepen Link",
-      "linkaddress": "https://codepen.io/rlahoda/full/YedNya/",
+      "linkaddress": "https://codepen.io/rlahoda/pen/JaJNdW",
       "trackingaddress":"codepencalendarclock",
       "image": "calendar.jpg",
       "locallink": "codepencalendarclock.html",
@@ -323,7 +323,7 @@
         },
         "3": {
           "title": "Key Technology",
-          "content": "Javascript, Flexbox, AJAX"
+          "content": "Javascript, CSS Grid, Flexbox, AJAX"
           }
       }
     },
@@ -372,23 +372,24 @@
       "4": "Javascript",
       "5": "Git",
       "6": "Patternlab",
-      "7": "SEO",
-      "8": "Gulp",
-      "9": "Browsersync",
-      "10": "Wordpress",
-      "11": "JSON",
-      "12": "MAMP",
-      "13": "HAML",
-      "14": "JQuery",
-      "15": "Webform module",
-      "16": "PHP (For Drupal 8 .theme file)",
-      "17": "Patternlab",
-      "18": "Mailchimp email marketing",
-      "19": "SVG sprite generation",
-      "20": "Front-end frameworks (specifically UIKit)",
-      "21": "Pantheon hosting and Dev/Multidev environments",
-      "22": "Slack",
-      "23": "UI/UX Development"
+      "7": "CSS Grid",
+      "8": "SEO",
+      "9": "Gulp",
+      "10": "Browsersync",
+      "11": "Wordpress",
+      "12": "JSON",
+      "13": "MAMP",
+      "14": "HAML",
+      "15": "JQuery",
+      "16": "Webform module",
+      "17": "PHP (For Drupal 8 .theme file)",
+      "18": "Patternlab",
+      "19": "Mailchimp email marketing",
+      "20": "SVG sprite generation",
+      "21": "Front-end frameworks (specifically UIKit)",
+      "22": "Pantheon hosting and Dev/Multidev environments",
+      "23": "Slack",
+      "24": "UI/UX Development"
     },
     "onestar": {
       "1": "PHP (General experience)",

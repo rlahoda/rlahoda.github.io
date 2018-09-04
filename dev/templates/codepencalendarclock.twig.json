@@ -124,9 +124,9 @@
     }
   },
   "contents": {
-    "title": "Codepen: Multilingual Calendar/Clock",
+    "title": "Codepen: Multilingual Calendar/Clock with CSS Grid and Flexbox Fallback",
     "linktitle": "Codepen Link",
-    "linkaddress": "https://codepen.io/rlahoda/full/YedNya/",
+    "linkaddress": "https://codepen.io/rlahoda/pen/JaJNdW",
     "trackingaddress":"codepencalendarclock",
     "image": "calendar.jpg",
     "locallink": "codepencalendarclock.html",
@@ -141,12 +141,12 @@
       },
       "3": {
         "title": "Key Technology",
-        "content": "Javascript, Flexbox, AJAX"
+        "content": "Javascript, CSS Grid, Flexbox, AJAX"
         }
       },
       "longdescription": {
         "1": "This is a multilingual clock and calendar built on Javascript. It allows the user to select between English, French, and Spanish languages for the interface, to change the start day of the week between Sunday and Monday, and to change the date order from Month/Day/Year to Day/Month/Year through reordering the Flex order.",
-        "2": "It is fully responsive, including changing layout to accomodate smaller viewport sizes. I designed the project to increase my understanding of Javascript, and I developed it entirely in vanilla Javascript. The project uses BEM naming for the structure and SASS for the stylesheet.",
+        "2": "It is fully responsive, built in a combination of CSS Grid and Flexbox. This includes a Flexbox fallback for browsers that don't support Grid yet. I developed it entirely in vanilla Javascript. The project uses BEM naming for the structure and SASS for the stylesheet.",
         "3": "To populate the interface content, the project uses an AJAX call to a JSON file hosted on Github that includes translations for all textual content. If the AJAX call fails, there is a local fallback in the project. On Github there are directions for creating a pull request to add additional languages, which allowed user Jamesxv7 to add Spanish."
       }
   }
