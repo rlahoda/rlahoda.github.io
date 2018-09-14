@@ -1,6 +1,6 @@
 {
   "page": {
-    "label": "Perfectly Imperfect"
+    "label": "Codepen: CSS Grid Periodic Table"
   },
   "links": {
     "home": {
@@ -127,37 +127,28 @@
     }
   },
   "contents": {
-    "title": "Perfectly Imperfect",
-    "linktitle": "kristylahoda.net",
-    "linkaddress": "http://www.kristylahoda.net/?utm_source=github&utm_medium=github_pages&utm_campaign=github_projects&utm_content=projects",
-    "trackingaddress":"kristylahoda.net",
-    "image": "kristy-full.jpg",
-    "locallink": "kristylahoda.html",
+    "title": "Codepen: CSS Grid Periodic Table",
+    "linktitle": "Codepen Link",
+    "linkaddress": "https://codepen.io/rlahoda/full/QVxYoE/",
+    "trackingaddress":"codepenperiodictable",
+    "image": "periodic-table.jpg",
+    "locallink": "codepenperiodictable.html",
     "siteinfo": {
       "1": {
         "title": "My Role",
-        "content": "Site Builder, Designer, Themer"
+        "content": "Developer, Designer"
         },
       "2": {
         "title": "Platform",
-        "content": "Wordpress"
+        "content": "Codepen"
         },
       "3": {
-        "title": "Key Plugins",
-        "content": "All In One SEO Pack, Social Media Floating Icons, Subscribe2"
-        },
-      "4": {
         "title": "Key Technology",
-        "content": "Flexbox"
-        },
-      "5": {
-        "title": "Theme",
-        "content": "Custom"
+        "content": "Javascript, CSS Grid"
         }
       },
       "longdescription": {
-        "1": "This is a personal blog site built on Wordpress. The author wanted a watercolor theme to match her interests and background so I used some original artwork from the author to create the interface. I also found a font that would give a feel of handwriting that would complement the theme.",
-        "2": "The site uses Flexbox for the layout and has multiple widget locations for content flexibility."
+        "1": "This is a representation of the Periodic Table of Elements and is entirely laid out using CSS Grid. Using some Javascript, I added the ability for the user to click on an element and reveal additional information about the element. The information used in the page is taken from the Periodic-Table-JSON made by Browserinator on Github."
       }
   }
 }

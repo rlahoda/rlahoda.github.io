@@ -29,24 +29,19 @@
         },
         "lglf": {
           "title": "Love God Love France",
-          "address": "lglf.html",
-          "active": "true"
+          "address": "lglf.html"
         },
         "roblahoda": {
           "title": "Rob Lahoda Media",
           "address": "roblahodamedia.html"
         },
-        "usher": {
-          "title": "Usher Syndrome Interactive Documentary",
-          "address": "usher.html"
-        },
-        "kristy": {
-          "title": "Kristy Lahoda",
-          "address": "KristyLahoda.html"
-        },
         "reactcalclock": {
           "title": "React-based Multilingual Calendar/Clock",
           "address": "reactcalendarclock.html"
+        },
+        "codepenperiodictable": {
+          "title": "Codepen: CSS Grid Periodic Table",
+          "address": "codepenperiodictable.html"
         },
         "calclock": {
           "title": "Codepen: Multilingual Calendar/Clock",
@@ -55,6 +50,14 @@
         "flashcards": {
           "title": "Codepen: Flashcards",
           "address": "codepenflashcards.html"
+        },
+        "usher": {
+          "title": "Usher Syndrome Interactive Documentary",
+          "address": "usher.html"
+        },
+        "kristy": {
+          "title": "Kristy Lahoda",
+          "address": "KristyLahoda.html"
         }
       }
     },

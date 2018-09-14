@@ -37,17 +37,13 @@
           "title": "Rob Lahoda Media",
           "address": "roblahodamedia.html"
         },
-        "usher": {
-          "title": "Usher Syndrome Interactive Documentary",
-          "address": "usher.html"
-        },
-        "kristy": {
-          "title": "Kristy Lahoda",
-          "address": "KristyLahoda.html"
-        },
         "reactcalclock": {
           "title": "React-based Multilingual Calendar/Clock",
           "address": "reactcalendarclock.html"
+        },
+        "codepenperiodictable": {
+          "title": "Codepen: CSS Grid Periodic Table",
+          "address": "codepenperiodictable.html"
         },
         "calclock": {
           "title": "Codepen: Multilingual Calendar/Clock",
@@ -56,6 +52,14 @@
         "flashcards": {
           "title": "Codepen: Flashcards",
           "address": "codepenflashcards.html"
+        },
+        "usher": {
+          "title": "Usher Syndrome Interactive Documentary",
+          "address": "usher.html"
+        },
+        "kristy": {
+          "title": "Kristy Lahoda",
+          "address": "KristyLahoda.html"
         }
       }
     },
@@ -164,6 +168,7 @@
       }
     },
     "lglf": {
+      "alert": "Please Note: This site describes my family's desire to move internationally. However, due to circumstances beyond our control, this is no longer our intent. However, this site is still a good example of my work in Drupal theming.",
       "title": "Love God Love France",
       "linktitle": "lovegodlovefrance.org",
       "linkaddress": "https://www.lovegodlovefrance.org/?utm_source=github&utm_medium=github_pages&utm_campaign=github_projects&utm_content=projects",
@@ -220,6 +225,94 @@
         "3": {
           "title": "Key Technology",
           "content": "Twig templating, Gulp compiling workflow, JSON content, Flexbox"
+          }
+      }
+    },
+    "reactcalendarclock": {
+      "title": "React-based Multilingual Calendar/Clock",
+      "linktitle": "reactcalendar.roblahoda.com/",
+      "linkaddress": "http://reactcalendar.roblahoda.com/",
+      "trackingaddress":"http://reactcalendar.roblahoda.com/?utm_source=github&utm_medium=github_pages&utm_campaign=github_projects&utm_content=projects",
+      "image": "reactclockcalendar.jpg",
+      "locallink": "reactcalendarclock.html",
+      "siteinfo": {
+        "1": {
+          "title": "My Role",
+          "content": "Developer, Designer"
+          },
+        "2": {
+          "title": "Platform",
+          "content": "HTML"
+        },
+        "3": {
+          "title": "Key Technology",
+          "content": "React, Javascript, CSS Grid, Flexbox, AJAX"
+          }
+      }
+    },
+    "codepenperiodictable": {
+      "title": "Codepen: CSS Grid Periodic Table",
+      "linktitle": "Codepen Link",
+      "linkaddress": "https://codepen.io/rlahoda/full/QVxYoE/",
+      "trackingaddress":"codepenperiodictable",
+      "image": "periodic-table.jpg",
+      "locallink": "codepenperiodictable.html",
+      "siteinfo": {
+        "1": {
+          "title": "My Role",
+          "content": "Developer, Designer"
+          },
+        "2": {
+          "title": "Platform",
+          "content": "Codepen"
+          },
+        "3": {
+          "title": "Key Technology",
+          "content": "Javascript, CSS Grid"
+          }
+      }
+    },
+    "codepencalendarclock": {
+      "title": "Codepen: Multilingual Calendar/Clock with CSS Grid and Flexbox Fallback",
+      "linktitle": "Codepen Link",
+      "linkaddress": "https://codepen.io/rlahoda/pen/JaJNdW",
+      "trackingaddress":"codepencalendarclock",
+      "image": "calendar.jpg",
+      "locallink": "codepencalendarclock.html",
+      "siteinfo": {
+        "1": {
+          "title": "My Role",
+          "content": "Developer, Designer"
+          },
+        "2": {
+          "title": "Platform",
+          "content": "Codepen"
+        },
+        "3": {
+          "title": "Key Technology",
+          "content": "Javascript, CSS Grid, Flexbox, AJAX"
+          }
+      }
+    },
+    "codepenflashcards": {
+      "title": "Codepen: Flashcards",
+      "linktitle": "Codepen Link",
+      "linkaddress": "https://codepen.io/rlahoda/full/xVaWpd/",
+      "trackingaddress":"codepenflashcards",
+      "image": "flashcards.jpg",
+      "locallink": "codepenflashcards.html",
+      "siteinfo": {
+        "1": {
+          "title": "My Role",
+          "content": "Developer, Designer"
+          },
+        "2": {
+          "title": "Platform",
+          "content": "Codepen"
+          },
+        "3": {
+          "title": "Key Technology",
+          "content": "Javascript, Flexbox"
           }
       }
     },
@@ -280,72 +373,6 @@
         "5": {
           "title": "Theme",
           "content": "Custom"
-          }
-      }
-    },
-    "reactcalendarclock": {
-      "title": "React-based Multilingual Calendar/Clock",
-      "linktitle": "reactcalendar.roblahoda.com/",
-      "linkaddress": "http://reactcalendar.roblahoda.com/",
-      "trackingaddress":"http://reactcalendar.roblahoda.com/?utm_source=github&utm_medium=github_pages&utm_campaign=github_projects&utm_content=projects",
-      "image": "reactclockcalendar.jpg",
-      "locallink": "reactcalendarclock.html",
-      "siteinfo": {
-        "1": {
-          "title": "My Role",
-          "content": "Developer, Designer"
-          },
-        "2": {
-          "title": "Platform",
-          "content": "HTML"
-        },
-        "3": {
-          "title": "Key Technology",
-          "content": "React, Javascript, CSS Grid, Flexbox, AJAX"
-          }
-      }
-    },
-    "codepencalendarclock": {
-      "title": "Codepen: Multilingual Calendar/Clock with CSS Grid and Flexbox Fallback",
-      "linktitle": "Codepen Link",
-      "linkaddress": "https://codepen.io/rlahoda/pen/JaJNdW",
-      "trackingaddress":"codepencalendarclock",
-      "image": "calendar.jpg",
-      "locallink": "codepencalendarclock.html",
-      "siteinfo": {
-        "1": {
-          "title": "My Role",
-          "content": "Developer, Designer"
-          },
-        "2": {
-          "title": "Platform",
-          "content": "Codepen"
-        },
-        "3": {
-          "title": "Key Technology",
-          "content": "Javascript, CSS Grid, Flexbox, AJAX"
-          }
-      }
-    },
-    "codepenflashcards": {
-      "title": "Codepen: Flashcards",
-      "linktitle": "Codepen Link",
-      "linkaddress": "https://codepen.io/rlahoda/full/xVaWpd/",
-      "trackingaddress":"codepenflashcards",
-      "image": "flashcards.jpg",
-      "locallink": "codepenflashcards.html",
-      "siteinfo": {
-        "1": {
-          "title": "My Role",
-          "content": "Developer, Designer"
-          },
-        "2": {
-          "title": "Platform",
-          "content": "Codepen"
-          },
-        "3": {
-          "title": "Key Technology",
-          "content": "Javascript, Flexbox"
           }
       }
     }
