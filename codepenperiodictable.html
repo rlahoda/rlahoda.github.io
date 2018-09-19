@@ -127,11 +127,12 @@
         </tr>
                 <tr>
           <td class="uk-text-bold">Key Technology</td>
-          <td>Javascript, CSS Grid</td>
+          <td>Javascript, CSS Grid, AJAX</td>
         </tr>
               </table>
       <div class="uk-margin-top uk-margin-left">
-                  <p>This is a representation of the Periodic Table of Elements and is entirely laid out using CSS Grid. Using some Javascript, I added the ability for the user to click on an element and reveal additional information about the element. The information used in the page is taken from the Periodic-Table-JSON made by Browserinator on Github.</p>
+                  <p>This is a representation of the Periodic Table of Elements and is entirely laid out using CSS Grid. The table is generated through an AJAX call to a Github repo containing the raw information in JSON. Using ES6 template literals the array is looped through generating both the HTML for the element as well as the CSS that is dynamically inserted into the <head> to determine the element's location on the table.</p>
+                  <p>Using some additional Javascript, I added the ability for the user to click on an element and reveal additional information about the element. This is done by adding a CSS class to reveal the hidden data. The script also accounts for if the user clicks on another element when one is open as well as removing text highlighting that was happening when the user clicks on an element. The information used in the page is taken from the Periodic-Table-JSON made by Browserinator on Github.</p>
         
       </div>
     </div>
