@@ -208,30 +208,6 @@
           }
       }
     },
-    "roblahodamedia": {
-      "title": "Rob Lahoda Media",
-      "linktitle": "media.roblahoda.com",
-      "linkaddress": "http://media.roblahoda.com/?utm_source=github&utm_medium=github_pages&utm_campaign=github_projects&utm_content=projects",
-      "trackingaddress":"media.roblahoda.com",
-      "githubaddress": "https://github.com/rlahoda/roblahoda-media",
-      "githubtracking":"https://github.com/rlahoda/roblahoda-media",
-      "image": "roblahoda.jpg",
-      "locallink": "roblahodamedia.html",
-      "siteinfo": {
-        "1": {
-          "title": "My Role",
-          "content": "Site Builder, Designer"
-          },
-        "2": {
-          "title": "Platform",
-          "content": "HTML"
-          },
-        "3": {
-          "title": "Key Technology",
-          "content": "Twig templating, Gulp compiling workflow, JSON content, Flexbox"
-          }
-      }
-    },
     "reactcalendarclock": {
       "title": "React-based Multilingual Calendar/Clock",
       "linktitle": "reactcalendar.roblahoda.com/",
@@ -323,6 +299,30 @@
         "3": {
           "title": "Key Technology",
           "content": "Javascript, Flexbox"
+          }
+      }
+    },
+    "roblahodamedia": {
+      "title": "Rob Lahoda Media",
+      "linktitle": "media.roblahoda.com",
+      "linkaddress": "http://media.roblahoda.com/?utm_source=github&utm_medium=github_pages&utm_campaign=github_projects&utm_content=projects",
+      "trackingaddress":"media.roblahoda.com",
+      "githubaddress": "https://github.com/rlahoda/roblahoda-media",
+      "githubtracking":"https://github.com/rlahoda/roblahoda-media",
+      "image": "roblahoda.jpg",
+      "locallink": "roblahodamedia.html",
+      "siteinfo": {
+        "1": {
+          "title": "My Role",
+          "content": "Site Builder, Designer"
+          },
+        "2": {
+          "title": "Platform",
+          "content": "HTML"
+          },
+        "3": {
+          "title": "Key Technology",
+          "content": "Twig templating, Gulp compiling workflow, JSON content, Flexbox"
           }
       }
     },
