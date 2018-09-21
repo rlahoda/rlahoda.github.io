@@ -11,7 +11,7 @@
       <p>I have a love of learning so I'm constantly expanding and improving my skillset to allow me to find the most effective technology and techniques for every project I work on. I learn new skills quickly which helps me to stay current with the fast pace of the world front-end web design.</p>
       <p>I'm never satisfied with meeting my client's needs. I try to find ways to exceed their ideas and help them achieve more than they thought they would through the project.</p>
     </div>
-    <div class="uk-margin-top"> 
+    <div class="uk-margin-top">
       <h2 class="uk-margin-small-left">Projects</h2>
       {% for site in contents %}
       <div class="uk-card uk-card-hover uk-card-default uk-width-1-1 uk-child-width-1-2@s uk-margin-remove" uk-grid>
@@ -22,7 +22,8 @@
         <div class="uk-card-body">
           {% if site.alert %} <p class="uk-alert-danger">{{site.alert}}</p>  {% endif %}
           <h2 class="uk-card-title">{{ site.title }}</h2>
-          <h4><a class="uk-link-heading" href="{{ site.linkaddress }}" uk-icon="icon: link" onclick="trackOutboundLink('{{ site.linkaddress }}'); return false;" target="_blank">{{ site.linktitle }}</a></h4>
+          <h4 class="uk-margin-small"><a class="uk-link-heading" href="{{ site.linkaddress }}" uk-icon="icon: link" onclick="trackOutboundLink('{{ site.linkaddress }}'); return false;" target="_blank">{{ site.linktitle }}</a></h4>
+          {% if site.githubaddress %}<h5 class="uk-margin-remove"><a class="uk-link-heading" href="{{ site.githubaddress }}" uk-icon="icon: github" onclick="trackOutboundLink('{{ site.githubaddress }}'); return false;" target="_blank">View Github Repo</a></h5>{% endif %}
           <table class="uk-table uk-table-striped">
             {% for row in site.siteinfo %}
             {% if loop.first %}

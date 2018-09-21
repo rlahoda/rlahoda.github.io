@@ -173,6 +173,8 @@
       "linktitle": "lovegodlovefrance.org",
       "linkaddress": "https://www.lovegodlovefrance.org/?utm_source=github&utm_medium=github_pages&utm_campaign=github_projects&utm_content=projects",
       "trackingaddress":"lovegodlovefrance.org",
+      "githubaddress": "https://github.com/rlahoda/lahodatheme",
+      "githubtracking":"https://github.com/rlahoda/lahodatheme",
       "image": "lglf.jpg",
       "locallink": "lglf.html",
       "siteinfo": {
@@ -211,6 +213,8 @@
       "linktitle": "media.roblahoda.com",
       "linkaddress": "http://media.roblahoda.com/?utm_source=github&utm_medium=github_pages&utm_campaign=github_projects&utm_content=projects",
       "trackingaddress":"media.roblahoda.com",
+      "githubaddress": "https://github.com/rlahoda/roblahoda-media",
+      "githubtracking":"https://github.com/rlahoda/roblahoda-media",
       "image": "roblahoda.jpg",
       "locallink": "roblahodamedia.html",
       "siteinfo": {
@@ -233,6 +237,8 @@
       "linktitle": "reactcalendar.roblahoda.com/",
       "linkaddress": "http://reactcalendar.roblahoda.com/",
       "trackingaddress":"http://reactcalendar.roblahoda.com/?utm_source=github&utm_medium=github_pages&utm_campaign=github_projects&utm_content=projects",
+      "githubaddress": "https://github.com/rlahoda/Multilingual-Calendar-React",
+      "githubtracking":"https://github.com/rlahoda/Multilingual-Calendar-React",
       "image": "reactclockcalendar.jpg",
       "locallink": "reactcalendarclock.html",
       "siteinfo": {
@@ -255,6 +261,8 @@
       "linktitle": "Codepen Link",
       "linkaddress": "https://codepen.io/rlahoda/full/QVxYoE/",
       "trackingaddress":"codepenperiodictable",
+      "githubaddress": "https://github.com/rlahoda/css_grid_periodic_table",
+      "githubtracking":"codepenperiodictablecode",
       "image": "periodic-table.jpg",
       "locallink": "codepenperiodictable.html",
       "siteinfo": {
@@ -277,6 +285,8 @@
       "linktitle": "Codepen Link",
       "linkaddress": "https://codepen.io/rlahoda/pen/JaJNdW",
       "trackingaddress":"codepencalendarclock",
+      "githubaddress": "https://github.com/rlahoda/multilingual-calendar",
+      "githubtracking":"codepencalendarclockcode",
       "image": "calendar.jpg",
       "locallink": "codepencalendarclock.html",
       "siteinfo": {
@@ -351,6 +361,8 @@
       "linktitle": "kristylahoda.net",
       "linkaddress": "http://www.kristylahoda.net/?utm_source=github&utm_medium=github_pages&utm_campaign=github_projects&utm_content=projects",
       "trackingaddress":"kristylahoda.net",
+      "githubaddress": "https://github.com/rlahoda/kristylahoda_wp_theme",
+      "githubtracking":"kristylahoda.netcode",
       "image": "kristy.jpg",
       "locallink": "kristylahoda.html",
       "siteinfo": {
