@@ -252,7 +252,7 @@
           },
         "3": {
           "title": "Key Technology",
-          "content": "Javascript, CSS Grid, AJAX"
+          "content": "Javascript, CSS Grid, Greensock Animation, AJAX"
           }
       }
     },
