@@ -1,2 +1,38 @@
-@import "partials/base";
+@import "partials/reset";
 @import "partials/typography";
+@import "partials/nameImage";
+
+@mixin respond-at($media) {
+  @media only screen and (min-width: $media) {
+    @content;
+  }
+}
+
+$bp-xsmall: 600px;
+$bp-small: 780px;
+$bp-med: 1060px;
+$bp-large: 1400px;
+
+body {
+
+}
+
+
+
+main {
+
+}
+
+h1 {
+  font-size: 1.5em;
+  &::first-letter {
+    text-transform: capitalize;
+  }
+  @include respond-at($bp-med) {
+    font-size: 2em;
+  }
+  @include respond-at($bp-large) {
+    font-size: 4em;
+  }
+  font-weight: normal;
+}

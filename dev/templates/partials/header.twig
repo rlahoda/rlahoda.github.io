@@ -1,0 +1,49 @@
+{% set info = {
+  "title": "Rob Lahoda • Front End Web Developer",
+  "href": "https://rlahoda.github.io",
+  "shortDesc": "",
+  "longDesc": "",
+  "subject": "",
+  "type": "website",
+  "imgLink": "/social-image.jpg",
+  "ogImage": "/og-image.jpg",
+  "twitterImage": "twitter-image.jpg",
+  "author": "Rob Lahoda",
+  "twitter": "@rlahoda"
+}
+%}
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'"> -->
+  <title>{{ info.title }}</title>
+  <!-- <base href="{{ info.href }}"> -->
+  <link rel="stylesheet" href="/css/styles.css">
+  <meta name="description" content="{{ info.longDesc }}">
+  <meta name="subject" content="{{ info.subject }}">
+
+  <meta property="og:url" content="{{ info.href }}">
+  <meta property="og:type" content="{{ info.type }}">
+  <meta property="og:title" content="{{ info.title }}">
+  <meta property="og:image" content="{{ info.href }}{{ info.ogImage }}">
+  <meta property="og:description" content="{{ info.shortDesc }}">
+  <meta property="og:site_name" content="{{ info.title }}">
+  <meta property="og:locale" content="en_US">
+  <meta property="article:author" content="">
+
+  <meta name="twitter:card" content="{{ info.longDesc }}">
+  <meta name="twitter:site" content="{{ info.twitter }}">
+  <meta name="twitter:creator" content="{{ info.twitter }}">
+  <meta name="twitter:url" content="{{ info.href }}">
+  <meta name="twitter:title" content="{{ info.title }}">
+  <meta name="twitter:description" content="{{ info.shortDesc }}">
+  <meta name="twitter:image" content="{{ info.href }}{{ info.twitterImage }}">
+
+  <meta name="robots" content="index,follow"><!-- All Search Engines -->
+  <meta name="googlebot" content="index,follow"><!-- Google Specific -->
+
+  <script src="/vendor/greensock-js/src/minified/TweenMax.min.js" charset="utf-8"></script>
+  <script src="/scripts/scripts-min.js" charset="utf-8"></script>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,900" rel="stylesheet"> 
+</head>
