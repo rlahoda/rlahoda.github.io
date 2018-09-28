@@ -1,0 +1,10 @@
+.homepageMain__container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  // grid-template-rows: 1fr 1fr 1fr minmax(50px,20vh) max-content max-content;
+  grid-auto-rows: 200px;
+}
+
+.homepageMain__content {
+  
+}

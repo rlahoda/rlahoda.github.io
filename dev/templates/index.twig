@@ -2,9 +2,17 @@
 
 {% block primarycontent %}
 <header>
-  <nav>
-
-  </nav><div class="name__container">
+  <nav class="fixed">
+    <ul class="noList navList">
+      <li><a href="/">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li class="icon__externalLink"><a href="projects.html">Multimedia Work</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="jobs.html">Jobs</a></li>
+      <li><a href="training.html">Training</a></li>
+    </ul>
+  </nav>
+  <div class="name__container">
     <div class="nameImage__container"></div>
     <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--1')" id="nameImage__container--box--1"></div>
     <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--2')" id="nameImage__container--box--2"></div>
@@ -34,8 +42,9 @@
     <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--26')" id="nameImage__container--box--26"></div>
     <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--27')" id="nameImage__container--box--27"></div>
     <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--28')" id="nameImage__container--box--28"></div>
-    <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--29')" id="nameImage__container--box--29"></div>
-    <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--30')" id="nameImage__container--box--30"></div>
+    <div class="nameSpacer">
+
+    </div>
   <div class="firstName__container">
     <h1 class="firstName">Rob</h1>
   </div>
@@ -49,10 +58,29 @@
   </div>
   <div class="pageTagline__container">
 <h2 class="pageTagline">I Build Websites</h2>
+<h2 class="pageTagline__helper" aria-hidden="true">I. Theme. In. Drupal</h2>
 </div></div>
 </header>
 <main>
+<section class="homepageMain__container">
+  <div class="homepageMain__content homepageMain__content--bio">
+    <h1>Who I Am</h1>
+    <p>I'm a versatile, adaptable problem-solver. My strong mix of technical and creative skills give me a diverse perspective on the projects I work on.</p>
+  </div>
+  <div class="homepageMain__content homepageMain__content--projects">
+    <h1>Projects</h1>
+    <p>Some work I've done.</p>
+    <a href="projects.html">View my projects</a>
+  </div>
+  <div class="homepageMain__content homepageMain__content--multimedia">
+    <h1>Multimedia Work</h1>
+    <p>I do a lot more than just websites, I also have training in multimedia production. My photojournalism and video production backgrounds give me a different perspective on my projects than someone with a programming background.</p>
+    <a href="http://media.roblahoda.com">View my multimedia portfolio</a>
+  </div>
+  <div class="homepageMain__content homepageMain__content--contact">
 
+  </div>
+</section>
 </main>
 
 {% endblock %}
