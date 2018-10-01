@@ -1,0 +1,37 @@
+.contactGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
+  margin: 5px;
+  text-align: center;
+  @include respond-at($bp-small) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 25px;
+    margin: 10px;
+  }
+  @include respond-at($bp-med) {
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 35px;
+    margin: 15px;
+  }
+  @include respond-at($bp-large) {
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 50px;
+    margin: 50px;
+  }
+}
+
+// .contactCard {
+//   background-color: blue;
+//   padding: 20px;
+//   color: white;
+//   & a {
+//     color: inherit;
+//   }
+// }
+
+.contactIcon {
+  fill: white;
+  height: 50px;
+  width: 50px;
+}

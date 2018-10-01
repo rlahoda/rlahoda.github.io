@@ -1,0 +1,32 @@
+{% extends 'base.twig' %}
+{% block primarycontent %}
+<header>
+  <div class="pageTopImage">
+
+  </div>
+</header>
+
+<main>
+  <div class="pageHeading">
+    <h1 class="bigTitle">
+      <span id="contact_c">C</span><span id="contact_o">O</span><span id="contact_n">N</span><span id="contact_t">T</span><span id="contact_a">A</span><span id="contact_c">C</span><span id="contact_t">T</span></h1>
+      <div class="pageTagline__container">
+        <h2 id="projectsTagline" class="pageTagline">How To Reach Me</h2>
+        <!-- <h2 class="pageTagline__helper" aria-hidden="true">I. Theme. In. Drupal</h2> -->
+      </div>
+    <p></p>
+  </div>
+  <div class="contactContainer">
+    <ul class="nolist noListBlock contactGrid">
+      {% for contact in contacts %}
+      <li class="infoCard contactCard">
+        <a class="" href="{{ contact.linkaddress }}" onclick="trackOutboundLink('{{ contact.linkaddress }}'); return false;" target="_blank"><span class="contactIcon" id="{{ contact.method }}"></span>
+        <h2 class="">{{ contact.title }}</h2></a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+</main>
+
+{% endblock %}

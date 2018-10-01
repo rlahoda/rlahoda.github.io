@@ -1,0 +1,51 @@
+.projectsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
+  margin: 5px;
+  @include respond-at($bp-small) {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;
+    margin: 10px;
+  }
+  @include respond-at($bp-med) {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 40px;
+    margin: 15px;
+  }
+  @include respond-at($bp-large) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 60px;
+    margin: 30px;
+  }
+}
+
+// background-color: #49D18F;
+// box-shadow: 6px 6px #35DDFF;
+
+
+
+
+.projectAlert {
+  font-style: italic;
+  font-size: 10px;
+}
+
+.projectTechnology {
+  text-transform: capitalize;
+  display: inline-flex;
+  flex-wrap: wrap;
+  flex: 1 1 auto;
+  width: 25%;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  & h4 {
+    margin: 5px 0;
+  }
+}
+
+.projectIcon {
+  width: 40px;
+  height: 40px;
+}

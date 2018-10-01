@@ -1,86 +1,131 @@
 {% extends 'base.twig' %}
 
 {% block primarycontent %}
-<header>
-  <nav class="fixed">
-    <ul class="noList navList">
-      <li><a href="/">Home</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li class="icon__externalLink"><a href="projects.html">Multimedia Work</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="jobs.html">Jobs</a></li>
-      <li><a href="training.html">Training</a></li>
-    </ul>
-  </nav>
-  <div class="name__container">
-    <div class="nameImage__container"></div>
-    <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--1')" id="nameImage__container--box--1"></div>
-    <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--2')" id="nameImage__container--box--2"></div>
-    <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--3')" id="nameImage__container--box--3"></div>
-    <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--4')" id="nameImage__container--box--4"></div>
-    <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--5')" id="nameImage__container--box--5"></div>
-    <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--6')" id="nameImage__container--box--6"></div>
-    <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--7')" id="nameImage__container--box--7"></div>
-    <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--8')" id="nameImage__container--box--8"></div>
-    <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--9')" id="nameImage__container--box--9"></div>
-    <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--10')" id="nameImage__container--box--10"></div>
-    <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--11')" id="nameImage__container--box--11"></div>
-    <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--12')" id="nameImage__container--box--12"></div>
-    <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--13')" id="nameImage__container--box--13"></div>
-    <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--14')" id="nameImage__container--box--14"></div>
-    <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--15')" id="nameImage__container--box--15"></div>
-    <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--16')" id="nameImage__container--box--16"></div>
-    <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--17')" id="nameImage__container--box--17"></div>
-    <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--18')" id="nameImage__container--box--18"></div>
-    <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--19')" id="nameImage__container--box--19"></div>
-    <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--20')" id="nameImage__container--box--20"></div>
-    <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--21')" id="nameImage__container--box--21"></div>
-    <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--22')" id="nameImage__container--box--22"></div>
-    <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--23')" id="nameImage__container--box--23"></div>
-    <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--24')" id="nameImage__container--box--24"></div>
-    <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--25')" id="nameImage__container--box--25"></div>
-    <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--26')" id="nameImage__container--box--26"></div>
-    <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--27')" id="nameImage__container--box--27"></div>
-    <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--28')" id="nameImage__container--box--28"></div>
-    <div class="nameSpacer">
+  <header>
 
+    <div class="name__container">
+      <div class="nameImage__container"></div>
+      <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--1')" id="nameImage__container--box--1"></div>
+      <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--2')" id="nameImage__container--box--2"></div>
+      <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--3')" id="nameImage__container--box--3"></div>
+      <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--4')" id="nameImage__container--box--4"></div>
+      <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--5')" id="nameImage__container--box--5"></div>
+      <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--6')" id="nameImage__container--box--6"></div>
+      <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--7')" id="nameImage__container--box--7"></div>
+      <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--8')" id="nameImage__container--box--8"></div>
+      <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--9')" id="nameImage__container--box--9"></div>
+      <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--10')" id="nameImage__container--box--10"></div>
+      <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--11')" id="nameImage__container--box--11"></div>
+      <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--12')" id="nameImage__container--box--12"></div>
+      <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--13')" id="nameImage__container--box--13"></div>
+      <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--14')" id="nameImage__container--box--14"></div>
+      <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--15')" id="nameImage__container--box--15"></div>
+      <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--16')" id="nameImage__container--box--16"></div>
+      <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--17')" id="nameImage__container--box--17"></div>
+      <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--18')" id="nameImage__container--box--18"></div>
+      <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--19')" id="nameImage__container--box--19"></div>
+      <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--20')" id="nameImage__container--box--20"></div>
+      <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--21')" id="nameImage__container--box--21"></div>
+      <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--22')" id="nameImage__container--box--22"></div>
+      <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--23')" id="nameImage__container--box--23"></div>
+      <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--24')" id="nameImage__container--box--24"></div>
+      <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--25')" id="nameImage__container--box--25"></div>
+      <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--26')" id="nameImage__container--box--26"></div>
+      <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--27')" id="nameImage__container--box--27"></div>
+      <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--28')" id="nameImage__container--box--28"></div>
+      <div class="nameSpacer"></div>
+      <div class="firstName__container">
+        <h1 class="firstName">Rob</h1>
+      </div>
+      <div class="lastName__container">
+
+        <h1 class="bigTitle">
+          <span id="lastName__l">L</span><span id="lastName__a1">A</span><span id="lastName__h">H</span><span id="lastName__o">O</span><span id="lastName__d">D</span><span id="lastName__a2">A</span></h1>
+
+      </div>
+      <div class="pageTagline__spacer"></div>
+      <div class="pageTagline__container">
+        <h2 id="indexTagline" class="pageTagline">I Build Websites</h2>
+        <h2 class="pageTagline__helper" aria-hidden="true">I. Theme. In. Drupal</h2>
+      </div>
     </div>
-  <div class="firstName__container">
-    <h1 class="firstName">Rob</h1>
-  </div>
-  <div class="lastName__container">
+  </header>
+  <main>
+    <section class="homepageMain__container">
+      <div class="infoCard homepageMain__content homepageMain__content--bio">
+        <h1 class="homepageMain__heading">Who I Am</h1>
+        <p class="homepageMain__p">I'm a versatile, adaptable problem-solver. My strong mix of technical and creative skills give me a diverse perspective on the projects I work on.</p>
+      </div>
+      <div class="infoCard homepageMain__content homepageMain__content--projects">
+        <h1 class="homepageMain__heading">Projects</h1>
+        <p class="homepageMain__p">I've worked on projects large and small. From small nonprofits, to local businesses, to large corporate sites.</p>
+        <a href="projects.html">View my projects</a>
+      </div>
+      <div class="infoCard homepageMain__content homepageMain__content--multimedia">
+        <h1 class="homepageMain__heading">Multimedia Work</h1>
+        <p class="homepageMain__p">I do a lot more than just websites, I also have training in multimedia production. My photojournalism and video production backgrounds give me a different perspective on my projects than someone with a programming background.</p>
+        <a href="http://media.roblahoda.com">View my multimedia portfolio</a>
+      </div>
+      <div class="homepageMain__content homepageMain__content--contact"></div>
+      <div class="homepageMain__content homepageMain__content--whatIUse">
+        <h1 class="homepageMain__heading">What I Use</h1>
+        <ul class="noList homepageMain__iconList">
+          <!-- HTML5 -->
+          <li class="homepageIcons">
+            <span class="icons" id="html5"></span>
+            HTML5</li>
+          <!-- CSS3 -->
+          <li class="homepageIcons">
+            <span class="icons" id="css3"></span>
+            CSS3</li>
+          <!-- Javascript -->
+          <li class="homepageIcons">
+            <span class="icons" id="javascript"></span>
+            Javascript</li>
+          <!-- Drupal -->
+          <li class="homepageIcons">
+            <span class="icons" id="drupal"></span>
+            Drupal</li>
+          <!-- React -->
+          <li class="homepageIcons">
+            <span class="icons" id="react"></span>
+            React</li>
+          <!-- Greensock -->
+          <li class="homepageIcons">
+            <span class="icons" id="greensock"></span>
+            Greensock</li>
+          <!-- Git -->
+          <li class="homepageIcons">
+            <span class="icons" id="git"></span>
+            Git</li>
+          <!-- Github -->
+          <li class="homepageIcons">
+            <span class="icons" id="github"></span>
+            Github</li>
+          <!-- Atom -->
+          <li class="homepageIcons">
+            <span class="icons" id="atom"></span>
+            Atom</li>
+          <!-- Gulp -->
+          <li class="homepageIcons">
+            <span class="icons" id="gulp"></span>
+            Gulp</li>
+          <!-- Sass -->
+          <li class="homepageIcons">
+            <span class="icons" id="sass"></span>
+            SASS</li>
+          <!-- Paragraphs -->
+          <li class="homepageIcons">
+            <span class="icons" id="paragraphs"></span>
+            Paragraphs Module</li>
+          <!-- UIKit -->
+          <li class="homepageIcons">
+            <span class="icons" id="uikit"></span>
+            UIKit</li>
 
-<h1 class="lastName"><span id="lastName__l">L</span><span id="lastName__a1">A</span><span id="lastName__h">H</span><span id="lastName__o">O</span><span id="lastName__d">D</span><span id="lastName__a2">A</span></h1>
-
-  </div>
-  <div class="pageTagline__spacer">
-
-  </div>
-  <div class="pageTagline__container">
-<h2 class="pageTagline">I Build Websites</h2>
-<h2 class="pageTagline__helper" aria-hidden="true">I. Theme. In. Drupal</h2>
-</div></div>
-</header>
-<main>
-<section class="homepageMain__container">
-  <div class="homepageMain__content homepageMain__content--bio">
-    <h1>Who I Am</h1>
-    <p>I'm a versatile, adaptable problem-solver. My strong mix of technical and creative skills give me a diverse perspective on the projects I work on.</p>
-  </div>
-  <div class="homepageMain__content homepageMain__content--projects">
-    <h1>Projects</h1>
-    <p>Some work I've done.</p>
-    <a href="projects.html">View my projects</a>
-  </div>
-  <div class="homepageMain__content homepageMain__content--multimedia">
-    <h1>Multimedia Work</h1>
-    <p>I do a lot more than just websites, I also have training in multimedia production. My photojournalism and video production backgrounds give me a different perspective on my projects than someone with a programming background.</p>
-    <a href="http://media.roblahoda.com">View my multimedia portfolio</a>
-  </div>
-  <div class="homepageMain__content homepageMain__content--contact">
-
-  </div>
-</section>
-</main>
+        </ul>
+      </div>
+    </section>
+  </main>
 
 {% endblock %}

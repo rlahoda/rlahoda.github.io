@@ -27,7 +27,7 @@ $lastName_min_font: 60px;
 $lastName_max_font: 220px;
 
 
-.lastName {
+.bigTitle {
   @include fluid-type($min_width, $max_width, $lastName_min_font, $lastName_max_font);
 }
 
@@ -55,4 +55,23 @@ $tagLine_max_font: 25px;
 .pageTagline {
   font-weight: normal;
   @include fluid-type($min_width, $max_width, $tagLine_min_font, $tagLine_max_font);
+}
+
+$homepageMainHeading_min_font: 25px;
+$homepageMainHeading_max_font: 35px;
+.homepageMain__heading {
+  @include fluid-type($min_width, $max_width, $homepageMainHeading_min_font, $homepageMainHeading_max_font);
+  margin: 0;
+}
+
+$homepageMainHeading2_min_font: 15px;
+$homepageMainHeading2_max_font: 25px;
+.homepageMain__heading2 {
+  @include fluid-type($min_width, $max_width, $homepageMainHeading2_min_font, $homepageMainHeading2_max_font);
+  margin: 0;
+  font-weight: normal;
+}
+
+.homepageMain__p {
+
 }
