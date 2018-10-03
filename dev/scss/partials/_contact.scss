@@ -1,37 +1,95 @@
 .contactGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+@supports (display: grid) {
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 10px;
+}
+
   margin: 5px;
   text-align: center;
+  @supports (display: grid) {
+    @include respond-at($bp-small) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 25px;
+    }
+    @include respond-at($bp-med) {
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 35px;
+    }
+    @include respond-at($bp-large) {
+      grid-template-columns: repeat(6, 1fr);
+      grid-gap: 50px;
+    }
+  }
   @include respond-at($bp-small) {
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 25px;
     margin: 10px;
   }
   @include respond-at($bp-med) {
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 35px;
     margin: 15px;
   }
   @include respond-at($bp-large) {
-    grid-template-columns: repeat(6, 1fr);
-    grid-gap: 50px;
     margin: 50px;
   }
 }
 
-// .contactCard {
-//   background-color: blue;
-//   padding: 20px;
-//   color: white;
-//   & a {
-//     color: inherit;
+// .contactGrid {
+//   display: grid;
+//   grid-template-columns: 1fr;
+//   grid-gap: 10px;
+//   margin: 5px;
+//   @include respond-at($bp-small) {
+//     grid-template-columns: 1fr 1fr;
+//     grid-gap: 15px;
+//     margin: 10px;
+//   }
+//   @include respond-at($bp-med) {
+//     grid-template-columns: 1fr 1fr 1fr;
+//     grid-gap: 40px;
+//     margin: 15px;
+//   }
+//   @include respond-at($bp-large) {
+//     grid-template-columns: 1fr 1fr 1fr 1fr;
+//     grid-gap: 60px;
+//     margin: 30px;
 //   }
 // }
 
+.contactCard {
+  width: 90%;
+  margin: 5px;
+    @include respond-at($bp-small) {
+      width:40%;
+      margin: 15px;
+    }
+    @include respond-at($bp-med) {
+      width:20%;
+      margin: 40px;
+    }
+    @include respond-at($bp-large) {
+      width:15%;
+      margin: 60px;
+    }
+  @supports (display: grid) {
+    @include respond-at($bp-small) {
+      width:100%;
+      margin: 5px;
+    }
+    @include respond-at($bp-med) {
+      width:100%;
+      margin: 5px;
+    }
+    @include respond-at($bp-large) {
+      width:100%;
+      margin: 5px;
+    }
+  }
+}
+
 .contactIcon {
-  fill: white;
-  height: 50px;
-  width: 50px;
+  fill: black;
+  height: 30px;
+  width: 30px;
 }

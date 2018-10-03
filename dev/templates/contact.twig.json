@@ -2,7 +2,7 @@
   "contacts": {
       "email":{
         "title":"Email",
-        "linkaddress": "rob@roblahoda.com",
+        "linkaddress": "mailto:rob@roblahoda.com",
         "method": "email"
       },
       "twitter":{

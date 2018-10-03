@@ -9,11 +9,25 @@ $bp-small: 780px;
 $bp-med: 1060px;
 $bp-large: 1400px;
 
-$cardColor1: #83F1FF;
-$cardColor2: #B48FE8;
-$cardColor3: #FF98A1;
-$cardColor4: #7AD19C;
-$cardColor5: #FFEF67;
+$cardColor1: #d2beb3;
+$cardColor2: #7bb6d0;
+$cardColor3: #bbb7b6;
+$cardColor4: #7cb2c9;
+$cardColor5: #c5b9ad;
+$cardColor6: #a5bbc4;
+
+// $cardColor1: #d2beb3;
+// $cardColor2: #659bb3;
+// $cardColor3: #bbb7b6;
+// $cardColor4: #5596b2;
+// $cardColor5: #c5b9ad;
+// $cardColor6: #8ca0a9;
+
+// $cardColor1: #83F1FF;
+// $cardColor2: #B48FE8;
+// $cardColor3: #FF98A1;
+// $cardColor4: #7AD19C;
+// $cardColor5: #FFEF67;
 
 
 @import "partials/reset";
@@ -25,6 +39,8 @@ $cardColor5: #FFEF67;
 @import "partials/homepage_main";
 @import "partials/projects";
 @import "partials/contact";
+@import "partials/about";
+@import "partials/footer";
 
 
 body {
@@ -69,45 +85,59 @@ h1 {
 
 }
 .pageTopImage {
-  height: 10vh;
-  width: 75%;
-  // background-color: purple;
+  height: 20vh;
+  width: 100%;
+  // background-color: $cardColor1;
 }
 
 
 
 
 .infoCard {
-  padding: 50px;
+  padding: 10px;
   text-align: center;
   // background-color: blue;
   color: black;
 
+    @include respond-at($bp-small) {
+      padding: 20px;
+    }
+    @include respond-at($bp-med) {
+      padding: 40px;
+    }
+    @include respond-at($bp-large) {
+      padding: 50px;
+    }
   & a {
     color: inherit;
   }
-  &:nth-child(5n) {
+  &:nth-of-type(6n) {
     background-color: $cardColor1;
     box-shadow: 10px 10px $cardColor2;
     // color: black;
   }
-  &:nth-child(5n+1) {
+  &:nth-of-type(6n+1) {
     background-color: $cardColor2;
     box-shadow: 10px 10px $cardColor3;
     // color: white;
   }
-  &:nth-child(5n+2) {
+  &:nth-of-type(6n+2) {
     background-color: $cardColor3;
     box-shadow: 10px 10px $cardColor4;
     // color: white;
   }
-  &:nth-child(5n+3) {
+  &:nth-of-type(6n+3) {
     background-color: $cardColor4;
     box-shadow: 10px 10px $cardColor5;
     // color: white;
   }
-  &:nth-child(5n+4) {
+  &:nth-of-type(6n+4) {
     background-color: $cardColor5;
+    box-shadow: 10px 10px $cardColor6;
+    // color: black;
+  }
+  &:nth-of-type(6n+5) {
+    background-color: $cardColor6;
     box-shadow: 10px 10px $cardColor1;
     // color: black;
   }

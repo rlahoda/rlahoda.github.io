@@ -17,10 +17,10 @@
     <p></p>
   </div>
   <div class="contactContainer">
-    <ul class="nolist noListBlock contactGrid">
+    <ul class="noList noListBlock contactGrid">
       {% for contact in contacts %}
       <li class="infoCard contactCard">
-        <a class="" href="{{ contact.linkaddress }}" onclick="trackOutboundLink('{{ contact.linkaddress }}'); return false;" target="_blank"><span class="contactIcon" id="{{ contact.method }}"></span>
+        <a class="" href="{{ contact.linkaddress }}" onclick="trackOutboundLink('{{ contact.linkaddress }}'); return false;" target="_blank"><span class="icons contactIcon" id="{{ contact.method }}"></span>
         <h2 class="">{{ contact.title }}</h2></a>
       </li>
       {% endfor %}

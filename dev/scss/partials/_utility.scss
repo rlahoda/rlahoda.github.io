@@ -12,3 +12,8 @@
 }
 
 :focus:not(:focus-visible) {outline:none}
+
+.smallText {
+  font-size: 10px;
+  font-weight: lighter;
+}

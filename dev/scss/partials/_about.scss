@@ -1,0 +1,120 @@
+.aboutContainer {
+  // width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutCard {
+  width: 90%;
+  margin: 5px;
+    @include respond-at($bp-small) {
+      width:80%;
+      margin: 15px;
+    }
+    @include respond-at($bp-med) {
+      width:70%;
+      margin: 40px;
+    }
+    @include respond-at($bp-large) {
+      width:70%;
+      margin: 60px;
+    }
+  & > p {
+    text-align: justify;
+  }
+
+}
+
+.aboutInfoMain {
+  line-height: 2;
+}
+
+.aboutToolsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.aboutIcon {
+
+  text-align: center;
+  & > svg {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+  }
+}
+.aboutToolsList {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  @supports (display: grid) {
+    display: grid;
+    @include respond-at($bp-small) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 25px;
+    }
+    @include respond-at($bp-med) {
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 35px;
+    }
+    @include respond-at($bp-large) {
+      grid-template-columns: repeat(6, 1fr);
+      grid-gap: 50px;
+    }
+  }
+}
+
+.aboutTechnology {
+  text-transform: capitalize;
+  text-align: center;
+  display: inline-flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex: 1 1 auto;
+  width: 30%;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  & h4 {
+    margin: 5px 0;
+  }
+  @include respond-at($bp-small) {
+    width: 31%;
+    // margin: 10px;
+  }
+  @include respond-at($bp-med) {
+    width: 25%;
+    // margin: 10px;
+  }
+  @include respond-at($bp-large) {
+    width: 20%;
+    margin: 10px;
+  }
+  @supports (display: grid) {
+    @include respond-at($bp-small) {
+      width:100%;
+      margin: 5px;
+    }
+    @include respond-at($bp-med) {
+      width:100%;
+      margin: 5px;
+    }
+    @include respond-at($bp-large) {
+      width:100%;
+      margin: 5px;
+    }
+  }
+}
+.icons {
+  text-align: center;
+}
+
+.aboutPicture {
+  width: 25%;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 10px 10px $cardColor1;
+}

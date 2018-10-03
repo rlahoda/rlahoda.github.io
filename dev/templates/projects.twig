@@ -19,7 +19,7 @@
 
   <div class="projectsGrid">
   {% for project in projects %}
-  <div class="infoCard">
+  <div class="infoCard projectsCard">
     <ul class="noList noListBlock">
       {% for item in project.technology %}
         <li class="projectTechnology">
@@ -27,7 +27,7 @@
         <h4>{{ item }}</h4>
       </li>
       {% endfor %}
-    </ul> 
+    </ul>
     <h2 class="">{{ project.title }}</h2>
     <h4 class=""><a class="" href="{{ project.linkaddress }}" onclick="trackOutboundLink('{{ project.linkaddress }}'); return false;" target="_blank">{{ project.linktitle }}</a></h4>
     {% if project.githubaddress %}<h5 class=""><a class="" href="{{ project.githubaddress }}" onclick="trackOutboundLink('{{ project.githubaddress }}'); return false;" target="_blank">View Github Repo</a></h5>{% endif %}

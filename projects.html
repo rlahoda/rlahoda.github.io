@@ -43,8 +43,8 @@
   <ul id="navList" class="noList navList">
     <li id="navList__menuLink" class="navList_in"><a href="javascript:void(0);" onclick="navListAnimate()">Menu</a><span id="navList__menuLink--arrow">⇦</span></li>
     <li class="navList__navItem" id="navList__homeLink"><a href="/">Home</a></li>
+    <li class="navList__navItem" id="navList__aboutLink"><a href="about.html">About</a></li>
     <li class="navList__navItem" id="navList__projectsLink"><a href="projects.html">Projects</a></li>
-    <li class="navList__navItem" id="navList__mediaLink"><a href="http://media.roblahoda.com">Multimedia Work <svg width="1em" height="1em" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" ratio="1"> <path fill="none" stroke="#000" stroke-width="1.1" d="M10.625,12.375 L7.525,15.475 C6.825,16.175 5.925,16.175 5.225,15.475 L4.525,14.775 C3.825,14.074 3.825,13.175 4.525,12.475 L7.625,9.375"></path> <path fill="none" stroke="#000" stroke-width="1.1" d="M9.325,7.375 L12.425,4.275 C13.125,3.575 14.025,3.575 14.724,4.275 L15.425,4.975 C16.125,5.675 16.125,6.575 15.425,7.275 L12.325,10.375"></path> <path fill="none" stroke="#000" stroke-width="1.1" d="M7.925,11.875 L11.925,7.975"></path></svg></a></li>
     <li class="navList__navItem" id="navList__contactLink"><a href="contact.html">Contact</a></li>
   </ul>
 </nav>
@@ -67,48 +67,7 @@
   </div>
 
   <div class="projectsGrid">
-    <div class="infoCard">
-    <ul class="noList noListBlock">
-              <li class="projectTechnology">
-          <div class="icons projectIcon" id="drupal8"></div>
-        <h4>drupal8</h4>
-      </li>
-          </ul> 
-    <h2 class="">Heritage Insurance Advisors</h2>
-    <h4 class=""><a class="" href="http://hia-oh.com/?utm_source=github&utm_medium=github_pages&utm_campaign=github_projects&utm_content=projects" onclick="trackOutboundLink('http://hia-oh.com/?utm_source=github&utm_medium=github_pages&utm_campaign=github_projects&utm_content=projects'); return false;" target="_blank">hia-oh.com</a></h4>
-        <p>A client site built in Drupal. Primarily laid out using Paragraphs for editorial flexibility. The Webform module was used for an interactive quote form.</p>
-      </div>
-    <div class="infoCard">
-    <ul class="noList noListBlock">
-              <li class="projectTechnology">
-          <div class="icons projectIcon" id="drupal8"></div>
-        <h4>drupal8</h4>
-      </li>
-              <li class="projectTechnology">
-          <div class="icons projectIcon" id="flexbox"></div>
-        <h4>flexbox</h4>
-      </li>
-          </ul> 
-    <h2 class="">Love God Love France</h2>
-    <h4 class=""><a class="" href="https://www.lovegodlovefrance.org/?utm_source=github&utm_medium=github_pages&utm_campaign=github_projects&utm_content=projects" onclick="trackOutboundLink('https://www.lovegodlovefrance.org/?utm_source=github&utm_medium=github_pages&utm_campaign=github_projects&utm_content=projects'); return false;" target="_blank">lovegodlovefrance.org</a></h4>
-    <h5 class=""><a class="" href="https://github.com/rlahoda/lahodatheme" onclick="trackOutboundLink('https://github.com/rlahoda/lahodatheme'); return false;" target="_blank">View Github Repo</a></h5>    <p>A personal project site built in Drupal with the Paragraphs module for editorial flexibility. There is also use of SVG built through a Paragraph type, Mailchimp integration, and a fully responsive design.</p>
-     <p class="projectAlert">Please Note: This site describes my family's desire to move internationally. However, due to circumstances beyond our control, this is no longer our intent.</p>    </div>
-    <div class="infoCard">
-    <ul class="noList noListBlock">
-              <li class="projectTechnology">
-          <div class="icons projectIcon" id="react"></div>
-        <h4>react</h4>
-      </li>
-              <li class="projectTechnology">
-          <div class="icons projectIcon" id="javascript"></div>
-        <h4>javascript</h4>
-      </li>
-          </ul> 
-    <h2 class="">React-based Multilingual Calendar/Clock</h2>
-    <h4 class=""><a class="" href="http://reactcalendar.roblahoda.com/" onclick="trackOutboundLink('http://reactcalendar.roblahoda.com/'); return false;" target="_blank">reactcalendar.roblahoda.com/</a></h4>
-    <h5 class=""><a class="" href="https://github.com/rlahoda/Multilingual-Calendar-React" onclick="trackOutboundLink('https://github.com/rlahoda/Multilingual-Calendar-React'); return false;" target="_blank">View Github Repo</a></h5>    <p>This is a multilingual clock and calendar built on React. The user is able to change the interface depending on their preferences. The languages are pulled by AJAX from a Github repository and used to populate the interface.</p>
-      </div>
-    <div class="infoCard">
+    <div class="infoCard projectsCard">
     <ul class="noList noListBlock">
               <li class="projectTechnology">
           <div class="icons projectIcon" id="javascript"></div>
@@ -122,12 +81,53 @@
           <div class="icons projectIcon" id="cssgrid"></div>
         <h4>cssgrid</h4>
       </li>
-          </ul> 
+          </ul>
     <h2 class="">CSS Grid Periodic Table</h2>
     <h4 class=""><a class="" href="https://codepen.io/rlahoda/full/QVxYoE/" onclick="trackOutboundLink('https://codepen.io/rlahoda/full/QVxYoE/'); return false;" target="_blank">Codepen Link</a></h4>
     <h5 class=""><a class="" href="https://github.com/rlahoda/css_grid_periodic_table" onclick="trackOutboundLink('https://github.com/rlahoda/css_grid_periodic_table'); return false;" target="_blank">View Github Repo</a></h5>    <p>This is a representation of the Periodic Table of Elements and is entirely laid out using CSS Grid. The table is generated through an AJAX call to a Github repo containing the raw information in JSON. Using Greensock Animations I set up a fade in upon loading of the table and also a fade and scaling effect on the elements.</p>
       </div>
-    <div class="infoCard">
+    <div class="infoCard projectsCard">
+    <ul class="noList noListBlock">
+              <li class="projectTechnology">
+          <div class="icons projectIcon" id="react"></div>
+        <h4>react</h4>
+      </li>
+              <li class="projectTechnology">
+          <div class="icons projectIcon" id="javascript"></div>
+        <h4>javascript</h4>
+      </li>
+          </ul>
+    <h2 class="">React-based Multilingual Calendar/Clock</h2>
+    <h4 class=""><a class="" href="http://reactcalendar.roblahoda.com/" onclick="trackOutboundLink('http://reactcalendar.roblahoda.com/'); return false;" target="_blank">reactcalendar.roblahoda.com/</a></h4>
+    <h5 class=""><a class="" href="https://github.com/rlahoda/Multilingual-Calendar-React" onclick="trackOutboundLink('https://github.com/rlahoda/Multilingual-Calendar-React'); return false;" target="_blank">View Github Repo</a></h5>    <p>This is a multilingual clock and calendar built on React. The user is able to change the interface depending on their preferences. The languages are pulled by AJAX from a Github repository and used to populate the interface.</p>
+      </div>
+    <div class="infoCard projectsCard">
+    <ul class="noList noListBlock">
+              <li class="projectTechnology">
+          <div class="icons projectIcon" id="drupal8"></div>
+        <h4>drupal8</h4>
+      </li>
+          </ul>
+    <h2 class="">Heritage Insurance Advisors</h2>
+    <h4 class=""><a class="" href="http://hia-oh.com/?utm_source=github&utm_medium=github_pages&utm_campaign=github_projects&utm_content=projects" onclick="trackOutboundLink('http://hia-oh.com/?utm_source=github&utm_medium=github_pages&utm_campaign=github_projects&utm_content=projects'); return false;" target="_blank">hia-oh.com</a></h4>
+        <p>A client site built in Drupal. Primarily laid out using Paragraphs for editorial flexibility. The Webform module was used for an interactive quote form.</p>
+      </div>
+    <div class="infoCard projectsCard">
+    <ul class="noList noListBlock">
+              <li class="projectTechnology">
+          <div class="icons projectIcon" id="drupal8"></div>
+        <h4>drupal8</h4>
+      </li>
+              <li class="projectTechnology">
+          <div class="icons projectIcon" id="flexbox"></div>
+        <h4>flexbox</h4>
+      </li>
+          </ul>
+    <h2 class="">Love God Love France</h2>
+    <h4 class=""><a class="" href="https://www.lovegodlovefrance.org/?utm_source=github&utm_medium=github_pages&utm_campaign=github_projects&utm_content=projects" onclick="trackOutboundLink('https://www.lovegodlovefrance.org/?utm_source=github&utm_medium=github_pages&utm_campaign=github_projects&utm_content=projects'); return false;" target="_blank">lovegodlovefrance.org</a></h4>
+    <h5 class=""><a class="" href="https://github.com/rlahoda/lahodatheme" onclick="trackOutboundLink('https://github.com/rlahoda/lahodatheme'); return false;" target="_blank">View Github Repo</a></h5>    <p>A personal project site built in Drupal with the Paragraphs module for editorial flexibility. There is also use of SVG built through a Paragraph type, Mailchimp integration, and a fully responsive design.</p>
+     <p class="projectAlert">Please Note: This site describes my family's desire to move internationally. However, due to circumstances beyond our control, this is no longer our intent.</p>    </div>
+    <div class="infoCard projectsCard">
     <ul class="noList noListBlock">
               <li class="projectTechnology">
           <div class="icons projectIcon" id="javascript"></div>
@@ -137,12 +137,12 @@
           <div class="icons projectIcon" id="cssgrid"></div>
         <h4>cssgrid</h4>
       </li>
-          </ul> 
+          </ul>
     <h2 class="">Multilingual Calendar/Clock with CSS Grid and Flexbox Fallback</h2>
     <h4 class=""><a class="" href="https://codepen.io/rlahoda/pen/JaJNdW" onclick="trackOutboundLink('https://codepen.io/rlahoda/pen/JaJNdW'); return false;" target="_blank">Codepen Link</a></h4>
     <h5 class=""><a class="" href="https://github.com/rlahoda/multilingual-calendar" onclick="trackOutboundLink('https://github.com/rlahoda/multilingual-calendar'); return false;" target="_blank">View Github Repo</a></h5>    <p>This is a multilingual clock and calendar built on Javascript. It allows the user to select between English, French, and Spanish languages for the interface, to change the start day of the week, and to change the date order from Month/Day/Year to Day/Month/Year. This includes a Flexbox fallback for browsers that don't support Grid yet.</p>
       </div>
-    <div class="infoCard">
+    <div class="infoCard projectsCard">
     <ul class="noList noListBlock">
               <li class="projectTechnology">
           <div class="icons projectIcon" id="javascript"></div>
@@ -152,12 +152,12 @@
           <div class="icons projectIcon" id="flexbox"></div>
         <h4>flexbox</h4>
       </li>
-          </ul> 
+          </ul>
     <h2 class="">Flashcards</h2>
     <h4 class=""><a class="" href="https://codepen.io/rlahoda/full/xVaWpd/" onclick="trackOutboundLink('https://codepen.io/rlahoda/full/xVaWpd/'); return false;" target="_blank">Codepen Link</a></h4>
         <p>This is a flashcard app that allows the user to enter information at the top for each cardas well as a front and a back, then the text is added to the "cards" below. The user is able to add cards as they go to have as many cards as they want.</p>
       </div>
-    <div class="infoCard">
+    <div class="infoCard projectsCard">
     <ul class="noList noListBlock">
               <li class="projectTechnology">
           <div class="icons projectIcon" id="twig"></div>
@@ -167,7 +167,7 @@
           <div class="icons projectIcon" id="gulp"></div>
         <h4>gulp</h4>
       </li>
-          </ul> 
+          </ul>
     <h2 class="">Rob Lahoda Media</h2>
     <h4 class=""><a class="" href="http://media.roblahoda.com/?utm_source=github&utm_medium=github_pages&utm_campaign=github_projects&utm_content=projects" onclick="trackOutboundLink('http://media.roblahoda.com/?utm_source=github&utm_medium=github_pages&utm_campaign=github_projects&utm_content=projects'); return false;" target="_blank">media.roblahoda.com</a></h4>
     <h5 class=""><a class="" href="https://github.com/rlahoda/roblahoda-media" onclick="trackOutboundLink('https://github.com/rlahoda/roblahoda-media'); return false;" target="_blank">View Github Repo</a></h5>    <p>This is my multimedia production portfolio site. I have been doing multimedia production for over 13 years. Built with a custom Gulp build workflow, the site includes Sass compiling and Twig templating.</p>
@@ -175,6 +175,41 @@
     </div>
 </main>
 
-        
+    <footer>
+  <div class="footerLinks__container">
+    <h4 class="">Say Hi!</h4>
+  <ul class="noList noListBlock footerLinks__list">
+              <li class="footerLinks__list--item">
+          <a class="footerLinks__link" href="mailto:rob@roblahoda.com" onclick="trackOutboundLink('rob@roblahoda.com'); return false;" target="_blank"><span class="icons footerLinks__link--icon" id="email"></span>
+          <p class="">Email</p></a>
+        </li>
+              <li class="footerLinks__list--item">
+          <a class="footerLinks__link" href="https://twitter.com/rlahoda" onclick="trackOutboundLink('https://twitter.com/rlahoda'); return false;" target="_blank"><span class="icons footerLinks__link--icon" id="twitter"></span>
+          <p class="">Twitter</p></a>
+        </li>
+              <li class="footerLinks__list--item">
+          <a class="footerLinks__link" href="https://github.com/rlahoda" onclick="trackOutboundLink('https://github.com/rlahoda'); return false;" target="_blank"><span class="icons footerLinks__link--icon" id="github"></span>
+          <p class="">Github</p></a>
+        </li>
+              <li class="footerLinks__list--item">
+          <a class="footerLinks__link" href="https://codepen.io/rlahoda/" onclick="trackOutboundLink('https://codepen.io/rlahoda/'); return false;" target="_blank"><span class="icons footerLinks__link--icon" id="codepen">
+          </span>
+          <p class="">Codepen</p></a>
+        </li>
+              <li class="footerLinks__list--item">
+          <a class="footerLinks__link" href="https://www.drupal.org/u/rlahoda/" onclick="trackOutboundLink('https://www.drupal.org/u/rlahoda/'); return false;" target="_blank"><span class="icons footerLinks__link--icon" id="drupal"></span>
+          <p class="">Drupal.org</p></a>
+        </li>
+              <li class="footerLinks__list--item">
+          <a class="footerLinks__link" href="https://www.linkedin.com/in/robert-lahoda/" onclick="trackOutboundLink('https://www.linkedin.com/in/robert-lahoda/'); return false;" target="_blank"><span class="icons footerLinks__link--icon" id="linkedin"></span>
+          <p class="">Linkedin</p></a>
+        </li>
+            </ul>
+            <p class="smallText">Copyright ©2018 Rob Lahoda - Logos are property of their respective owners.</p>
+</div>
+
+
+</footer>
+
   </body>
 </html>
