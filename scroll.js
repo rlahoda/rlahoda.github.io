@@ -1,14 +1,14 @@
-var height = documentHeight();
+let height = documentHeight();
 // console.log(height);
-var windowHeight = window.innerHeight;
-var scrollHeightAmt = (height - windowHeight);
-var hQuarter = (height / 4);
+let windowHeight = window.innerHeight;
+let scrollHeightAmt = (height - windowHeight);
+let hQuarter = (height / 4);
 // console.log(hQuarter);
-var hHalf = hQuarter * 2;
+let hHalf = hQuarter * 2;
 // console.log(hHalf);
-var hThreeQ = hQuarter * 3;
+let hThreeQ = hQuarter * 3;
 // console.log(hThreeQ);
-var scroll = 0;
+let scroll = 0;
 // console.log(scroll);
 function documentHeight() {
     return Math.max(

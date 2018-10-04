@@ -1,83 +1,172 @@
 {% extends 'base.twig' %}
 
 {% block primarycontent %}
-<div class="uk-section uk-margin-top" uk-grid>
-  <div class="uk-width-1-1 uk-width-3-4@m uk-padding-large uk-padding-remove-right uk-padding-remove-top">
-    <h2 class="uk-margin-small-left">About Me</h2>
-    <div class="uk-column-1-2@s uk-margin-small-left">
-      <p>Hi, I'm Rob Lahoda. I'm a front-end web developer specializing in Drupal with a diverse skillset including video production, graphic design, photography, and more. Thanks to my background I am strongly positioned to help my projects succeed from start to finish.</p>
-      <p>I'm not only skilled in designing impactful and compelling sites, but I'm also able to build the theme to bring that design to life. Once the site is live, I'm able to work with my clients to produce and utilize media and information to maximize effectivenes and impact for their target needs.</p>
-      <p>I love working closely with my clients to understand their needs and help them build a solution that covers not only their initial needs but will be able to grow and change with them as their needs change.</p>
-      <p>I have a love of learning so I'm constantly expanding and improving my skillset to allow me to find the most effective technology and techniques for every project I work on. I learn new skills quickly which helps me to stay current with the fast pace of the world front-end web design.</p>
-      <p>I'm never satisfied with meeting my client's needs. I try to find ways to exceed their ideas and help them achieve more than they thought they would through the project.</p>
-    </div>
-    <div class="uk-margin-top">
-      <h2 class="uk-margin-small-left">Projects</h2>
-      {% for site in contents %}
-      <div class="uk-card uk-card-hover uk-card-default uk-width-1-1 uk-child-width-1-2@s uk-margin-remove" uk-grid>
-      {% if loop.index is odd %}
-        <div style="border: 1px solid #777; background-image: url(assets/img/{{ site.image }}); background-position: top; background-repeat: no-repeat; background-size: cover;" class="uk-card-media-left">
-        </div>
-        {% endif %}
-        <div class="uk-card-body">
-          {% if site.alert %} <p class="uk-alert-danger">{{site.alert}}</p>  {% endif %}
-          <h2 class="uk-card-title">{{ site.title }}</h2>
-          <h4 class="uk-margin-small"><a class="uk-link-heading" href="{{ site.linkaddress }}" uk-icon="icon: link" onclick="trackOutboundLink('{{ site.linkaddress }}'); return false;" target="_blank">{{ site.linktitle }}</a></h4>
-          {% if site.githubaddress %}<h5 class="uk-margin-remove"><a class="uk-link-heading" href="{{ site.githubaddress }}" uk-icon="icon: github" onclick="trackOutboundLink('{{ site.githubaddress }}'); return false;" target="_blank">View Github Repo</a></h5>{% endif %}
-          <table class="uk-table uk-table-striped">
-            {% for row in site.siteinfo %}
-            {% if loop.first %}
-            <tr>
-              <td class="uk-text-bold">{{ row.title }}</td>
-              <td>{{ row.content }}</td>
-            </tr>
-            {% else %}
-            <tr class="uk-visible@s">
-              <td class="uk-text-bold">{{ row.title }}</td>
-              <td>{{ row.content }}</td>
-            </tr>
-            {% endif %}
-            {% endfor %}
-          </table>
-          <a class="uk-margin-top uk-label" href="{{ site.locallink }}" uk-icon="icon: chevron-right">Read More About This Project</a>
-        </div>
-        {% if loop.index is even %}
-        <div style="border: 1px solid #777; background-image: url(assets/img/{{ site.image }}); background-position: top; background-repeat: no-repeat; background-size: cover;" class="uk-card-media-right">
-        </div>
-        {% endif %}
+  <header>
+
+    <div class="name__container">
+      <div class="nameImage__container"></div>
+      <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--1')" id="nameImage__container--box--1"></div>
+      <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--2')" id="nameImage__container--box--2"></div>
+      <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--3')" id="nameImage__container--box--3"></div>
+      <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--4')" id="nameImage__container--box--4"></div>
+      <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--5')" id="nameImage__container--box--5"></div>
+      <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--6')" id="nameImage__container--box--6"></div>
+      <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--7')" id="nameImage__container--box--7"></div>
+      <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--8')" id="nameImage__container--box--8"></div>
+      <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--9')" id="nameImage__container--box--9"></div>
+      <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--10')" id="nameImage__container--box--10"></div>
+      <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--11')" id="nameImage__container--box--11"></div>
+      <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--12')" id="nameImage__container--box--12"></div>
+      <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--13')" id="nameImage__container--box--13"></div>
+      <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--14')" id="nameImage__container--box--14"></div>
+      <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--15')" id="nameImage__container--box--15"></div>
+      <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--16')" id="nameImage__container--box--16"></div>
+      <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--17')" id="nameImage__container--box--17"></div>
+      <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--18')" id="nameImage__container--box--18"></div>
+      <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--19')" id="nameImage__container--box--19"></div>
+      <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--20')" id="nameImage__container--box--20"></div>
+      <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--21')" id="nameImage__container--box--21"></div>
+      <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--22')" id="nameImage__container--box--22"></div>
+      <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--23')" id="nameImage__container--box--23"></div>
+      <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--24')" id="nameImage__container--box--24"></div>
+      <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--25')" id="nameImage__container--box--25"></div>
+      <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--26')" id="nameImage__container--box--26"></div>
+      <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--27')" id="nameImage__container--box--27"></div>
+      <div class="nameImage__container--box" onmouseover="boxesHeaderFade('nameImage__container--box--28')" id="nameImage__container--box--28"></div>
+      <div class="nameSpacer"></div>
+      <div class="firstName__container">
+        <h1 class="firstName">Rob</h1>
       </div>
-      <p></p>
-      {% endfor %}
+      <div class="lastName__container">
+
+        <h1 class="bigTitle">
+          <span id="lastName__l">L</span><span id="lastName__a1">A</span><span id="lastName__h">H</span><span id="lastName__o">O</span><span id="lastName__d">D</span><span id="lastName__a2">A</span></h1>
+
+      </div>
+      <div class="pageTagline__spacer"></div>
+      <div class="pageTagline__container">
+        <h2 id="indexTagline" class="pageTagline">I Build Websites</h2>
+        <h2 class="pageTagline__helper" aria-hidden="true">I'm. A. Visual. Storyteller.</h2>
+      </div>
     </div>
-  </div>
-  <div id="skills" class="uk-width-1-1 uk-width-1-4@m">
-    <div class=""><div class="uk-width-1-1">
-      <h2>Skills</h2>
+  </header>
+  <main>
+    <!-- <div class="arrow__container">
+      <div class="arrow">
+
+      </div>
+    </div> -->
+    <div class="homepageMain__grid">
+      <span class="homepageMain__spacer--half">
+
+      </span>
+      <div class="homepageMain__Card homepageMain__Card--links">
+        <a class="homepageMain__link infoCard" href="projects.html"><h3>Projects I've Done</h3></a>
+        <a class="homepageMain__link infoCard" href="about.html"><h3>About Me</h3></a>
+        <a class="homepageMain__link infoCard" href="contact.html"><h3>Contact Me</h3></a>
+      </div>
+      <span class="homepageMain__spacer--half">
+
+      </span>
+      <span class="homepageMain__spacer1">
+
+      </span>
+      <div class="infoCard homepageMain__Card homepageMain__Card--1">
+        <h3>I'm a front-end web developer based in central Ohio. <br>I work on all kinds of sites, but I especially love working with Drupal.</h3>
+      </div>
+      <span class="homepageMain__spacer2">
+
+      </span>
+      <span class="homepageMain__spacer3">
+
+      </span>
+      <div class="infoCard homepageMain__Card homepageMain__Card--2">
+        <h3>I've worked on projects large and small. I love building projects that tell stories and expose the user to information in an interesting and engaging way.</h3>
+      </div>
+      <span class="homepageMain__spacer4">
+
+      </span>
+      <span class="homepageMain__spacer1">
+
+      </span>
+      <div class="infoCard homepageMain__Card homepageMain__Card--3">
+        <h3>Being a part of the Drupal community is important to me. I've been to <a href="http://drupalcamppa.net/">Drupalcamp PA</a>, I'm a member of the <a href="https://www.drupal.org/association">Drupal Association</a>, and I try to contribute and share the knowledge I have with others.</h3>
+      </div>
+      <span class="homepageMain__spacer2">
+
+      </span>
+      <div class="homepageMain__spacer3"></div>
+      <div class="infoCard homepageMain__Card homepageMain__Card--4">
+        <h3>When I'm not working on projects, I love cycling, traveling, spending time with my family, and expanding my knowledge of web development.</h3>
+      </div>
+      <span class="homepageMain__spacer4"></span>
+      <span class="homepageMain__spacer1"></span>
+      <div class="infoCard homepageMain__Card homepageMain__Card--5">
+        <h3>I'm not just a developer, I'm also a photographer and videographer. <br>Check out my portfolio at <a class="" href="http://media.roblahoda.com" onclick="trackOutboundLink('http://media.roblahoda.com'); return false;" target="_blank">media.roblahoda.com</a></h3>
+      </div>
+      <span class="homepageMain__spacer2"></span>
+      <div class="infoCard homepageMain__Card homepageMain__ToolsContainer homepageMain__content--whatIUse">
+        <h2 class="">My Favorite Tools</h2>
+        <ul class="noList noListBlock homepageMain__ToolsList">
+          <!-- HTML5 -->
+          <li class="homepageMain__Technology">
+            <span class="icons homepageMain__Icon" id="html5"></span>
+            <h4>HTML5</h4></li>
+          <!-- CSS3 -->
+          <li class="homepageMain__Technology">
+            <span class="icons homepageMain__Icon" id="css3"></span>
+            <h4>CSS3</h4></li>
+          <!-- Javascript -->
+          <li class="homepageMain__Technology">
+            <span class="icons homepageMain__Icon" id="javascript"></span>
+            <h4>Javascript</h4></li>
+          <!-- Drupal -->
+          <li class="homepageMain__Technology"><a class="icons homepageMain__Icon" id="drupal" href="https://www.drupal.org">
+          <h4>Drupal</h4></a>
+            </li>
+          <!-- React -->
+          <li class="homepageMain__Technology"><a class="icons homepageMain__Icon" id="react" href="https://reactjs.org/">
+
+            <h4>React</h4></a></li>
+          <!-- Greensock -->
+          <li class="homepageMain__Technology"><a class="icons homepageMain__Icon" id="greensock" href="https://greensock.com/">
+
+            <h4>Greensock</h4></a></li>
+          <!-- Git -->
+          <li class="homepageMain__Technology"><a class="icons homepageMain__Icon" id="git" href="https://git-scm.com/">
+
+            <h4>Git</h4></a></li>
+          <!-- Github -->
+          <li class="homepageMain__Technology"><a class="icons homepageMain__Icon" id="github" href="http://github.com/">
+
+            <h4>Github</h4></a></li>
+          <!-- Lando -->
+          <li class="homepageMain__Technology"><a class="icons homepageMain__Icon" id="lando" href="https://docs.devwithlando.io/">
+
+            <h4>Lando</h4></a></li>
+          <!-- Atom -->
+          <li class="homepageMain__Technology"><a class="icons homepageMain__Icon" id="atom" href="https://atom.io/">
+
+            <h4>Atom</h4></a></li>
+          <!-- Gulp -->
+          <li class="homepageMain__Technology"><a class="icons homepageMain__Icon" id="gulp"  href="https://gulpjs.com/">
+            <h4>Gulp</h4></a></li>
+          <!-- Sass -->
+          <li class="homepageMain__Technology"><a class="icons homepageMain__Icon" id="sass" href="https://sass-lang.com/">
+
+            <h4>SASS</h4></a></li>
+          <!-- Paragraphs -->
+          <li class="homepageMain__Technology"><a class="icons homepageMain__Icon" id="paragraphs" href="https://www.drupal.org/project/paragraphs">
+
+            <h4>Paragraphs Module</h4></a></li>
+          <!-- UIKit -->
+          <li class="homepageMain__Technology"><a class="icons homepageMain__Icon" id="uikit" href="https://getuikit.com/">
+
+            <h4>UIKit</h4></a></li>
+
+        </ul>
+      </div>
     </div>
-    <div class="uk-width-1-1 uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-1@m" uk-grid>
+  </main>
 
-      <div>
-      <h3 class="uk-margin-remove-top">Experience Level ⭐⭐⭐</h3>
-      <ul class="uk-list uk-list-striped uk-margin-remove-top">
-        {% for skill in skills.threestars %}
-          <li class="uk-text-small">{{ skill }}</li>
-        {% endfor %}
-      </ul></div>
-
-      <div><h3 class="uk-margin-remove-top">Experience Level ⭐⭐</h3>
-      <ul class="uk-list uk-margin-remove-top uk-list-striped">
-        {% for skill in skills.twostars %}
-          <li class="uk-text-small">{{ skill }}</li>
-        {% endfor %}
-      </ul></div>
-
-      <div><h3 class="uk-margin-remove-top">Experience Level ⭐</h3>
-      <ul class="uk-list uk-list-striped uk-margin-remove-top">
-        {% for skill in skills.onestar %}
-          <li class="uk-text-small">{{ skill }}</li>
-        {% endfor %}
-      </ul></div>
-    </div></div>
-  </div>
-</div>
 {% endblock %}

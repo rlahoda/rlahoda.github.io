@@ -1,0 +1,96 @@
+.projectsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  @supports (display: grid) {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+  }
+
+  margin: 5px;
+  @include respond-at($bp-small) {
+    margin: 10px;
+  }
+  @include respond-at($bp-med) {
+    margin: 15px;
+  }
+  @include respond-at($bp-large) {
+    margin: 30px;
+  }
+  @supports (display: grid) {
+    @include respond-at($bp-small) {
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 25px;
+    }
+    @include respond-at($bp-med) {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 35px;
+    }
+    @include respond-at($bp-large) {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-gap: 50px;
+    }
+  }
+
+}
+
+// background-color: #49D18F;
+// box-shadow: 6px 6px #35DDFF;
+
+.projectsCard {
+  width: 90%;
+  margin: 5px;
+  @include respond-at($bp-small) {
+    margin: 15px;
+    width: 40%;
+  }
+  @include respond-at($bp-med) {
+    margin: 40px;
+    width: 25%;
+  }
+  @include respond-at($bp-large) {
+    margin: 60px;
+    width: 15%;
+  }
+  @supports (display: grid) {
+    @include respond-at($bp-small) {
+      width:100%;
+      margin: 5px;
+    }
+    @include respond-at($bp-med) {
+      width:100%;
+      margin: 5px;
+    }
+    @include respond-at($bp-large) {
+      width:100%;
+      margin: 5px;
+    }
+  }
+
+}
+
+
+.projectAlert {
+  font-style: italic;
+  font-size: 10px;
+}
+
+.projectTechnology {
+  text-transform: capitalize;
+  display: inline-flex;
+  flex-wrap: wrap;
+  flex: 1 1 auto;
+  width: 25%;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  & h4 {
+    margin: 5px 0;
+  }
+}
+
+.projectIcon {
+  width: 40px;
+  height: 40px;
+}

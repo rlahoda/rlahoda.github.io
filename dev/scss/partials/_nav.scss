@@ -1,0 +1,35 @@
+.navFixed {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  right: 0;
+}
+
+.navList {
+  background-color: $cardColor1;
+  box-shadow: 6px 6px $cardColor2;
+  color: black;
+  & a {
+    color: inherit;
+  }
+  padding: 5px;
+  & > li {
+    display: inline-block;
+  }
+  & >li:nth-child(1) {
+    margin: 10px 25px;
+  }
+  & >li:nth-child(n+2) {
+    opacity: 0;
+    width: 0;
+    margin: 10px, 0;
+    padding: 0;
+    white-space: nowrap;
+  }
+}
+
+#navList__menuLink--arrow {
+  margin-left: 10px;
+  display: inline-block;
+  tranform: rotate(90deg);
+}

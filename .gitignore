@@ -12,6 +12,3 @@ node_modules
 
 # Sass Cache Files
 .sass-cache
-
-# Core's dependencies are managed with Composer.
-/vendor

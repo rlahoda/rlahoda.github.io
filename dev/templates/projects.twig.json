@@ -1,0 +1,92 @@
+{
+  "projects": {
+    "codepenperiodictable": {
+      "title": "CSS Grid Periodic Table",
+      "linktitle": "Codepen Link",
+      "linkaddress": "https://codepen.io/rlahoda/full/QVxYoE/",
+      "trackingaddress": "codepenperiodictable",
+      "githubaddress": "https://github.com/rlahoda/css_grid_periodic_table",
+      "githubtracking": "codepenperiodictablecode",
+      "description": "This is a representation of the Periodic Table of Elements and is entirely laid out using CSS Grid. The table is generated through an AJAX call to a Github repo containing the raw information in JSON. Using Greensock Animations I set up a fade in upon loading of the table and also a fade and scaling effect on the elements.",
+      "technology": {
+        "1": "javascript",
+        "2": "greensock",
+        "3": "cssgrid"
+      }
+    },
+    "reactcalendarclock": {
+      "title": "React-based Multilingual Calendar/Clock",
+      "linktitle": "reactcalendar.roblahoda.com/",
+      "linkaddress": "http://reactcalendar.roblahoda.com/",
+      "trackingaddress": "http://reactcalendar.roblahoda.com/?utm_source=github&utm_medium=github_pages&utm_campaign=github_projects&utm_content=projects",
+      "githubaddress": "https://github.com/rlahoda/Multilingual-Calendar-React",
+      "githubtracking": "https://github.com/rlahoda/Multilingual-Calendar-React",
+      "description": "This is a multilingual clock and calendar built on React. The user is able to change the interface depending on their preferences. The languages are pulled by AJAX from a Github repository and used to populate the interface.",
+      "technology": {
+        "1": "react",
+        "2": "javascript"
+      }
+    },
+    "hia": {
+      "title": "Heritage Insurance Advisors",
+      "linktitle": "hia-oh.com",
+      "linkaddress": "http://hia-oh.com/?utm_source=github&utm_medium=github_pages&utm_campaign=github_projects&utm_content=projects",
+      "trackingaddress": "hia-oh.com",
+      "description": "A client site built in Drupal. Primarily laid out using Paragraphs for editorial flexibility. The Webform module was used for an interactive quote form.",
+      "technology": {
+        "1": "drupal8"
+      }
+    },
+    "lglf": {
+      "alert": "Please Note: This site describes my family's desire to move internationally. However, due to circumstances beyond our control, this is no longer our intent.",
+      "title": "Love God Love France",
+      "linktitle": "lovegodlovefrance.org",
+      "linkaddress": "https://www.lovegodlovefrance.org/?utm_source=github&utm_medium=github_pages&utm_campaign=github_projects&utm_content=projects",
+      "trackingaddress": "lovegodlovefrance.org",
+      "githubaddress": "https://github.com/rlahoda/lahodatheme",
+      "githubtracking": "https://github.com/rlahoda/lahodatheme",
+      "description": "A personal project site built in Drupal with the Paragraphs module for editorial flexibility. There is also use of SVG built through a Paragraph type, Mailchimp integration, and a fully responsive design.",
+      "technology": {
+        "1": "drupal8",
+        "2": "flexbox"
+      }
+    },
+    "codepencalendarclock": {
+      "title": "Multilingual Calendar/Clock with CSS Grid and Flexbox Fallback",
+      "linktitle": "Codepen Link",
+      "linkaddress": "https://codepen.io/rlahoda/pen/JaJNdW",
+      "trackingaddress": "codepencalendarclock",
+      "githubaddress": "https://github.com/rlahoda/multilingual-calendar",
+      "githubtracking": "codepencalendarclockcode",
+      "description": "This is a multilingual clock and calendar built on Javascript. It allows the user to select between English, French, and Spanish languages for the interface, to change the start day of the week, and to change the date order from Month/Day/Year to Day/Month/Year. This includes a Flexbox fallback for browsers that don't support Grid yet.",
+      "technology": {
+        "1": "javascript",
+        "2": "cssgrid"
+      }
+    },
+    "codepenflashcards": {
+      "title": "Flashcards",
+      "linktitle": "Codepen Link",
+      "linkaddress": "https://codepen.io/rlahoda/full/xVaWpd/",
+      "trackingaddress": "codepenflashcards",
+      "description": "This is a flashcard app that allows the user to enter information at the top for each cardas well as a front and a back, then the text is added to the \"cards\" below. The user is able to add cards as they go to have as many cards as they want.",
+      "technology": {
+        "1": "javascript",
+        "2": "flexbox"
+      }
+    },
+    "roblahodamedia": {
+      "title": "Rob Lahoda Media",
+      "linktitle": "media.roblahoda.com",
+      "linkaddress": "http://media.roblahoda.com/?utm_source=github&utm_medium=github_pages&utm_campaign=github_projects&utm_content=projects",
+      "trackingaddress": "media.roblahoda.com",
+      "githubaddress": "https://github.com/rlahoda/roblahoda-media",
+      "githubtracking": "https://github.com/rlahoda/roblahoda-media",
+      "description": "This is my multimedia production portfolio site. I have been doing multimedia production for over 13 years. Built with a custom Gulp build workflow, the site includes Sass compiling and Twig templating.",
+      "technology": {
+        "1": "twig",
+        "2": "gulp"
+      }
+    }
+  }
+}

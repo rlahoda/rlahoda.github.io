@@ -1,0 +1,34 @@
+{
+  "contacts": {
+      "email":{
+        "title":"Email",
+        "linkaddress": "mailto:rob@roblahoda.com",
+        "method": "email"
+      },
+      "twitter":{
+        "title":"Twitter",
+        "linkaddress": "https://twitter.com/rlahoda",
+        "method": "twitter"
+      },
+      "github":{
+        "title":"Github",
+        "linkaddress": "https://github.com/rlahoda",
+        "method": "github"
+      },
+      "codepen":{
+        "title":"Codepen",
+        "linkaddress": "https://codepen.io/rlahoda/",
+        "method": "codepen"
+      },
+      "drupal":{
+        "title":"Drupal.org",
+        "linkaddress": "https://www.drupal.org/u/rlahoda/",
+        "method": "drupal"
+      },
+      "linkedin":{
+        "title":"Linkedin",
+        "linkaddress": "https://www.linkedin.com/in/robert-lahoda/",
+        "method": "linkedin"
+      }
+  }
+}

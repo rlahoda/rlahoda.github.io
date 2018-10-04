@@ -1,8 +1,8 @@
-var basePaths = {
+const basePaths = {
   src: 'dev/',
   dest: './',
 };
-var paths = {
+const paths = {
   images: {
     src: basePaths.src + 'assets/img/',
     dest: basePaths.dest + 'assets/img/'
@@ -23,7 +23,7 @@ var paths = {
     dest: basePaths.dest + 'css/'
   }
 };
-var globs = {
+const globs = {
   "scripts": ['dev/**/*.js'],
   "styles": ['dev/scss/**/*.scss'],
   "images": ['dev/assets/**/*'],
@@ -32,23 +32,27 @@ var globs = {
 }
 
 // Load Gulp
-var gulp = require('gulp');
+const gulp = require('gulp');
 
 // BroswerSync
-var browserSync = require('browser-sync').create();
-var reload = browserSync.reload;
+const browserSync = require('browser-sync').create();
+const reload = browserSync.reload;
 
 // Twig stuff
-var twig = require('gulp-twig');
-var data = require('gulp-data');
-var fs = require('fs');
-var path = require('path');
+const twig = require('gulp-twig');
+const data = require('gulp-data');
+const fs = require('fs');
+const path = require('path');
 
 
 // SASS compiling
-var postcss = require('gulp-postcss');
-var sass = require('gulp-sass');
-var sourcemaps = require('gulp-sourcemaps');
+const postcss = require('gulp-postcss');
+const sass = require('gulp-sass');
+const sourcemaps = require('gulp-sourcemaps');
+
+// JS concatenation and minification
+const concat = require('gulp-concat');
+const minify = require('gulp-minify');
 
 
 // Starts a webserver and opens a window that will update dynamically as you save your work
@@ -110,16 +114,24 @@ gulp.task('css', function() {
 });
 
 //Copy scripts to appropriate folder, this would be used for scripts you write yourself and just copies them straight over from the dev folder to the docs folder
-gulp.task('scripts', function() {
-  gulp.src('./dev/scripts/*.js')
-    .pipe(gulp.dest('./scripts/'));
-});
+// gulp.task('scripts', function() {
+//   gulp.src('./dev/scripts/*.js')
+//     .pipe(gulp.dest('./scripts/'));
+// });
 
 
 //Copy vendor packages to appropriate folder, this would be used for 3rd party plugins like bootstrap and just copies them straight over from the dev folder to the docs folder
 gulp.task('vendor', function() {
   gulp.src('./dev/vendor/**/*.*')
     .pipe(gulp.dest('./vendor/'));
+});
+
+// Concatenate JS files into a single file and minify
+gulp.task('concat', function() {
+  return gulp.src('./dev/scripts/*.js')
+    .pipe(concat('scripts.js'))
+    .pipe(minify())
+    .pipe(gulp.dest('./scripts'));
 });
 
 //Copy images to appropriate folder, this just copies them straight over from the dev folder to the docs folder
@@ -130,8 +142,9 @@ gulp.task('images', function() {
 
 // Watch task, this watches the different folders and when there's a change, it triggers the appropriate function. The bottom one triggers the page refresh in your browser
 gulp.task('watch', ['browser-sync'], function() {
-  gulp.watch(globs.scripts, ['scripts']);
+  // gulp.watch(globs.scripts, ['scripts']);
   gulp.watch(globs.styles, ['css']);
+  gulp.watch(globs.scripts, ['concat']);
   gulp.watch(globs.twig, ['twig-json']);
   gulp.watch(globs.vendor, ['vendor']);
   gulp.watch(globs.images, ['images']);
@@ -140,4 +153,4 @@ gulp.task('watch', ['browser-sync'], function() {
 
 
 gulp.task('default', ['build', 'watch']);
-gulp.task('build', ['twig-json', 'css', 'vendor', 'scripts', 'images']);
+gulp.task('build', ['twig-json', 'css', 'concat', 'vendor','images']);

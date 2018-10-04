@@ -1,32 +1,77 @@
-
-
-html, .uk-h1, .uk-h2, .uk-h3, .uk-h4, .uk-h5, .uk-h6, h1, h2, h3, h4, h5, h6, p, td {
-  font-family: "mr-eaves-xl-modern",sans-serif;
-  font-weight: 300;
-  letter-spacing: 0.05em;
-  // font-size: 17px;
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
 }
 
-h1 {
-  font-size: 2rem;
-  text-align: center;
-  font-weight: 400;
-  // font-style: normal;
+@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+  $u1: unit($min-vw);
+  $u2: unit($max-vw);
+  $u3: unit($min-font-size);
+  $u4: unit($max-font-size);
 
-  &::first-letter {
-    text-transform: capitalize;
-  }
-
-  @include respond-at($bp-small) {
-    // font-size: 3em;
-    font-size: 2.625rem;
-  }
-
-  @include respond-at($bp-large) {
-
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    & {
+      font-size: $min-font-size;
+      @media screen and (min-width: $min-vw) {
+        font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+      }
+      @media screen and (min-width: $max-vw) {
+        font-size: $max-font-size;
+      }
+    }
   }
 }
 
-.uk-label:hover {
-  color: white;
+$min_width: 320px;
+$max_width: 1200px;
+$lastName_min_font: 50px;
+$lastName_max_font: 220px;
+
+
+.bigTitle {
+  @include fluid-type($min_width, $max_width, $lastName_min_font, $lastName_max_font);
+}
+
+
+$firstName_min_font: 20px;
+$firstName_max_font: 40px;
+
+.firstName {
+  @include fluid-type($min_width, $max_width, $firstName_min_font, $firstName_max_font);
+  // background-color: blue;
+  text-align: right;
+  // transform: rotate(270deg);
+  // transform-origin: bottom right;
+  // @include respond-at($bp-small) {
+  //   transform: rotate(0deg);
+  // }
+}
+
+$tagLine_min_font: 15px;
+$tagLine_max_font: 25px;
+.pageTagline__container {
+  text-align: right;
+}
+
+.pageTagline {
+  font-weight: normal;
+  @include fluid-type($min_width, $max_width, $tagLine_min_font, $tagLine_max_font);
+}
+
+$homepageMainHeading_min_font: 25px;
+$homepageMainHeading_max_font: 35px;
+.homepageMain__heading {
+  @include fluid-type($min_width, $max_width, $homepageMainHeading_min_font, $homepageMainHeading_max_font);
+  margin: 0;
+}
+
+$homepageMainHeading2_min_font: 15px;
+$homepageMainHeading2_max_font: 25px;
+.homepageMain__heading2 {
+  @include fluid-type($min_width, $max_width, $homepageMainHeading2_min_font, $homepageMainHeading2_max_font);
+  margin: 0;
+  font-weight: normal;
+}
+
+.homepageMain__p {
+
 }
