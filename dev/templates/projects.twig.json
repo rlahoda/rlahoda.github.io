@@ -1,5 +1,18 @@
 {
   "projects": {
+    "westervillecaringsharing": {
+      "title": "Westerville Caring and Sharing",
+      "linktitle": "westervillecaringandsharing.org",
+      "linkaddress": "http://www.westervillecaringandsharing.org",
+      "trackingaddress": "westervillecaringsharing",
+      "githubaddress": "https://github.com/rlahoda/westerville_caring_sharing",
+      "githubtracking": "westervillecaringsharingcode",
+      "description": "A local charity contacted me about helping them update their website in time for their 25th anniversary.",
+      "technology": {
+        "1": "flexbox",
+        "2": "twig"
+      }
+    },
     "codepenperiodictable": {
       "title": "CSS Grid Periodic Table",
       "linktitle": "Codepen Link",
