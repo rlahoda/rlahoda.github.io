@@ -1,5 +1,19 @@
 {
   "projects": {
+    "rockpaperscissors": {
+      "title": "Rock, Paper, Scissors Game",
+      "linktitle": "Codepen Link",
+      "linkaddress": "https://codepen.io/rlahoda/full/pxBKmY/",
+      "trackingaddress": "rockpaperscissors",
+      "githubaddress": "https://github.com/rlahoda/rock-paper-scissors",
+      "githubtracking": "rockpaperscissorscode",
+      "description": "This is a Javascript Rock-Paper-Scissors game! It started off as a simple command-line challenge that I decided to translate into a full game with Greensock GSAP animation, SVG graphics for the hands, emojis, and a retro feel. It uses an ES6 Promise structure to get a random name for player 2 from a random name API.",
+      "technology": {
+        "1": "javascript",
+        "2": "greensock",
+        "3": "codepen"
+      }
+    },
     "westervillecaringsharing": {
       "title": "Westerville Caring and Sharing",
       "linktitle": "westervillecaringandsharing.org",
