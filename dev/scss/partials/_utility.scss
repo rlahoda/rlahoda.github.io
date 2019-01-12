@@ -11,9 +11,15 @@
   margin: 0;
 }
 
-:focus:not(:focus-visible) {outline:none}
+:focus:not(:focus-visible) {
+  outline: none;
+}
 
 .smallText {
   font-size: 10px;
   font-weight: lighter;
+}
+
+hr {
+  border-color: white;
 }

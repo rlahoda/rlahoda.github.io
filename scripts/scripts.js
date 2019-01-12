@@ -41,14 +41,15 @@ var _gsScope="undefined"!=typeof module&&module.exports&&"undefined"!=typeof glo
 var _gsScope="undefined"!=typeof module&&module.exports&&"undefined"!=typeof global?global:this||window;(_gsScope._gsQueue||(_gsScope._gsQueue=[])).push(function(){"use strict";_gsScope._gsDefine("easing.Back",["easing.Ease"],function(a){var b,c,d,e,f=_gsScope.GreenSockGlobals||_gsScope,g=f.com.greensock,h=2*Math.PI,i=Math.PI/2,j=g._class,k=function(b,c){var d=j("easing."+b,function(){},!0),e=d.prototype=new a;return e.constructor=d,e.getRatio=c,d},l=a.register||function(){},m=function(a,b,c,d,e){var f=j("easing."+a,{easeOut:new b,easeIn:new c,easeInOut:new d},!0);return l(f,a),f},n=function(a,b,c){this.t=a,this.v=b,c&&(this.next=c,c.prev=this,this.c=c.v-b,this.gap=c.t-a)},o=function(b,c){var d=j("easing."+b,function(a){this._p1=a||0===a?a:1.70158,this._p2=1.525*this._p1},!0),e=d.prototype=new a;return e.constructor=d,e.getRatio=c,e.config=function(a){return new d(a)},d},p=m("Back",o("BackOut",function(a){return(a-=1)*a*((this._p1+1)*a+this._p1)+1}),o("BackIn",function(a){return a*a*((this._p1+1)*a-this._p1)}),o("BackInOut",function(a){return(a*=2)<1?.5*a*a*((this._p2+1)*a-this._p2):.5*((a-=2)*a*((this._p2+1)*a+this._p2)+2)})),q=j("easing.SlowMo",function(a,b,c){b=b||0===b?b:.7,null==a?a=.7:a>1&&(a=1),this._p=1!==a?b:0,this._p1=(1-a)/2,this._p2=a,this._p3=this._p1+this._p2,this._calcEnd=c===!0},!0),r=q.prototype=new a;return r.constructor=q,r.getRatio=function(a){var b=a+(.5-a)*this._p;return a<this._p1?this._calcEnd?1-(a=1-a/this._p1)*a:b-(a=1-a/this._p1)*a*a*a*b:a>this._p3?this._calcEnd?1===a?0:1-(a=(a-this._p3)/this._p1)*a:b+(a-b)*(a=(a-this._p3)/this._p1)*a*a*a:this._calcEnd?1:b},q.ease=new q(.7,.7),r.config=q.config=function(a,b,c){return new q(a,b,c)},b=j("easing.SteppedEase",function(a,b){a=a||1,this._p1=1/a,this._p2=a+(b?0:1),this._p3=b?1:0},!0),r=b.prototype=new a,r.constructor=b,r.getRatio=function(a){return 0>a?a=0:a>=1&&(a=.999999999),((this._p2*a|0)+this._p3)*this._p1},r.config=b.config=function(a,c){return new b(a,c)},c=j("easing.ExpoScaleEase",function(a,b,c){this._p1=Math.log(b/a),this._p2=b-a,this._p3=a,this._ease=c},!0),r=c.prototype=new a,r.constructor=c,r.getRatio=function(a){return this._ease&&(a=this._ease.getRatio(a)),(this._p3*Math.exp(this._p1*a)-this._p3)/this._p2},r.config=c.config=function(a,b,d){return new c(a,b,d)},d=j("easing.RoughEase",function(b){b=b||{};for(var c,d,e,f,g,h,i=b.taper||"none",j=[],k=0,l=0|(b.points||20),m=l,o=b.randomize!==!1,p=b.clamp===!0,q=b.template instanceof a?b.template:null,r="number"==typeof b.strength?.4*b.strength:.4;--m>-1;)c=o?Math.random():1/l*m,d=q?q.getRatio(c):c,"none"===i?e=r:"out"===i?(f=1-c,e=f*f*r):"in"===i?e=c*c*r:.5>c?(f=2*c,e=f*f*.5*r):(f=2*(1-c),e=f*f*.5*r),o?d+=Math.random()*e-.5*e:m%2?d+=.5*e:d-=.5*e,p&&(d>1?d=1:0>d&&(d=0)),j[k++]={x:c,y:d};for(j.sort(function(a,b){return a.x-b.x}),h=new n(1,1,null),m=l;--m>-1;)g=j[m],h=new n(g.x,g.y,h);this._prev=new n(0,0,0!==h.t?h:h.next)},!0),r=d.prototype=new a,r.constructor=d,r.getRatio=function(a){var b=this._prev;if(a>b.t){for(;b.next&&a>=b.t;)b=b.next;b=b.prev}else for(;b.prev&&a<=b.t;)b=b.prev;return this._prev=b,b.v+(a-b.t)/b.gap*b.c},r.config=function(a){return new d(a)},d.ease=new d,m("Bounce",k("BounceOut",function(a){return 1/2.75>a?7.5625*a*a:2/2.75>a?7.5625*(a-=1.5/2.75)*a+.75:2.5/2.75>a?7.5625*(a-=2.25/2.75)*a+.9375:7.5625*(a-=2.625/2.75)*a+.984375}),k("BounceIn",function(a){return(a=1-a)<1/2.75?1-7.5625*a*a:2/2.75>a?1-(7.5625*(a-=1.5/2.75)*a+.75):2.5/2.75>a?1-(7.5625*(a-=2.25/2.75)*a+.9375):1-(7.5625*(a-=2.625/2.75)*a+.984375)}),k("BounceInOut",function(a){var b=.5>a;return a=b?1-2*a:2*a-1,a=1/2.75>a?7.5625*a*a:2/2.75>a?7.5625*(a-=1.5/2.75)*a+.75:2.5/2.75>a?7.5625*(a-=2.25/2.75)*a+.9375:7.5625*(a-=2.625/2.75)*a+.984375,b?.5*(1-a):.5*a+.5})),m("Circ",k("CircOut",function(a){return Math.sqrt(1-(a-=1)*a)}),k("CircIn",function(a){return-(Math.sqrt(1-a*a)-1)}),k("CircInOut",function(a){return(a*=2)<1?-.5*(Math.sqrt(1-a*a)-1):.5*(Math.sqrt(1-(a-=2)*a)+1)})),e=function(b,c,d){var e=j("easing."+b,function(a,b){this._p1=a>=1?a:1,this._p2=(b||d)/(1>a?a:1),this._p3=this._p2/h*(Math.asin(1/this._p1)||0),this._p2=h/this._p2},!0),f=e.prototype=new a;return f.constructor=e,f.getRatio=c,f.config=function(a,b){return new e(a,b)},e},m("Elastic",e("ElasticOut",function(a){return this._p1*Math.pow(2,-10*a)*Math.sin((a-this._p3)*this._p2)+1},.3),e("ElasticIn",function(a){return-(this._p1*Math.pow(2,10*(a-=1))*Math.sin((a-this._p3)*this._p2))},.3),e("ElasticInOut",function(a){return(a*=2)<1?-.5*(this._p1*Math.pow(2,10*(a-=1))*Math.sin((a-this._p3)*this._p2)):this._p1*Math.pow(2,-10*(a-=1))*Math.sin((a-this._p3)*this._p2)*.5+1},.45)),m("Expo",k("ExpoOut",function(a){return 1-Math.pow(2,-10*a)}),k("ExpoIn",function(a){return Math.pow(2,10*(a-1))-.001}),k("ExpoInOut",function(a){return(a*=2)<1?.5*Math.pow(2,10*(a-1)):.5*(2-Math.pow(2,-10*(a-1)))})),m("Sine",k("SineOut",function(a){return Math.sin(a*i)}),k("SineIn",function(a){return-Math.cos(a*i)+1}),k("SineInOut",function(a){return-.5*(Math.cos(Math.PI*a)-1)})),j("easing.EaseLookup",{find:function(b){return a.map[b]}},!0),l(f.SlowMo,"SlowMo","ease,"),l(d,"RoughEase","ease,"),l(b,"SteppedEase","ease,"),p},!0)}),_gsScope._gsDefine&&_gsScope._gsQueue.pop()(),function(){"use strict";var a=function(){return _gsScope.GreenSockGlobals||_gsScope};"undefined"!=typeof module&&module.exports?(require("../TweenLite.min.js"),module.exports=a()):"function"==typeof define&&define.amd&&define(["TweenLite"],a)}();
 function addIcons() {
   //get all the items on the page that have the icons class
-  const icons = document.getElementsByClassName('icons');
+  const icons = document.getElementsByClassName("icons");
   //iterate through them to figure out which icon it needs
   for (icon of icons) {
     //append the icon code to the item, probably through a lookup of some kind.
     // console.log(icon.id);
     switch (icon.id) {
       case "paragraphs":
-        icon.innerHTML = `<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 128 128" style="enable-background:new 0 0 128 128;" xml:space="preserve">
+        icon.innerHTML =
+          `<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 128 128" style="enable-background:new 0 0 128 128;" xml:space="preserve">
         <path
           d="M58.5,13.9c0,1,0,1.8,0,2.6c0,34.3,0,68.5,0,102.8c0,0.6,0,1.3,0,1.9c0.2,1.5,1.2,2.4,2.6,2.3c1.5-0.1,2.3-0.9,2.4-2.3
           c0.1-0.6,0-1.1,0-1.7c0-19,0-38,0-56.9c0-0.7,0-1.4,0-2.3c0.9,0,1.5,0,2.1,0c4.2,0,8.4,0,12.6,0c14.9-0.1,25.9-12.7,25.6-26.4
@@ -60,13 +61,15 @@ function addIcons() {
         </svg>` + icon.innerHTML;
         break;
       case "javascript":
-        icon.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 128 128">
+        icon.innerHTML =
+          `<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 128 128">
           <path
             d="M2 1v125h125v-125h-125zm66.119 106.513c-1.845 3.749-5.367 6.212-9.448 7.401-6.271 1.44-12.269.619-16.731-2.059-2.986-1.832-5.318-4.652-6.901-7.901l9.52-5.83c.083.035.333.487.667 1.071 1.214 2.034 2.261 3.474 4.319 4.485 2.022.69 6.461 1.131 8.175-2.427 1.047-1.81.714-7.628.714-14.065-.001-10.115.046-20.188.046-30.188h11.709c0 11 .06 21.418 0 32.152.025 6.58.596 12.446-2.07 17.361zm48.574-3.308c-4.07 13.922-26.762 14.374-35.83 5.176-1.916-2.165-3.117-3.296-4.26-5.795 4.819-2.772 4.819-2.772 9.508-5.485 2.547 3.915 4.902 6.068 9.139 6.949 5.748.702 11.531-1.273 10.234-7.378-1.333-4.986-11.77-6.199-18.873-11.531-7.211-4.843-8.901-16.611-2.975-23.335 1.975-2.487 5.343-4.343 8.877-5.235l3.688-.477c7.081-.143 11.507 1.727 14.756 5.355.904.916 1.642 1.904 3.022 4.045-3.772 2.404-3.76 2.381-9.163 5.879-1.154-2.486-3.069-4.046-5.093-4.724-3.142-.952-7.104.083-7.926 3.403-.285 1.023-.226 1.975.227 3.665 1.273 2.903 5.545 4.165 9.377 5.926 11.031 4.474 14.756 9.271 15.672 14.981.882 4.916-.213 8.105-.38 8.581z"/>
         </svg>` + icon.innerHTML;
         break;
       case "greensock":
-        icon.innerHTML = `<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 128 128" style="enable-background:new 0 0 128 128;" xml:space="preserve">
+        icon.innerHTML =
+          `<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 128 128" style="enable-background:new 0 0 128 128;" xml:space="preserve">
             <style type="text/css">
               .st0 {
                 fill: none;
@@ -348,7 +351,8 @@ function addIcons() {
         </svg>` + icon.innerHTML;
         break;
       case "uikit":
-        icon.innerHTML = `<svg viewbox="0 0 256 297" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveaspectratio="xMidYMid">
+        icon.innerHTML =
+          `<svg viewbox="0 0 256 297" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveaspectratio="xMidYMid">
           <g>
             <path
               d="M174.656,28.4373333 L125.717333,0 L74.6453333,31.7226667 L124.266667,59.136 L174.656,28.4373333 L174.656,28.4373333 Z M198.058667,40.6826667 L147.52,71.424 L204.8,104.533333 L204.8,192 L127.552,235.904 L51.2,192 L51.2,123.733333 L0,98.304 L0,221.866667 L125.717333,296.533333 L256,222.421333 L256,74.1546667 L198.058667,40.6826667 L198.058667,40.6826667 Z"></path>
@@ -356,7 +360,8 @@ function addIcons() {
         </svg>` + icon.innerHTML;
         break;
       case "sass":
-        icon.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 128 128">
+        icon.innerHTML =
+          `<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 128 128">
             <path
               fill-rule="evenodd"
               clip-rule="evenodd"
@@ -364,7 +369,8 @@ function addIcons() {
           </svg>` + icon.innerHTML;
         break;
       case "gulp":
-        icon.innerHTML = `  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 128 128">
+        icon.innerHTML =
+          `  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 128 128">
                 <path
                   fill-rule="evenodd"
                   clip-rule="evenodd"
@@ -372,7 +378,8 @@ function addIcons() {
               </svg>` + icon.innerHTML;
         break;
       case "atom":
-        icon.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 128 128">
+        icon.innerHTML =
+          `<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 128 128">
           <path
             fill-rule="evenodd"
             clip-rule="evenodd"
@@ -380,24 +387,29 @@ function addIcons() {
         </svg>` + icon.innerHTML;
         break;
       case "html5":
-        icon.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 128 128">
+        icon.innerHTML =
+          `<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 128 128">
           <path
-            d="M19.569 27l8.087 89.919 36.289 9.682 36.39-9.499 8.096-90.102h-88.862zm72.041 20.471l-.507 5.834-.223 2.695h-42.569l1.017 12h40.54l-.271 2.231-2.615 28.909-.192 1.69-22.79 6.134v-.005l-.027.012-22.777-5.916-1.546-17.055h11.168l.791 8.46 12.385 3.139.006-.234v.012l12.412-2.649 1.296-13.728h-38.555l-2.734-30.836-.267-3.164h55.724000000000004l-.266 2.471zM27.956 1.627h5.622v5.556h5.144v-5.556h5.623v16.822h-5.623v-5.633h-5.143v5.633h-5.623v-16.822zM51.738 7.206h-4.95v-5.579h15.525v5.579h-4.952v11.243h-5.623v-11.243zM64.777 1.627h5.862l3.607 5.911 3.603-5.911h5.865v16.822h-5.601v-8.338l-3.867 5.981h-.098l-3.87-5.981v8.338h-5.502v-16.822zM86.513 1.627h5.624v11.262h7.907v5.561h-13.531v-16.823z"/></svg>` + icon.innerHTML;
+            d="M19.569 27l8.087 89.919 36.289 9.682 36.39-9.499 8.096-90.102h-88.862zm72.041 20.471l-.507 5.834-.223 2.695h-42.569l1.017 12h40.54l-.271 2.231-2.615 28.909-.192 1.69-22.79 6.134v-.005l-.027.012-22.777-5.916-1.546-17.055h11.168l.791 8.46 12.385 3.139.006-.234v.012l12.412-2.649 1.296-13.728h-38.555l-2.734-30.836-.267-3.164h55.724000000000004l-.266 2.471zM27.956 1.627h5.622v5.556h5.144v-5.556h5.623v16.822h-5.623v-5.633h-5.143v5.633h-5.623v-16.822zM51.738 7.206h-4.95v-5.579h15.525v5.579h-4.952v11.243h-5.623v-11.243zM64.777 1.627h5.862l3.607 5.911 3.603-5.911h5.865v16.822h-5.601v-8.338l-3.867 5.981h-.098l-3.87-5.981v8.338h-5.502v-16.822zM86.513 1.627h5.624v11.262h7.907v5.561h-13.531v-16.823z"/></svg>` +
+          icon.innerHTML;
         break;
       case "css3":
-        icon.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 128 128">
+        icon.innerHTML =
+          `<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 128 128">
           <path
             d="M19.67 26l8.069 90.493 36.206 10.05 36.307-10.063 8.078-90.48h-88.66zm69.21 50.488l-2.35 21.892.009 1.875-22.539 6.295v.001l-.018.015-22.719-6.225-1.537-17.341h11.141l.79 8.766 12.347 3.295-.004.015v-.032l12.394-3.495 1.308-14.549h-25.907000000000004l-.222-2.355-.506-5.647-.265-2.998h27.886000000000003l1.014-11h-42.473l-.223-2.589-.506-6.03-.265-3.381h55.597l-.267 3.334-2.685 30.154"/><path d="M89 14.374l-7.149-8.374h7.149v-5h-16v4.363l8.39 7.637h-8.39v5h16zM70 14.374l-6.807-8.374h6.807v-5h-15v4.363l7.733 7.637h-7.733v5h15zM52 13h-8v-7h8v-5h-14v17h14z"/>
         </svg>` + icon.innerHTML;
         break;
       case "drupal":
-        icon.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 128 128">
+        icon.innerHTML =
+          `<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 128 128">
           <path
             d="M91.086 24.929c-6.352-3.956-12.344-5.514-18.336-9.469-3.717-2.517-8.869-8.51-13.186-13.663-.838 8.27-3.355 11.626-6.23 14.022-6.113 4.795-9.949 6.232-15.222 9.109-4.435 2.277-28.524 16.659-28.524 47.58 0 30.923 26.008 53.693 54.891 53.693 28.887 0 53.934-20.974 53.934-52.734s-23.491-46.142-27.327-48.538zm.693 89.994c-.6.6-6.113 4.435-12.584 5.034-6.473.599-15.221.96-20.496-3.835-.838-.84-.598-2.037 0-2.517.6-.479 1.08-.84 1.799-.84s.6 0 .959.24c2.396 1.917 5.992 3.476 13.662 3.476 7.672 0 13.064-2.158 15.461-3.955 1.08-.84 1.559-.119 1.678.359.121.48.361 1.2-.479 2.038zm-20.974-10.906c1.318-1.199 3.477-3.115 5.514-3.955 2.037-.838 3.117-.719 5.033-.719 1.918 0 3.955.119 5.395 1.079 1.438.958 2.277 3.116 2.756 4.314s0 1.917-.959 2.396c-.838.48-.959.24-1.797-1.316-.84-1.559-1.559-3.117-5.754-3.117s-5.514 1.438-7.551 3.117c-2.037 1.678-2.756 2.277-3.475 1.316-.719-.958-.481-1.916.838-3.115zm31.761.959c-4.314-.359-12.945-13.783-18.459-14.022-6.949-.24-22.053 14.501-33.918 14.501-7.19 0-9.347-1.077-11.745-2.637-3.596-2.516-5.393-6.352-5.273-11.625.12-9.349 8.869-18.098 19.895-18.218 14.023-.118 23.73 13.903 30.803 13.783 5.992-.119 17.498-11.864 23.131-11.864 5.992 0 7.672 6.232 7.672 9.947s-1.199 10.427-4.076 14.621c-2.877 4.195-4.674 5.754-8.03 5.514z"/>
         </svg>` + icon.innerHTML;
         break;
       case "drupal8":
-        icon.innerHTML = `<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        icon.innerHTML =
+          `<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
         	 viewBox="-249 83.1 381 416" enable-background="new -249 83.1 381 416" xml:space="preserve">
             <g>
             	<g>
@@ -422,20 +434,23 @@ function addIcons() {
         ` + icon.innerHTML;
         break;
       case "react":
-        icon.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 128 128" enable-background="new 0 0 128 128">
+        icon.innerHTML =
+          `<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 128 128" enable-background="new 0 0 128 128">
           <g><circle cx="64" cy="64" r="11.4"/><path
             d="M107.3 45.2c-2.2-.8-4.5-1.6-6.9-2.3.6-2.4 1.1-4.8 1.5-7.1 2.1-13.2-.2-22.5-6.6-26.1-1.9-1.1-4-1.6-6.4-1.6-7 0-15.9 5.2-24.9 13.9-9-8.7-17.9-13.9-24.9-13.9-2.4 0-4.5.5-6.4 1.6-6.4 3.7-8.7 13-6.6 26.1.4 2.3.9 4.7 1.5 7.1-2.4.7-4.7 1.4-6.9 2.3-12.5 4.8-19.3 11.4-19.3 18.8s6.9 14 19.3 18.8c2.2.8 4.5 1.6 6.9 2.3-.6 2.4-1.1 4.8-1.5 7.1-2.1 13.2.2 22.5 6.6 26.1 1.9 1.1 4 1.6 6.4 1.6 7.1 0 16-5.2 24.9-13.9 9 8.7 17.9 13.9 24.9 13.9 2.4 0 4.5-.5 6.4-1.6 6.4-3.7 8.7-13 6.6-26.1-.4-2.3-.9-4.7-1.5-7.1 2.4-.7 4.7-1.4 6.9-2.3 12.5-4.8 19.3-11.4 19.3-18.8s-6.8-14-19.3-18.8zm-14.8-30.5c4.1 2.4 5.5 9.8 3.8 20.3-.3 2.1-.8 4.3-1.4 6.6-5.2-1.2-10.7-2-16.5-2.5-3.4-4.8-6.9-9.1-10.4-13 7.4-7.3 14.9-12.3 21-12.3 1.3 0 2.5.3 3.5.9zm-11.2 59.3c-1.8 3.2-3.9 6.4-6.1 9.6-3.7.3-7.4.4-11.2.4-3.9 0-7.6-.1-11.2-.4-2.2-3.2-4.2-6.4-6-9.6-1.9-3.3-3.7-6.7-5.3-10 1.6-3.3 3.4-6.7 5.3-10 1.8-3.2 3.9-6.4 6.1-9.6 3.7-.3 7.4-.4 11.2-.4 3.9 0 7.6.1 11.2.4 2.2 3.2 4.2 6.4 6 9.6 1.9 3.3 3.7 6.7 5.3 10-1.7 3.3-3.4 6.6-5.3 10zm8.3-3.3c1.5 3.5 2.7 6.9 3.8 10.3-3.4.8-7 1.4-10.8 1.9 1.2-1.9 2.5-3.9 3.6-6 1.2-2.1 2.3-4.2 3.4-6.2zm-25.6 27.1c-2.4-2.6-4.7-5.4-6.9-8.3 2.3.1 4.6.2 6.9.2 2.3 0 4.6-.1 6.9-.2-2.2 2.9-4.5 5.7-6.9 8.3zm-18.6-15c-3.8-.5-7.4-1.1-10.8-1.9 1.1-3.3 2.3-6.8 3.8-10.3 1.1 2 2.2 4.1 3.4 6.1 1.2 2.2 2.4 4.1 3.6 6.1zm-7-25.5c-1.5-3.5-2.7-6.9-3.8-10.3 3.4-.8 7-1.4 10.8-1.9-1.2 1.9-2.5 3.9-3.6 6-1.2 2.1-2.3 4.2-3.4 6.2zm25.6-27.1c2.4 2.6 4.7 5.4 6.9 8.3-2.3-.1-4.6-.2-6.9-.2-2.3 0-4.6.1-6.9.2 2.2-2.9 4.5-5.7 6.9-8.3zm22.2 21l-3.6-6c3.8.5 7.4 1.1 10.8 1.9-1.1 3.3-2.3 6.8-3.8 10.3-1.1-2.1-2.2-4.2-3.4-6.2zm-54.5-16.2c-1.7-10.5-.3-17.9 3.8-20.3 1-.6 2.2-.9 3.5-.9 6 0 13.5 4.9 21 12.3-3.5 3.8-7 8.2-10.4 13-5.8.5-11.3 1.4-16.5 2.5-.6-2.3-1-4.5-1.4-6.6zm-24.7 29c0-4.7 5.7-9.7 15.7-13.4 2-.8 4.2-1.5 6.4-2.1 1.6 5 3.6 10.3 6 15.6-2.4 5.3-4.5 10.5-6 15.5-13.8-4-22.1-10-22.1-15.6zm28.5 49.3c-4.1-2.4-5.5-9.8-3.8-20.3.3-2.1.8-4.3 1.4-6.6 5.2 1.2 10.7 2 16.5 2.5 3.4 4.8 6.9 9.1 10.4 13-7.4 7.3-14.9 12.3-21 12.3-1.3 0-2.5-.3-3.5-.9zm60.8-20.3c1.7 10.5.3 17.9-3.8 20.3-1 .6-2.2.9-3.5.9-6 0-13.5-4.9-21-12.3 3.5-3.8 7-8.2 10.4-13 5.8-.5 11.3-1.4 16.5-2.5.6 2.3 1 4.5 1.4 6.6zm9-15.6c-2 .8-4.2 1.5-6.4 2.1-1.6-5-3.6-10.3-6-15.6 2.4-5.3 4.5-10.5 6-15.5 13.8 4 22.1 10 22.1 15.6 0 4.7-5.8 9.7-15.7 13.4z"/>
           </g>
         </svg>` + icon.innerHTML;
         break;
       case "git":
-        icon.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 128 128">
+        icon.innerHTML =
+          `<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 128 128">
           <path
             d="M124.737 58.378l-55.116-55.114c-3.172-3.174-8.32-3.174-11.497 0l-11.444 11.446 14.518 14.518c3.375-1.139 7.243-.375 9.932 2.314 2.703 2.706 3.461 6.607 2.294 9.993l13.992 13.993c3.385-1.167 7.292-.413 9.994 2.295 3.78 3.777 3.78 9.9 0 13.679-3.78 3.78-9.901 3.78-13.683 0-2.842-2.844-3.545-7.019-2.105-10.521l-13.048-13.048-.002 34.341c.922.455 1.791 1.063 2.559 1.828 3.778 3.777 3.778 9.898 0 13.683-3.779 3.777-9.904 3.777-13.679 0-3.778-3.784-3.778-9.905 0-13.683.934-.933 2.014-1.638 3.167-2.11v-34.659c-1.153-.472-2.231-1.172-3.167-2.111-2.862-2.86-3.551-7.06-2.083-10.576l-14.313-14.313-37.792 37.79c-3.175 3.177-3.175 8.325 0 11.5l55.117 55.114c3.174 3.174 8.32 3.174 11.499 0l54.858-54.858c3.174-3.176 3.174-8.327-.001-11.501z"/>
         </svg>` + icon.innerHTML;
         break;
       case "github":
-        icon.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 128 128">
+        icon.innerHTML =
+          `<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 128 128">
           <g>
             <path
               fill-rule="evenodd"
@@ -446,7 +461,8 @@ function addIcons() {
         </svg>` + icon.innerHTML;
         break;
       case "cssgrid":
-        icon.innerHTML = `
+        icon.innerHTML =
+          `
                   <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
           viewBox="0 0 128 128">
           <g>
@@ -468,7 +484,8 @@ function addIcons() {
         ` + icon.innerHTML;
         break;
       case "flexbox":
-        icon.innerHTML = `<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        icon.innerHTML =
+          `<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
         	 viewBox="0 0 128 128" style="enable-background:new 0 0 128 128;" xml:space="preserve">
           <g>
           	<path d="M63.6,58.1c-6.1,0-9.4,5.7-9.4,12.6c0,6.9,3.5,12.3,9.4,12.3c6,0,9.3-5.5,9.3-12.6
@@ -488,7 +505,8 @@ function addIcons() {
         ` + icon.innerHTML;
         break;
       case "twitter":
-        icon.innerHTML = `<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        icon.innerHTML =
+          `<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
           	 viewBox="0 0 128 128" style="enable-background:new 0 0 128 128;" xml:space="preserve">
 
           <path id="original" d="M40.7,115.3c47.6,0,73.7-39.5,73.7-73.7c0-1.1,0-2.2-0.1-3.3c5.1-3.7,9.4-8.2,12.9-13.4
@@ -499,7 +517,8 @@ function addIcons() {
           </svg>` + icon.innerHTML;
         break;
       case "codepen":
-        icon.innerHTML = `<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        icon.innerHTML =
+          `<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
         	 viewBox="0 0 128 128" style="enable-background:new 0 0 128 128;" xml:space="preserve">
 
               <path  d="M124.3,40.5L67.1,2.1c-1.9-1.3-3.8-1.3-6.3,0L3.7,40.5c-1.9,1.3-2.5,3.1-2.5,5v37.7c0,1.9,0.6,3.8,2.5,4.4
@@ -511,11 +530,14 @@ function addIcons() {
         ` + icon.innerHTML;
         break;
       case "linkedin":
-        icon.innerHTML = `
-            <svg id="Linkedin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><title>Artboard 14</title><path id="plain" d="M116,3H12a8.91,8.91,0,0,0-9,8.8V116.22A8.91,8.91,0,0,0,12,125H116a8.93,8.93,0,0,0,9-8.81V11.77A8.93,8.93,0,0,0,116,3ZM39.17,107H21.06V48.73H39.17Zm-9-66.21a10.5,10.5,0,1,1,10.49-10.5A10.5,10.5,0,0,1,30.12,40.77ZM107,107H88.89V78.65c0-6.75-.12-15.44-9.41-15.44s-10.87,7.36-10.87,15V107H50.53V48.73H67.89v8h.24c2.42-4.58,8.32-9.41,17.13-9.41C103.6,47.28,107,59.35,107,75Z"/></svg>` + icon.innerHTML;
+        icon.innerHTML =
+          `
+            <svg id="Linkedin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><title>Artboard 14</title><path id="plain" d="M116,3H12a8.91,8.91,0,0,0-9,8.8V116.22A8.91,8.91,0,0,0,12,125H116a8.93,8.93,0,0,0,9-8.81V11.77A8.93,8.93,0,0,0,116,3ZM39.17,107H21.06V48.73H39.17Zm-9-66.21a10.5,10.5,0,1,1,10.49-10.5A10.5,10.5,0,0,1,30.12,40.77ZM107,107H88.89V78.65c0-6.75-.12-15.44-9.41-15.44s-10.87,7.36-10.87,15V107H50.53V48.73H67.89v8h.24c2.42-4.58,8.32-9.41,17.13-9.41C103.6,47.28,107,59.35,107,75Z"/></svg>` +
+          icon.innerHTML;
         break;
       case "email":
-        icon.innerHTML = `<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        icon.innerHTML =
+          `<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
       	 viewBox="0 0 128 128" style="enable-background:new 0 0 128 128;" xml:space="preserve">
 
         <path d="M1.9,31.3v9.5c0,0,52.9,27.2,55.7,28c6.3,1.7,6.2,1.8,12.7,0s55.7-28,55.7-28v-9.5H1.9z"/>
@@ -524,7 +546,8 @@ function addIcons() {
         ` + icon.innerHTML;
         break;
       case "lando":
-        icon.innerHTML = `<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        icon.innerHTML =
+          `<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
       	 viewBox="0 0 128 128"  xml:space="preserve">
           <path d="M126.8,61.1c-1,7.2-1.9,14-3.9,21.2c-4.8,16.8-16.4,27.4-31.8,35.1c-9.6,4.3-19.7,7.2-29.8,6.3c-13.5-1-26.5-4.3-37.5-13
           	c-0.5,0-0.5-0.5-1-1c4.3-1,9.1-1.9,13-3.4c6.7-2.9,13.5-5.8,19.7-9.1c4.3-2.4,8.7-3.9,14-4.8c9.1-1.4,14.9-6.7,18.8-14.9
@@ -541,7 +564,8 @@ function addIcons() {
           ` + icon.innerHTML;
         break;
       case "twig":
-        icon.innerHTML = `
+        icon.innerHTML =
+          `
         <svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
         	 viewBox="0 0 128 128" style="enable-background:new 0 0 128 128;" xml:space="preserve">
         <polygon points="68.1,124.6 65.2,114.5 65.2,124.2 "/>
@@ -566,76 +590,138 @@ function addIcons() {
         </svg>
         ` + icon.innerHTML;
         break;
+      case "redux":
+        icon.innerHTML =
+          `
+  <svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+  	 viewBox="0 0 128 128" style="enable-background:new 0 0 128 128;" xml:space="preserve">
+  <g>
+  	<path d="M87.6,86.3c4.2-0.4,7.5-4.1,7.3-8.5c-0.1-4.4-3.8-7.9-8.2-7.9h-0.3c-4.5,0.1-8.1,4-7.9,8.5
+  		c0.1,2.2,1,4.1,2.3,5.4c-5,9.8-12.6,17-24,23c-7.8,4.1-15.8,5.6-23.9,4.5c-6.6-0.9-11.7-3.8-14.9-8.6c-4.7-7.2-5.1-14.9-1.2-22.7
+  		c2.8-5.6,7.2-9.7,10-11.7c-0.6-1.9-1.5-5.1-1.9-7.5c-21.2,15.4-19,36.2-12.6,46c4.8,7.3,14.6,11.9,25.5,11.9c2.9,0,5.9-0.3,8.8-1
+  		C65.4,114,79.6,102.8,87.6,86.3z"/>
+  	<path d="M113.4,68.1c-11.1-13-27.5-20.2-46.3-20.2h-2.3c-1.3-2.6-4.1-4.4-7.2-4.4h-0.3c-4.5,0.1-8.1,4-7.9,8.5
+  		c0.1,4.4,3.8,7.9,8.2,7.9h0.3c3.2-0.1,6-2.2,7.2-5h2.6c11.1,0,21.7,3.2,31.2,9.5c7.3,4.8,12.6,11.1,15.5,18.8
+  		c2.5,6.2,2.3,12.2-0.3,17.3c-4.1,7.8-11,12-20.1,12c-5.9,0-11.4-1.8-14.4-3.1c-1.6,1.5-4.5,3.8-6.6,5.3c6.3,2.9,12.7,4.5,18.9,4.5
+  		c14.1,0,24.5-7.8,28.4-15.5C124.7,95.2,124.4,80.6,113.4,68.1z"/>
+  	<path d="M39,88.8c0.1,4.4,3.8,7.9,8.2,7.9h0.3c4.5-0.1,8.1-4,7.9-8.5c-0.1-4.4-3.8-7.9-8.2-7.9h-0.3
+  		c-0.3,0-0.7,0-1,0.1c-6-10-8.5-20.8-7.6-32.5c0.6-8.8,3.5-16.4,8.6-22.7c4.2-5.4,12.5-8.1,18-8.2c15.5-0.3,22.1,19,22.6,26.8
+  		c1.9,0.4,5.1,1.5,7.3,2.2c-1.8-23.7-16.4-36-30.5-36C51.2,10,39,19.5,34.2,33.5c-6.7,18.8-2.3,36.8,5.9,51
+  		C39.3,85.5,38.9,87.2,39,88.8z"/>
+  </g>
+  </svg>
+        ` + icon.innerHTML;
+        break;
+      case "leaflet":
+        icon.innerHTML =
+          `
+          <svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+    	 viewBox="0 0 128 128" style="enable-background:new 0 0 128 128;" xml:space="preserve">
+    <path d="M80.2,71.3c-1-3.3-1.1-6.8-0.2-10.5c-4.9-3.6-12.9-6.3-13.4-6.8l0,0c0,0-0.6,2.7-0.8,6c-0.2,3.3-0.4,9.3,2.3,15.6
+    	c2.7,6.3,6.5,8.2,10.2,8.4c1.8,0.1,3.1-0.6,4-1.5l-16.1-26l16.8,25.1c0.2-0.2,0.4-0.5,0.5-0.7c0.7-0.9,2-1.2,2.9-2.4
+    	C84.4,77.2,81.8,76.4,80.2,71.3z"/>
+    <path d="M1.3,90.7l0.2-1.1c4.5-2.4,10.2-3.3,14.8-5.7c1.4,0.6,2-0.3,3.5-0.2c0.5,0.5-0.7,1.1,0.8,1c3.3,0.4,6.5-0.2,9.7-0.5
+    	c3.4-0.3,6.8,0,10.1-0.2c1.1-0.1,2.7-1.5,4-0.8c0.6,1.1-1.9,1.2-1.2,2.3c6.7,1.6,23.3,8.2,26.2,1c0,0.4-0.5,1.3,0.3,1.2
+    	c5.6-2.5,15.2-7.9,16.9-9.4c1.8-1.6,4.3-1.5,6.7-2.1c4.4-1,9-2,12.8-4.2c2.3,1.6,7.2,2.4,9.8,1.9c2.7-0.6,6.9-5.1,9.2-6.7
+    	c0.9-0.6,2.2-1.8,3.1-1.2c-0.6,0.4,0.1,1.7-0.7,1.5c-0.4-0.8-1.2,0.1-1.8,0c-2.3,1.9-4.6,3.6-7,5.4c-1.1,0.7,1,1.4-0.2,1.6
+    	c-6,1.2-15.1-1.8-18.9,2.3c-6,2-11.6,2.6-17.5,5.7c-3.4,1.8-7.5,5.1-11.1,6.9c-0.6,0.3-1.5,0.4-2.2,0.8c-0.9,0.5-1.1,1.2-1.8,1.3
+    	c-1.8,0.4-5.5-0.6-7.9-0.9c-7.8-1.1-16.2-4.3-23.6-4.7c-2.9-0.2-6.4,0.3-9.7,0.5c-7,0.3-11.4,0.5-17,2.4C6.4,89.8,2.8,91.8,1.3,90.7
+    	L1.3,90.7z"/>
+    <path d="M112.8,39.3c-1.2-5.5-2.9-9.8-2.9-9.8h0c-0.8,1.3-18.8,10.6-24.2,19.3c-5.4,8.7-6.9,15.6-5,22c1.7,5.6,4.8,6.1,7,7.6
+    	l21.9-47L89,79.5c2.1,2,4.9,4.2,9.2,3.2c6.1-1.4,11.9-5.4,14.8-16.7C115.9,54.6,114,44.7,112.8,39.3z"/>
+    </svg>
+        ` + icon.innerHTML;
+        break;
     }
   }
-
-
 }
 
-
-
-function getRandom(min,max) {
-  let randomNumber = Math.floor(Math.random() * (max-min)) + 1;
+function getRandom(min, max) {
+  let randomNumber = Math.floor(Math.random() * (max - min)) + 1;
   return randomNumber;
 }
 
 function boxesHeaderRandom() {
   let tl = new TimelineMax();
   for (var i = 0; i < 10; i++) {
-    let randomId = getRandom(1,28);
+    let randomId = getRandom(1, 28);
     let elId = "#nameImage__container--box--" + randomId;
-    tl.to(elId, 2, {opacity:0});
-    tl.to(elId, 2, {opacity:1});
+    tl.to(elId, 2, { opacity: 0 });
+    tl.to(elId, 2, { opacity: 1 });
   }
   tl.eventCallback("onComplete", boxesHeaderRandom);
 }
 
-window.onload = function(){
+window.onload = function() {
   boxesHeaderRandom();
   pageTaglineLoop();
   arrowWiggle();
   addIcons();
-}
+};
 
 function boxesHeaderFade(id) {
   let tl = new TimelineMax();
-  let elId = "#"+id;
-  tl.to(elId, 1.5, {opacity:0});
-  tl.to(elId, 1.5, {opacity:1});
+  let elId = "#" + id;
+  tl.to(elId, 1.5, { opacity: 0 });
+  tl.to(elId, 1.5, { opacity: 1 });
 }
 
-
 function pageTaglineLoop() {
-  let tagLines = ["I Tell Stories", "I Theme In Drupal", "I Take Pictures", "I'm A Visual Storyteller", "I Make Videos", "I Like Pizza", "I Build Websites"];
-  let tl = new TimelineMax({repeat: -1});
+  let tagLines = [
+    "I Tell Stories",
+    "I Theme In Drupal",
+    "I Take Pictures",
+    "I'm A Visual Storyteller",
+    "I Make Videos",
+    "I Build In React",
+    "I Like Pizza",
+    "I Build Websites"
+  ];
+  let tl = new TimelineMax({ repeat: -1 });
   tl.delay(2);
   for (var i = 0; i < tagLines.length; i++) {
     let tagline = tagLines[i];
-    tl.to("#indexTagline", 1, {text:tagline, ease:Linear.easeNone, delay:2});
-
+    tl.to("#indexTagline", 1, {
+      text: tagline,
+      ease: Linear.easeNone,
+      delay: 2
+    });
   }
-  }
+}
 
 function arrowWiggle() {
-  var tl = new TimelineMax({repeat:-1});
-  tl.to("#navList__menuLink--arrow", 0.1, {opacity:0, ease: "easeIn", delay: 1});
+  var tl = new TimelineMax({ repeat: -1 });
+  tl.to("#navList__menuLink--arrow", 0.1, {
+    opacity: 0,
+    ease: "easeIn",
+    delay: 1
+  });
   tl.yoyo(true);
 }
 
-
 function navListAnimate() {
-  let direction = document.getElementById('navList__menuLink');
-    let tl = new TimelineMax();
+  let direction = document.getElementById("navList__menuLink");
+  let tl = new TimelineMax();
 
   if (direction.classList.contains("navList_in")) {
-      tl.staggerTo(".navList__navItem",0.5,{opacity:1, width: "auto", margin: "10px 25px"}, 0.1);
-      tl.to("#navList__menuLink--arrow",0.4,{text:"⇨"});
-    direction.classList.remove('navList_in');
-    direction.classList.add('navList_out');
+    tl.staggerTo(
+      ".navList__navItem",
+      0.5,
+      { opacity: 1, width: "auto", margin: "10px 25px" },
+      0.1
+    );
+    tl.to("#navList__menuLink--arrow", 0.4, { text: "⇨" });
+    direction.classList.remove("navList_in");
+    direction.classList.add("navList_out");
   } else if (direction.classList.contains("navList_out")) {
-      tl.staggerTo(".navList__navItem",0.5,{opacity:0, width: 0, margin: "10px 0" }, 0.1);
-      tl.to("#navList__menuLink--arrow",0.4,{text:"⇦"});
-    direction.classList.remove('navList_out');
-    direction.classList.add('navList_in');
+    tl.staggerTo(
+      ".navList__navItem",
+      0.5,
+      { opacity: 0, width: 0, margin: "10px 0" },
+      0.1
+    );
+    tl.to("#navList__menuLink--arrow", 0.4, { text: "⇦" });
+    direction.classList.remove("navList_out");
+    direction.classList.add("navList_in");
   }
 }

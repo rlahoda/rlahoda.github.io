@@ -12,16 +12,15 @@
       <span id="projects_p">P</span><span id="projects_r">R</span><span id="projects_o">O</span><span id="projects_j">J</span><span id="projects_e">E</span><span id="projects_c">C</span><span id="projects_t">T</span><span id="projects_s">S</span></h1>
       <div class="pageTagline__container">
         <h2 id="projectsTagline" class="pageTagline">Stuff I've Built</h2>
-        <!-- <h2 class="pageTagline__helper" aria-hidden="true">I. Theme. In. Drupal</h2> -->
       </div>
     <p></p>
   </div>
 
-
   <div class="projectsGrid">
   {% for project in projects %}
-  <div class="infoCard projectsCard">
-    <ul class="noList noListBlock">
+  <div class="infoCard projectsCard {% if project.width == "wide" %}projectsCard-wide{% endif %}">
+      <h2 class="">{{ project.title }}</h2>
+    <ul class="noList noListBlock"> 
       {% for item in project.technology %}
         <li class="projectTechnology">
           <div class="icons projectIcon" id="{{item}}"></div>
@@ -29,11 +28,13 @@
       </li>
       {% endfor %}
     </ul>
-    <h2 class="">{{ project.title }}</h2>
+    <hr>
+    {% for paragraph in project.paragraphs %}
+      <p>{{ paragraph}}</p>
+    {% endfor %}
+    {% if project.alert %} <p class="projectAlert">{{project.alert}}</p>  {% endif %}
     <h4 class=""><a class="" href="{{ project.linkaddress }}" onclick="trackOutboundLink('{{ project.linkaddress }}'); return false;" target="_blank">{{ project.linktitle }}</a></h4>
     {% if project.githubaddress %}<h5 class=""><a class="" href="{{ project.githubaddress }}" onclick="trackOutboundLink('{{ project.githubaddress }}'); return false;" target="_blank">View Github Repo</a></h5>{% endif %}
-    <p>{{ project.description}}</p>
-    {% if project.alert %} <p class="projectAlert">{{project.alert}}</p>  {% endif %}
   </div>
   {% endfor %}
   </div>
