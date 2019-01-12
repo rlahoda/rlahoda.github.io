@@ -1,1 +1,91 @@
-{}
+{
+  "tools": [
+    {
+      "name": "HTML5",
+      "icon": "html5"
+    },
+    {
+      "name": "CSS3",
+      "icon": "css3"
+    },
+    {
+      "name": "Javascript",
+      "icon": "javascript"
+    },
+    {
+      "name": "Drupal",
+      "icon": "drupal8",
+      "link": "https://www.drupal.org"
+    },
+    {
+      "name": "Twig",
+      "icon": "twig",
+      "link": "https://twig.symfony.com/"
+    },
+    {
+      "name": "React",
+      "icon": "react",
+      "link": "https://reactjs.org/"
+    },
+    {
+      "name": "Redux",
+      "icon": "redux",
+      "link": "https://react-redux.js.org/"
+    },
+    {
+      "name": "Greensock",
+      "icon": "greensock",
+      "link": "https://greensock.com/"
+    },
+    {
+      "name": "Git",
+      "icon": "git",
+      "link": "https://git-scm.com/"
+    },
+    {
+      "name": "Github",
+      "icon": "github",
+      "link": "https://github.com/rlahoda"
+    },
+    {
+      "name": "Codepen",
+      "icon": "codepen",
+      "link": "https://codepen.io/rlahoda/"
+    },
+    {
+      "name": "Lando",
+      "icon": "lando",
+      "link": "https://docs.devwithlando.io/"
+    },
+    {
+      "name": "Atom",
+      "icon": "atom",
+      "link": "https://atom.io/"
+    },
+    {
+      "name": "Gulp",
+      "icon": "gulp",
+      "link": "https://gulpjs.com/"
+    },
+    {
+      "name": "SASS",
+      "icon": "sass",
+      "link": "https://sass-lang.com/"
+    },
+    {
+      "name": "Paragraphs Module",
+      "icon": "paragraphs",
+      "link": "https://www.drupal.org/project/paragraphs"
+    },
+    {
+      "name": "Leaflet",
+      "icon": "leaflet",
+      "link": "https://leafletjs.com/"
+    },
+    {
+      "name": "UIKit",
+      "icon": "uikit",
+      "link": "https://getuikit.com/"
+    }
+  ]
+}

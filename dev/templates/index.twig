@@ -98,111 +98,18 @@
       <div class="infoCard homepageMain__Card homepageMain__ToolsContainer homepageMain__content--whatIUse">
         <h2 class="">My Favorite Tools</h2>
         <ul class="noList noListBlock homepageMain__ToolsList">
-          <!-- HTML5 -->
+          {% for tool in tools %}
           <li class="homepageMain__Technology">
-            <span class="icons homepageMain__Icon" id="html5"></span>
-            <h4>HTML5</h4>
+            {% if tool.link %}
+            <a class="icons homepageMain__Icon" id="{{ tool.icon }}" href="{{ tool.link }}" onclick="trackOutboundLink('{{ tool.link }}'); return false;">
+              <h4>{{ tool.name }}</h4></a>
+              {% else %}
+              <span class="icons homepageMain__Icon" id="{{ tool.icon}}"></span>
+              <h4>{{ tool.name}}</h4>
+          {% endif %}
           </li>
-          <!-- CSS3 -->
-          <li class="homepageMain__Technology">
-            <span class="icons homepageMain__Icon" id="css3"></span>
-            <h4>CSS3</h4>
-          </li>
-          <!-- Javascript -->
-          <li class="homepageMain__Technology">
-            <span class="icons homepageMain__Icon" id="javascript"></span>
-            <h4>Javascript</h4>
-          </li>
-          <!-- Drupal -->
-          <li class="homepageMain__Technology">
-            <a class="icons homepageMain__Icon" id="drupal" href="https://www.drupal.org" onclick="trackOutboundLink('https://www.drupal.org'); return false;">
-              <h4>Drupal</h4>
-            </a>
-          </li>
-          <!-- Twig -->
-          <li class="homepageMain__Technology">
-            <a class="icons homepageMain__Icon" id="twig" href="https://twig.symfony.com/" onclick="trackOutboundLink('https://twig.symfony.com/'); return false;">
-              <h4>Twig</h4>
-            </a>
-          </li>
-          <!-- React -->
-          <li class="homepageMain__Technology">
-            <a class="icons homepageMain__Icon" id="react" href="https://reactjs.org/" onclick="trackOutboundLink('https://reactjs.org/'); return false;">
-              <h4>React</h4>
-            </a>
-          </li>
-          <!-- Redux -->
-          <li class="homepageMain__Technology">
-            <a class="icons homepageMain__Icon" id="redux" href="https://react-redux.js.org/" onclick="trackOutboundLink('https://react-redux.js.org/'); return false;">
-              <h4>Redux</h4>
-            </a>
-          </li>
-          <!-- Greensock -->
-          <li class="homepageMain__Technology">
-            <a class="icons homepageMain__Icon" id="greensock" href="https://greensock.com/" onclick="trackOutboundLink('https://greensock.com/'); return false;">
-              <h4>Greensock</h4>
-            </a>
-          </li>
-          <!-- Git -->
-          <li class="homepageMain__Technology">
-            <a class="icons homepageMain__Icon" id="git" href="https://git-scm.com/" onclick="trackOutboundLink('https://git-scm.com/'); return false;">
-              <h4>Git</h4>
-            </a>
-          </li>
-          <!-- Github -->
-          <li class="homepageMain__Technology">
-            <a class="icons homepageMain__Icon" id="github" href="https://github.com/rlahoda" onclick="trackOutboundLink('https://github.com/rlahoda'); return false;">
-              <h4>Github</h4>
-            </a>
-          </li>
-          <!-- Codepen -->
-          <li class="homepageMain__Technology">
-            <a class="icons homepageMain__Icon" id="codepen" href="https://codepen.io/rlahoda/" onclick="trackOutboundLink('https://codepen.io/rlahoda/'); return false;">
-            <h4>Codepen</h4>
-            </a>
-          </li>
-          <!-- Lando -->
-          <li class="homepageMain__Technology">
-            <a class="icons homepageMain__Icon" id="lando" href="https://docs.devwithlando.io/" onclick="trackOutboundLink('https://docs.devwithlando.io/'); return false;">
-              <h4>Lando</h4>
-            </a>
-          </li>
-          <!-- Atom -->
-          <li class="homepageMain__Technology">
-            <a class="icons homepageMain__Icon" id="atom" href="https://atom.io/" onclick="trackOutboundLink('https://atom.io/'); return false;">
-              <h4>Atom</h4>
-            </a>
-          </li>
-          <!-- Gulp -->
-          <li class="homepageMain__Technology">
-            <a class="icons homepageMain__Icon" id="gulp" href="https://gulpjs.com/" onclick="trackOutboundLink('https://gulpjs.com/'); return false;">
-              <h4>Gulp</h4>
-            </a>
-          </li>
-          <!-- Sass -->
-          <li class="homepageMain__Technology">
-            <a class="icons homepageMain__Icon" id="sass" href="https://sass-lang.com/" onclick="trackOutboundLink('https://sass-lang.com/'); return false;">
-              <h4>SASS</h4>
-            </a>
-          </li>
-          <!-- Paragraphs -->
-          <li class="homepageMain__Technology">
-            <a class="icons homepageMain__Icon" id="paragraphs" href="https://www.drupal.org/project/paragraphs" onclick="trackOutboundLink('https://www.drupal.org/project/paragraphs'); return false;">
-              <h4>Paragraphs Module</h4>
-            </a>
-          </li>
-          <!-- UIKit -->
-          <li class="homepageMain__Technology">
-            <a class="icons homepageMain__Icon" id="uikit" href="https://getuikit.com/" onclick="trackOutboundLink('https://getuikit.com/'); return false;">
-              <h4>UIKit</h4>
-            </a>
-          </li>
-          <!-- Leaflet -->
-          <li class="homepageMain__Technology">
-            <a class="icons homepageMain__Icon" id="leaflet" href="https://leafletjs.com/" onclick="trackOutboundLink('https://leafletjs.com/'); return false;">
-              <h4>Leaflet</h4>
-            </a>
-          </li>
+          {% endfor %}
+
 
         </ul>
       </div>
