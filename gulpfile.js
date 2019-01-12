@@ -1,6 +1,6 @@
 const basePaths = {
   src: "dev/",
-  dest: "prod/"
+  dest: "./"
 };
 const paths = {
   images: {
@@ -57,7 +57,7 @@ const minify = require("gulp-minify");
 gulp.task("browser-sync", function() {
   browserSync.init({
     server: {
-      baseDir: "./prod/"
+      baseDir: "./"
     }
   });
 });
@@ -75,7 +75,7 @@ gulp.task("twig", function() {
   return gulp
     .src("dev/templates/*.twig")
     .pipe(twig())
-    .pipe(gulp.dest("./prod/"));
+    .pipe(gulp.dest("./"));
 });
 
 // Adds the data from the JSON files into the Twig templates as they're being compiled
@@ -92,7 +92,7 @@ gulp.task("twig-json", function() {
     )
 
     .pipe(twig())
-    .pipe(gulp.dest("./prod/"));
+    .pipe(gulp.dest("./"));
 });
 
 //PostCSS process and SASS compilation
@@ -132,7 +132,7 @@ gulp.task("css", function() {
 
 //Copy vendor packages to appropriate folder, this would be used for 3rd party plugins like bootstrap and just copies them straight over from the dev folder to the docs folder
 gulp.task("vendor", function() {
-  gulp.src("./dev/vendor/**/*.*").pipe(gulp.dest("./prod/vendor/"));
+  gulp.src("./dev/vendor/**/*.*").pipe(gulp.dest("./vendor/"));
 });
 
 // Concatenate JS files into a single file and minify
@@ -141,12 +141,12 @@ gulp.task("concat", function() {
     .src("./dev/scripts/*.js")
     .pipe(concat("scripts.js"))
     .pipe(minify())
-    .pipe(gulp.dest("./prod/scripts"));
+    .pipe(gulp.dest("./scripts"));
 });
 
 //Copy images to appropriate folder, this just copies them straight over from the dev folder to the docs folder
 gulp.task("images", function() {
-  gulp.src(globs.images).pipe(gulp.dest("./prod/assets/"));
+  gulp.src(globs.images).pipe(gulp.dest("./assets/"));
 });
 
 // Watch task, this watches the different folders and when there's a change, it triggers the appropriate function. The bottom one triggers the page refresh in your browser
@@ -157,14 +157,8 @@ gulp.task("watch", ["browser-sync"], function() {
   gulp.watch(globs.twig, ["twig-json"]);
   gulp.watch(globs.vendor, ["vendor"]);
   gulp.watch(globs.images, ["images"]);
-  gulp.watch("./prod/**/*.html").on("change", browserSync.reload);
+  gulp.watch("./**/*.html").on("change", browserSync.reload);
 });
 
 gulp.task("default", ["build", "watch"]);
 gulp.task("build", ["twig-json", "css", "concat", "vendor", "images"]);
-
-var ghpages = require("gh-pages");
-
-gulp.task("deploy", function() {
-  return ghpages.publish("prod", function(err) {});
-});
