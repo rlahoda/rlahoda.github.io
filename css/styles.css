@@ -942,33 +942,38 @@ hr {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  width: calc(100% - 10px);
   margin: 5px; }
   @supports (display: grid) {
     .projectsGrid {
       display: grid;
       grid-template-columns: 1fr;
-      grid-gap: 10px; } }
+      grid-gap: 10px;
+      grid-auto-flow: dense; } }
   @media only screen and (min-width: 780px) {
     .projectsGrid {
-      margin: 10px; } }
+      margin: 10px;
+      width: calc(100% - 20px); } }
   @media only screen and (min-width: 1060px) {
     .projectsGrid {
-      margin: 15px; } }
+      margin: 15px;
+      width: calc(100% - 30px); } }
   @media only screen and (min-width: 1400px) {
     .projectsGrid {
-      margin: 30px; } }
+      margin: 30px;
+      width: calc(100% - 60px); } }
   @supports (display: grid) {
     @media only screen and (min-width: 780px) {
       .projectsGrid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, 1fr);
         grid-gap: 25px; } }
     @media only screen and (min-width: 1060px) {
       .projectsGrid {
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: repeat(6, 1fr);
         grid-gap: 35px; } }
     @media only screen and (min-width: 1400px) {
       .projectsGrid {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: repeat(8, 1fr);
         grid-gap: 50px; } } }
 
 .projectsCard {
@@ -987,23 +992,30 @@ hr {
       margin: 60px;
       width: 15%; } }
   @supports (display: grid) {
-    @media only screen and (min-width: 780px) {
-      .projectsCard {
-        width: 100%;
-        margin: 5px; } }
-    @media only screen and (min-width: 1060px) {
-      .projectsCard {
-        width: 100%;
-        margin: 5px; } }
-    @media only screen and (min-width: 1400px) {
-      .projectsCard {
-        width: 100%;
-        margin: 5px; } } }
+    .projectsCard {
+      grid-area: span 1 / span 2; }
+      @media only screen and (min-width: 780px) {
+        .projectsCard {
+          width: 100%;
+          margin: 5px; } }
+      @media only screen and (min-width: 1060px) {
+        .projectsCard {
+          width: 100%;
+          margin: 5px; } }
+      @media only screen and (min-width: 1400px) {
+        .projectsCard {
+          width: 100%;
+          margin: 5px; } } }
   .projectsCard-wide {
-    grid-area: span 1 / span 1; }
+    grid-area: span 1 / span 2; }
     @media only screen and (min-width: 780px) {
       .projectsCard-wide {
-        grid-area: span 1 / span 2; } }
+        grid-area: span 1 / span 4; } }
+  .projectsCard-med {
+    grid-area: span 1 / span 1; }
+    @media only screen and (min-width: 780px) {
+      .projectsCard-med {
+        grid-area: span 1 / span 3; } }
 
 .projectAlert {
   font-style: italic;

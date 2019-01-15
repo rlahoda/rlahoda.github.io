@@ -15,12 +15,12 @@
       </div>
     <p></p>
   </div>
-
+ 
   <div class="projectsGrid">
   {% for project in projects %}
-  <div class="infoCard projectsCard {% if project.width == "wide" %}projectsCard-wide{% endif %}">
+  <div class="infoCard projectsCard {% if project.width == "wide" %}projectsCard-wide{% endif %} {% if project.width == "med" %}projectsCard-med{% endif %}">
       <h2 class="">{{ project.title }}</h2>
-    <ul class="noList noListBlock"> 
+    <ul class="noList noListBlock">
       {% for item in project.technology %}
         <li class="projectTechnology">
           <div class="icons projectIcon" id="{{item}}"></div>
