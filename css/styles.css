@@ -228,7 +228,7 @@ h4 {
   font-weight: 300; }
 
 body {
-  line-height: 1.25;
+  line-height: 1.5;
   font-size: 18px; }
 
 a {
@@ -1000,7 +1000,10 @@ hr {
         width: 100%;
         margin: 5px; } } }
   .projectsCard-wide {
-    grid-area: span 1 / span 2; }
+    grid-area: span 1 / span 1; }
+    @media only screen and (min-width: 780px) {
+      .projectsCard-wide {
+        grid-area: span 1 / span 2; } }
 
 .projectAlert {
   font-style: italic;

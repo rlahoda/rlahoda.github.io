@@ -67,7 +67,11 @@
     }
   }
   &-wide {
-    grid-area: span 1 / span 2;
+    grid-area: span 1 / span 1;
+
+    @include respond-at($bp-small) {
+      grid-area: span 1 / span 2;
+    }
   }
 }
 
