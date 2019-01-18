@@ -50,10 +50,6 @@ var twig1 = require("twig");
 // var twigFoo = require("twig-foo");
 
 twig1.extend(twigMarkdown);
-// twig1({ data: {}, extend: twigMarkdown });
-// twig.extend(function(Twig) {
-//   twigMarkdown;
-// });
 
 // SASS compiling
 const postcss = require("gulp-postcss");
