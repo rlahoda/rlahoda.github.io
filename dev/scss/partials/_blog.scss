@@ -1,0 +1,41 @@
+.blogListContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.blogListCard {
+  margin: 10px;
+}
+
+.blogContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.blogCard {
+  width: calc(100%-20px);
+  margin: 10px;
+  padding: 10px;
+  line-height: 2;
+  background-color: $cardColor5;
+  box-shadow: 10px 10px $cardColor6;
+  & a:hover {
+    color: $cardColor6;
+  }
+
+  @include respond-at($bp-small) {
+    width: calc(100%-40px);
+    margin: 20px;
+    padding: 20px;
+  }
+  @include respond-at($bp-med) {
+    width: 75%;
+    padding: 40px;
+  }
+  @include respond-at($bp-large) {
+    width: 65%;
+  }
+}

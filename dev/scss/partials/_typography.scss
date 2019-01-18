@@ -41,6 +41,16 @@ body {
   font-size: 18px;
 }
 
+code {
+  background-color: #f5f2f0;
+  padding: 4px;
+}
+
+b,
+strong {
+  font-weight: 700;
+}
+
 a {
   text-decoration: none;
   font-weight: 700;
@@ -49,6 +59,8 @@ a {
   color: inherit;
   transition: color 0.6s;
   // z-index: 10;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
   &::after {
     // z-index: 9;
     position: absolute;
@@ -72,6 +84,15 @@ a.no-border {
   &::after {
     border: none;
   }
+}
+
+blockquote {
+  background-color: $cardColor1;
+  box-shadow: 10px 10px $cardColor2;
+  & a:hover {
+    color: $cardColor2;
+  }
+  padding: 10px;
 }
 
 .footerLinks__link {

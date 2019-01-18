@@ -1,0 +1,28 @@
+{% extends 'base.twig' %}
+{% block primarycontent %}
+<header>
+  <div class="pageTopImage">
+
+  </div>
+</header>
+
+<main>
+  <div class="pageHeading">
+    <h1 class="bigTitle">
+      Blog</h1>
+      <div class="pageTagline__container">
+        <h2 id="projectsTagline" class="pageTagline">Stuff I Write</h2>
+      </div>
+    <p></p>
+  </div>
+  <div class="blogListContainer">
+    {% for post in posts %}
+
+    <div class="infoCard blogListCard">  <h3><a href="{{post.link}}">{{post.title}}</a></h3> • {{post.date}}</div>
+    {% endfor %}
+
+  </div>
+
+</main>
+
+{% endblock %}

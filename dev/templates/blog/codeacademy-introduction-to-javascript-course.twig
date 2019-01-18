@@ -1,0 +1,29 @@
+{% extends '../base.twig' %}
+{% block primarycontent %}
+<header>
+  <div class="pageTopImage">
+
+  </div>
+</header>
+
+<main>
+  <div class="pageHeading">
+    <!-- <h1 class="bigTitle">
+      Blog</h1> -->
+      <div class="pageTagline__container">
+        <h1 id="projectsTagline" class="pageTagline">CodeAcademy Introduction to Javascript Course</h1>
+        <h2>May 6, 2016</h2>
+      </div>
+    <p></p>
+  </div>
+  <div class="blogContainer">
+    <div class="blogCard">
+      {% markdown 'codeacademy-introduction-to-javascript-course.md' %}{% endmarkdown %}
+    </div>
+
+
+  </div>
+
+</main>
+
+{% endblock %}

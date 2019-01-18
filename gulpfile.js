@@ -28,7 +28,9 @@ const globs = {
   styles: ["dev/scss/**/*.scss"],
   images: ["dev/assets/**/*"],
   vendor: ["dev/vendor/**/*"],
-  twig: ["dev/**/*.twig"]
+  twig: ["dev/**/*.twig"],
+  json: ["dev/**/*.json"],
+  blog: ["dev/blog/**/*"]
 };
 
 // Load Gulp
@@ -43,6 +45,15 @@ const twig = require("gulp-twig");
 const data = require("gulp-data");
 const fs = require("fs");
 const path = require("path");
+var twigMarkdown = require("twig-markdown");
+var twig1 = require("twig");
+// var twigFoo = require("twig-foo");
+
+twig1.extend(twigMarkdown);
+// twig1({ data: {}, extend: twigMarkdown });
+// twig.extend(function(Twig) {
+//   twigMarkdown;
+// });
 
 // SASS compiling
 const postcss = require("gulp-postcss");
@@ -70,18 +81,19 @@ gulp.task("serve", function() {
 });
 
 // Compiles the Twig templates
-gulp.task("twig", function() {
+gulp.task("blog", function() {
   "use strict";
   return gulp
-    .src("dev/templates/*.twig")
+    .src("dev/templates/blog/*.twig")
     .pipe(twig())
     .pipe(gulp.dest("./"));
 });
 
 // Adds the data from the JSON files into the Twig templates as they're being compiled
-gulp.task("twig-json", function() {
+gulp.task("twig-json", function(Twig) {
   "use strict";
   return gulp
+
     .src("dev/templates/*.twig")
     .pipe(
       data(function(file) {
@@ -90,7 +102,6 @@ gulp.task("twig-json", function() {
         );
       })
     )
-
     .pipe(twig())
     .pipe(gulp.dest("./"));
 });
@@ -155,10 +166,12 @@ gulp.task("watch", ["browser-sync"], function() {
   gulp.watch(globs.styles, ["css"]);
   gulp.watch(globs.scripts, ["concat"]);
   gulp.watch(globs.twig, ["twig-json"]);
+  gulp.watch(globs.json, ["twig-json"]);
+  gulp.watch(globs.blog, ["blog"]);
   gulp.watch(globs.vendor, ["vendor"]);
   gulp.watch(globs.images, ["images"]);
   gulp.watch("./**/*.html").on("change", browserSync.reload);
 });
 
 gulp.task("default", ["build", "watch"]);
-gulp.task("build", ["twig-json", "css", "concat", "vendor", "images"]);
+gulp.task("build", ["twig-json", "css", "concat", "vendor", "images", "blog"]);
