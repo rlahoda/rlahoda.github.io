@@ -2,9 +2,12 @@
   "projects": {
     "myvacationmap": {
       "title": "My Vacation Map",
-      "linktitle": "Email me for access to this private repo! rob@roblahoda.com",
-      "linkaddress": "mailto:rob@roblahoda.com",
-      "trackingaddress": "myvacationmap",
+      "linktitle": "myvacationmap.com",
+      "linkaddress": "https://www.myvacationmap.com",
+      "trackingaddress": "https://www.myvacationmap.com",
+      "githubTitle": "Email me for access to this private repo! rob@roblahoda.com",
+      "githubaddress": "mailto:rob@roblahoda.com",
+      "githubtracking": "myvacationmap",
       "width": "wide",
       "paragraphs": [
         "Have you ever been preparing for a trip and found a bunch of cool places to visit, only to not know where to keep that information so that it's easily accessable when you're out and about? My Vacation Map is a custom mapping app that is built on React and using the Leaflet mapping library to solve this problem.",
@@ -16,7 +19,8 @@
         "2": "javascript",
         "3": "drupal8",
         "4": "redux",
-        "5": "leaflet"
+        "5": "leaflet",
+        "6": "pantheon"
       }
     },
     "rockpaperscissors": {
@@ -66,7 +70,8 @@
       "technology": {
         "1": "javascript",
         "2": "greensock",
-        "3": "cssgrid"
+        "3": "cssgrid",
+        "4": "codepen"
       }
     },
     "reactcalendarclock": {
@@ -98,7 +103,8 @@
         "The theme is built with Paragraphs as the primary layout tool. The client wanted the site up quickly so I used the UIKit front-end framework as a starting point for the design. The site is fully responsive and contains a custom quote form based on the Webform module that uses a variety of logic to allow the user to request a quote for the various types of insurance that is offered by the company."
       ],
       "technology": {
-        "1": "drupal8"
+        "1": "drupal8",
+        "2": "pantheon"
       }
     },
     "lglf": {
@@ -115,7 +121,8 @@
       ],
       "technology": {
         "1": "drupal8",
-        "2": "flexbox"
+        "2": "flexbox",
+        "3": "pantheon"
       }
     },
     "codepencalendarclock": {
@@ -133,7 +140,8 @@
       "technology": {
         "1": "javascript",
         "2": "cssgrid",
-        "3": "flexbox"
+        "3": "flexbox",
+        "4": "codepen"
       }
     },
     "codepenflashcards": {
@@ -148,7 +156,8 @@
       ],
       "technology": {
         "1": "javascript",
-        "2": "flexbox"
+        "2": "flexbox",
+        "3": "codepen"
       }
     },
     "roblahodamedia": {

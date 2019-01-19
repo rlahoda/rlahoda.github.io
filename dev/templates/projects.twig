@@ -15,7 +15,7 @@
       </div>
     <p></p>
   </div>
- 
+
   <div class="projectsGrid">
   {% for project in projects %}
   <div class="infoCard projectsCard {% if project.width == "wide" %}projectsCard-wide{% endif %} {% if project.width == "med" %}projectsCard-med{% endif %}">
@@ -34,7 +34,7 @@
     {% endfor %}
     {% if project.alert %} <p class="projectAlert">{{project.alert}}</p>  {% endif %}
     <h4 class=""><a class="" href="{{ project.linkaddress }}" onclick="trackOutboundLink('{{ project.linkaddress }}'); return false;" target="_blank">{{ project.linktitle }}</a></h4>
-    {% if project.githubaddress %}<h5 class=""><a class="" href="{{ project.githubaddress }}" onclick="trackOutboundLink('{{ project.githubaddress }}'); return false;" target="_blank">View Github Repo</a></h5>{% endif %}
+    {% if project.githubaddress %}<h5 class=""><a class="" href="{{ project.githubaddress }}" onclick="trackOutboundLink('{{ project.githubaddress }}'); return false;" target="_blank">{% if project.githubTitle %}{{ project.githubTitle}}{% else %}View Github Repo{% endif %}</a></h5>{% endif %}
   </div>
   {% endfor %}
   </div>

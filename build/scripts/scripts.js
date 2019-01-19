@@ -632,6 +632,29 @@ function addIcons() {
     </svg>
         ` + icon.innerHTML;
         break;
+      case "pantheon":
+        icon.innerHTML =
+          `
+<svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 128 128" style="enable-background:new 0 0 128 128;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
+
+</style>
+<polygon class="st0" points="45.5,6.6 56.2,31.7 42.6,31.7 47.1,42.7 74.7,42.7 "/>
+<polygon class="st0" points="81.8,97.9 77.2,86.9 71,86.9 61.9,65.6 56.3,65.6 65.3,86.9 49.2,86.9 78.9,123 68.2,97.9 "/>
+<path  d="M85.5,53.8c0.4,0,1.1-0.4,1.1-4.2c0-3.8-0.8-4.2-1.1-4.2h-19l3.6,8.5H85.5z"/>
+<path  d="M74.4,64h12.7c0.4,0,1.1-0.4,1.1-4.2c0-3.8-0.8-4.2-1.1-4.2H70.8L74.4,64z"/>
+<path  d="M85.5,75.8H68.3l3.6,8.5h13.6c0.4,0,1.1-0.4,1.1-4.2C86.6,76.2,85.8,75.8,85.5,75.8"/>
+<path  d="M87.2,65.6H64l3.6,8.5h19.5c0.4,0,1.1-0.4,1.1-4.2C88.3,66,87.5,65.6,87.2,65.6"/>
+<path  d="M85.5,75.8H68.3l3.6,8.5h13.6c0.4,0,1.1-0.4,1.1-4.2C86.6,76.2,85.8,75.8,85.5,75.8"/>
+<path  d="M87.2,65.6H64l3.6,8.5h19.5c0.4,0,1.1-0.4,1.1-4.2C88.3,66,87.5,65.6,87.2,65.6"/>
+<path  d="M61.2,63.9l-4.3-10.2h2.1L63.3,64h9.2l-7.9-18.7H44.7c-1.5,0-2.3,0-3.1,2.2c-0.8,2.6-0.9,7.6-0.9,17.3
+	s0.1,14.7,0.9,17.3c0.7,2.2,1.5,2.2,3.1,2.2h17.4L53.5,64L61.2,63.9z"/>
+</svg>
+
+          ` + icon.innerHTML;
+        break;
     }
   }
 }
