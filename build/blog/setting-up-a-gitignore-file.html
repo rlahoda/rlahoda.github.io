@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  
+<head>
+  <script>
+    (function(i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function() {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-32142472-2', 'auto');
+    ga('send', 'pageview');
+  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'"> -->
+  <title>Rob Lahoda • Front End Web Developer</title>
+  <!-- <base href="https://rlahoda.github.io"> -->
+  <link rel="stylesheet" href="/css/styles.css">
+  <link href="/vendor/prism/prism.css" rel="stylesheet" />
+  <meta name="description" content="">
+  <meta name="subject" content="">
+
+  <meta property="og:url" content="https://rlahoda.github.io">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Rob Lahoda • Front End Web Developer">
+  <meta property="og:image" content="https://rlahoda.github.io/og-image.jpg">
+  <meta property="og:description" content="">
+  <meta property="og:site_name" content="Rob Lahoda • Front End Web Developer">
+  <meta property="og:locale" content="en_US">
+  <meta property="article:author" content="">
+
+  <meta name="twitter:card" content="">
+  <meta name="twitter:site" content="@rlahoda">
+  <meta name="twitter:creator" content="@rlahoda">
+  <meta name="twitter:url" content="https://rlahoda.github.io">
+  <meta name="twitter:title" content="Rob Lahoda • Front End Web Developer">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:image" content="https://rlahoda.github.iotwitter-image.jpg">
+
+  <meta name="robots" content="index,follow"><!-- All Search Engines -->
+  <meta name="googlebot" content="index,follow"><!-- Google Specific -->
+
+  <!-- <script src="/vendor/greensock-js/src/minified/TweenMax.min.js" charset="utf-8"></script>
+  <script src="/vendor/greensock-js/src/minified/plugins/TextPlugin.min.js" charset="utf-8"></script>
+  <script src="/vendor/greensock-js/src/minified/easing/EasePack.min.js" charset="utf-8"></script> -->
+  <script src="/scripts/scripts-min.js" charset="utf-8"></script>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,700,900" rel="stylesheet">
+</head>
+
+  <body>
+    <nav class="navFixed">
+  <ul id="navList" class="navList">
+    <li class="navList__navItem" id="navList__homeLink"><a href="./">Home</a></li>
+    <li class="navList__navItem" id="navList__aboutLink"><a href="./about.html">About</a></li>
+    <li class="navList__navItem" id="navList__projectsLink"><a href="./projects.html">Projects</a></li>
+    <li class="navList__navItem" id="navList__projectsLink"><a href="./blog.html">Blog</a></li>
+    <li class="navList__navItem" id="navList__contactLink"><a href="./contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+    <header>
+  <div class="pageTopImage">
+
+  </div>
+</header>
+
+<main>
+  <div class="pageHeading">
+    <!-- <h1 class="bigTitle">
+      Blog</h1> -->
+      <div class="pageTagline__container">
+        <h1 id="projectsTagline" class="pageTagline">Setting up a .gitignore file</h1>
+        <h2>May 10, 2016</h2>
+      </div>
+    <p></p>
+  </div>
+  <div class="blogContainer">
+    <div class="blogCard">
+      <p><a href="../blog.html">Back to blog posts</a></p>
+<p>I&#39;ll confess off the top now that I&#39;m still pretty new to Git. I&#39;ve started using it myself to keep track of files as I&#39;ve been working, but I don&#39;t work on a team that uses Git so there are a lot of the functions that I don&#39;t really use yet. The .gitignore file is one that took me a little to figure out so I thought I&#39;d write up a quick post talking about what this little file does.</p>
+<p>If you&#39;re not familiar with Git to begin with, it&#39;s a version control system that allows for users to work on different parts of a project, track the changes and bring those updated files together into a master code base. This is most often used in software development and other coding environments like web development. The whole idea of Git is pretty complex so I won&#39;t try to explain it any more right here. If you want more information, the best thing is to check out the <a href="https://git-scm.com/">Git homepage</a> and read some info there.</p>
+<p>The .gitignore file is a special file that tells Git what files you don&#39;t want to track in your project. Why wouldn&#39;t you want to track everything? Well, there are lots of reasons. Temporary files, system files, log files, anything that isn&#39;t actually part of your code base is what you&#39;d want to leave out of your Git tracking. This helps save space in your Git backups and also cleans up a lot of the clutter in the file system.</p>
+<p>So a few things to know about working with a .gitignore file:</p>
+<p><strong>1. You have to create the file yourself</strong></p>
+<p>It doesn&#39;t automatically get created when you <code>git init</code> in a folder. You have to create it yourself and put it in the folder that you&#39;re going to <code>git init</code> into for it to be recognized.</p>
+<p><strong>2. Create the file before you init in the folder</strong></p>
+<p>Before you <code>git init</code> you should create the .gitignore file. The reason for this is that if you <code>git init</code> first, commit your project then realize there&#39;s a ton of stuff you didn&#39;t want to add, it&#39;s a pretty clunky process to remove them from tracking. You could do it: you&#39;d have to enter <code>git rm --cached &lt;file&gt;</code> for every file you wanted to remove. That&#39;s not too big of a deal if you realize there is one file here or there that you want to remove. But what if you have to remove a folder with hundreds of files? So yeah, remember to have the .gitignore in place <strong>before</strong> you start tracking your files.</p>
+<p><strong>3. You can ignore individual files, types of files and folders</strong></p>
+<p>You might know that there&#39;s a specific file you have in your project that doesn&#39;t need to be tracked so you can point to that specifically. So you might put <code>unused.txt</code> into your .gitignore. Maybe you know there are log files or temp files that would just add a lot of clutter to the project so you could put <code>*.log</code> into your file. The <code>*</code> is a wildcard indicator so by putting it in front of the <code>.log</code> you&#39;re saying that any file that ends in <code>.log</code> will be ignored. You can also put whole folders into the .gitignore. When working with NPM projects I prefer not to track my modules directory. So I have <code>node_modules</code> listed in my .gitignore file. This means that nothing in that folder is going to be tracked.</p>
+<p><strong>4. You can make sure a file/folder is tracked by negating a pattern</strong></p>
+<p>So if you had <code>*.log</code> in your file but you know that there&#39;s one log file you really want saved you can put the line in: <code>!superimportantlogfile.log</code> and it will be tracked even though the rest of the <code>.log</code> files will not. This goes for folders or anything you&#39;ve put in that could match more than one file but be careful. If you say to ignore a folder but then want something in it to be tracked still, it&#39;s not going to happen. Git won&#39;t track an individual file inside a folder that isn&#39;t being tracked.</p>
+<p><strong>5. You can point to files inside your file structure</strong></p>
+<p>You&#39;re not limited only to files in the same folder as the .gitignore file. If you know you want a random file deep in your structure you could put <code>path/to/the/file.html</code> and Git will know not to touch that file. The path is relative to where the .gitignore file is located so keep that in mind when you point to deeper paths in your project.</p>
+<p><strong>6. You can add notes for yourself</strong></p>
+<p>Anything starting with a <code>#</code> will be ignored by Git. So if you have a very specific file located at a location and you wanted to remember why you were ignoring it, you could write a little note above your filter and ensure that your future self or others on your team will be able to know why that file is or isn&#39;t being tracked.</p>
+<p>So there you have it. Hopefully you learned a little more about working with a .gitignore file. Just as an example, here&#39;s my .gitignore file for projects I&#39;m working on at the moment:</p>
+<pre><code class="language-javascript">#  logs - this is using the wildcard to filter any files ending in .log
+*.log
+# project dependencies - this is a folder
+node_modules
+# OSX folder attributes
+.DS_Store
+# temporary files - this points to anything starting or ending with tmp
+*. tmp *~
+# Zip files
+*.zip</code></pre>
+<p>For more ideas and help, here&#39;s a long <a href="https://github.com/github/gitignore">list of .gitignore ideas</a> on GitHub. Here&#39;s the <a href="https://git-scm.com/docs/gitignore">official documentation</a> for .gitignore from Git itself.</p>
+<p><a href="../blog.html">Back to blog posts</a></p>
+    </div>
+
+
+  </div>
+
+</main>
+
+    <footer>
+  <div class="footerLinks__container">
+    <h4 class="">Say Hi!</h4>
+  <ul class="noList noListBlock footerLinks__list">
+              <li class="footerLinks__list--item">
+          <a class="footerLinks__link" href="mailto:rob@roblahoda.com" onclick="trackOutboundLink('rob@roblahoda.com'); return false;" target="_blank"><span class="icons footerLinks__link--icon" id="email"></span>
+          <p class="">Email</p></a>
+        </li>
+              <li class="footerLinks__list--item">
+          <a class="footerLinks__link" href="https://twitter.com/rlahoda" onclick="trackOutboundLink('https://twitter.com/rlahoda'); return false;" target="_blank"><span class="icons footerLinks__link--icon" id="twitter"></span>
+          <p class="">Twitter</p></a>
+        </li>
+              <li class="footerLinks__list--item">
+          <a class="footerLinks__link" href="https://github.com/rlahoda" onclick="trackOutboundLink('https://github.com/rlahoda'); return false;" target="_blank"><span class="icons footerLinks__link--icon" id="github"></span>
+          <p class="">Github</p></a>
+        </li>
+              <li class="footerLinks__list--item">
+          <a class="footerLinks__link" href="https://codepen.io/rlahoda/" onclick="trackOutboundLink('https://codepen.io/rlahoda/'); return false;" target="_blank"><span class="icons footerLinks__link--icon" id="codepen">
+          </span>
+          <p class="">Codepen</p></a>
+        </li>
+              <li class="footerLinks__list--item">
+          <a class="footerLinks__link" href="https://www.drupal.org/u/rlahoda/" onclick="trackOutboundLink('https://www.drupal.org/u/rlahoda/'); return false;" target="_blank"><span class="icons footerLinks__link--icon" id="drupal"></span>
+          <p class="">Drupal.org</p></a>
+        </li>
+              <li class="footerLinks__list--item">
+          <a class="footerLinks__link" href="https://www.linkedin.com/in/robert-lahoda/" onclick="trackOutboundLink('https://www.linkedin.com/in/robert-lahoda/'); return false;" target="_blank"><span class="icons footerLinks__link--icon" id="linkedin"></span>
+          <p class="">Linkedin</p></a>
+        </li>
+            </ul>
+            <p class="smallText">Copyright ©2018 Rob Lahoda - Logos are property of their respective owners.</p>
+
+</div>
+<script src="/vendor/prism/prism.js"></script>
+</footer>
+<script type="text/javascript" src="scroll.js"></script>
+<script>
+/**
+* Function that tracks a click on an outbound link in Analytics.
+* This function takes a valid URL string as an argument, and uses that URL string
+* as the event label. Setting the transport method to 'beacon' lets the hit be sent
+* using 'navigator.sendBeacon' in browser that support it.
+*/
+var trackOutboundLink = function(url) {
+ ga('send', 'event', 'outbound', 'click', url, {
+   'transport': 'beacon',
+   'hitCallback': function(){document.location = url;}
+ });
+}
+</script>
+  </body>
+</html>

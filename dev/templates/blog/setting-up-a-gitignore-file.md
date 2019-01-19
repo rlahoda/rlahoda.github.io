@@ -1,4 +1,4 @@
-[Back to blog posts](./blog.html)
+[Back to blog posts](../blog.html)
 
 I'll confess off the top now that I'm still pretty new to Git. I've started using it myself to keep track of files as I've been working, but I don't work on a team that uses Git so there are a lot of the functions that I don't really use yet. The .gitignore file is one that took me a little to figure out so I thought I'd write up a quick post talking about what this little file does.
 
@@ -48,3 +48,5 @@ node_modules
 ```
 
 For more ideas and help, here's a long [list of .gitignore ideas](https://github.com/github/gitignore) on GitHub. Here's the [official documentation](https://git-scm.com/docs/gitignore) for .gitignore from Git itself.
+
+[Back to blog posts](../blog.html)

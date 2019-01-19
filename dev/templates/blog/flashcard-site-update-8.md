@@ -1,4 +1,4 @@
-[Back to blog posts](./blog.html)
+[Back to blog posts](../blog.html)
 
 With this update, I finally got everything working correctly to add a card and entry form! I was pretty excited to get to this point in the process because I had just gotten the card form to add dynamically. So I was feeling like this part would go pretty smoothly. As a whole it did. I put together the code (you can see it below) and was able to assemble the card pretty smoothly and cleanly. Everything was working perfectly. The text I type in the submission form was showing up correctly in the card and everything looked good. That is, until I clicked the card to flip to the back content. Instead of it switching over to the back content, it just did nothing. I clicked and clicked and nothing happened.
 
@@ -97,3 +97,5 @@ So here it is. The app is now starting to feel more like an app. The user can ad
 
 <p class="codepen" data-height="464" data-theme-id="0" data-slug-hash="wGXrdE" data-default-tab="js,result" data-user="rlahoda" data-embed-version="2">See the Pen <a href="http://codepen.io/rlahoda/pen/wGXrdE/">Flashcards v1.3.0</a> by Rob Lahoda (<a href="http://codepen.io/rlahoda">@rlahoda</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script src="//assets.codepen.io/assets/embed/ei.js" async=""></script>
+
+[Back to blog posts](../blog.html)

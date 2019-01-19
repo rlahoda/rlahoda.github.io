@@ -1,4 +1,4 @@
-[Back to blog posts](./blog.html)
+[Back to blog posts](../blog.html)
 
 After my [proof of concept](flashcard-site-update-6.HTML) came together to actually add a div to the DOM on-the-fly, it was time to get back into my actual project and put that into action. I decided to start by adding a new input form when the user clicks the little button I added. The first thing I did was delete most of the extra cards and input forms that I created initially since they would be added in dynamically through the script. Then I started working on the script. The first goal was to use the script to generate this:
 
@@ -107,3 +107,5 @@ document.getElementById("cardContainer").appendChild(cardNode);
 In both the dummy card and the actual form I again used `document.getElementById()` to find the appropriate part of the DOM to insert the new piece and then `.appendChild();` to add it in place.
 
 So that's all for this post. The next step is building the card and making sure the text is correctly flowing from the input form to the card itself. Thanks for reading!
+
+[Back to blog posts](../blog.html)

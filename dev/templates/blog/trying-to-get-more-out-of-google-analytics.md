@@ -1,4 +1,4 @@
-[Back to blog posts](./blog.html)
+[Back to blog posts](../blog.html)
 
 I've always wanted to really get some more usable information out of my analytics reports. So far, all I've really ever done is just paste in the basic Google Analytics (GA) code and call it a day. I poke around the reports and kinda think I know what's going on, but getting the really helpful information out if it has been a bit of a mystery still. So a couple weeks ago I had lunch with an awesome guy from Lullabot, [Wes Ruvalcaba](https://www.lullabot.com/about/wes-ruvalcaba). He's been doing web development for a long time and I met him at DrupalCamp PA last summer...which reminds me, I was going to write a post about that but forgot... So anyway, he gave me a couple really good tips that have helped me get started on the path of learning more about Google Analytics.
 
@@ -92,3 +92,5 @@ So there you go! I put the whole thing on my [github page](https://github.com/rl
 Another thing he told me about was [Google Analytics Academy](https://analytics.google.com/analytics/academy/). This free course is a series of training videos and interactive trainings that walk you through the process of learning about how GA works and how to understand all the information listed there. I'm through a few of the trainings and it's been really helpful so far. Just with the first few levels I've gone through I'm learning more and understanding with better clarity how GA works and some of the features I never thought about before. So I'm looking forward to getting more understanding and expertise in how to work with compiling and interpreting my site analytics.
 
 So that's what I learned so far. As I continue to learn more I'll try to add more updates on here and get better about updating my blog here.
+
+[Back to blog posts](../blog.html)

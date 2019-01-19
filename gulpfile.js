@@ -1,6 +1,6 @@
 const basePaths = {
   src: "dev/",
-  dest: "./"
+  dest: "build/"
 };
 const paths = {
   images: {
@@ -64,14 +64,14 @@ const minify = require("gulp-minify");
 gulp.task("browser-sync", function() {
   browserSync.init({
     server: {
-      baseDir: "./"
+      baseDir: "./build/"
     }
   });
 });
 gulp.task("serve", function() {
   browserSync({
     server: {
-      baseDir: "."
+      baseDir: "./build/"
     }
   });
 });
@@ -82,7 +82,7 @@ gulp.task("blog", function() {
   return gulp
     .src("dev/templates/blog/*.twig")
     .pipe(twig())
-    .pipe(gulp.dest("./"));
+    .pipe(gulp.dest("./build/blog/"));
 });
 
 // Adds the data from the JSON files into the Twig templates as they're being compiled
@@ -99,7 +99,7 @@ gulp.task("twig-json", function(Twig) {
       })
     )
     .pipe(twig())
-    .pipe(gulp.dest("./"));
+    .pipe(gulp.dest("./build/"));
 });
 
 //PostCSS process and SASS compilation
@@ -139,7 +139,7 @@ gulp.task("css", function() {
 
 //Copy vendor packages to appropriate folder, this would be used for 3rd party plugins like bootstrap and just copies them straight over from the dev folder to the docs folder
 gulp.task("vendor", function() {
-  gulp.src("./dev/vendor/**/*.*").pipe(gulp.dest("./vendor/"));
+  gulp.src("./dev/vendor/**/*.*").pipe(gulp.dest("./build/vendor/"));
 });
 
 // Concatenate JS files into a single file and minify
@@ -148,12 +148,12 @@ gulp.task("concat", function() {
     .src("./dev/scripts/*.js")
     .pipe(concat("scripts.js"))
     .pipe(minify())
-    .pipe(gulp.dest("./scripts"));
+    .pipe(gulp.dest("./build/scripts"));
 });
 
 //Copy images to appropriate folder, this just copies them straight over from the dev folder to the docs folder
 gulp.task("images", function() {
-  gulp.src(globs.images).pipe(gulp.dest("./assets/"));
+  gulp.src(globs.images).pipe(gulp.dest("./build/assets/"));
 });
 
 // Watch task, this watches the different folders and when there's a change, it triggers the appropriate function. The bottom one triggers the page refresh in your browser

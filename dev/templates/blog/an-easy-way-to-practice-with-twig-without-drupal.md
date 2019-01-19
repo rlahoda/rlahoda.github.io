@@ -1,4 +1,4 @@
-[Back to blog posts](./blog.html)
+[Back to blog posts](../blog.html)
 
 A few years ago I was just getting started learning Drupal 8 and decided to try to play around with the Twig theming templates. I barely understood Drupal at the time so that was a bit of a mistake. Not really understanding what I was looking at meant that I was overwhelmed quickly by the number of files and not understanding what I was looking at inside of them. I soon realized that if I was going to work on a theme, I needed to try to understand Twig, but without the complexity of Drupal surrounding it.
 
@@ -76,3 +76,5 @@ Here are a few other resources you can check out:
 - [A SASS intro guide](https://sass-lang.com/guide)
 
 So I hope this makes sense, if you have any questions, comments or anything feel free to leave a comment below or reach out to me on [Twitter!](https://twitter.com/rlahoda/)
+
+[Back to blog posts](../blog.html)

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  
+<head>
+  <script>
+    (function(i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function() {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-32142472-2', 'auto');
+    ga('send', 'pageview');
+  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'"> -->
+  <title>Rob Lahoda • Front End Web Developer</title>
+  <!-- <base href="https://rlahoda.github.io"> -->
+  <link rel="stylesheet" href="/css/styles.css">
+  <link href="/vendor/prism/prism.css" rel="stylesheet" />
+  <meta name="description" content="">
+  <meta name="subject" content="">
+
+  <meta property="og:url" content="https://rlahoda.github.io">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Rob Lahoda • Front End Web Developer">
+  <meta property="og:image" content="https://rlahoda.github.io/og-image.jpg">
+  <meta property="og:description" content="">
+  <meta property="og:site_name" content="Rob Lahoda • Front End Web Developer">
+  <meta property="og:locale" content="en_US">
+  <meta property="article:author" content="">
+
+  <meta name="twitter:card" content="">
+  <meta name="twitter:site" content="@rlahoda">
+  <meta name="twitter:creator" content="@rlahoda">
+  <meta name="twitter:url" content="https://rlahoda.github.io">
+  <meta name="twitter:title" content="Rob Lahoda • Front End Web Developer">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:image" content="https://rlahoda.github.iotwitter-image.jpg">
+
+  <meta name="robots" content="index,follow"><!-- All Search Engines -->
+  <meta name="googlebot" content="index,follow"><!-- Google Specific -->
+
+  <!-- <script src="/vendor/greensock-js/src/minified/TweenMax.min.js" charset="utf-8"></script>
+  <script src="/vendor/greensock-js/src/minified/plugins/TextPlugin.min.js" charset="utf-8"></script>
+  <script src="/vendor/greensock-js/src/minified/easing/EasePack.min.js" charset="utf-8"></script> -->
+  <script src="/scripts/scripts-min.js" charset="utf-8"></script>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,700,900" rel="stylesheet">
+</head>
+
+  <body>
+    <nav class="navFixed">
+  <ul id="navList" class="navList">
+    <li class="navList__navItem" id="navList__homeLink"><a href="./">Home</a></li>
+    <li class="navList__navItem" id="navList__aboutLink"><a href="./about.html">About</a></li>
+    <li class="navList__navItem" id="navList__projectsLink"><a href="./projects.html">Projects</a></li>
+    <li class="navList__navItem" id="navList__projectsLink"><a href="./blog.html">Blog</a></li>
+    <li class="navList__navItem" id="navList__contactLink"><a href="./contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+    <header>
+  <div class="pageTopImage">
+
+  </div>
+</header>
+
+<main>
+  <div class="pageHeading">
+    <h1 class="bigTitle">
+      <span id="projects_p">P</span><span id="projects_r">R</span><span id="projects_o">O</span><span id="projects_j">J</span><span id="projects_e">E</span><span id="projects_c">C</span><span id="projects_t">T</span><span id="projects_s">S</span></h1>
+      <div class="pageTagline__container">
+        <h2 id="projectsTagline" class="pageTagline">Stuff I've Built</h2>
+      </div>
+    <p></p>
+  </div>
+ 
+  <div class="projectsGrid">
+    <div class="infoCard projectsCard projectsCard-wide ">
+      <h2 class="">My Vacation Map</h2>
+    <ul class="noList noListBlock">
+              <li class="projectTechnology">
+          <div class="icons projectIcon" id="react"></div>
+        <h4>react</h4>
+      </li>
+              <li class="projectTechnology">
+          <div class="icons projectIcon" id="javascript"></div>
+        <h4>javascript</h4>
+      </li>
+              <li class="projectTechnology">
+          <div class="icons projectIcon" id="drupal8"></div>
+        <h4>drupal8</h4>
+      </li>
+              <li class="projectTechnology">
+          <div class="icons projectIcon" id="redux"></div>
+        <h4>redux</h4>
+      </li>
+              <li class="projectTechnology">
+          <div class="icons projectIcon" id="leaflet"></div>
+        <h4>leaflet</h4>
+      </li>
+          </ul>
+    <hr>
+          <p>Have you ever been preparing for a trip and found a bunch of cool places to visit, only to not know where to keep that information so that it's easily accessable when you're out and about? My Vacation Map is a custom mapping app that is built on React and using the Leaflet mapping library to solve this problem.</p>
+          <p>The app allows the user to add points onto the map with various information that the user would like to keep about that location. These can be personal notes, information from guidebooks, links to a website about that location, or many other possibilities. The user is able to add a category that will determine the icon and color of the map point for easier identification while reviewing their points. The app also is able to use geolocation to find the user's current location and even follow them as they move.</p>
+          <p>My Vacation Map is built on Create-React-App with Redux for state management, the React-Leaflet component library for managing the Leaflet mapping, and the React-Geolocated component for geolocation. For data managemnet, there is a Drupal 8 back-end connected via REST and JSON Api end points as well as the Simple Oauth module for Oauth2 authentication management.</p>
+            <h4 class=""><a class="" href="mailto:rob@roblahoda.com" onclick="trackOutboundLink('mailto:rob@roblahoda.com'); return false;" target="_blank">Email me for access to this private repo! rob@roblahoda.com</a></h4>
+      </div>
+    <div class="infoCard projectsCard  ">
+      <h2 class="">Rock, Paper, Scissors Game</h2>
+    <ul class="noList noListBlock">
+              <li class="projectTechnology">
+          <div class="icons projectIcon" id="javascript"></div>
+        <h4>javascript</h4>
+      </li>
+              <li class="projectTechnology">
+          <div class="icons projectIcon" id="greensock"></div>
+        <h4>greensock</h4>
+      </li>
+              <li class="projectTechnology">
+          <div class="icons projectIcon" id="codepen"></div>
+        <h4>codepen</h4>
+      </li>
+          </ul>
+    <hr>
+          <p>This is a Javascript Rock-Paper-Scissors game! It started off as a simple command-line challenge that I decided to translate into a full game with Greensock GSAP animation, SVG graphics for the hands, emojis, and a retro feel. It uses an ES6 Promise structure to get a random name for player 2 from a random name API.</p>
+            <h4 class=""><a class="" href="https://codepen.io/rlahoda/full/pxBKmY/" onclick="trackOutboundLink('https://codepen.io/rlahoda/full/pxBKmY/'); return false;" target="_blank">Codepen Link</a></h4>
+    <h5 class=""><a class="" href="https://github.com/rlahoda/rock-paper-scissors" onclick="trackOutboundLink('https://github.com/rlahoda/rock-paper-scissors'); return false;" target="_blank">View Github Repo</a></h5>  </div>
+    <div class="infoCard projectsCard  ">
+      <h2 class="">Westerville Caring and Sharing</h2>
+    <ul class="noList noListBlock">
+              <li class="projectTechnology">
+          <div class="icons projectIcon" id="flexbox"></div>
+        <h4>flexbox</h4>
+      </li>
+              <li class="projectTechnology">
+          <div class="icons projectIcon" id="twig"></div>
+        <h4>twig</h4>
+      </li>
+          </ul>
+    <hr>
+          <p>A local charity contacted me about helping them update their website in time for their 25th anniversary. They had a previously unfinished site that needed rebuilding so I put together a simple site using Twig templates and a simple, Flexbox-based layout. The site design and content needed to be simple so that a volunteer from the organization could take over the code and continue to update the site. We were able to put together a nice, clean design in just over a month to have it ready for their organization's 25th Anniversary celebration.</p>
+            <h4 class=""><a class="" href="http://www.westervillecaringandsharing.org" onclick="trackOutboundLink('http://www.westervillecaringandsharing.org'); return false;" target="_blank">westervillecaringandsharing.org</a></h4>
+    <h5 class=""><a class="" href="https://github.com/rlahoda/westerville_caring_sharing" onclick="trackOutboundLink('https://github.com/rlahoda/westerville_caring_sharing'); return false;" target="_blank">View Github Repo</a></h5>  </div>
+    <div class="infoCard projectsCard  ">
+      <h2 class="">CSS Grid Periodic Table</h2>
+    <ul class="noList noListBlock">
+              <li class="projectTechnology">
+          <div class="icons projectIcon" id="javascript"></div>
+        <h4>javascript</h4>
+      </li>
+              <li class="projectTechnology">
+          <div class="icons projectIcon" id="greensock"></div>
+        <h4>greensock</h4>
+      </li>
+              <li class="projectTechnology">
+          <div class="icons projectIcon" id="cssgrid"></div>
+        <h4>cssgrid</h4>
+      </li>
+          </ul>
+    <hr>
+          <p>My wife is a chemist and I used to work for a chemistry information company, so I felt inspired to use this as a basis for playing around with CSS Grid. So I built a representation of the Periodic Table of Elements laid out using CSS Grid. The table is generated through an AJAX call to a Github repo containing the raw information in JSON. Using Greensock Animations I set up a fade in upon loading of the table and also a fade and scaling effect on the elements.</p>
+            <h4 class=""><a class="" href="https://codepen.io/rlahoda/full/QVxYoE/" onclick="trackOutboundLink('https://codepen.io/rlahoda/full/QVxYoE/'); return false;" target="_blank">Codepen Link</a></h4>
+    <h5 class=""><a class="" href="https://github.com/rlahoda/css_grid_periodic_table" onclick="trackOutboundLink('https://github.com/rlahoda/css_grid_periodic_table'); return false;" target="_blank">View Github Repo</a></h5>  </div>
+    <div class="infoCard projectsCard  ">
+      <h2 class="">React-based Multilingual Calendar/Clock</h2>
+    <ul class="noList noListBlock">
+              <li class="projectTechnology">
+          <div class="icons projectIcon" id="react"></div>
+        <h4>react</h4>
+      </li>
+              <li class="projectTechnology">
+          <div class="icons projectIcon" id="javascript"></div>
+        <h4>javascript</h4>
+      </li>
+          </ul>
+    <hr>
+          <p>After building my multilingual clock and calendar in vanilla Javascript, I decided to rebuild it in React. The app is visually identical to the Codepen version except that this one is built in React. For more information see the description below for the original project.</p>
+            <h4 class=""><a class="" href="https://reactcalendar.roblahoda.com/" onclick="trackOutboundLink('https://reactcalendar.roblahoda.com/'); return false;" target="_blank">reactcalendar.roblahoda.com/</a></h4>
+    <h5 class=""><a class="" href="https://github.com/rlahoda/Multilingual-Calendar-React" onclick="trackOutboundLink('https://github.com/rlahoda/Multilingual-Calendar-React'); return false;" target="_blank">View Github Repo</a></h5>  </div>
+    <div class="infoCard projectsCard  projectsCard-med">
+      <h2 class="">Heritage Insurance Advisors</h2>
+    <ul class="noList noListBlock">
+              <li class="projectTechnology">
+          <div class="icons projectIcon" id="drupal8"></div>
+        <h4>drupal8</h4>
+      </li>
+          </ul>
+    <hr>
+          <p>A local business contacted me with the request to build a website for them that could grow significantly in the future. After some discussion with them, we decided that Drupal 8 would be an ideal platform based on their needs and future growth plans. Their desires were fairly open-ended so I built the theme with maximum flexibility in mind.</p>
+          <p>The theme is built with Paragraphs as the primary layout tool. The client wanted the site up quickly so I used the UIKit front-end framework as a starting point for the design. The site is fully responsive and contains a custom quote form based on the Webform module that uses a variety of logic to allow the user to request a quote for the various types of insurance that is offered by the company.</p>
+            <h4 class=""><a class="" href="http://hia-oh.com/?utm_source=github&utm_medium=github_pages&utm_campaign=github_projects&utm_content=projects" onclick="trackOutboundLink('http://hia-oh.com/?utm_source=github&utm_medium=github_pages&utm_campaign=github_projects&utm_content=projects'); return false;" target="_blank">hia-oh.com</a></h4>
+      </div>
+    <div class="infoCard projectsCard  ">
+      <h2 class="">Love God Love France</h2>
+    <ul class="noList noListBlock">
+              <li class="projectTechnology">
+          <div class="icons projectIcon" id="drupal8"></div>
+        <h4>drupal8</h4>
+      </li>
+              <li class="projectTechnology">
+          <div class="icons projectIcon" id="flexbox"></div>
+        <h4>flexbox</h4>
+      </li>
+          </ul>
+    <hr>
+          <p>Working on a personal project I built this site using Drupal 8. I wanted to have maximum editorial flexibility so I used Paragraphs for the primary layout basis. There are a number of different Paragraph types including one that generates an SVG pie chart based off the values supplied by the content item. The site also includes Mailchimp signup forms and a responsive design.</p>
+         <p class="projectAlert">Please Note: This site describes my family's desire to move internationally. However, due to circumstances beyond our control, this is no longer our intent.</p>      <h4 class=""><a class="" href="https://www.lovegodlovefrance.org/?utm_source=github&utm_medium=github_pages&utm_campaign=github_projects&utm_content=projects" onclick="trackOutboundLink('https://www.lovegodlovefrance.org/?utm_source=github&utm_medium=github_pages&utm_campaign=github_projects&utm_content=projects'); return false;" target="_blank">lovegodlovefrance.org</a></h4>
+    <h5 class=""><a class="" href="https://github.com/rlahoda/lahodatheme" onclick="trackOutboundLink('https://github.com/rlahoda/lahodatheme'); return false;" target="_blank">View Github Repo</a></h5>  </div>
+    <div class="infoCard projectsCard projectsCard-wide ">
+      <h2 class="">Multilingual Calendar/Clock with CSS Grid and Flexbox Fallback</h2>
+    <ul class="noList noListBlock">
+              <li class="projectTechnology">
+          <div class="icons projectIcon" id="javascript"></div>
+        <h4>javascript</h4>
+      </li>
+              <li class="projectTechnology">
+          <div class="icons projectIcon" id="cssgrid"></div>
+        <h4>cssgrid</h4>
+      </li>
+              <li class="projectTechnology">
+          <div class="icons projectIcon" id="flexbox"></div>
+        <h4>flexbox</h4>
+      </li>
+          </ul>
+    <hr>
+          <p>When learning a new language one of the first things people learn are numbers and dates. As a way to help language students get used to reading numbers and dates in the language they want to learn, I created this multilingual clock and calendar. The app shows all the numbers both as numbers and written out. The user can see the current time and date as well as the next and previous days. There is a full calendar of the entire month with the days of the week and numbers for each of the days with different styles for the current day and weekends.</p>
+          <p>The app is built in Javascript with a CSS Grid layout and a Flexbox fallback. The user can change the order of dates in the date view from Month/Day/Year to Day/Month/Year and they are able to change the week start date from Sunday to Monday. There is an API call to Github to get a JSON file containing all of the different languages (currently English, French, Spanish, and German). </p>
+            <h4 class=""><a class="" href="https://codepen.io/rlahoda/pen/JaJNdW" onclick="trackOutboundLink('https://codepen.io/rlahoda/pen/JaJNdW'); return false;" target="_blank">Codepen Link</a></h4>
+    <h5 class=""><a class="" href="https://github.com/rlahoda/multilingual-calendar" onclick="trackOutboundLink('https://github.com/rlahoda/multilingual-calendar'); return false;" target="_blank">View Github Repo</a></h5>  </div>
+    <div class="infoCard projectsCard  projectsCard-med">
+      <h2 class="">Flashcards</h2>
+    <ul class="noList noListBlock">
+              <li class="projectTechnology">
+          <div class="icons projectIcon" id="javascript"></div>
+        <h4>javascript</h4>
+      </li>
+              <li class="projectTechnology">
+          <div class="icons projectIcon" id="flexbox"></div>
+        <h4>flexbox</h4>
+      </li>
+          </ul>
+    <hr>
+          <p>I've always been fascinated by the prospect of learning another language. For a few years I have been slowly learning French and I wanted a way to make flashcards that I could use to help learn the vocabulary. Of course, I didn't want to deal with paper flashcards, I wanted something electronic. That led me to start this project.</p>
+          <p>The project is written in Javascript with a Flexbox layout and allows the user to enter in the 'front' and 'back' values for the cards they are creating, then hide what they entered and test themselves on the cards. Adding and removing the cards happens dynamically and the user can create as many cards as they want.</p>
+            <h4 class=""><a class="" href="https://codepen.io/rlahoda/full/xVaWpd/" onclick="trackOutboundLink('https://codepen.io/rlahoda/full/xVaWpd/'); return false;" target="_blank">Codepen Link</a></h4>
+      </div>
+    <div class="infoCard projectsCard  ">
+      <h2 class="">Rob Lahoda Media</h2>
+    <ul class="noList noListBlock">
+              <li class="projectTechnology">
+          <div class="icons projectIcon" id="twig"></div>
+        <h4>twig</h4>
+      </li>
+              <li class="projectTechnology">
+          <div class="icons projectIcon" id="gulp"></div>
+        <h4>gulp</h4>
+      </li>
+              <li class="projectTechnology">
+          <div class="icons projectIcon" id="sass"></div>
+        <h4>sass</h4>
+      </li>
+          </ul>
+    <hr>
+          <p>For over 15 years I have been a multimedia producer. I love visual storytelling and have used photography, video production, graphic design, and more to tell many stories through personal and client-based projects. My experience has run the gamut from sports to nature, architecture to astronomy, portraits to journalism.</p>
+          <p>As a way to showcase my work, I created this portfolio site using a custom Gulp workflow, SASS, Twig templating for automating much of the code, Flexbox layout, and a responsive design.</p>
+            <h4 class=""><a class="" href="https://media.roblahoda.com/?utm_source=github&utm_medium=github_pages&utm_campaign=github_projects&utm_content=projects" onclick="trackOutboundLink('https://media.roblahoda.com/?utm_source=github&utm_medium=github_pages&utm_campaign=github_projects&utm_content=projects'); return false;" target="_blank">media.roblahoda.com</a></h4>
+    <h5 class=""><a class="" href="https://github.com/rlahoda/roblahoda-media" onclick="trackOutboundLink('https://github.com/rlahoda/roblahoda-media'); return false;" target="_blank">View Github Repo</a></h5>  </div>
+    </div>
+</main>
+
+    <footer>
+  <div class="footerLinks__container">
+    <h4 class="">Say Hi!</h4>
+  <ul class="noList noListBlock footerLinks__list">
+              <li class="footerLinks__list--item">
+          <a class="footerLinks__link" href="mailto:rob@roblahoda.com" onclick="trackOutboundLink('rob@roblahoda.com'); return false;" target="_blank"><span class="icons footerLinks__link--icon" id="email"></span>
+          <p class="">Email</p></a>
+        </li>
+              <li class="footerLinks__list--item">
+          <a class="footerLinks__link" href="https://twitter.com/rlahoda" onclick="trackOutboundLink('https://twitter.com/rlahoda'); return false;" target="_blank"><span class="icons footerLinks__link--icon" id="twitter"></span>
+          <p class="">Twitter</p></a>
+        </li>
+              <li class="footerLinks__list--item">
+          <a class="footerLinks__link" href="https://github.com/rlahoda" onclick="trackOutboundLink('https://github.com/rlahoda'); return false;" target="_blank"><span class="icons footerLinks__link--icon" id="github"></span>
+          <p class="">Github</p></a>
+        </li>
+              <li class="footerLinks__list--item">
+          <a class="footerLinks__link" href="https://codepen.io/rlahoda/" onclick="trackOutboundLink('https://codepen.io/rlahoda/'); return false;" target="_blank"><span class="icons footerLinks__link--icon" id="codepen">
+          </span>
+          <p class="">Codepen</p></a>
+        </li>
+              <li class="footerLinks__list--item">
+          <a class="footerLinks__link" href="https://www.drupal.org/u/rlahoda/" onclick="trackOutboundLink('https://www.drupal.org/u/rlahoda/'); return false;" target="_blank"><span class="icons footerLinks__link--icon" id="drupal"></span>
+          <p class="">Drupal.org</p></a>
+        </li>
+              <li class="footerLinks__list--item">
+          <a class="footerLinks__link" href="https://www.linkedin.com/in/robert-lahoda/" onclick="trackOutboundLink('https://www.linkedin.com/in/robert-lahoda/'); return false;" target="_blank"><span class="icons footerLinks__link--icon" id="linkedin"></span>
+          <p class="">Linkedin</p></a>
+        </li>
+            </ul>
+            <p class="smallText">Copyright ©2018 Rob Lahoda - Logos are property of their respective owners.</p>
+
+</div>
+<script src="/vendor/prism/prism.js"></script>
+</footer>
+<script type="text/javascript" src="scroll.js"></script>
+<script>
+/**
+* Function that tracks a click on an outbound link in Analytics.
+* This function takes a valid URL string as an argument, and uses that URL string
+* as the event label. Setting the transport method to 'beacon' lets the hit be sent
+* using 'navigator.sendBeacon' in browser that support it.
+*/
+var trackOutboundLink = function(url) {
+ ga('send', 'event', 'outbound', 'click', url, {
+   'transport': 'beacon',
+   'hitCallback': function(){document.location = url;}
+ });
+}
+</script>
+  </body>
+</html>

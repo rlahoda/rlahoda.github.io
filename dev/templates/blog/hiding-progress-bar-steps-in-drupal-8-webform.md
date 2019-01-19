@@ -1,4 +1,4 @@
-[Back to blog posts](./blog.html)
+[Back to blog posts](../blog.html)
 
 I was recently working on a client site in Drupal 8 that involved a [multi-step form](https://hia-oh.com/get-a-quote?utm_source=blog&utm_medium=link&utm_campaign=blog-link). The client is an insurance agency and wanted to have a quote form that users can fill out to start the process of getting a quote for insurance. Since the agency covers multiple kinds of insurance, this meant that the form needed to handle multiple types of insurance. To create this, I used the [Webform](https://www.drupal.org/project/webform/) module. I thought about doing multiple forms for simplicity, but realized that a single user might want to get a quote for more than one kind of insurance and asking them to fill out the same information multiple times would be frustrating and a negative user experience.
 
@@ -200,3 +200,5 @@ The final step is to make the markers look a little different because of the fac
 To see the progress bar design I came up with, I put the design into a [pen on Codepen](https://codepen.io/rlahoda/pen/KoVQyy?editors=1100) where you can see how it all comes together.
 
 I hope this all made sense to you. If you have any questions, feel free to leave a comment or contact me [via Twitter (@rlahoda)](https://twitter.com/rlahoda/). Thanks for reading!
+
+[Back to blog posts](../blog.html)
