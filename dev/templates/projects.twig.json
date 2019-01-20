@@ -20,7 +20,8 @@
         "3": "drupal8",
         "4": "redux",
         "5": "leaflet",
-        "6": "pantheon"
+        "6": "pantheon",
+        "7": "netlify"
       }
     },
     "rockpaperscissors": {
@@ -88,6 +89,24 @@
       "technology": {
         "1": "react",
         "2": "javascript"
+      }
+    },
+    "roblahoda": {
+      "title": "Rob Lahoda • Web Developer",
+      "linktitle": "roblahoda.com",
+      "linkaddress": "http://www.roblahoda.com/?utm_source=github&utm_medium=github_pages&utm_campaign=github_projects&utm_content=projects",
+      "trackingaddress": "roblahoda.com",
+      "githubaddress": "https://github.com/rlahoda/rlahoda.github.io",
+      "githubtracking": "https://github.com/rlahoda/rlahoda.github.io",
+      "width": "normal",
+      "paragraphs": [
+        "This is my personal website. It's built using Twig templating combined with JSON data and Markdown files for blog content. The site is hosted on Netlify for continuious delivery from Github. The animation is done with Greensock Animation Platform (GSAP) and the layout is in CSS Grid with a Flexbox fallback. The icons are inline SVG inserted dynamically using Javascript."
+      ],
+      "technology": {
+        "1": "javascript",
+        "2": "greensock",
+        "3": "cssgrid",
+        "4": "netlify"
       }
     },
     "hia": {
