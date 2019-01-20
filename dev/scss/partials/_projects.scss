@@ -75,14 +75,14 @@
   &-wide {
     grid-area: span 1 / span 2;
 
-    @include respond-at($bp-small) {
+    @include respond-at($bp-med) {
       grid-area: span 1 / span 4;
     }
   }
   &-med {
-    grid-area: span 1 / span 1;
+    grid-area: span 1 / span 2;
 
-    @include respond-at($bp-small) {
+    @include respond-at($bp-med) {
       grid-area: span 1 / span 3;
     }
   }
