@@ -114,4 +114,6 @@ console.log(array2);// output is: [2,4,6,8,10,12]
 
 This means you can use `const` for probably the majority of variables that you're going to create when you're writing your functions.
 
+If you're interested in learning more about ES6 check out [Wes Bos' ES6 for everyone course](https://es6.io/) for some pretty helpful training. If you're just trying to get started in learning Javascript, there are a ton of different options. One I thought was really helpful was [Javascript - From Beginner to Pro-Build real world JS apps ](https://www.udemy.com/javascript-from-beginner-to-pro-best-course/) by [Abhay Talreja](https://twitter.com/AbhayTalreja). He does a great job of laying out how to use JS and what everything means. If you're just getting started, I'd recommend that course before then moving on to Wes' training because his is more geared for people who already know Javascript and are looking to understand the new features of ES6.
+
 [Back to blog posts](../blog.html)
