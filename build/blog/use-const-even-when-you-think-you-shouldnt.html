@@ -76,8 +76,8 @@
     <!-- <h1 class="bigTitle">
       Blog</h1> -->
       <div class="pageTagline__container">
-        <h1 id="projectsTagline" class="pageTagline">CodeAcademy Introduction to Javascript Course</h1>
-        <h2>May 6, 2016</h2>
+        <h1 id="projectsTagline" class="pageTagline">Use "const", Even When You Think You Shouldn't</h1>
+        <h2>Jan 23, 2019</h2>
       </div>
     <p></p>
   </div>
@@ -100,8 +100,77 @@
     
     <div class="blogCard">
       <p><a href="../blog.html">Back to blog posts</a></p>
-<p>I haven&#39;t had as much to talk about the past couple weeks because I&#39;ve been working on learning more Javascript. After talking to some people and looking around I decided to start with <a href="https://www.codecademy.com/learn/javascript">CodeAcademy&#39;s free online JS course</a>. It was an interesting course to follow because it was purely about Javascript. It didn&#39;t talk about using JS to talk to html or manipulate the DOM. It didn&#39;t work with anything outside of a few popup alerts and the console. In some ways this was good because it meant I wasn&#39;t distracted or confused by any of that, but at the same time I came to learn JS to work with it in the context of a website, not manipulate the console. So I was a bit disappointed in that aspect of things. At the same time, I feel like it gave me more understanding of the basics of how JS works and the concepts of programming so I did learn stuff.</p>
-<p>Programming is something that I really need to get my head around soon. Back in high school I took a programming course and did pretty terrible with it. Part of that was over-thinking the concepts. The teacher gave us the assignment to make a simple calculator program. My head was spinning trying to figure out how to teach the program the basic concepts of math. It didn&#39;t occur to me that I could just tell it to multiply or divide two values that were input by the user. The only reason I didn&#39;t bomb that class completely was because I had my own website, a rarity back in the late 90&#39;s, and my teacher gave me credit for scanning in photos during class. So now it&#39;s time to continue to my next step of learning. I&#39;ve gotten a few JS books that I&#39;m going to start reading through and I&#39;m feeling good about the first one. It&#39;s an O&#39;Reilly book and in the introduction the author walks you through how to install Git, Node.js and Gulp, all of which are heavily used in the industry. So the fact that in the introduction they&#39;re starting with practical skills is encouraging. Many tutorials go the route of being so high-level that you only learn concepts and nothing practical so this should be a good one.</p>
+<p>If you&#39;re just starting out in Javascript (JS), you might be learning from some of the many great trainings that explain how JS has been done for many years. There are tons of great trainings to check out and I&#39;ll recommend some in a moment. When you go through these trainings, you probably see everywhere the use of <code>var</code> for creating variables. With the advent of ES6 (or ECMAScript 2015, the latest version of Javascript) there are a couple more fun variable types that we can use: <code>const</code> and let.</p>
+<p>There are a lot of great tutorials that explain how to use the different types of variables and go into in-depth description of what they do and how they&#39;re different from <code>var</code>, but I want to focus specifically on <code>const</code> and one of the concepts that took me a while to understand.</p>
+<p>On the surface, <code>const</code> would seem to stand for &quot;constant&quot;, which it kind of is. Here&#39;s what <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const">MDN has to say about const</a>:</p>
+<blockquote>
+<p>Constants are block-scoped, much like variables defined using the let statement. The value of a constant cannot change through reassignment, and it can&#39;t be redeclared.</p>
+</blockquote>
+<p>So it seems pretty clear: &quot;the value of a constant cannot change through reassignment, and it can&#39;t be redeclared.&quot; So what does that mean?</p>
+<h3 id="const-can-t-be-reassigned">Const can&#39;t be reassigned</h3>
+<p>Assigning a variable is when we tell a function what value a variable is going to have. Essentially it&#39;s the function saying &quot;here&#39;s what this variable holds.&quot; It&#39;s usually shown like this:</p>
+<pre><code class="language-JavaScript">const variable1 = 5;</code></pre>
+<p>If this was a <code>var</code> instead of a const, we can tell the function to assign different values at different times.</p>
+<pre><code class="language-JavaScript">var variable1 = 5;
+
+console.log(variable1); //output is: &quot;5&quot;
+
+variable1 = 10;
+
+console.log(variable1); //output is: &quot;10&quot;</code></pre>
+<p>This is possible because <code>var</code> is able to be redefined. <code>Const</code>, however, isn&#39;t. So trying the same function with <code>const</code> will just give you an error:</p>
+<pre><code class="language-JavaScript">const variable1 = 5;
+
+console.log(variable1); //output is: &quot;5&quot;
+
+variable1 = 10;
+
+console.log(variable1); //output is: &quot;TypeError: invalid assignment to const `variable1&#39;&quot;</code></pre>
+<h3 id="const-can-t-be-redeclared">Const can&#39;t be redeclared</h3>
+<p>Declaring a variable is when a function says &quot;here&#39;s the name of a variable.&quot; Redeclaring is when the function later says another variable has that same name. Here&#39;s an example:</p>
+<pre><code class="language-JavaScript">function example() {
+  var variable1 = 5;
+
+  console.log(variable1); //output is: &quot;5&quot;
+
+  var variable1 = 10;
+
+  console.log(variable1); //output is: &quot;10&quot;
+}</code></pre>
+<p>So in this little function, the same variable is created twice with two different values. This is possible because <code>var</code> is able to redeclared. If you tried it with <code>const</code>, however, you would get an error because the variable has already been declared once.</p>
+<pre><code class="language-Javascript">function example() {
+  const variable1 = 5;
+
+  console.log(variable1); //output is: &quot;5&quot;
+
+  const variable1 = 10;
+
+  console.log(variable1); //output is: &quot;SyntaxError: redeclaration of const variable1&quot;
+}</code></pre>
+<p>It&#39;s not specified, but it&#39;s implied that you also can&#39;t change what type of content is being held by the <code>const</code>. This is pretty obvious because if you can&#39;t change the content of what&#39;s in it, why would you be able to change the type of content that&#39;s in it either.</p>
+<p>Ok, so now you&#39;re thinking: <em>&quot;cool, <code>const</code> is for &quot;constant&quot;, or unchanging values, no problem. I&#39;ll only use them when I have a value that isn&#39;t changing.&quot;</em> And you&#39;ll be right, sort of.</p>
+<h3 id="const-values-can-change-in-certain-circumstances">Const values can change in certain circumstances</h3>
+<p><strong>Wait, what? How is that possible?</strong></p>
+<p>It&#39;s true. It took me a while to understand this, but it makes sense and it&#39;s why I use <code>const</code> almost all the time for variable declarations.</p>
+<h3 id="when-const-holds-an-object-or-array-the-value-can-change">When const holds an object or array, the value can change</h3>
+<p>A quick review: there are different types of content that can be stored in a variable. These are things like number values, strings of text, boolean (true/false) values, arrays, and objects. The first three of those, <strong>numbers</strong>, <strong>strings</strong>, and <strong>booleans</strong>, cannot be changed if they are declared in a <code>const</code> variable. So in those instances, the <code>const</code> truly means it&#39;s a constant.</p>
+<p>If <code>const</code> is declared as an <strong>array</strong> or an <strong>object</strong>, however, it can change, but not completely. <em>Wait, what? I thought <code>const</code> couldn&#39;t change!</em> So if you declare a <code>const</code> variable as an array, it is constant, as an array. It can&#39;t change to be something other than an array, it&#39;s stuck as an array. However, you <strong>can</strong> change the values contained <strong>inside</strong> the array! 🤯 The same goes for if the <code>const</code> is holding an object.</p>
+<p>So why is this possible? I don&#39;t know. It&#39;s the way they made it.</p>
+<p>Why is it good? It means that when you create a <code>const</code> variable, you always know what type of content will be in it. You don&#39;t have to worry that at some other point in the function you might forget that you used that variable name and give it a new value or new type of content, once you create it, it stays the same. This comes in handy when you&#39;re containing a lot of information inside of an object and need to add things like functions through dot notation.</p>
+<pre><code class="language-JavaScript">const obj1 = {
+  name: &quot;Rob&quot;,
+  lastName: &quot;Lahoda&quot;
+}
+obj1.greeting = function() {
+  console.log(&quot;hello &quot; + this.name + &quot; &quot; + this.lastName)
+}</code></pre>
+<p>Maybe you have an array that you need to iterate over and process the data, then you&#39;re going to save it into another variable. You&#39;d think that since the second variable is going to &quot;change&quot; since the content adds with every iteration, but you can still use <code>const</code> for that.</p>
+<pre><code class="language-JavaScript">const array1 = [1,2,3,4,5,6];
+const array2 = array1.map((num) =&gt; {
+  return num * 2;
+});
+console.log(array2);// output is: [2,4,6,8,10,12]</code></pre>
+<p>This means you can use <code>const</code> for probably the majority of variables that you&#39;re going to create when you&#39;re writing your functions.</p>
 <p><a href="../blog.html">Back to blog posts</a></p>
     </div>
 

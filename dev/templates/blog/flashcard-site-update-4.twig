@@ -1,5 +1,5 @@
-{% extends '../base.twig' %}
-{% block primarycontent %}
+{% extends '../blogBase.twig' %}
+{% block heading %}
 <header>
   <div class="pageTopImage">
 
@@ -17,6 +17,9 @@
     <p></p>
   </div>
   <div class="blogContainer">
+{% endblock %}
+{% block primarycontent %}
+
     <div class="blogCard">
       {% markdown 'flashcard-site-update-4.md' %}{% endmarkdown %}
   <p class="codepen" data-height="668" data-theme-id="0" data-slug-hash="RaRqPG" data-default-tab="result" data-user="rlahoda">See the Pen <a href="http://codepen.io/rlahoda/pen/RaRqPG/">Flashcards v1.0.0</a> by Rob Lahoda (<a href="http://codepen.io/rlahoda">@rlahoda</a>) on <a href="http://codepen.io">CodePen</a>.</p>

@@ -4,9 +4,10 @@
 
   <body>
     {% include 'partials/nav.twig' %}
+    {% block heading %}
+    {% endblock %}
 
     {% block primarycontent %}
-
     {% endblock %}
     {% include 'partials/footer.twig' %}
 {% include 'partials/scripts.twig' %}

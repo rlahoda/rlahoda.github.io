@@ -1,0 +1,60 @@
+{% set posts = [
+    {
+      "title": "Use 'const', Even When You Think You Shouldn't",
+      "date": "Jan 23, 2019",
+      "link": "use-const-even-when-you-think-you-shouldnt.html"
+    },
+    {
+      "title": "An Easy Way To Practice With Twig Without Drupal",
+      "date": "Mar 28, 2018",
+      "link": "an-easy-way-to-practice-with-twig-without-drupal.html"
+    },
+    {
+      "title": "Hiding Progress Bar Steps in Drupal 8 Webform",
+      "date": "Mar 26, 2018",
+      "link": "hiding-progress-bar-steps-in-drupal-8-webform.html"
+    },
+    {
+      "title": "Trying to get more out of Google Analytics",
+      "date": "Apr 22, 2017",
+      "link": "trying-to-get-more-out-of-google-analytics.html"
+    }
+  ]
+ %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  {% include 'partials/header.twig' %}
+
+  <body>
+    {% include 'partials/nav.twig' %}
+    {% block heading %}
+    {% endblock %}
+
+    <div class="blogCard recentPosts">
+      <h3 class="noMargin">Check Out Some Recent Posts:</h3>
+      <ul class="noList linkList">
+        {% for post in posts %}
+          <li class="linkList-links"><a href="{{ post.link }}">{{ post.title }}</a></br>
+           <p class="noMargin indented">{{ post.date }}</p></li>
+        {% endfor %}
+      </ul>
+
+    </div>
+    {% block primarycontent %}
+    {% endblock %}
+    <div class="blogContainer">
+    <div class="blogCard recentPosts">
+      <h3 class="noMargin">Check Out Some Recent Posts:</h3>
+      <ul class="noList linkList">
+        {% for post in posts %}
+          <li class="linkList-links"><a href="{{ post.link }}">{{ post.title }}</a></br>
+           <p class="noMargin indented">{{ post.date }}</p></li>
+        {% endfor %}
+      </ul>
+</div>
+    </div>
+    {% include 'partials/footer.twig' %}
+{% include 'partials/scripts.twig' %}
+  </body>
+</html>

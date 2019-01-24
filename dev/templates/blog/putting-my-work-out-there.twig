@@ -1,5 +1,5 @@
-{% extends '../base.twig' %}
-{% block primarycontent %}
+{% extends '../blogBase.twig' %}
+{% block heading %}
 <header>
   <div class="pageTopImage">
 
@@ -16,6 +16,9 @@
     <p></p>
   </div>
   <div class="blogContainer">
+{% endblock %}
+{% block primarycontent %}
+
     <div class="blogCard">
       {% markdown 'putting-my-work-out-there.md' %}{% endmarkdown %}
       <div class="video-responsive"><iframe width="1468" height="759" src="https://www.youtube.com/embed/kTEGsFJDnC8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>

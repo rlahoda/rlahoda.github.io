@@ -682,6 +682,12 @@ hr {
   width: 100%;
   position: absolute; }
 
+.noMargin {
+  margin: 0; }
+
+.indented {
+  margin-left: 20px; }
+
 .homepageMain__grid {
   width: 100%;
   display: -webkit-box;
@@ -1384,7 +1390,14 @@ hr {
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center; }
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
 
 .blogCard {
   width: calc(100%-20px);
@@ -1408,6 +1421,28 @@ hr {
   @media only screen and (min-width: 1400px) {
     .blogCard {
       width: 65%; } }
+
+.recentPosts {
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #b48fe8;
+  -webkit-box-shadow: 10px 10px #ff98a1;
+          box-shadow: 10px 10px #ff98a1; }
+  .recentPosts a:hover {
+    color: #ff98a1; }
+
+.linkList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.linkList-links {
+  width: 40%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto; }
 
 h1 {
   font-size: 1.5em;

@@ -1,6 +1,11 @@
 {
   "posts": [
     {
+      "title": "Use 'const', Even When You Think You Shouldn't",
+      "date": "Jan 23, 2019",
+      "link": "use-const-even-when-you-think-you-shouldnt.html"
+    },
+    {
       "title": "An Easy Way To Practice With Twig Without Drupal",
       "date": "Mar 28, 2018",
       "link": "an-easy-way-to-practice-with-twig-without-drupal.html"

@@ -1,5 +1,5 @@
-{% extends '../base.twig' %}
-{% block primarycontent %}
+{% extends '../blogBase.twig' %}
+{% block heading %}
 <header>
   <div class="pageTopImage">
 
@@ -17,6 +17,9 @@
     <p></p>
   </div>
   <div class="blogContainer">
+{% endblock %}
+{% block primarycontent %}
+
     <div class="blogCard">
       {% markdown 'an-easy-way-to-practice-with-twig-without-drupal.md' %}{% endmarkdown %}
 
