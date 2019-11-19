@@ -43,4 +43,35 @@ export const pointerIcon = new L.Icon({
 });
 ```
 
+## Map Display
+
+Displaying the custom icons is pretty easy once you get this far. Just like always, the `<Marker/>` component is called but with a new prop that's passed for the icon:
+
+```javascript
+<Marker position={position} icon={pointerIcon}>
+  // Popup or other information
+</Marker>
+```
+
+## Webpack Issue
+
+For some reason, Webpack doesn't like to compile the code correctly when using custom icons. This is an issue with Create-React-App and might be for other Webpack setups, but my project is based on Create-React-App, so this is something I had to deal with.
+
+What needs to be done is to remove the default icon from the original Leaflet class (imported here as `L.Icon`) and replace it with a custom icon. In my case, I created my own default point design, though using the default Leaflet point would work just fine, you would have to point to the files yourself here instead of relying on the defaults in the Leaflet package.
+
+To override the defauts and force the use of the custom icons, here's a little snippet that I placed at the top of my component that was housing the React Leaflet `Map` component:
+
+```javascript
+delete L.Icon.Default.prototype._getIconUrl;
+L.Icon.Default.mergeOptions({
+  iconRetinaUrl: require("../assets/starIcon.svg"),
+  iconUrl: require("../assets/starIcon.svg"),
+  shadowUrl: require("leaflet/dist/images/marker-shadow.png")
+});
+```
+
+## Conclusion
+
+I hope this was helpful to understand a bit more about how to add custom map icons for Leaflet maps in React!
+
 [Back to blog posts](../blog.html)
