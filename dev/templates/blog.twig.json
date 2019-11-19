@@ -1,6 +1,11 @@
 {
   "posts": [
     {
+      "title": "React Leaflet Custom Map Icons",
+      "date": "Nov 19, 2019",
+      "link": "leaflet-react-custom-icons.html"
+    },
+    {
       "title": "Use 'const', Even When You Think You Shouldn't",
       "date": "Jan 23, 2019",
       "link": "use-const-even-when-you-think-you-shouldnt.html"
