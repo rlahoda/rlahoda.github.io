@@ -1,0 +1,32 @@
+{% extends '../blogBase.twig' %}
+{% block heading %}
+<header>
+  <div class="pageTopImage">
+
+  </div>
+</header>
+
+<main>
+  <div class="pageHeading">
+    <!-- <h1 class="bigTitle">
+      Blog</h1> -->
+      <div class="pageTagline__container">
+        <h1 id="projectsTagline" class="pageTagline">React Leaflet Custom Map Icons</h1>
+         <h2>November 19, 2019</h2>
+      </div>
+    <p></p>
+  </div>
+  <div class="blogContainer">
+{% endblock %}
+{% block primarycontent %}
+
+    <div class="blogCard">
+      {% markdown 'leaflet-react-custom-icons.md' %}{% endmarkdown %}
+    </div>
+
+
+  </div>
+
+</main>
+
+{% endblock %}
