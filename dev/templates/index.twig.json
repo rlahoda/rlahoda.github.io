@@ -18,6 +18,11 @@
       "link": "https://www.drupal.org"
     },
     {
+      "name": "VS Code",
+      "icon": "vscode",
+      "link": "https://code.visualstudio.com"
+    },
+    {
       "name": "Twig",
       "icon": "twig",
       "link": "https://twig.symfony.com/"
@@ -61,6 +66,11 @@
       "name": "Atom",
       "icon": "atom",
       "link": "https://atom.io/"
+    },
+    {
+      "name": "Jest",
+      "icon": "jest",
+      "link": "https://jestjs.io"
     },
     {
       "name": "Gulp",

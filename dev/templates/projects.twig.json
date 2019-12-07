@@ -12,16 +12,38 @@
       "paragraphs": [
         "Have you ever been preparing for a trip and found a bunch of cool places to visit, only to not know where to keep that information so that it's easily accessable when you're out and about? My Vacation Map is a custom mapping app that is built on React and using the Leaflet mapping library to solve this problem.",
         "The app allows the user to add points onto the map with various information that the user would like to keep about that location. These can be personal notes, information from guidebooks, links to a website about that location, or many other possibilities. The user is able to add a category that will determine the icon and color of the map point for easier identification while reviewing their points. The app also is able to use geolocation to find the user's current location and even follow them as they move.",
-        "My Vacation Map is built on Create-React-App with Redux for state management, the React-Leaflet component library for managing the Leaflet mapping, and the React-Geolocated component for geolocation. For data managemnet, there is a Drupal 8 back-end connected via REST and JSON Api end points as well as the Simple Oauth module for Oauth2 authentication management."
+        "My Vacation Map is built React with Redux for state management, the React-Leaflet component library for managing the Leaflet mapping, and the React-Geolocated component for geolocation. For data managemnet, there is a Drupal 8 back-end connected via REST and JSON Api end points as well as the Simple Oauth module for Oauth2 authentication management.",
+        "For API management, custom Redux middleware was written to allow simplified triggering of complex events through components. Unit tests are written in Jest with Enzyme."
       ],
       "technology": {
         "1": "react",
         "2": "javascript",
         "3": "drupal8",
         "4": "redux",
-        "5": "leaflet",
-        "6": "pantheon",
-        "7": "netlify"
+        "5": "jest",
+        "6": "leaflet",
+        "7": "pantheon",
+        "8": "netlify"
+      }
+    },
+    "demosite": {
+      "title": "Hot Dog Demo Site",
+      "linktitle": "Live Preview Site",
+      "linkaddress": "https://rlahoda.github.io/demo-site/",
+      "trackingaddress": "rockpaperscissors",
+      "githubaddress": "https://github.com/rlahoda/demo-site",
+      "githubtracking": "hotdog",
+      "width": "med",
+      "paragraphs": [
+        "I recently did a little code challenge where I was given a photoshop mockup of a site and asked to build it out however I wanted to. So I built this demo site. It’s written in HTML using semantic markup and tagging. The styles were written in SCSS and there’s a small amount of Javascript.",
+        "All of the colors are in CSS variables, which allowed me to implement a “dark mode” setting by just adding a single CSS style to the body element. The layout is done in Flexbox and fully responsive with the order of the image/article sets changing on smaller viewport sizes to allow for the content to remain in a logical order on screen.",
+        "The main navigation menu collapses on mobile using just CSS styles. SCSS mixin was used to create responsive type to change sizes based on the viewport size. I added hover animations to the primary nav menu items. The icons are inline SVG images for fast loading."
+      ],
+      "technology": {
+        "1": "html5",
+        "2": "css3",
+        "3": "sass",
+        "4": "flexbox"
       }
     },
     "rockpaperscissors": {

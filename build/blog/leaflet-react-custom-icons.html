@@ -76,8 +76,8 @@
     <!-- <h1 class="bigTitle">
       Blog</h1> -->
       <div class="pageTagline__container">
-        <h1 id="projectsTagline" class="pageTagline">Use "const", Even When You Think You Shouldn't</h1>
-        <h2>Jan 23, 2019</h2>
+        <h1 id="projectsTagline" class="pageTagline">React Leaflet Custom Map Icons</h1>
+         <h2>November 19, 2019</h2>
       </div>
     <p></p>
   </div>
@@ -100,78 +100,48 @@
     
     <div class="blogCard">
       <p><a href="../blog.html">Back to blog posts</a></p>
-<p>If you&#39;re just starting out in Javascript (JS), you might be learning from some of the many great trainings that explain how JS has been done for many years. There are tons of great trainings to check out and I&#39;ll recommend some in a moment. When you go through these trainings, you probably see everywhere the use of <code>var</code> for creating variables. With the advent of ES6 (or ECMAScript 2015, the latest version of Javascript) there are a couple more fun variable types that we can use: <code>const</code> and let.</p>
-<p>There are a lot of great tutorials that explain how to use the different types of variables and go into in-depth description of what they do and how they&#39;re different from <code>var</code>, but I want to focus specifically on <code>const</code> and one of the concepts that took me a while to understand.</p>
-<p>On the surface, <code>const</code> would seem to stand for &quot;constant&quot;, which it kind of is. Here&#39;s what <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const">MDN has to say about const</a>:</p>
-<blockquote>
-<p>Constants are block-scoped, much like variables defined using the let statement. The value of a constant cannot change through reassignment, and it can&#39;t be redeclared.</p>
-</blockquote>
-<p>So it seems pretty clear: &quot;the value of a constant cannot change through reassignment, and it can&#39;t be redeclared.&quot; So what does that mean?</p>
-<h3 id="const-can-t-be-reassigned">Const can&#39;t be reassigned</h3>
-<p>Assigning a variable is when we tell a function what value a variable is going to have. Essentially it&#39;s the function saying &quot;here&#39;s what this variable holds.&quot; It&#39;s usually shown like this:</p>
-<pre><code class="language-JavaScript">const variable1 = 5;</code></pre>
-<p>If this was a <code>var</code> instead of a const, we can tell the function to assign different values at different times.</p>
-<pre><code class="language-JavaScript">var variable1 = 5;
-
-console.log(variable1); //output is: &quot;5&quot;
-
-variable1 = 10;
-
-console.log(variable1); //output is: &quot;10&quot;</code></pre>
-<p>This is possible because <code>var</code> is able to be redefined. <code>Const</code>, however, isn&#39;t. So trying the same function with <code>const</code> will just give you an error:</p>
-<pre><code class="language-JavaScript">const variable1 = 5;
-
-console.log(variable1); //output is: &quot;5&quot;
-
-variable1 = 10;
-
-console.log(variable1); //output is: &quot;TypeError: invalid assignment to const `variable1&#39;&quot;</code></pre>
-<h3 id="const-can-t-be-redeclared">Const can&#39;t be redeclared</h3>
-<p>Declaring a variable is when a function says &quot;here&#39;s the name of a variable.&quot; Redeclaring is when the function later says another variable has that same name. Here&#39;s an example:</p>
-<pre><code class="language-JavaScript">function example() {
-  var variable1 = 5;
-
-  console.log(variable1); //output is: &quot;5&quot;
-
-  var variable1 = 10;
-
-  console.log(variable1); //output is: &quot;10&quot;
-}</code></pre>
-<p>So in this little function, the same variable is created twice with two different values. This is possible because <code>var</code> is able to redeclared. If you tried it with <code>const</code>, however, you would get an error because the variable has already been declared once.</p>
-<pre><code class="language-Javascript">function example() {
-  const variable1 = 5;
-
-  console.log(variable1); //output is: &quot;5&quot;
-
-  const variable1 = 10;
-
-  console.log(variable1); //output is: &quot;SyntaxError: redeclaration of const variable1&quot;
-}</code></pre>
-<p>It&#39;s not specified, but it&#39;s implied that you also can&#39;t change what type of content is being held by the <code>const</code>. This is pretty obvious because if you can&#39;t change the content of what&#39;s in it, why would you be able to change the type of content that&#39;s in it either.</p>
-<p>Ok, so now you&#39;re thinking: <em>&quot;cool, <code>const</code> is for &quot;constant&quot;, or unchanging values, no problem. I&#39;ll only use them when I have a value that isn&#39;t changing.&quot;</em> And you&#39;ll be right, sort of.</p>
-<h3 id="const-values-can-change-in-certain-circumstances">Const values can change in certain circumstances</h3>
-<p><strong>Wait, what? How is that possible?</strong></p>
-<p>It&#39;s true. It took me a while to understand this, but it makes sense and it&#39;s why I use <code>const</code> almost all the time for variable declarations.</p>
-<h3 id="when-const-holds-an-object-or-array-the-value-can-change">When const holds an object or array, the value can change</h3>
-<p>A quick review: there are different types of content that can be stored in a variable. These are things like number values, strings of text, boolean (true/false) values, arrays, and objects. The first three of those, <strong>numbers</strong>, <strong>strings</strong>, and <strong>booleans</strong>, cannot be changed if they are declared in a <code>const</code> variable. So in those instances, the <code>const</code> truly means it&#39;s a constant.</p>
-<p>If <code>const</code> is declared as an <strong>array</strong> or an <strong>object</strong>, however, it can change, but not completely. <em>Wait, what? I thought <code>const</code> couldn&#39;t change!</em> So if you declare a <code>const</code> variable as an array, it is constant, as an array. It can&#39;t change to be something other than an array, it&#39;s stuck as an array. However, you <strong>can</strong> change the values contained <strong>inside</strong> the array! 🤯 The same goes for if the <code>const</code> is holding an object.</p>
-<p>So why is this possible? I don&#39;t know. It&#39;s the way they made it.</p>
-<p>Why is it good? It means that when you create a <code>const</code> variable, you always know what type of content will be in it. You don&#39;t have to worry that at some other point in the function you might forget that you used that variable name and give it a new value or new type of content, once you create it, it stays the same. This comes in handy when you&#39;re containing a lot of information inside of an object and need to add things like functions through dot notation.</p>
-<pre><code class="language-JavaScript">const obj1 = {
-  name: &quot;Rob&quot;,
-  lastName: &quot;Lahoda&quot;
-}
-obj1.greeting = function() {
-  console.log(&quot;hello &quot; + this.name + &quot; &quot; + this.lastName)
-}</code></pre>
-<p>Maybe you have an array that you need to iterate over and process the data, then you&#39;re going to save it into another variable. You&#39;d think that since the second variable is going to &quot;change&quot; since the content adds with every iteration, but you can still use <code>const</code> for that.</p>
-<pre><code class="language-JavaScript">const array1 = [1,2,3,4,5,6];
-const array2 = array1.map((num) =&gt; {
-  return num * 2;
-});
-console.log(array2);// output is: [2,4,6,8,10,12]</code></pre>
-<p>This means you can use <code>const</code> for probably the majority of variables that you&#39;re going to create when you&#39;re writing your functions.</p>
-<p>If you&#39;re interested in learning more about ES6 check out <a href="https://es6.io/">Wes Bos&#39; ES6 for everyone course</a> for some pretty helpful training. If you&#39;re just trying to get started in learning Javascript, there are a ton of different options. One I thought was really helpful was <a href="https://www.udemy.com/javascript-from-beginner-to-pro-best-course/">Javascript - From Beginner to Pro-Build real world JS apps </a> by <a href="https://twitter.com/AbhayTalreja">Abhay Talreja</a>. He does a great job of laying out how to use JS and what everything means. If you&#39;re just getting started, I&#39;d recommend that course before then moving on to Wes&#39; training because his is more geared for people who already know Javascript and are looking to understand the new features of ES6.</p>
+<p>I&#39;ve always enjoyed travelling and exploring new places. Maps have been a way that I&#39;ve been able to see what somewhere is like without actually visiting. It&#39;s a fun way to plan, dream, explor, and get familiar with an area before I&#39;m able to visit in person. As a result, I&#39;ve had an interest in mapping projects and development. One of the most popular open-source Javascript libraries out there for mapping is <a href="https://leafletjs.com/">Leaflet</a>. Playing around with this library led me to start building my project <a href="https://myvacationmap.com">My Vacation Map</a>, a React-based mapping app that lets you add map points to various places and enter information about places you&#39;d like to see, things to do, etc.</p>
+<p>Since the project is created in React, I came across the <a href="https://react-leaflet.js.org/">React Leaflet</a> project that is taking the Leaflet library and building a set of React components to make the library easy to use in a React project.</p>
+<p>With my project, I wanted to have different icons representing the different types of map points that a user can create. Leaflet already supports having different icons on the map as desired but there was no clear example for doing the same in React Leaflet. I did some investigation and found some ways that other people were doing this but aside from some Stack Overflow answers, there wasn&#39;t any real helpful example that I could find to do this myself.</p>
+<p>After much trial and error, I was able to get the custom points working and decided to go ahead and create a simple example to share with the React Leaflet project team to show others how to do it.</p>
+<p>The entire example can be viewed in the <a href="https://github.com/PaulLeCam/react-leaflet/blob/master/example/components/custom-icons.js">React Leaflet Github Repository</a>.</p>
+<p>Here&#39;s a quick explanation of what&#39;s happening.</p>
+<h2 id="icons">Icons</h2>
+<p>The first part of the process is to create the actual icons.</p>
+<p>Each icon is defined as a leaflet Icon component <code>L.Icon()</code> and then a variety of parameters are passed to override the defaults for the Icon.</p>
+<p>The most obvious parameters are <code>iconUrl</code> and <code>shadowUrl</code>, which are the paths to the custom icon graphic and shadow graphic, respectively. <code>iconRetinaUrl</code> is the path to the graphic to be used for high resolution monitors. In this example, I created an SVG graphic so it&#39;ll work fine for both types.</p>
+<p><code>iconAnchor</code> and <code>popupAnchor</code> are used to determine how the image is positioned relative to the actual point on the map. Depending on the shape and design of your graphic, this might be above or even directly on top of the map point. These are in the x and y axes, respecively.</p>
+<p><code>popupAnchor</code> defines the location of where the popup for this point will display relative to the map point itself, assuming one is being used. These are in the x and y axes, respecively.</p>
+<p><code>iconSize</code> is the size of the custom icon itself with the first value being width and the second is height.</p>
+<p><code>shadowSize</code> and <code>shadowAnchor</code> are the same types of information as <code>iconSize</code> and <code>iconAnchor</code>, but for the shadow.</p>
+<p>Here&#39;s the full example icon definition:</p>
+<pre><code class="language-javascript">export const pointerIcon = new L.Icon({
+  iconUrl: require(&quot;../assets/pointerIcon.svg&quot;),
+  iconRetinaUrl: require(&quot;../assets/pointerIcon.svg&quot;),
+  iconAnchor: [5, 55],
+  popupAnchor: [10, -44],
+  iconSize: [25, 55],
+  shadowUrl: &quot;../assets/marker-shadow.png&quot;,
+  shadowSize: [68, 95],
+  shadowAnchor: [20, 92]
+});</code></pre>
+<h2 id="map-display">Map Display</h2>
+<p>Displaying the custom icons is pretty easy once you get this far. Just like always, the <code>&lt;Marker/&gt;</code> component is called but with a new prop that&#39;s passed for the icon:</p>
+<pre><code class="language-javascript">&lt;Marker position={position} icon={pointerIcon}&gt;
+  // Popup or other information
+&lt;/Marker&gt;</code></pre>
+<h2 id="webpack-issue">Webpack Issue</h2>
+<p>For some reason, Webpack doesn&#39;t like to compile the code correctly when using custom icons. This is an issue with Create-React-App and might be for other Webpack setups, but my project is based on Create-React-App, so this is something I had to deal with.</p>
+<p>What needs to be done is to remove the default icon from the original Leaflet class (imported here as <code>L.Icon</code>) and replace it with a custom icon. In my case, I created my own default point design, though using the default Leaflet point would work just fine, you would have to point to the files yourself here instead of relying on the defaults in the Leaflet package.</p>
+<p>To override the defauts and force the use of the custom icons, here&#39;s a little snippet that I placed at the top of my component that was housing the React Leaflet <code>Map</code> component:</p>
+<pre><code class="language-javascript">delete L.Icon.Default.prototype._getIconUrl;
+L.Icon.Default.mergeOptions({
+  iconRetinaUrl: require(&quot;../assets/starIcon.svg&quot;),
+  iconUrl: require(&quot;../assets/starIcon.svg&quot;),
+  shadowUrl: require(&quot;leaflet/dist/images/marker-shadow.png&quot;)
+});</code></pre>
+<h2 id="conclusion">Conclusion</h2>
+<p>I hope this was helpful to understand a bit more about how to add custom map icons for Leaflet maps in React!</p>
 <p><a href="../blog.html">Back to blog posts</a></p>
     </div>
 
