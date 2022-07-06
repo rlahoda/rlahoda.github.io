@@ -23,26 +23,26 @@
   <title>Rob Lahoda • Front End Web Developer</title>
   <!-- <base href="https://rlahoda.github.io"> -->
   <link rel="stylesheet" href="/css/styles.css">
-  <link href="/vendor/prism.css" rel="stylesheet" />
-  <meta name="description" content="">
+  <link href="/vendor/prism/prism.css" rel="stylesheet" />
+  <meta name="description" content="I'm a versatile, adaptable problem-solver. My strong mix of technical and creative skills give me a diverse perspective on the projects I work on.">
   <meta name="subject" content="">
 
   <meta property="og:url" content="https://rlahoda.github.io">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Rob Lahoda • Front End Web Developer">
-  <meta property="og:image" content="https://rlahoda.github.io/og-image.jpg">
-  <meta property="og:description" content="">
+  <meta property="og:image" content="https://rlahoda.github.io/assets/images/social-twitter.jpg">
+  <meta property="og:description" content="I'm a versatile, adaptable problem-solver. My strong mix of technical and creative skills give me a diverse perspective on the projects I work on.">
   <meta property="og:site_name" content="Rob Lahoda • Front End Web Developer">
   <meta property="og:locale" content="en_US">
   <meta property="article:author" content="">
 
-  <meta name="twitter:card" content="">
+  <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@rlahoda">
   <meta name="twitter:creator" content="@rlahoda">
   <meta name="twitter:url" content="https://rlahoda.github.io">
   <meta name="twitter:title" content="Rob Lahoda • Front End Web Developer">
-  <meta name="twitter:description" content="">
-  <meta name="twitter:image" content="https://rlahoda.github.iotwitter-image.jpg">
+  <meta name="twitter:description" content="I'm a versatile, adaptable problem-solver. My strong mix of technical and creative skills give me a diverse perspective on the projects I work on.">
+  <meta name="twitter:image" content="https://rlahoda.github.io/assets/images/social-twitter.jpg">
 
   <meta name="robots" content="index,follow"><!-- All Search Engines -->
   <meta name="googlebot" content="index,follow"><!-- Google Specific -->
@@ -57,14 +57,14 @@
   <body>
     <nav class="navFixed">
   <ul id="navList" class="navList">
-    <li class="navList__navItem" id="navList__homeLink"><a href="./">Home</a></li>
-    <li class="navList__navItem" id="navList__aboutLink"><a href="./about.html">About</a></li>
-    <li class="navList__navItem" id="navList__projectsLink"><a href="./projects.html">Projects</a></li>
-    <li class="navList__navItem" id="navList__projectsLink"><a href="./blog.html">Blog</a></li>
-    <li class="navList__navItem" id="navList__contactLink"><a href="./contact.html">Contact</a></li>
+    <li class="navList__navItem" id="navList__homeLink"><a href="../">Home</a></li>
+    <li class="navList__navItem" id="navList__aboutLink"><a href="../about.html">About</a></li>
+    <li class="navList__navItem" id="navList__projectsLink"><a href="../projects.html">Projects</a></li>
+    <li class="navList__navItem" id="navList__projectsLink"><a href="../blog.html">Blog</a></li>
+    <li class="navList__navItem" id="navList__contactLink"><a href="../contact.html">Contact</a></li>
   </ul>
 </nav>
-
+        
     <header>
   <div class="pageTopImage">
 
@@ -80,8 +80,44 @@
       </div>
     <p></p>
   </div>
- 
+
   <div class="projectsGrid">
+    <div class="infoCard projectsCard projectsCard-wide ">
+      <h2 class="">Covid-19 Chart Site</h2>
+    <ul class="noList noListBlock">
+              <li class="projectTechnology">
+          <div class="icons projectIcon" id="javascript"></div>
+        <h4>javascript</h4>
+      </li>
+              <li class="projectTechnology">
+          <div class="icons projectIcon" id="html5"></div>
+        <h4>html5</h4>
+      </li>
+              <li class="projectTechnology">
+          <div class="icons projectIcon" id="css3"></div>
+        <h4>css3</h4>
+      </li>
+              <li class="projectTechnology">
+          <div class="icons projectIcon" id="sass"></div>
+        <h4>sass</h4>
+      </li>
+              <li class="projectTechnology">
+          <div class="icons projectIcon" id="flexbox"></div>
+        <h4>flexbox</h4>
+      </li>
+              <li class="projectTechnology">
+          <div class="icons projectIcon" id="netlify"></div>
+        <h4>netlify</h4>
+      </li>
+          </ul>
+    <hr>
+          <p>With all the hype and confusion around the Covid-19 pandemic, I wanted to be able to see the data in a clear, helpful way that would help me understand what was going on better. I had heard that things were getting better at times, or worse, but it was hard to know what was going on.</p>
+          <p>This site uses data from the NY Times and the European Centre for Disease Prevention and Control to allow users to view data for various countries around the world or US states. The raw data came in the form of deaths and cases for each day in CSV format. So I wrote some Python code that would parse the CSV files into JSON, then take that JSON and write it into a Javascript file for display. During the processing, I added in additional data to further help with understanding and clarity.</p>
+          <p>In addition to the total numbers of cases and deaths that have accumulated each day, other metrics such as the number of new cases and deaths, the percent of the total population of that country or state that has the virus or has died, the date of the first death, and the date of the first case were calculated.</p>
+          <p>The site was built in vanilla Javascript using Chart.js for the charting and Python for data parsing and calculations. Additional features include using CSS Grid with a Flexbox fallback for the country/state card display grid, using HTML5 details/summary tags for collapsable data cards, using Javascript to automatically collapse the cards for easier scrolling on mobile view, a "scroll to top" button for easier scrolling on mobile and desktop, and the ability to add all countries/states or clear the chart as desired.</p>
+          <p>The site is hosted via Netlify for continuous deployment from Github.</p>
+            <h4 class=""><a class="" href="https://covid-19-graph.netlify.com" onclick="trackOutboundLink('https://covid-19-graph.netlify.com'); return false;" target="_blank">covid-19-graph.netlify.com</a></h4>
+    <h5 class=""><a class="" href="https://github.com/rlahoda/covid-19-data" onclick="trackOutboundLink('https://github.com/rlahoda/covid-19-data'); return false;" target="_blank">View on Github</a></h5>  </div>
     <div class="infoCard projectsCard projectsCard-wide ">
       <h2 class="">My Vacation Map</h2>
     <ul class="noList noListBlock">
@@ -102,16 +138,55 @@
         <h4>redux</h4>
       </li>
               <li class="projectTechnology">
+          <div class="icons projectIcon" id="jest"></div>
+        <h4>jest</h4>
+      </li>
+              <li class="projectTechnology">
           <div class="icons projectIcon" id="leaflet"></div>
         <h4>leaflet</h4>
+      </li>
+              <li class="projectTechnology">
+          <div class="icons projectIcon" id="pantheon"></div>
+        <h4>pantheon</h4>
+      </li>
+              <li class="projectTechnology">
+          <div class="icons projectIcon" id="netlify"></div>
+        <h4>netlify</h4>
       </li>
           </ul>
     <hr>
           <p>Have you ever been preparing for a trip and found a bunch of cool places to visit, only to not know where to keep that information so that it's easily accessable when you're out and about? My Vacation Map is a custom mapping app that is built on React and using the Leaflet mapping library to solve this problem.</p>
           <p>The app allows the user to add points onto the map with various information that the user would like to keep about that location. These can be personal notes, information from guidebooks, links to a website about that location, or many other possibilities. The user is able to add a category that will determine the icon and color of the map point for easier identification while reviewing their points. The app also is able to use geolocation to find the user's current location and even follow them as they move.</p>
-          <p>My Vacation Map is built on Create-React-App with Redux for state management, the React-Leaflet component library for managing the Leaflet mapping, and the React-Geolocated component for geolocation. For data managemnet, there is a Drupal 8 back-end connected via REST and JSON Api end points as well as the Simple Oauth module for Oauth2 authentication management.</p>
-            <h4 class=""><a class="" href="mailto:rob@roblahoda.com" onclick="trackOutboundLink('mailto:rob@roblahoda.com'); return false;" target="_blank">Email me for access to this private repo! rob@roblahoda.com</a></h4>
-      </div>
+          <p>My Vacation Map is built React with Redux for state management, the React-Leaflet component library for managing the Leaflet mapping, and the React-Geolocated component for geolocation. For data managemnet, there is a Drupal 8 back-end connected via REST and JSON Api end points as well as the Simple Oauth module for Oauth2 authentication management.</p>
+          <p>For API management, custom Redux middleware was written to allow simplified triggering of complex events through components. Unit tests are written in Jest with Enzyme.</p>
+            <h4 class=""><a class="" href="https://www.myvacationmap.com" onclick="trackOutboundLink('https://www.myvacationmap.com'); return false;" target="_blank">myvacationmap.com</a></h4>
+    <h5 class=""><a class="" href="mailto:rob@roblahoda.com" onclick="trackOutboundLink('mailto:rob@roblahoda.com'); return false;" target="_blank">Email me for access to this private repo! rob@roblahoda.com</a></h5>  </div>
+    <div class="infoCard projectsCard  projectsCard-med">
+      <h2 class="">Hot Dog Demo Site</h2>
+    <ul class="noList noListBlock">
+              <li class="projectTechnology">
+          <div class="icons projectIcon" id="html5"></div>
+        <h4>html5</h4>
+      </li>
+              <li class="projectTechnology">
+          <div class="icons projectIcon" id="css3"></div>
+        <h4>css3</h4>
+      </li>
+              <li class="projectTechnology">
+          <div class="icons projectIcon" id="sass"></div>
+        <h4>sass</h4>
+      </li>
+              <li class="projectTechnology">
+          <div class="icons projectIcon" id="flexbox"></div>
+        <h4>flexbox</h4>
+      </li>
+          </ul>
+    <hr>
+          <p>I recently did a little code challenge where I was given a photoshop mockup of a site and asked to build it out however I wanted to. So I built this demo site. It’s written in HTML using semantic markup and tagging. The styles were written in SCSS and there’s a small amount of Javascript.</p>
+          <p>All of the colors are in CSS variables, which allowed me to implement a “dark mode” setting by just adding a single CSS style to the body element. The layout is done in Flexbox and fully responsive with the order of the image/article sets changing on smaller viewport sizes to allow for the content to remain in a logical order on screen.</p>
+          <p>The main navigation menu collapses on mobile using just CSS styles. SCSS mixin was used to create responsive type to change sizes based on the viewport size. I added hover animations to the primary nav menu items. The icons are inline SVG images for fast loading.</p>
+            <h4 class=""><a class="" href="https://rlahoda.github.io/demo-site/" onclick="trackOutboundLink('https://rlahoda.github.io/demo-site/'); return false;" target="_blank">Live Preview Site</a></h4>
+    <h5 class=""><a class="" href="https://github.com/rlahoda/demo-site" onclick="trackOutboundLink('https://github.com/rlahoda/demo-site'); return false;" target="_blank">View Github Repo</a></h5>  </div>
     <div class="infoCard projectsCard  ">
       <h2 class="">Rock, Paper, Scissors Game</h2>
     <ul class="noList noListBlock">
@@ -163,6 +238,10 @@
           <div class="icons projectIcon" id="cssgrid"></div>
         <h4>cssgrid</h4>
       </li>
+              <li class="projectTechnology">
+          <div class="icons projectIcon" id="codepen"></div>
+        <h4>codepen</h4>
+      </li>
           </ul>
     <hr>
           <p>My wife is a chemist and I used to work for a chemistry information company, so I felt inspired to use this as a basis for playing around with CSS Grid. So I built a representation of the Periodic Table of Elements laid out using CSS Grid. The table is generated through an AJAX call to a Github repo containing the raw information in JSON. Using Greensock Animations I set up a fade in upon loading of the table and also a fade and scaling effect on the elements.</p>
@@ -184,6 +263,30 @@
           <p>After building my multilingual clock and calendar in vanilla Javascript, I decided to rebuild it in React. The app is visually identical to the Codepen version except that this one is built in React. For more information see the description below for the original project.</p>
             <h4 class=""><a class="" href="https://reactcalendar.roblahoda.com/" onclick="trackOutboundLink('https://reactcalendar.roblahoda.com/'); return false;" target="_blank">reactcalendar.roblahoda.com/</a></h4>
     <h5 class=""><a class="" href="https://github.com/rlahoda/Multilingual-Calendar-React" onclick="trackOutboundLink('https://github.com/rlahoda/Multilingual-Calendar-React'); return false;" target="_blank">View Github Repo</a></h5>  </div>
+    <div class="infoCard projectsCard  ">
+      <h2 class="">Rob Lahoda • Web Developer</h2>
+    <ul class="noList noListBlock">
+              <li class="projectTechnology">
+          <div class="icons projectIcon" id="javascript"></div>
+        <h4>javascript</h4>
+      </li>
+              <li class="projectTechnology">
+          <div class="icons projectIcon" id="greensock"></div>
+        <h4>greensock</h4>
+      </li>
+              <li class="projectTechnology">
+          <div class="icons projectIcon" id="cssgrid"></div>
+        <h4>cssgrid</h4>
+      </li>
+              <li class="projectTechnology">
+          <div class="icons projectIcon" id="netlify"></div>
+        <h4>netlify</h4>
+      </li>
+          </ul>
+    <hr>
+          <p>This is my personal website. It's built using Twig templating combined with JSON data and Markdown files for blog content. The site is hosted on Netlify for continuious delivery from Github. The animation is done with Greensock Animation Platform (GSAP) and the layout is in CSS Grid with a Flexbox fallback. The icons are inline SVG inserted dynamically using Javascript.</p>
+            <h4 class=""><a class="" href="http://www.roblahoda.com/?utm_source=github&utm_medium=github_pages&utm_campaign=github_projects&utm_content=projects" onclick="trackOutboundLink('http://www.roblahoda.com/?utm_source=github&utm_medium=github_pages&utm_campaign=github_projects&utm_content=projects'); return false;" target="_blank">roblahoda.com</a></h4>
+    <h5 class=""><a class="" href="https://github.com/rlahoda/rlahoda.github.io" onclick="trackOutboundLink('https://github.com/rlahoda/rlahoda.github.io'); return false;" target="_blank">View Github Repo</a></h5>  </div>
     <div class="infoCard projectsCard  projectsCard-med">
       <h2 class="">Heritage Insurance Advisors</h2>
     <ul class="noList noListBlock">
@@ -191,12 +294,16 @@
           <div class="icons projectIcon" id="drupal8"></div>
         <h4>drupal8</h4>
       </li>
+              <li class="projectTechnology">
+          <div class="icons projectIcon" id="pantheon"></div>
+        <h4>pantheon</h4>
+      </li>
           </ul>
     <hr>
           <p>A local business contacted me with the request to build a website for them that could grow significantly in the future. After some discussion with them, we decided that Drupal 8 would be an ideal platform based on their needs and future growth plans. Their desires were fairly open-ended so I built the theme with maximum flexibility in mind.</p>
           <p>The theme is built with Paragraphs as the primary layout tool. The client wanted the site up quickly so I used the UIKit front-end framework as a starting point for the design. The site is fully responsive and contains a custom quote form based on the Webform module that uses a variety of logic to allow the user to request a quote for the various types of insurance that is offered by the company.</p>
             <h4 class=""><a class="" href="http://hia-oh.com/?utm_source=github&utm_medium=github_pages&utm_campaign=github_projects&utm_content=projects" onclick="trackOutboundLink('http://hia-oh.com/?utm_source=github&utm_medium=github_pages&utm_campaign=github_projects&utm_content=projects'); return false;" target="_blank">hia-oh.com</a></h4>
-      </div>
+    <h5 class=""><a class="" href="https://github.com/rlahoda/hia-theme" onclick="trackOutboundLink('https://github.com/rlahoda/hia-theme'); return false;" target="_blank">View Github Repo</a></h5>  </div>
     <div class="infoCard projectsCard  ">
       <h2 class="">Love God Love France</h2>
     <ul class="noList noListBlock">
@@ -207,6 +314,10 @@
               <li class="projectTechnology">
           <div class="icons projectIcon" id="flexbox"></div>
         <h4>flexbox</h4>
+      </li>
+              <li class="projectTechnology">
+          <div class="icons projectIcon" id="pantheon"></div>
+        <h4>pantheon</h4>
       </li>
           </ul>
     <hr>
@@ -228,6 +339,10 @@
           <div class="icons projectIcon" id="flexbox"></div>
         <h4>flexbox</h4>
       </li>
+              <li class="projectTechnology">
+          <div class="icons projectIcon" id="codepen"></div>
+        <h4>codepen</h4>
+      </li>
           </ul>
     <hr>
           <p>When learning a new language one of the first things people learn are numbers and dates. As a way to help language students get used to reading numbers and dates in the language they want to learn, I created this multilingual clock and calendar. The app shows all the numbers both as numbers and written out. The user can see the current time and date as well as the next and previous days. There is a full calendar of the entire month with the days of the week and numbers for each of the days with different styles for the current day and weekends.</p>
@@ -244,6 +359,10 @@
               <li class="projectTechnology">
           <div class="icons projectIcon" id="flexbox"></div>
         <h4>flexbox</h4>
+      </li>
+              <li class="projectTechnology">
+          <div class="icons projectIcon" id="codepen"></div>
+        <h4>codepen</h4>
       </li>
           </ul>
     <hr>
@@ -305,12 +424,12 @@
           <p class="">Linkedin</p></a>
         </li>
             </ul>
-            <p class="smallText">Copyright ©2018 Rob Lahoda - Logos are property of their respective owners.</p>
+            <p class="smallText">Copyright &copy; <script>document.write(new Date().getFullYear())</script> Rob Lahoda - Logos are property of their respective owners.</p>
 
 </div>
-<script src="/vendor/prism.js"></script>
+<script src="/vendor/prism/prism.js"></script>
 </footer>
-<script type="text/javascript" src="scroll.js"></script>
+<script type="text/javascript" src="/vendor/scroll.js"></script>
 <script>
 /**
 * Function that tracks a click on an outbound link in Analytics.

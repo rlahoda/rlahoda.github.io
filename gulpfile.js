@@ -103,7 +103,8 @@ return src("dev/templates/*.twig")
       })
     )
     .pipe(twig())
-    .pipe(dest("./build/"));
+    .pipe(dest("./build/"))
+    .pipe(dest("./"));
 }
 
 // Browsersync reload
