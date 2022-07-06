@@ -1,10 +1,8 @@
-[Back to blog posts](../blog.html)
-
 I was recently working on a client site in Drupal 8 that involved a [multi-step form](https://hia-oh.com/get-a-quote?utm_source=blog&utm_medium=link&utm_campaign=blog-link). The client is an insurance agency and wanted to have a quote form that users can fill out to start the process of getting a quote for insurance. Since the agency covers multiple kinds of insurance, this meant that the form needed to handle multiple types of insurance. To create this, I used the [Webform](https://www.drupal.org/project/webform/) module. I thought about doing multiple forms for simplicity, but realized that a single user might want to get a quote for more than one kind of insurance and asking them to fill out the same information multiple times would be frustrating and a negative user experience.
 
 The default progress bar is a series of circles with the number of the step on them and the label for the step underneath.
 
-![](/assets/img/blog/webform-default-progressbar.jpg)
+![](/assets/images/webform-default-progressbar.jpg)
 
 Using built-in conditional logic I am able to hide pages or reveal pages as the user progresses based on their choice of Auto or Homeowner's. The problem is that hitting "next" would mean the user sees all of the steps but doesn't use them. While I recognize there is the possibility of user confusion for the progress bar to be changing throughout the process, I think there would be more confusion for the user to see steps showing that they've been visited when the user hasn't actually visited them.
 
@@ -23,7 +21,7 @@ So to make this work we had to accomplish a few things:
 
 Step 1 was to give each page marker a unique identifier that would allow us to do something with them later. This was taken care of in the Twig template for the form. In my case, the form is called "Get A Quote" so we went to the file: `/modules/webform/templates/webform-progress-tracker.html.twig` and copied it into my `mytheme/templates/webform` directory (if you don't have that directory in your theme files, just create it). Then we renamed it: `webform-progress-tracker--get-a-quote.html.twig` to ensure that it would be used for this specific form. If you're not familiar with template hints when you're theme building check out [this article about setting up your local dev environment](https://www.drupal.org/docs/8/theming/twig/debugging-twig-templates). Looking at the default template file there already is a unique identifier for each page set as a value in a span: `<span class="progress-marker">{{ index + 1 }}</span>`. When you look at the default progress bar, you can see this showing up as a number in a circle:
 
-![](/assets/img/blog/webform-closeup-marker-progressbar.jpg)
+![](/assets/images/webform-closeup-marker-progressbar.jpg)
 
 So I basically want this number to be used in adding a CSS class to each marker to designate its step in the line. Fortunately, it's really easy to just copy the Twig code and reuse it for creating a CSS class.
 
@@ -107,7 +105,7 @@ if ($form_id == 'webform_submission_get_a_quote_add_form') {
 
 Next, we need to look at the form itself and see what checkbox set we want to use to base it off and get the machine name for it. For mine it's "what*kind_of_insurance_are_you_looking_for*".
 
-![](/assets/img/blog/webform-checkbox-name-progressbar.jpg)
+![](/assets/images/webform-checkbox-name-progressbar.jpg)
 
 So we want to get this value and assign it to a variable that we'll call \$checkbox: `getValue('what_kind_of_insurance_are_you_looking_for_');`.
 
@@ -200,5 +198,3 @@ The final step is to make the markers look a little different because of the fac
 To see the progress bar design I came up with, I put the design into a [pen on Codepen](https://codepen.io/rlahoda/pen/KoVQyy?editors=1100) where you can see how it all comes together.
 
 I hope this all made sense to you. If you have any questions, feel free to leave a comment or contact me [via Twitter (@rlahoda)](https://twitter.com/rlahoda/). Thanks for reading!
-
-[Back to blog posts](../blog.html)

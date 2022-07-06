@@ -31,7 +31,7 @@
   <meta property="og:url" content="https://rlahoda.github.io">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Rob Lahoda • Front End Web Developer">
-  <meta property="og:image" content="https://rlahoda.github.io/assets/img/social-twitter.jpg">
+  <meta property="og:image" content="https://rlahoda.github.io/assets/images/social-twitter.jpg">
   <meta property="og:description" content="I'm a versatile, adaptable problem-solver. My strong mix of technical and creative skills give me a diverse perspective on the projects I work on.">
   <meta property="og:site_name" content="Rob Lahoda • Front End Web Developer">
   <meta property="og:locale" content="en_US">
@@ -43,7 +43,7 @@
   <meta name="twitter:url" content="https://rlahoda.github.io">
   <meta name="twitter:title" content="Rob Lahoda • Front End Web Developer">
   <meta name="twitter:description" content="I'm a versatile, adaptable problem-solver. My strong mix of technical and creative skills give me a diverse perspective on the projects I work on.">
-  <meta name="twitter:image" content="https://rlahoda.github.io/assets/img/social-twitter.jpg">
+  <meta name="twitter:image" content="https://rlahoda.github.io/assets/images/social-twitter.jpg">
 
   <meta name="robots" content="index,follow"><!-- All Search Engines -->
   <meta name="googlebot" content="index,follow"><!-- Google Specific -->
@@ -66,69 +66,67 @@
   </ul>
 </nav>
     <header>
-  <div class="pageTopImage">
+      <div class="pageTopImage">
+        
+              </div>
+    </header>
 
-  </div>
-</header>
+    <main>
+      <div class="pageHeading">
+        <!-- <h1 class="bigTitle">
+          Blog</h1> -->
+        <div class="pageTagline__container">
 
-<main>
-  <div class="pageHeading">
-    <!-- <h1 class="bigTitle">
-      Blog</h1> -->
-      <div class="pageTagline__container">
-        <h1 id="projectsTagline" class="pageTagline">Flashcard Site – Update 1</h1>
+                  <h1 id="projectsTagline" class="pageTagline">Flashcard Site – Update 1</h1>
         <h2>Mar 11, 2016</h2>
+        </div>
+        <p></p>
       </div>
-    <p></p>
-  </div>
-  <div class="blogContainer">
+      <div class="blogContainer">
 
-    <div class="blogCard recentPosts">
-      <h3 class="noMargin">Check Out Some Recent Posts:</h3>
-      <ul class="noList linkList">
-                  <li class="linkList-links"><a href="leaflet-react-custom-icons.html">React Leaflet Custom Map Icons</a></br>
-           <p class="noMargin indented">Nov 19, 2019</p></li>
-                  <li class="linkList-links"><a href="use-const-even-when-you-think-you-shouldnt.html">Use 'const', Even When You Think You Shouldn't</a></br>
-           <p class="noMargin indented">Jan 23, 2019</p></li>
-                  <li class="linkList-links"><a href="an-easy-way-to-practice-with-twig-without-drupal.html">An Easy Way To Practice With Twig Without Drupal</a></br>
-           <p class="noMargin indented">Mar 28, 2018</p></li>
-                  <li class="linkList-links"><a href="hiding-progress-bar-steps-in-drupal-8-webform.html">Hiding Progress Bar Steps in Drupal 8 Webform</a></br>
-           <p class="noMargin indented">Mar 26, 2018</p></li>
-              </ul>
+        <div class="blogCard recentPosts">
+          <h3 class="noMargin">Check Out Some Recent Posts:</h3>
+          <ul class="noList linkList">
+                        <li class="linkList-links"><a href="leaflet-react-custom-icons.html">React Leaflet Custom Map Icons</a></br>
+            <p class="noMargin indented">Nov 19, 2019</p></li>
+                        <li class="linkList-links"><a href="use-const-even-when-you-think-you-shouldnt.html">Use 'const', Even When You Think You Shouldn't</a></br>
+            <p class="noMargin indented">Jan 23, 2019</p></li>
+                        <li class="linkList-links"><a href="an-easy-way-to-practice-with-twig-without-drupal.html">An Easy Way To Practice With Twig Without Drupal</a></br>
+            <p class="noMargin indented">Mar 28, 2018</p></li>
+                        <li class="linkList-links"><a href="hiding-progress-bar-steps-in-drupal-8-webform.html">Hiding Progress Bar Steps in Drupal 8 Webform</a></br>
+            <p class="noMargin indented">Mar 26, 2018</p></li>
+                      </ul>
 
-    </div>
-    
-    <div class="blogCard">
-      <p><a href="../blog.html">Back to blog posts</a></p>
-<p>My next update for the flashcard site is up. I&#39;m calling it version 0.2.1 because the first version was really just the styling and layout. This one introduces actual interactivity. The first goal was to add in the basic ability to hide and show each side of the card. I did some searching around and found that I can use a button to change the CSS visibility style value applied to the text in the div. So to just achieve the basic functionality I was looking for, I created 4 buttons. Each button changed the visibility to either visible or collapse for either the front or the back text of the div.</p>
+        </div>
+        <div class="blogCard">
+          <a href="/blog.html">Back to the blog</a>
+                <p>My next update for the flashcard site is up. I&#39;m calling it version 0.2.1 because the first version was really just the styling and layout. This one introduces actual interactivity. The first goal was to add in the basic ability to hide and show each side of the card. I did some searching around and found that I can use a button to change the CSS visibility style value applied to the text in the div. So to just achieve the basic functionality I was looking for, I created 4 buttons. Each button changed the visibility to either visible or collapse for either the front or the back text of the div.</p>
 <p>Here you can see the code for the &quot;Hide Front&quot; button. You can see there&#39;s the click detection: &quot;onclick&quot; then it looks for the element based on the ID, in this case it&#39;s &quot;cardfront1&quot;. Then it changes the style visibility to &quot;collapse&quot;.</p>
-<pre><code class="language-Javascript">&lt;input type=&quot;button&quot; value=&quot;Hide Front&quot; onclick=&quot;document.getElementById(&#39;cardfront1&#39;).style.visibility=&#39;collapse&#39;&quot;&gt;</code></pre>
+<pre><code class="language-Javascript">&lt;input type=&quot;button&quot; value=&quot;Hide Front&quot; onclick=&quot;document.getElementById(&#39;cardfront1&#39;).style.visibility=&#39;collapse&#39;&quot;&gt;
+</code></pre>
 <p>This is using Javascript inline with the HTML to trigger the function. I think of it as four toggle switches stepping through each state. The first one hides the front then the second one shows the back. To switch it back you first hide the back, then show the front. Obviously, this kind of clunky scripting won&#39;t work as a long-term solution, but it&#39;s a good start and I can see that I&#39;m able to create the basic functionality that I&#39;m looking for. The other big problem with this approach is that it&#39;s definitely not scalable. I can&#39;t have a page that&#39;s covered in buttons where I&#39;m asking users to click so much to see the contents of each card. So the goal for the next version is to consolidate the scripting into something that&#39;s more streamlined and lets the user click once and the transition happens.</p>
-<p><a href="../blog.html">Back to blog posts</a></p>
     <p class="codepen" data-height="668" data-theme-id="0" data-slug-hash="WwwoPJ" data-default-tab="result" data-user="rlahoda">See the Pen <a href="http://codepen.io/rlahoda/pen/WwwoPJ/">Flashcards v0.2.1</a> by Rob Lahoda (<a href="http://codepen.io/rlahoda">@rlahoda</a>) on <a href="http://codepen.io">CodePen</a>.</p>
       <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
-    </div>
+          <a href="/blog.html">Back to the blog</a>
+        </div>
+        <div class="blogContainer">
+          <div class="blogCard recentPosts">
+            <h3 class="noMargin">Check Out Some Recent Posts:</h3>
+            <ul class="noList linkList">
+                            <li class="linkList-links"><a href="leaflet-react-custom-icons.html">React Leaflet Custom Map Icons</a></br>
+              <p class="noMargin indented">Nov 19, 2019</p></li>
+                            <li class="linkList-links"><a href="use-const-even-when-you-think-you-shouldnt.html">Use 'const', Even When You Think You Shouldn't</a></br>
+              <p class="noMargin indented">Jan 23, 2019</p></li>
+                            <li class="linkList-links"><a href="an-easy-way-to-practice-with-twig-without-drupal.html">An Easy Way To Practice With Twig Without Drupal</a></br>
+              <p class="noMargin indented">Mar 28, 2018</p></li>
+                            <li class="linkList-links"><a href="hiding-progress-bar-steps-in-drupal-8-webform.html">Hiding Progress Bar Steps in Drupal 8 Webform</a></br>
+              <p class="noMargin indented">Mar 26, 2018</p></li>
+                          </ul>
+          </div>
+        </div>
+      </div>
+    </main>
 
-
-  </div>
-
-</main>
-
-    <div class="blogContainer">
-    <div class="blogCard recentPosts">
-      <h3 class="noMargin">Check Out Some Recent Posts:</h3>
-      <ul class="noList linkList">
-                  <li class="linkList-links"><a href="leaflet-react-custom-icons.html">React Leaflet Custom Map Icons</a></br>
-           <p class="noMargin indented">Nov 19, 2019</p></li>
-                  <li class="linkList-links"><a href="use-const-even-when-you-think-you-shouldnt.html">Use 'const', Even When You Think You Shouldn't</a></br>
-           <p class="noMargin indented">Jan 23, 2019</p></li>
-                  <li class="linkList-links"><a href="an-easy-way-to-practice-with-twig-without-drupal.html">An Easy Way To Practice With Twig Without Drupal</a></br>
-           <p class="noMargin indented">Mar 28, 2018</p></li>
-                  <li class="linkList-links"><a href="hiding-progress-bar-steps-in-drupal-8-webform.html">Hiding Progress Bar Steps in Drupal 8 Webform</a></br>
-           <p class="noMargin indented">Mar 26, 2018</p></li>
-              </ul>
-</div>
-    </div>
     <footer>
   <div class="footerLinks__container">
     <h4 class="">Say Hi!</h4>
@@ -159,12 +157,12 @@
           <p class="">Linkedin</p></a>
         </li>
             </ul>
-            <p class="smallText">Copyright ©2018 Rob Lahoda - Logos are property of their respective owners.</p>
+            <p class="smallText">Copyright &copy; <script>document.write(new Date().getFullYear())</script> Rob Lahoda - Logos are property of their respective owners.</p>
 
 </div>
 <script src="/vendor/prism/prism.js"></script>
 </footer>
-<script type="text/javascript" src="/vendor/scroll.js"></script>
+    <script type="text/javascript" src="/vendor/scroll.js"></script>
 <script>
 /**
 * Function that tracks a click on an outbound link in Analytics.

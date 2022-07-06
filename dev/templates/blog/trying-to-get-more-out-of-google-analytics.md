@@ -1,5 +1,3 @@
-[Back to blog posts](../blog.html)
-
 I've always wanted to really get some more usable information out of my analytics reports. So far, all I've really ever done is just paste in the basic Google Analytics (GA) code and call it a day. I poke around the reports and kinda think I know what's going on, but getting the really helpful information out if it has been a bit of a mystery still. So a couple weeks ago I had lunch with an awesome guy from Lullabot, [Wes Ruvalcaba](https://www.lullabot.com/about/wes-ruvalcaba). He's been doing web development for a long time and I met him at DrupalCamp PA last summer...which reminds me, I was going to write a post about that but forgot... So anyway, he gave me a couple really good tips that have helped me get started on the path of learning more about Google Analytics.
 
 He was telling me about some UX stuff he had worked on and how he had figured out a way to track how far down a page users read on a website. I mentioned that I had tried to find information online about this but nothing I had ever found was very useful. He said that I shouldn't try to find a pre-fab script since most of them are pretty lousy. Instead, he recommended that I try to come up with something myself by measuring the overall page height and then figuring out how far the user scrolls and set up JavaScript triggers to happen at various intervals. Then I should figure out how to trigger GA events and tie them into the JS triggers.
@@ -93,4 +91,3 @@ Another thing he told me about was [Google Analytics Academy](https://analytics.
 
 So that's what I learned so far. As I continue to learn more I'll try to add more updates on here and get better about updating my blog here.
 
-[Back to blog posts](../blog.html)

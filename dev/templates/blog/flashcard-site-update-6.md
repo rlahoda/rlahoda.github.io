@@ -1,5 +1,3 @@
-[Back to blog posts](../blog.html)
-
 It's been a little while since I wrote an update on my project. As I was working on the last one I realized I needed to get a better understanding of what JavaScript is all about. I've been working through Code Academy's free JavaScript course and I'm just about done with that. Once that's done I'm going to continue with some more books and stuff for learning more about JS.
 
 So on to the update.
@@ -76,5 +74,3 @@ I've added a bunch of comments to the code to explain how it works so I won't tr
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-
-[Back to blog posts](../blog.html)

@@ -46,6 +46,7 @@ function addIcons() {
   for (icon of icons) {
     //append the icon code to the item, probably through a lookup of some kind.
     // console.log(icon.id);
+    
     switch (icon.id) {
       case "paragraphs":
         icon.innerHTML =

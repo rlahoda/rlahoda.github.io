@@ -30,7 +30,7 @@
   <meta property="og:url" content="https://rlahoda.github.io">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Rob Lahoda • Front End Web Developer">
-  <meta property="og:image" content="https://rlahoda.github.io/assets/img/social-twitter.jpg">
+  <meta property="og:image" content="https://rlahoda.github.io/assets/images/social-twitter.jpg">
   <meta property="og:description" content="I'm a versatile, adaptable problem-solver. My strong mix of technical and creative skills give me a diverse perspective on the projects I work on.">
   <meta property="og:site_name" content="Rob Lahoda • Front End Web Developer">
   <meta property="og:locale" content="en_US">
@@ -42,7 +42,7 @@
   <meta name="twitter:url" content="https://rlahoda.github.io">
   <meta name="twitter:title" content="Rob Lahoda • Front End Web Developer">
   <meta name="twitter:description" content="I'm a versatile, adaptable problem-solver. My strong mix of technical and creative skills give me a diverse perspective on the projects I work on.">
-  <meta name="twitter:image" content="https://rlahoda.github.io/assets/img/social-twitter.jpg">
+  <meta name="twitter:image" content="https://rlahoda.github.io/assets/images/social-twitter.jpg">
 
   <meta name="robots" content="index,follow"><!-- All Search Engines -->
   <meta name="googlebot" content="index,follow"><!-- Google Specific -->
@@ -82,6 +82,42 @@
   </div>
 
   <div class="projectsGrid">
+    <div class="infoCard projectsCard projectsCard-wide ">
+      <h2 class="">Covid-19 Chart Site</h2>
+    <ul class="noList noListBlock">
+              <li class="projectTechnology">
+          <div class="icons projectIcon" id="javascript"></div>
+        <h4>javascript</h4>
+      </li>
+              <li class="projectTechnology">
+          <div class="icons projectIcon" id="html5"></div>
+        <h4>html5</h4>
+      </li>
+              <li class="projectTechnology">
+          <div class="icons projectIcon" id="css3"></div>
+        <h4>css3</h4>
+      </li>
+              <li class="projectTechnology">
+          <div class="icons projectIcon" id="sass"></div>
+        <h4>sass</h4>
+      </li>
+              <li class="projectTechnology">
+          <div class="icons projectIcon" id="flexbox"></div>
+        <h4>flexbox</h4>
+      </li>
+              <li class="projectTechnology">
+          <div class="icons projectIcon" id="netlify"></div>
+        <h4>netlify</h4>
+      </li>
+          </ul>
+    <hr>
+          <p>With all the hype and confusion around the Covid-19 pandemic, I wanted to be able to see the data in a clear, helpful way that would help me understand what was going on better. I had heard that things were getting better at times, or worse, but it was hard to know what was going on.</p>
+          <p>This site uses data from the NY Times and the European Centre for Disease Prevention and Control to allow users to view data for various countries around the world or US states. The raw data came in the form of deaths and cases for each day in CSV format. So I wrote some Python code that would parse the CSV files into JSON, then take that JSON and write it into a Javascript file for display. During the processing, I added in additional data to further help with understanding and clarity.</p>
+          <p>In addition to the total numbers of cases and deaths that have accumulated each day, other metrics such as the number of new cases and deaths, the percent of the total population of that country or state that has the virus or has died, the date of the first death, and the date of the first case were calculated.</p>
+          <p>The site was built in vanilla Javascript using Chart.js for the charting and Python for data parsing and calculations. Additional features include using CSS Grid with a Flexbox fallback for the country/state card display grid, using HTML5 details/summary tags for collapsable data cards, using Javascript to automatically collapse the cards for easier scrolling on mobile view, a "scroll to top" button for easier scrolling on mobile and desktop, and the ability to add all countries/states or clear the chart as desired.</p>
+          <p>The site is hosted via Netlify for continuous deployment from Github.</p>
+            <h4 class=""><a class="" href="https://covid-19-graph.netlify.com" onclick="trackOutboundLink('https://covid-19-graph.netlify.com'); return false;" target="_blank">covid-19-graph.netlify.com</a></h4>
+    <h5 class=""><a class="" href="https://github.com/rlahoda/covid-19-data" onclick="trackOutboundLink('https://github.com/rlahoda/covid-19-data'); return false;" target="_blank">View on Github</a></h5>  </div>
     <div class="infoCard projectsCard projectsCard-wide ">
       <h2 class="">My Vacation Map</h2>
     <ul class="noList noListBlock">
@@ -388,7 +424,7 @@
           <p class="">Linkedin</p></a>
         </li>
             </ul>
-            <p class="smallText">Copyright ©2018 Rob Lahoda - Logos are property of their respective owners.</p>
+            <p class="smallText">Copyright &copy; <script>document.write(new Date().getFullYear())</script> Rob Lahoda - Logos are property of their respective owners.</p>
 
 </div>
 <script src="/vendor/prism/prism.js"></script>

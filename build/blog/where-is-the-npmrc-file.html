@@ -31,7 +31,7 @@
   <meta property="og:url" content="https://rlahoda.github.io">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Rob Lahoda • Front End Web Developer">
-  <meta property="og:image" content="https://rlahoda.github.io/assets/img/social-twitter.jpg">
+  <meta property="og:image" content="https://rlahoda.github.io/assets/images/social-twitter.jpg">
   <meta property="og:description" content="I'm a versatile, adaptable problem-solver. My strong mix of technical and creative skills give me a diverse perspective on the projects I work on.">
   <meta property="og:site_name" content="Rob Lahoda • Front End Web Developer">
   <meta property="og:locale" content="en_US">
@@ -43,7 +43,7 @@
   <meta name="twitter:url" content="https://rlahoda.github.io">
   <meta name="twitter:title" content="Rob Lahoda • Front End Web Developer">
   <meta name="twitter:description" content="I'm a versatile, adaptable problem-solver. My strong mix of technical and creative skills give me a diverse perspective on the projects I work on.">
-  <meta name="twitter:image" content="https://rlahoda.github.io/assets/img/social-twitter.jpg">
+  <meta name="twitter:image" content="https://rlahoda.github.io/assets/images/social-twitter.jpg">
 
   <meta name="robots" content="index,follow"><!-- All Search Engines -->
   <meta name="googlebot" content="index,follow"><!-- Google Specific -->
@@ -66,41 +66,41 @@
   </ul>
 </nav>
     <header>
-  <div class="pageTopImage">
+      <div class="pageTopImage">
+        
+              </div>
+    </header>
 
-  </div>
-</header>
+    <main>
+      <div class="pageHeading">
+        <!-- <h1 class="bigTitle">
+          Blog</h1> -->
+        <div class="pageTagline__container">
 
-<main>
-  <div class="pageHeading">
-    <!-- <h1 class="bigTitle">
-      Blog</h1> -->
-      <div class="pageTagline__container">
-        <h1 id="projectsTagline" class="pageTagline">Where is the .npmrc file?</h1>
+                  <h1 id="projectsTagline" class="pageTagline">Where is the .npmrc file?</h1>
         <h2>May 19, 2016</h2>
+        </div>
+        <p></p>
       </div>
-    <p></p>
-  </div>
-  <div class="blogContainer">
+      <div class="blogContainer">
 
-    <div class="blogCard recentPosts">
-      <h3 class="noMargin">Check Out Some Recent Posts:</h3>
-      <ul class="noList linkList">
-                  <li class="linkList-links"><a href="leaflet-react-custom-icons.html">React Leaflet Custom Map Icons</a></br>
-           <p class="noMargin indented">Nov 19, 2019</p></li>
-                  <li class="linkList-links"><a href="use-const-even-when-you-think-you-shouldnt.html">Use 'const', Even When You Think You Shouldn't</a></br>
-           <p class="noMargin indented">Jan 23, 2019</p></li>
-                  <li class="linkList-links"><a href="an-easy-way-to-practice-with-twig-without-drupal.html">An Easy Way To Practice With Twig Without Drupal</a></br>
-           <p class="noMargin indented">Mar 28, 2018</p></li>
-                  <li class="linkList-links"><a href="hiding-progress-bar-steps-in-drupal-8-webform.html">Hiding Progress Bar Steps in Drupal 8 Webform</a></br>
-           <p class="noMargin indented">Mar 26, 2018</p></li>
-              </ul>
+        <div class="blogCard recentPosts">
+          <h3 class="noMargin">Check Out Some Recent Posts:</h3>
+          <ul class="noList linkList">
+                        <li class="linkList-links"><a href="leaflet-react-custom-icons.html">React Leaflet Custom Map Icons</a></br>
+            <p class="noMargin indented">Nov 19, 2019</p></li>
+                        <li class="linkList-links"><a href="use-const-even-when-you-think-you-shouldnt.html">Use 'const', Even When You Think You Shouldn't</a></br>
+            <p class="noMargin indented">Jan 23, 2019</p></li>
+                        <li class="linkList-links"><a href="an-easy-way-to-practice-with-twig-without-drupal.html">An Easy Way To Practice With Twig Without Drupal</a></br>
+            <p class="noMargin indented">Mar 28, 2018</p></li>
+                        <li class="linkList-links"><a href="hiding-progress-bar-steps-in-drupal-8-webform.html">Hiding Progress Bar Steps in Drupal 8 Webform</a></br>
+            <p class="noMargin indented">Mar 26, 2018</p></li>
+                      </ul>
 
-    </div>
-    
-    <div class="blogCard">
-      <p><a href="../blog.html">Back to blog posts</a></p>
-<p>I&#39;ve been through this a couple times now because I wanted to move my NPM global install location to a new spot where I wasn&#39;t constantly dealing with permissions issues and both times it was a bigger hassle than it probably should have been. I was able to find a <a href="https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md">great guide</a> for how to change the default global installation location for NPM but there was one minor point of confusion. The author states:</p>
+        </div>
+        <div class="blogCard">
+          <a href="/blog.html">Back to the blog</a>
+                <p>I&#39;ve been through this a couple times now because I wanted to move my NPM global install location to a new spot where I wasn&#39;t constantly dealing with permissions issues and both times it was a bigger hassle than it probably should have been. I was able to find a <a href="https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md">great guide</a> for how to change the default global installation location for NPM but there was one minor point of confusion. The author states:</p>
 <blockquote>
 <p>Indicate to <code>npm</code> where to store globally installed packages. In your <code>~/.npmrc</code> file add:
 <code>prefix=${HOME}/.npm-packages</code></p>
@@ -115,32 +115,29 @@ PATH=&quot;$NPM_PACKAGES/bin:$PATH&quot;
 
 # Unset manpath so we can inherit from /etc/manpath via the `manpath` command
 unset MANPATH # delete if you already modified MANPATH elsewhere in your config
-export MANPATH=&quot;$NPM_PACKAGES/share/man:$(manpath)&quot;</code></pre>
+export MANPATH=&quot;$NPM_PACKAGES/share/man:$(manpath)&quot;
+</code></pre>
 <p>Good luck!</p>
-<p><a href="../blog.html">Back to blog posts</a></p>
+          <a href="/blog.html">Back to the blog</a>
+        </div>
+        <div class="blogContainer">
+          <div class="blogCard recentPosts">
+            <h3 class="noMargin">Check Out Some Recent Posts:</h3>
+            <ul class="noList linkList">
+                            <li class="linkList-links"><a href="leaflet-react-custom-icons.html">React Leaflet Custom Map Icons</a></br>
+              <p class="noMargin indented">Nov 19, 2019</p></li>
+                            <li class="linkList-links"><a href="use-const-even-when-you-think-you-shouldnt.html">Use 'const', Even When You Think You Shouldn't</a></br>
+              <p class="noMargin indented">Jan 23, 2019</p></li>
+                            <li class="linkList-links"><a href="an-easy-way-to-practice-with-twig-without-drupal.html">An Easy Way To Practice With Twig Without Drupal</a></br>
+              <p class="noMargin indented">Mar 28, 2018</p></li>
+                            <li class="linkList-links"><a href="hiding-progress-bar-steps-in-drupal-8-webform.html">Hiding Progress Bar Steps in Drupal 8 Webform</a></br>
+              <p class="noMargin indented">Mar 26, 2018</p></li>
+                          </ul>
+          </div>
+        </div>
+      </div>
+    </main>
 
-    </div>
-
-
-  </div>
-
-</main>
-
-    <div class="blogContainer">
-    <div class="blogCard recentPosts">
-      <h3 class="noMargin">Check Out Some Recent Posts:</h3>
-      <ul class="noList linkList">
-                  <li class="linkList-links"><a href="leaflet-react-custom-icons.html">React Leaflet Custom Map Icons</a></br>
-           <p class="noMargin indented">Nov 19, 2019</p></li>
-                  <li class="linkList-links"><a href="use-const-even-when-you-think-you-shouldnt.html">Use 'const', Even When You Think You Shouldn't</a></br>
-           <p class="noMargin indented">Jan 23, 2019</p></li>
-                  <li class="linkList-links"><a href="an-easy-way-to-practice-with-twig-without-drupal.html">An Easy Way To Practice With Twig Without Drupal</a></br>
-           <p class="noMargin indented">Mar 28, 2018</p></li>
-                  <li class="linkList-links"><a href="hiding-progress-bar-steps-in-drupal-8-webform.html">Hiding Progress Bar Steps in Drupal 8 Webform</a></br>
-           <p class="noMargin indented">Mar 26, 2018</p></li>
-              </ul>
-</div>
-    </div>
     <footer>
   <div class="footerLinks__container">
     <h4 class="">Say Hi!</h4>
@@ -171,12 +168,12 @@ export MANPATH=&quot;$NPM_PACKAGES/share/man:$(manpath)&quot;</code></pre>
           <p class="">Linkedin</p></a>
         </li>
             </ul>
-            <p class="smallText">Copyright ©2018 Rob Lahoda - Logos are property of their respective owners.</p>
+            <p class="smallText">Copyright &copy; <script>document.write(new Date().getFullYear())</script> Rob Lahoda - Logos are property of their respective owners.</p>
 
 </div>
 <script src="/vendor/prism/prism.js"></script>
 </footer>
-<script type="text/javascript" src="/vendor/scroll.js"></script>
+    <script type="text/javascript" src="/vendor/scroll.js"></script>
 <script>
 /**
 * Function that tracks a click on an outbound link in Analytics.

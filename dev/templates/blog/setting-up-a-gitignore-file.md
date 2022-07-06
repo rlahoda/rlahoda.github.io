@@ -1,5 +1,3 @@
-[Back to blog posts](../blog.html)
-
 I'll confess off the top now that I'm still pretty new to Git. I've started using it myself to keep track of files as I've been working, but I don't work on a team that uses Git so there are a lot of the functions that I don't really use yet. The .gitignore file is one that took me a little to figure out so I thought I'd write up a quick post talking about what this little file does.
 
 If you're not familiar with Git to begin with, it's a version control system that allows for users to work on different parts of a project, track the changes and bring those updated files together into a master code base. This is most often used in software development and other coding environments like web development. The whole idea of Git is pretty complex so I won't try to explain it any more right here. If you want more information, the best thing is to check out the [Git homepage](https://git-scm.com/) and read some info there.
@@ -48,5 +46,3 @@ node_modules
 ```
 
 For more ideas and help, here's a long [list of .gitignore ideas](https://github.com/github/gitignore) on GitHub. Here's the [official documentation](https://git-scm.com/docs/gitignore) for .gitignore from Git itself.
-
-[Back to blog posts](../blog.html)

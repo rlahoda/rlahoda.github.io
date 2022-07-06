@@ -1,32 +1,8 @@
 {% extends '../blogBase.twig' %}
 {% block heading %}
-<header>
-  <div class="pageTopImage">
-
-  </div>
-</header>
-
-<main>
-  <div class="pageHeading">
-    <!-- <h1 class="bigTitle">
-      Blog</h1> -->
-      <div class="pageTagline__container">
         <h1 id="projectsTagline" class="pageTagline">Trying to get more out of Google Analytics</h1>
         <h2>Apr 22, 2017</h2>
-      </div>
-    <p></p>
-  </div>
-  <div class="blogContainer">
 {% endblock %}
 {% block primarycontent %}
-
-    <div class="blogCard">
       {% markdown 'trying-to-get-more-out-of-google-analytics.md' %}{% endmarkdown %}
-    </div>
-
-
-  </div>
-
-</main>
-
 {% endblock %}

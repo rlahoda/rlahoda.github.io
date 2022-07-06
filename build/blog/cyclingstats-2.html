@@ -1,0 +1,240 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  
+<head>
+  <script>
+    (function(i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function() {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-32142472-2', 'auto');
+    ga('send', 'pageview');
+  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'"> -->
+  <title>Rob Lahoda • Front End Web Developer</title>
+  <!-- <base href="https://rlahoda.github.io"> -->
+  <link rel="stylesheet" href="/css/styles.css">
+  <link href="/vendor/prism/prism.css" rel="stylesheet" />
+  <meta name="description" content="I'm a versatile, adaptable problem-solver. My strong mix of technical and creative skills give me a diverse perspective on the projects I work on.">
+  <meta name="subject" content="">
+
+  <meta property="og:url" content="https://rlahoda.github.io">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Rob Lahoda • Front End Web Developer">
+  <meta property="og:image" content="https://rlahoda.github.io/assets/images/social-twitter.jpg">
+  <meta property="og:description" content="I'm a versatile, adaptable problem-solver. My strong mix of technical and creative skills give me a diverse perspective on the projects I work on.">
+  <meta property="og:site_name" content="Rob Lahoda • Front End Web Developer">
+  <meta property="og:locale" content="en_US">
+  <meta property="article:author" content="">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@rlahoda">
+  <meta name="twitter:creator" content="@rlahoda">
+  <meta name="twitter:url" content="https://rlahoda.github.io">
+  <meta name="twitter:title" content="Rob Lahoda • Front End Web Developer">
+  <meta name="twitter:description" content="I'm a versatile, adaptable problem-solver. My strong mix of technical and creative skills give me a diverse perspective on the projects I work on.">
+  <meta name="twitter:image" content="https://rlahoda.github.io/assets/images/social-twitter.jpg">
+
+  <meta name="robots" content="index,follow"><!-- All Search Engines -->
+  <meta name="googlebot" content="index,follow"><!-- Google Specific -->
+
+  <!-- <script src="/vendor/greensock-js/src/minified/TweenMax.min.js" charset="utf-8"></script>
+  <script src="/vendor/greensock-js/src/minified/plugins/TextPlugin.min.js" charset="utf-8"></script>
+  <script src="/vendor/greensock-js/src/minified/easing/EasePack.min.js" charset="utf-8"></script> -->
+  <script src="/scripts/scripts-min.js" charset="utf-8"></script>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,700,900" rel="stylesheet">
+</head>
+
+  <body>
+    <nav class="navFixed">
+  <ul id="navList" class="navList">
+    <li class="navList__navItem" id="navList__homeLink"><a href="../">Home</a></li>
+    <li class="navList__navItem" id="navList__aboutLink"><a href="../about.html">About</a></li>
+    <li class="navList__navItem" id="navList__projectsLink"><a href="../projects.html">Projects</a></li>
+    <li class="navList__navItem" id="navList__projectsLink"><a href="../blog.html">Blog</a></li>
+    <li class="navList__navItem" id="navList__contactLink"><a href="../contact.html">Contact</a></li>
+  </ul>
+</nav>
+    <header>
+      <div class="pageTopImage">
+        
+              </div>
+    </header>
+
+    <main>
+      <div class="pageHeading">
+        <!-- <h1 class="bigTitle">
+          Blog</h1> -->
+        <div class="pageTagline__container">
+
+                  <h1 id="projectsTagline" class="pageTagline">CyclingStats Part 2</h1>
+        <h2>Oct 21, 2020</h2>
+        </div>
+        <p></p>
+      </div>
+      <div class="blogContainer">
+
+        <div class="blogCard recentPosts">
+          <h3 class="noMargin">Check Out Some Recent Posts:</h3>
+          <ul class="noList linkList">
+                        <li class="linkList-links"><a href="leaflet-react-custom-icons.html">React Leaflet Custom Map Icons</a></br>
+            <p class="noMargin indented">Nov 19, 2019</p></li>
+                        <li class="linkList-links"><a href="use-const-even-when-you-think-you-shouldnt.html">Use 'const', Even When You Think You Shouldn't</a></br>
+            <p class="noMargin indented">Jan 23, 2019</p></li>
+                        <li class="linkList-links"><a href="an-easy-way-to-practice-with-twig-without-drupal.html">An Easy Way To Practice With Twig Without Drupal</a></br>
+            <p class="noMargin indented">Mar 28, 2018</p></li>
+                        <li class="linkList-links"><a href="hiding-progress-bar-steps-in-drupal-8-webform.html">Hiding Progress Bar Steps in Drupal 8 Webform</a></br>
+            <p class="noMargin indented">Mar 26, 2018</p></li>
+                      </ul>
+
+        </div>
+        <div class="blogCard">
+          <a href="/blog.html">Back to the blog</a>
+                <p>The first part of planning this project is to think through the data involved and how I&#39;d like to structure the data.</p>
+<h3 id="a-race">A Race</h3>
+<p>There are a few aspects of the data that I need to think about. The first is to try to determine the different types of data that need to be separated into discrete entities. When thinking about the Tour de France (TdF), the most famous cycling race in the world, there&#39;s once immediate entity that comes to mind: the race itself. But a grand tour, like the TdF, has multiple individual stages. A stage is basically the same as a regular race, though, so data-wise, they can be treated as a race but with a &quot;parent race&quot; that is then above the stages.</p>
+<h3 id="riders">Riders</h3>
+<p>Then there are the individual riders themselves. They make sense as another discrete entity type. These racers have information like names, teams, countries they&#39;re from, and other information that helps add to their profile.</p>
+<h3 id="teams">Teams</h3>
+<p>Those riders are a part of a team, usually, so that&#39;s something else to add in there. Teams change names from year-to-year sometimes so each name would be considered a unique entry. However, there needs to be a way to link previous variations of that team so that you can see the different names it&#39;s had over the years. Also, riders come and go from the team, even if the team doesn&#39;t change names. Initially the site will be focused on race results, but to be &quot;IMDB for cycling&quot; I need to include additional information and data about the rider that will not just be contained in a race result. Thankfully, Drupal will let me extend the content types as I need to add more in down the line, so it&#39;ll be fine.</p>
+<h3 id="other-people">Other People</h3>
+<p>Thinking about teams, it would be good to have information about other people involved with the team. What about the directeur sportif or others involved with coaching the teams? Many of these people are former professional riders so it would be good to be able to incorporate any past results in their profile. So it would make sense not to have a &quot;rider&quot; entity and a separate other entity for &quot;non-riders&quot;. So I think I&#39;ll have just a generic &quot;person&quot; type that will allow for additional information over time.</p>
+<h3 id="race-results">Race Results</h3>
+<p>What about the race results? As I was thinking about this, I knew that I want the results to be data that can be worked with, not just a static text block or table. So I decided that there should be an entity I&#39;m calling &quot;Race Result&quot;. This would link the competitor who&#39;s result it is, the team of that competitor, the time of the result, any penalty or bonus time, and other important information.</p>
+<h3 id="other-races">Other &quot;Races&quot;</h3>
+<p>That&#39;s all good for the Yellow Jersey, or the racer with the lowest overall time, but what about the Polka Dot Jersey, the racer with the most mountain points, or the Green Jersey, the racer with the most sprint points? I&#39;ve decided that these are all just different kinds of results so I&#39;m going to keep all that information available in the single entity. Essentially, the Polka Dot Jersey competition would be treated as a unique &quot;race&quot; within that stage or competition.</p>
+<h3 id="content-type-fields">Content Type Fields</h3>
+<p>So taking all this into consideration, here&#39;s my content types and the various fields that I can think of to include in them:</p>
+<ul>
+<li>Person<ul>
+<li>First name</li>
+<li>Last name</li>
+<li>DOB (to calculate age)</li>
+<li>Country of origin</li>
+<li>Team</li>
+<li>First year as a professional (to calculate how many years)</li>
+</ul>
+</li>
+<li>Race<ul>
+<li>Name</li>
+<li>Is_multi-stage (bool to flag for the race that contains multiple stages)</li>
+<li>Is_stage (bool to flag for a stage of a multi stage race)</li>
+<li>Parent race (for stages to associate the race)</li>
+<li>Country</li>
+<li>Region (?)</li>
+<li>Start Date</li>
+<li>Is_multi-day (bool to flag for multi day races)</li>
+<li>Stage Number</li>
+<li>End Date (only for multi day races)</li>
+<li>Organizing Body (?) (UCI or ASO or something)</li>
+<li>Start location (Town/City)</li>
+<li>End location (Town/City) (not required)</li>
+<li>Length (for individual stage or total race)</li>
+<li>Route (GPS line on embedded map)</li>
+<li>Race type -&gt; taxonomy</li>
+</ul>
+</li>
+<li>Race Result<ul>
+<li>Competitor</li>
+<li>Team (of the competitor)</li>
+<li>Time</li>
+<li>Placement (1st, 2nd, etc - would be an integer)</li>
+<li>Penalty time</li>
+<li>Bonus time</li>
+<li>Overall Time (for multi day races)</li>
+<li>KOM Points</li>
+<li>Points</li>
+<li>Gap (time between them and 1st place - calculated field)</li>
+<li>Bib Number</li>
+<li>Type of result (Overall, KOM, Points, Young, etc) -&gt; taxonomy</li>
+</ul>
+</li>
+<li>Team - new entity when team names change year-to-year<ul>
+<li>Former names -&gt; association to previous versions of that team</li>
+</ul>
+</li>
+</ul>
+<p>If you have any suggestions or ideas for how these can be improved, feel free to reach out to me through any of my social media or other contact methods that you can find at the bottom of this page!</p>
+<p>If you want to follow along with my progress, you can see the <a href="/tags/cycling-stats/">full list of tagged posts</a>.</p>
+          <a href="/blog.html">Back to the blog</a>
+        </div>
+        <div class="blogContainer">
+          <div class="blogCard recentPosts">
+            <h3 class="noMargin">Check Out Some Recent Posts:</h3>
+            <ul class="noList linkList">
+                            <li class="linkList-links"><a href="leaflet-react-custom-icons.html">React Leaflet Custom Map Icons</a></br>
+              <p class="noMargin indented">Nov 19, 2019</p></li>
+                            <li class="linkList-links"><a href="use-const-even-when-you-think-you-shouldnt.html">Use 'const', Even When You Think You Shouldn't</a></br>
+              <p class="noMargin indented">Jan 23, 2019</p></li>
+                            <li class="linkList-links"><a href="an-easy-way-to-practice-with-twig-without-drupal.html">An Easy Way To Practice With Twig Without Drupal</a></br>
+              <p class="noMargin indented">Mar 28, 2018</p></li>
+                            <li class="linkList-links"><a href="hiding-progress-bar-steps-in-drupal-8-webform.html">Hiding Progress Bar Steps in Drupal 8 Webform</a></br>
+              <p class="noMargin indented">Mar 26, 2018</p></li>
+                          </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+  <div class="footerLinks__container">
+    <h4 class="">Say Hi!</h4>
+  <ul class="noList noListBlock footerLinks__list">
+              <li class="footerLinks__list--item">
+          <a class="footerLinks__link" href="mailto:rob@roblahoda.com" onclick="trackOutboundLink('rob@roblahoda.com'); return false;" target="_blank"><span class="icons footerLinks__link--icon" id="email"></span>
+          <p class="">Email</p></a>
+        </li>
+              <li class="footerLinks__list--item">
+          <a class="footerLinks__link" href="https://twitter.com/rlahoda" onclick="trackOutboundLink('https://twitter.com/rlahoda'); return false;" target="_blank"><span class="icons footerLinks__link--icon" id="twitter"></span>
+          <p class="">Twitter</p></a>
+        </li>
+              <li class="footerLinks__list--item">
+          <a class="footerLinks__link" href="https://github.com/rlahoda" onclick="trackOutboundLink('https://github.com/rlahoda'); return false;" target="_blank"><span class="icons footerLinks__link--icon" id="github"></span>
+          <p class="">Github</p></a>
+        </li>
+              <li class="footerLinks__list--item">
+          <a class="footerLinks__link" href="https://codepen.io/rlahoda/" onclick="trackOutboundLink('https://codepen.io/rlahoda/'); return false;" target="_blank"><span class="icons footerLinks__link--icon" id="codepen">
+          </span>
+          <p class="">Codepen</p></a>
+        </li>
+              <li class="footerLinks__list--item">
+          <a class="footerLinks__link" href="https://www.drupal.org/u/rlahoda/" onclick="trackOutboundLink('https://www.drupal.org/u/rlahoda/'); return false;" target="_blank"><span class="icons footerLinks__link--icon" id="drupal"></span>
+          <p class="">Drupal.org</p></a>
+        </li>
+              <li class="footerLinks__list--item">
+          <a class="footerLinks__link" href="https://www.linkedin.com/in/robert-lahoda/" onclick="trackOutboundLink('https://www.linkedin.com/in/robert-lahoda/'); return false;" target="_blank"><span class="icons footerLinks__link--icon" id="linkedin"></span>
+          <p class="">Linkedin</p></a>
+        </li>
+            </ul>
+            <p class="smallText">Copyright &copy; <script>document.write(new Date().getFullYear())</script> Rob Lahoda - Logos are property of their respective owners.</p>
+
+</div>
+<script src="/vendor/prism/prism.js"></script>
+</footer>
+    <script type="text/javascript" src="/vendor/scroll.js"></script>
+<script>
+/**
+* Function that tracks a click on an outbound link in Analytics.
+* This function takes a valid URL string as an argument, and uses that URL string
+* as the event label. Setting the transport method to 'beacon' lets the hit be sent
+* using 'navigator.sendBeacon' in browser that support it.
+*/
+var trackOutboundLink = function(url) {
+ ga('send', 'event', 'outbound', 'click', url, {
+   'transport': 'beacon',
+   'hitCallback': function(){document.location = url;}
+ });
+}
+</script>
+  </body>
+</html>

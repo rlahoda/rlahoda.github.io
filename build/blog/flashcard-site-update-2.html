@@ -31,7 +31,7 @@
   <meta property="og:url" content="https://rlahoda.github.io">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Rob Lahoda • Front End Web Developer">
-  <meta property="og:image" content="https://rlahoda.github.io/assets/img/social-twitter.jpg">
+  <meta property="og:image" content="https://rlahoda.github.io/assets/images/social-twitter.jpg">
   <meta property="og:description" content="I'm a versatile, adaptable problem-solver. My strong mix of technical and creative skills give me a diverse perspective on the projects I work on.">
   <meta property="og:site_name" content="Rob Lahoda • Front End Web Developer">
   <meta property="og:locale" content="en_US">
@@ -43,7 +43,7 @@
   <meta name="twitter:url" content="https://rlahoda.github.io">
   <meta name="twitter:title" content="Rob Lahoda • Front End Web Developer">
   <meta name="twitter:description" content="I'm a versatile, adaptable problem-solver. My strong mix of technical and creative skills give me a diverse perspective on the projects I work on.">
-  <meta name="twitter:image" content="https://rlahoda.github.io/assets/img/social-twitter.jpg">
+  <meta name="twitter:image" content="https://rlahoda.github.io/assets/images/social-twitter.jpg">
 
   <meta name="robots" content="index,follow"><!-- All Search Engines -->
   <meta name="googlebot" content="index,follow"><!-- Google Specific -->
@@ -66,41 +66,41 @@
   </ul>
 </nav>
     <header>
-  <div class="pageTopImage">
+      <div class="pageTopImage">
+        
+              </div>
+    </header>
 
-  </div>
-</header>
+    <main>
+      <div class="pageHeading">
+        <!-- <h1 class="bigTitle">
+          Blog</h1> -->
+        <div class="pageTagline__container">
 
-<main>
-  <div class="pageHeading">
-    <!-- <h1 class="bigTitle">
-      Blog</h1> -->
-      <div class="pageTagline__container">
-        <h1 id="projectsTagline" class="pageTagline">Flashcard Site – Update 2</h1>
+                  <h1 id="projectsTagline" class="pageTagline">Flashcard Site – Update 2</h1>
         <h2>Mar 11, 2016</h2>
+        </div>
+        <p></p>
       </div>
-    <p></p>
-  </div>
-  <div class="blogContainer">
+      <div class="blogContainer">
 
-    <div class="blogCard recentPosts">
-      <h3 class="noMargin">Check Out Some Recent Posts:</h3>
-      <ul class="noList linkList">
-                  <li class="linkList-links"><a href="leaflet-react-custom-icons.html">React Leaflet Custom Map Icons</a></br>
-           <p class="noMargin indented">Nov 19, 2019</p></li>
-                  <li class="linkList-links"><a href="use-const-even-when-you-think-you-shouldnt.html">Use 'const', Even When You Think You Shouldn't</a></br>
-           <p class="noMargin indented">Jan 23, 2019</p></li>
-                  <li class="linkList-links"><a href="an-easy-way-to-practice-with-twig-without-drupal.html">An Easy Way To Practice With Twig Without Drupal</a></br>
-           <p class="noMargin indented">Mar 28, 2018</p></li>
-                  <li class="linkList-links"><a href="hiding-progress-bar-steps-in-drupal-8-webform.html">Hiding Progress Bar Steps in Drupal 8 Webform</a></br>
-           <p class="noMargin indented">Mar 26, 2018</p></li>
-              </ul>
+        <div class="blogCard recentPosts">
+          <h3 class="noMargin">Check Out Some Recent Posts:</h3>
+          <ul class="noList linkList">
+                        <li class="linkList-links"><a href="leaflet-react-custom-icons.html">React Leaflet Custom Map Icons</a></br>
+            <p class="noMargin indented">Nov 19, 2019</p></li>
+                        <li class="linkList-links"><a href="use-const-even-when-you-think-you-shouldnt.html">Use 'const', Even When You Think You Shouldn't</a></br>
+            <p class="noMargin indented">Jan 23, 2019</p></li>
+                        <li class="linkList-links"><a href="an-easy-way-to-practice-with-twig-without-drupal.html">An Easy Way To Practice With Twig Without Drupal</a></br>
+            <p class="noMargin indented">Mar 28, 2018</p></li>
+                        <li class="linkList-links"><a href="hiding-progress-bar-steps-in-drupal-8-webform.html">Hiding Progress Bar Steps in Drupal 8 Webform</a></br>
+            <p class="noMargin indented">Mar 26, 2018</p></li>
+                      </ul>
 
-    </div>
-    
-    <div class="blogCard">
-      <p><a href="../blog.html">Back to blog posts</a></p>
-<p>So now I&#39;m into version 0.2.2. After getting through my first goal of establishing the basic concept pretty smoothly, the next big hurdle was a double: doing the hiding/showing of the sides with a single click and also creating code that was more scalable. As I was working on the script, I pretty quickly realized that my original method of having the scripting inline in the html was not going to work. Not only was it tied directly to a single button but there was no way to reuse the code meaning that for every card a script would need to be inline. So I began investigating different script options and found one that worked well for me.</p>
+        </div>
+        <div class="blogCard">
+          <a href="/blog.html">Back to the blog</a>
+                <p>So now I&#39;m into version 0.2.2. After getting through my first goal of establishing the basic concept pretty smoothly, the next big hurdle was a double: doing the hiding/showing of the sides with a single click and also creating code that was more scalable. As I was working on the script, I pretty quickly realized that my original method of having the scripting inline in the html was not going to work. Not only was it tied directly to a single button but there was no way to reuse the code meaning that for every card a script would need to be inline. So I began investigating different script options and found one that worked well for me.</p>
 <p>The first step of making the code more reusable was to create two classes that determined if the text was &quot;visible&quot; or &quot;hidden&quot;. It does this by changing the CSS visibility property to either visible or collapsed. This allows me to put this class on anything, a div, some text, whatever, and it&#39;ll hide or show the contents.</p>
 <p>So here&#39;s the script, then I&#39;ll break down what&#39;s happening.</p>
 <pre><code class="language-Javascript">window.fnccardswap = function(cardfront, cardback) {
@@ -111,37 +111,36 @@
      document.getElementById(cardfront).setAttribute(&#39;class&#39;, &#39;visible&#39;);
      document.getElementById(cardback).setAttribute(&#39;class&#39;, &#39;hidden&#39;);
    };
-  };</code></pre>
+  };
+</code></pre>
 <p>So the basic structure of the code is: if the div labeled &quot;cardfront&quot; has a class of &quot;visible&quot;, set it to &quot;hidden&quot; and also set the class of the &quot;cardback&quot; div to &quot;visible&quot;, but if &quot;cardfront&quot; does not have the class &quot;visible&quot;, set the class to &quot;visible&quot; and set the class of the &quot;cardback&quot; to &quot;hidden&quot;.</p>
 <p>Each div has this code on it to trigger the function:</p>
-<pre><code class="language-Javascript">onmouseup=&quot;fnccardswap(&#39;cardfront1&#39;, &#39;cardback1&#39;)&quot;</code></pre>
+<pre><code class="language-Javascript">onmouseup=&quot;fnccardswap(&#39;cardfront1&#39;, &#39;cardback1&#39;)&quot;
+</code></pre>
 <p>So it starts with the onmouseup which tells the page to run the fnccardswap function. The original version of the code for the trigger and also the script itself didn&#39;t have &#39;cardfront&#39; or &#39;cardback&#39;. It actually was specific to the first div which was labeled &quot;cardfront1&quot; and &quot;cardfront2&quot;. So as I was trying to make the script reusable, I learned that you can create variables for the function and specify what would go into those variables. So what I mean is, if you look at the full script you can see how it starts off with &quot;function(cardfront, cardback)&quot;. This is defining two variables and what they are called throughout the function. So then as you look through the function, you can see cardfront and cardback listed. If the function was going to directly connect to a specific element, instead of a variable, the function at top would just have empty parenthesis () and you&#39;d see quotes around each of the cardfront mentions (&#39;cardfront1&#39;). So if you look at the div trigger again you see that on the mouseup it will run the function: fcncardswap and in the parenthesis it defines which two elements will be referenced by the two variables in the function. In this case, &#39;cardfront1&#39; will be passed to the cardfront variable.</p>
 <p>So it&#39;s a good start. I&#39;m reusing code for efficiency, the goal of having the card front and back swapping was met and I&#39;m off to a solid start.</p>
-<p><a href="../blog.html">Back to blog posts</a></p>
     <p class="codepen" data-height="668" data-theme-id="0" data-slug-hash="EKKNBY" data-default-tab="result" data-user="rlahoda">See the Pen <a href="http://codepen.io/rlahoda/pen/EKKNBY/">Flashcards v0.2.2</a> by Rob Lahoda (<a href="http://codepen.io/rlahoda">@rlahoda</a>) on <a href="http://codepen.io">CodePen</a>.</p>
       <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
-    </div>
+          <a href="/blog.html">Back to the blog</a>
+        </div>
+        <div class="blogContainer">
+          <div class="blogCard recentPosts">
+            <h3 class="noMargin">Check Out Some Recent Posts:</h3>
+            <ul class="noList linkList">
+                            <li class="linkList-links"><a href="leaflet-react-custom-icons.html">React Leaflet Custom Map Icons</a></br>
+              <p class="noMargin indented">Nov 19, 2019</p></li>
+                            <li class="linkList-links"><a href="use-const-even-when-you-think-you-shouldnt.html">Use 'const', Even When You Think You Shouldn't</a></br>
+              <p class="noMargin indented">Jan 23, 2019</p></li>
+                            <li class="linkList-links"><a href="an-easy-way-to-practice-with-twig-without-drupal.html">An Easy Way To Practice With Twig Without Drupal</a></br>
+              <p class="noMargin indented">Mar 28, 2018</p></li>
+                            <li class="linkList-links"><a href="hiding-progress-bar-steps-in-drupal-8-webform.html">Hiding Progress Bar Steps in Drupal 8 Webform</a></br>
+              <p class="noMargin indented">Mar 26, 2018</p></li>
+                          </ul>
+          </div>
+        </div>
+      </div>
+    </main>
 
-
-  </div>
-
-</main>
-
-    <div class="blogContainer">
-    <div class="blogCard recentPosts">
-      <h3 class="noMargin">Check Out Some Recent Posts:</h3>
-      <ul class="noList linkList">
-                  <li class="linkList-links"><a href="leaflet-react-custom-icons.html">React Leaflet Custom Map Icons</a></br>
-           <p class="noMargin indented">Nov 19, 2019</p></li>
-                  <li class="linkList-links"><a href="use-const-even-when-you-think-you-shouldnt.html">Use 'const', Even When You Think You Shouldn't</a></br>
-           <p class="noMargin indented">Jan 23, 2019</p></li>
-                  <li class="linkList-links"><a href="an-easy-way-to-practice-with-twig-without-drupal.html">An Easy Way To Practice With Twig Without Drupal</a></br>
-           <p class="noMargin indented">Mar 28, 2018</p></li>
-                  <li class="linkList-links"><a href="hiding-progress-bar-steps-in-drupal-8-webform.html">Hiding Progress Bar Steps in Drupal 8 Webform</a></br>
-           <p class="noMargin indented">Mar 26, 2018</p></li>
-              </ul>
-</div>
-    </div>
     <footer>
   <div class="footerLinks__container">
     <h4 class="">Say Hi!</h4>
@@ -172,12 +171,12 @@
           <p class="">Linkedin</p></a>
         </li>
             </ul>
-            <p class="smallText">Copyright ©2018 Rob Lahoda - Logos are property of their respective owners.</p>
+            <p class="smallText">Copyright &copy; <script>document.write(new Date().getFullYear())</script> Rob Lahoda - Logos are property of their respective owners.</p>
 
 </div>
 <script src="/vendor/prism/prism.js"></script>
 </footer>
-<script type="text/javascript" src="/vendor/scroll.js"></script>
+    <script type="text/javascript" src="/vendor/scroll.js"></script>
 <script>
 /**
 * Function that tracks a click on an outbound link in Analytics.

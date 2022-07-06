@@ -1,34 +1,10 @@
 {% extends '../blogBase.twig' %}
 {% block heading %}
-<header>
-  <div class="pageTopImage">
-
-  </div>
-</header>
-
-<main>
-  <div class="pageHeading">
-    <!-- <h1 class="bigTitle">
-      Blog</h1> -->
-      <div class="pageTagline__container">
         <h1 id="projectsTagline" class="pageTagline">Flashcard Site – Update 4</h1>
         <h2>Mar 18, 2016</h2>
-      </div>
-    <p></p>
-  </div>
-  <div class="blogContainer">
 {% endblock %}
 {% block primarycontent %}
-
-    <div class="blogCard">
       {% markdown 'flashcard-site-update-4.md' %}{% endmarkdown %}
   <p class="codepen" data-height="668" data-theme-id="0" data-slug-hash="RaRqPG" data-default-tab="result" data-user="rlahoda">See the Pen <a href="http://codepen.io/rlahoda/pen/RaRqPG/">Flashcards v1.0.0</a> by Rob Lahoda (<a href="http://codepen.io/rlahoda">@rlahoda</a>) on <a href="http://codepen.io">CodePen</a>.</p>
       <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
-    </div>
-
-
-  </div>
-
-</main>
-
 {% endblock %}

@@ -1,5 +1,3 @@
-[Back to blog posts](../blog.html)
-
 If you're just starting out in Javascript (JS), you might be learning from some of the many great trainings that explain how JS has been done for many years. There are tons of great trainings to check out and I'll recommend some in a moment. When you go through these trainings, you probably see everywhere the use of `var` for creating variables. With the advent of ES6 (or ECMAScript 2015, the latest version of Javascript) there are a couple more fun variable types that we can use: `const` and let.
 
 There are a lot of great tutorials that explain how to use the different types of variables and go into in-depth description of what they do and how they're different from `var`, but I want to focus specifically on `const` and one of the concepts that took me a while to understand.
@@ -116,4 +114,3 @@ This means you can use `const` for probably the majority of variables that you'r
 
 If you're interested in learning more about ES6 check out [Wes Bos' ES6 for everyone course](https://es6.io/) for some pretty helpful training. If you're just trying to get started in learning Javascript, there are a ton of different options. One I thought was really helpful was [Javascript - From Beginner to Pro-Build real world JS apps ](https://www.udemy.com/javascript-from-beginner-to-pro-best-course/) by [Abhay Talreja](https://twitter.com/AbhayTalreja). He does a great job of laying out how to use JS and what everything means. If you're just getting started, I'd recommend that course before then moving on to Wes' training because his is more geared for people who already know Javascript and are looking to understand the new features of ES6.
 
-[Back to blog posts](../blog.html)

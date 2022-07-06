@@ -31,7 +31,7 @@
   <meta property="og:url" content="https://rlahoda.github.io">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Rob Lahoda • Front End Web Developer">
-  <meta property="og:image" content="https://rlahoda.github.io/assets/img/social-twitter.jpg">
+  <meta property="og:image" content="https://rlahoda.github.io/assets/images/social-twitter.jpg">
   <meta property="og:description" content="I'm a versatile, adaptable problem-solver. My strong mix of technical and creative skills give me a diverse perspective on the projects I work on.">
   <meta property="og:site_name" content="Rob Lahoda • Front End Web Developer">
   <meta property="og:locale" content="en_US">
@@ -43,7 +43,7 @@
   <meta name="twitter:url" content="https://rlahoda.github.io">
   <meta name="twitter:title" content="Rob Lahoda • Front End Web Developer">
   <meta name="twitter:description" content="I'm a versatile, adaptable problem-solver. My strong mix of technical and creative skills give me a diverse perspective on the projects I work on.">
-  <meta name="twitter:image" content="https://rlahoda.github.io/assets/img/social-twitter.jpg">
+  <meta name="twitter:image" content="https://rlahoda.github.io/assets/images/social-twitter.jpg">
 
   <meta name="robots" content="index,follow"><!-- All Search Engines -->
   <meta name="googlebot" content="index,follow"><!-- Google Specific -->
@@ -66,43 +66,43 @@
   </ul>
 </nav>
     <header>
-  <div class="pageTopImage">
+      <div class="pageTopImage">
+        
+              </div>
+    </header>
 
-  </div>
-</header>
+    <main>
+      <div class="pageHeading">
+        <!-- <h1 class="bigTitle">
+          Blog</h1> -->
+        <div class="pageTagline__container">
 
-<main>
-  <div class="pageHeading">
-    <!-- <h1 class="bigTitle">
-      Blog</h1> -->
-      <div class="pageTagline__container">
-        <h1 id="projectsTagline" class="pageTagline">Hiding Progress Bar Steps in Drupal 8 Webform</h1>
+                  <h1 id="projectsTagline" class="pageTagline">Hiding Progress Bar Steps in Drupal 8 Webform</h1>
         <h2>Mar 26, 2018</h2>
+        </div>
+        <p></p>
       </div>
-    <p></p>
-  </div>
-  <div class="blogContainer">
+      <div class="blogContainer">
 
-    <div class="blogCard recentPosts">
-      <h3 class="noMargin">Check Out Some Recent Posts:</h3>
-      <ul class="noList linkList">
-                  <li class="linkList-links"><a href="leaflet-react-custom-icons.html">React Leaflet Custom Map Icons</a></br>
-           <p class="noMargin indented">Nov 19, 2019</p></li>
-                  <li class="linkList-links"><a href="use-const-even-when-you-think-you-shouldnt.html">Use 'const', Even When You Think You Shouldn't</a></br>
-           <p class="noMargin indented">Jan 23, 2019</p></li>
-                  <li class="linkList-links"><a href="an-easy-way-to-practice-with-twig-without-drupal.html">An Easy Way To Practice With Twig Without Drupal</a></br>
-           <p class="noMargin indented">Mar 28, 2018</p></li>
-                  <li class="linkList-links"><a href="hiding-progress-bar-steps-in-drupal-8-webform.html">Hiding Progress Bar Steps in Drupal 8 Webform</a></br>
-           <p class="noMargin indented">Mar 26, 2018</p></li>
-              </ul>
+        <div class="blogCard recentPosts">
+          <h3 class="noMargin">Check Out Some Recent Posts:</h3>
+          <ul class="noList linkList">
+                        <li class="linkList-links"><a href="leaflet-react-custom-icons.html">React Leaflet Custom Map Icons</a></br>
+            <p class="noMargin indented">Nov 19, 2019</p></li>
+                        <li class="linkList-links"><a href="use-const-even-when-you-think-you-shouldnt.html">Use 'const', Even When You Think You Shouldn't</a></br>
+            <p class="noMargin indented">Jan 23, 2019</p></li>
+                        <li class="linkList-links"><a href="an-easy-way-to-practice-with-twig-without-drupal.html">An Easy Way To Practice With Twig Without Drupal</a></br>
+            <p class="noMargin indented">Mar 28, 2018</p></li>
+                        <li class="linkList-links"><a href="hiding-progress-bar-steps-in-drupal-8-webform.html">Hiding Progress Bar Steps in Drupal 8 Webform</a></br>
+            <p class="noMargin indented">Mar 26, 2018</p></li>
+                      </ul>
 
-    </div>
-    
-    <div class="blogCard">
-      <p><a href="../blog.html">Back to blog posts</a></p>
-<p>I was recently working on a client site in Drupal 8 that involved a <a href="https://hia-oh.com/get-a-quote?utm_source=blog&amp;utm_medium=link&amp;utm_campaign=blog-link">multi-step form</a>. The client is an insurance agency and wanted to have a quote form that users can fill out to start the process of getting a quote for insurance. Since the agency covers multiple kinds of insurance, this meant that the form needed to handle multiple types of insurance. To create this, I used the <a href="https://www.drupal.org/project/webform/">Webform</a> module. I thought about doing multiple forms for simplicity, but realized that a single user might want to get a quote for more than one kind of insurance and asking them to fill out the same information multiple times would be frustrating and a negative user experience.</p>
+        </div>
+        <div class="blogCard">
+          <a href="/blog.html">Back to the blog</a>
+                <p>I was recently working on a client site in Drupal 8 that involved a <a href="https://hia-oh.com/get-a-quote?utm_source=blog&amp;utm_medium=link&amp;utm_campaign=blog-link">multi-step form</a>. The client is an insurance agency and wanted to have a quote form that users can fill out to start the process of getting a quote for insurance. Since the agency covers multiple kinds of insurance, this meant that the form needed to handle multiple types of insurance. To create this, I used the <a href="https://www.drupal.org/project/webform/">Webform</a> module. I thought about doing multiple forms for simplicity, but realized that a single user might want to get a quote for more than one kind of insurance and asking them to fill out the same information multiple times would be frustrating and a negative user experience.</p>
 <p>The default progress bar is a series of circles with the number of the step on them and the label for the step underneath.</p>
-<p><img src="/assets/img/blog/webform-default-progressbar.jpg" alt=""></p>
+<p><img src="/assets/images/webform-default-progressbar.jpg" alt=""></p>
 <p>Using built-in conditional logic I am able to hide pages or reveal pages as the user progresses based on their choice of Auto or Homeowner&#39;s. The problem is that hitting &quot;next&quot; would mean the user sees all of the steps but doesn&#39;t use them. While I recognize there is the possibility of user confusion for the progress bar to be changing throughout the process, I think there would be more confusion for the user to see steps showing that they&#39;ve been visited when the user hasn&#39;t actually visited them.</p>
 <p>So my goal was to remove the steps that aren&#39;t going to be used based on the user&#39;s selection.</p>
 <p><strong>I&#39;ll say right now that this solution works and is pretty effective but not as flexible as I would prefer.</strong> It requires some template and css changes every time a new type of insurance is added or if the order of the pages were to change. But since a form like this isn&#39;t one that will change that dramatically very often, I&#39;m ok with those limitations. Also, a lot of the idea for how to approach to this came from <a href="https://twitter.com/wesruv">Wes Ruvacalba</a> who has been helping me out with solving some of the tougher problems I&#39;ve run into.</p>
@@ -115,7 +115,7 @@
 </ul>
 <h3 id="uniquely-identifying-page-markers">Uniquely Identifying Page Markers</h3>
 <p>Step 1 was to give each page marker a unique identifier that would allow us to do something with them later. This was taken care of in the Twig template for the form. In my case, the form is called &quot;Get A Quote&quot; so we went to the file: <code>/modules/webform/templates/webform-progress-tracker.html.twig</code> and copied it into my <code>mytheme/templates/webform</code> directory (if you don&#39;t have that directory in your theme files, just create it). Then we renamed it: <code>webform-progress-tracker--get-a-quote.html.twig</code> to ensure that it would be used for this specific form. If you&#39;re not familiar with template hints when you&#39;re theme building check out <a href="https://www.drupal.org/docs/8/theming/twig/debugging-twig-templates">this article about setting up your local dev environment</a>. Looking at the default template file there already is a unique identifier for each page set as a value in a span: <code>&lt;span class=&quot;progress-marker&quot;&gt;{{ index + 1 }}&lt;/span&gt;</code>. When you look at the default progress bar, you can see this showing up as a number in a circle:</p>
-<p><img src="/assets/img/blog/webform-closeup-marker-progressbar.jpg" alt=""></p>
+<p><img src="/assets/images/webform-closeup-marker-progressbar.jpg" alt=""></p>
 <p>So I basically want this number to be used in adding a CSS class to each marker to designate its step in the line. Fortunately, it&#39;s really easy to just copy the Twig code and reuse it for creating a CSS class.</p>
 <p>I&#39;m going to assume you know some about how to create stuff in Twig so I&#39;m not going to explain everything here. To add it to a class on the marker, first let&#39;s look at the whole template:</p>
 <pre><code class="language-twig">{{ attach_library(&#39;webform/webform.progress.tracker&#39;) }}
@@ -137,7 +137,8 @@
     {% endif %}
   &lt;/li&gt;
   {% endfor %}
-&lt;/ul&gt;</code></pre>
+&lt;/ul&gt;
+</code></pre>
 <p>You can see that this code creates an unordered list with a for loop inside that creates the list items for each of the markers. In the initial list item, the CSS classes are being added with <code>.addClass(classes)</code>. This is using the &quot;classes&quot; variable that&#39;s defined above and adds multiple values of classes. Currently, it&#39;s adding a class to define if the item has been completed already or if it&#39;s the currently active step. We want to add in one that just says which number step it is so that we have a uniquely identified class for each marker. To do this, we&#39;ll add a new line to the &quot;classes&quot; variable. My first guess was to have <code>index + 1</code> joined up with my text, in this case &quot;webform&quot; but it didn&#39;t work. So I instead created a new variable above the &quot;classes&quot; variable to take care of the math part: <code>{% set pagenumber = index + 1 %}</code> then I referenced that variable inside the &quot;classes&quot; variable to add the class: <code>&#39;webform_page&#39; ~ pagenumber,</code>.</p>
 <pre><code class="language-twig">{{ attach_library(&#39;webform/webform.progress.tracker&#39;) }}
 &lt;ul class=&quot;webform-progress-tracker progress-tracker progress-tracker--center&quot;&gt;
@@ -160,32 +161,37 @@
     {% endif %}
   &lt;/li&gt;
   {% endfor %}
-&lt;/ul&gt;</code></pre>
+&lt;/ul&gt;
+</code></pre>
 <p><strong>One important note.</strong> If you look, the &quot;classes&quot; variable and my new &quot;pagenumber&quot; variable are declared inside the for loop. This is really important because if it wasn&#39;t, it wouldn&#39;t be able to know which number to put for &quot;index&quot; or if the marker indicates a step that has been completed or is the current one.</p>
 <p>So now, we have a CSS class that&#39;s being added to each marker that looks like this: &quot;webform_page1&quot;, &quot;webform_page2&quot;, etc. The next step is figuring out which type(s) of insurance are checked at the beginning of the form to make sure those steps are shown.</p>
 <h3 id="identifying-which-types-of-insurance-are-checked">Identifying Which Types of Insurance are Checked</h3>
 <p>To figure this step out, we need to work in the .theme file. In your myThemeName.theme file go down to the bottom and add:</p>
 <pre><code class="language-php">function myThemeName_form_alter(&amp;$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
-}</code></pre>
+}
+</code></pre>
 <p><em>Make sure to replace &quot;myThemeName&quot; with the name of your own theme.</em></p>
 <p>So this calls the function <a href="https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Form%21form.api.php/function/hook_form_alter/8.3.x">hook_form_alter</a> which allows us to work with the data inside the form. The first thing that we want to do is check to make sure we&#39;re working with the right form. We can get the form ID by looking at the HTML for the form. Inside the form tag it says: <code>&lt;form id=&quot;webform-submission-get-a-quote-add-form&quot;</code>. There&#39;s a lot more info, but just look for the ID in there and copy the name down.</p>
 <p><strong>Important note:</strong> copy the name but replace the dashes with underscores! So the final name should look like this: <code>webform_submission_get_a_quote_add_form</code>.</p>
 <p>So we set an if statement to check to make sure we&#39;re only working with the &quot;get a quote&quot; form:</p>
 <pre><code class="language-php">if ($form_id == &#39;webform_submission_get_a_quote_add_form&#39;) {
-}</code></pre>
+}
+</code></pre>
 <p>Next, we need to look at the form itself and see what checkbox set we want to use to base it off and get the machine name for it. For mine it&#39;s &quot;what<em>kind_of_insurance_are_you_looking_for</em>&quot;.</p>
-<p><img src="/assets/img/blog/webform-checkbox-name-progressbar.jpg" alt=""></p>
+<p><img src="/assets/images/webform-checkbox-name-progressbar.jpg" alt=""></p>
 <p>So we want to get this value and assign it to a variable that we&#39;ll call $checkbox: <code>getValue(&#39;what_kind_of_insurance_are_you_looking_for_&#39;);</code>.</p>
 <p>Next we want to verify that $<code>checkbox</code> contains an array. This is because even though it&#39;s an array the way we set it up, at some point when the page loads this doesn&#39;t contain an array so to get rid of the errors that show up, we have this if statement:</p>
 <pre><code class="language-php">if (is_array($checkbox)) {
-}</code></pre>
+}
+</code></pre>
 <p>So now we get to the part that isn&#39;t flexible. There&#39;s probably a way around this, but for now, it works. we set up multiple if statements for each of the types of insurance and used them to add a class to the form tag.</p>
 <pre><code class="language-twig">if (in_array(&quot;Auto&quot;,$checkbox)) {
     $form[&#39;#attributes&#39;][&#39;class&#39;][]=&#39;webform_insurance_selector_auto&#39;;
   }
   if (in_array(&quot;Home or Rental&quot;,$checkbox)) {
     $form[&#39;#attributes&#39;][&#39;class&#39;][]=&#39;webform_insurance_selector_home&#39;;
-  }</code></pre>
+  }
+</code></pre>
 <p>We use &quot;in_array&quot; to check to see if the value has been added $checkbox then if it is, we add a new class to the form based on the one that&#39;s being checked.</p>
 <p>So if this is working correctly, when I move on to the second page of my form my array tag will have one or both of those classes added to it. When you go to check this, make sure to flush your caches before you check to make sure that your new function is being recognized.</p>
 <h3 id="triggering-the-timeline-markers">Triggering The Timeline Markers</h3>
@@ -198,7 +204,8 @@
 .webform_insurance_selector_home .webform_page4,
 .webform_insurance_selector_home .webform_page5 {
   display: block;
-}</code></pre>
+}
+</code></pre>
 <p>So now if everything went smoothly, after you save your files, clear your caches and move forward past the first page of the form, only the markers that are associated with the checkbox(es) you checked should show up!</p>
 <h3 id="styling-the-new-markers">Styling The New Markers</h3>
 <p>The final step is to make the markers look a little different because of the fact that we&#39;re hiding steps along the way so the original numbers don&#39;t work anymore. It&#39;d be confusing for the user to see they&#39;re going from page 2 to page 6. So we need to get rid of the number and style it differently to look nice with just the title of the page as the primary element. Since this post is mostly about how I got rid of the extra markers, I won&#39;t go into this but here&#39;s the final Twig template:</p>
@@ -240,33 +247,30 @@
   &lt;/li&gt;
   {% endif %}
   {% endfor %}
-&lt;/ul&gt;</code></pre>
+&lt;/ul&gt;
+</code></pre>
 <p>To see the progress bar design I came up with, I put the design into a <a href="https://codepen.io/rlahoda/pen/KoVQyy?editors=1100">pen on Codepen</a> where you can see how it all comes together.</p>
 <p>I hope this all made sense to you. If you have any questions, feel free to leave a comment or contact me <a href="https://twitter.com/rlahoda/">via Twitter (@rlahoda)</a>. Thanks for reading!</p>
-<p><a href="../blog.html">Back to blog posts</a></p>
+          <a href="/blog.html">Back to the blog</a>
+        </div>
+        <div class="blogContainer">
+          <div class="blogCard recentPosts">
+            <h3 class="noMargin">Check Out Some Recent Posts:</h3>
+            <ul class="noList linkList">
+                            <li class="linkList-links"><a href="leaflet-react-custom-icons.html">React Leaflet Custom Map Icons</a></br>
+              <p class="noMargin indented">Nov 19, 2019</p></li>
+                            <li class="linkList-links"><a href="use-const-even-when-you-think-you-shouldnt.html">Use 'const', Even When You Think You Shouldn't</a></br>
+              <p class="noMargin indented">Jan 23, 2019</p></li>
+                            <li class="linkList-links"><a href="an-easy-way-to-practice-with-twig-without-drupal.html">An Easy Way To Practice With Twig Without Drupal</a></br>
+              <p class="noMargin indented">Mar 28, 2018</p></li>
+                            <li class="linkList-links"><a href="hiding-progress-bar-steps-in-drupal-8-webform.html">Hiding Progress Bar Steps in Drupal 8 Webform</a></br>
+              <p class="noMargin indented">Mar 26, 2018</p></li>
+                          </ul>
+          </div>
+        </div>
+      </div>
+    </main>
 
-    </div>
-
-
-  </div>
-
-</main>
-
-    <div class="blogContainer">
-    <div class="blogCard recentPosts">
-      <h3 class="noMargin">Check Out Some Recent Posts:</h3>
-      <ul class="noList linkList">
-                  <li class="linkList-links"><a href="leaflet-react-custom-icons.html">React Leaflet Custom Map Icons</a></br>
-           <p class="noMargin indented">Nov 19, 2019</p></li>
-                  <li class="linkList-links"><a href="use-const-even-when-you-think-you-shouldnt.html">Use 'const', Even When You Think You Shouldn't</a></br>
-           <p class="noMargin indented">Jan 23, 2019</p></li>
-                  <li class="linkList-links"><a href="an-easy-way-to-practice-with-twig-without-drupal.html">An Easy Way To Practice With Twig Without Drupal</a></br>
-           <p class="noMargin indented">Mar 28, 2018</p></li>
-                  <li class="linkList-links"><a href="hiding-progress-bar-steps-in-drupal-8-webform.html">Hiding Progress Bar Steps in Drupal 8 Webform</a></br>
-           <p class="noMargin indented">Mar 26, 2018</p></li>
-              </ul>
-</div>
-    </div>
     <footer>
   <div class="footerLinks__container">
     <h4 class="">Say Hi!</h4>
@@ -297,12 +301,12 @@
           <p class="">Linkedin</p></a>
         </li>
             </ul>
-            <p class="smallText">Copyright ©2018 Rob Lahoda - Logos are property of their respective owners.</p>
+            <p class="smallText">Copyright &copy; <script>document.write(new Date().getFullYear())</script> Rob Lahoda - Logos are property of their respective owners.</p>
 
 </div>
 <script src="/vendor/prism/prism.js"></script>
 </footer>
-<script type="text/javascript" src="/vendor/scroll.js"></script>
+    <script type="text/javascript" src="/vendor/scroll.js"></script>
 <script>
 /**
 * Function that tracks a click on an outbound link in Analytics.

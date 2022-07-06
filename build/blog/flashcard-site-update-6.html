@@ -31,7 +31,7 @@
   <meta property="og:url" content="https://rlahoda.github.io">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Rob Lahoda • Front End Web Developer">
-  <meta property="og:image" content="https://rlahoda.github.io/assets/img/social-twitter.jpg">
+  <meta property="og:image" content="https://rlahoda.github.io/assets/images/social-twitter.jpg">
   <meta property="og:description" content="I'm a versatile, adaptable problem-solver. My strong mix of technical and creative skills give me a diverse perspective on the projects I work on.">
   <meta property="og:site_name" content="Rob Lahoda • Front End Web Developer">
   <meta property="og:locale" content="en_US">
@@ -43,7 +43,7 @@
   <meta name="twitter:url" content="https://rlahoda.github.io">
   <meta name="twitter:title" content="Rob Lahoda • Front End Web Developer">
   <meta name="twitter:description" content="I'm a versatile, adaptable problem-solver. My strong mix of technical and creative skills give me a diverse perspective on the projects I work on.">
-  <meta name="twitter:image" content="https://rlahoda.github.io/assets/img/social-twitter.jpg">
+  <meta name="twitter:image" content="https://rlahoda.github.io/assets/images/social-twitter.jpg">
 
   <meta name="robots" content="index,follow"><!-- All Search Engines -->
   <meta name="googlebot" content="index,follow"><!-- Google Specific -->
@@ -66,48 +66,50 @@
   </ul>
 </nav>
     <header>
-  <div class="pageTopImage">
+      <div class="pageTopImage">
+        
+              </div>
+    </header>
 
-  </div>
-</header>
+    <main>
+      <div class="pageHeading">
+        <!-- <h1 class="bigTitle">
+          Blog</h1> -->
+        <div class="pageTagline__container">
 
-<main>
-  <div class="pageHeading">
-    <!-- <h1 class="bigTitle">
-      Blog</h1> -->
-      <div class="pageTagline__container">
-        <h1 id="projectsTagline" class="pageTagline">Flashcard Site – Update 6</h1>
-        <h2>APR 20, 2016</h2>
+                  <h1 id="projectsTagline" class="pageTagline">Flashcard Site – Update 6</h1>
+        <h2>Apr 20, 2016</h2>
+        </div>
+        <p></p>
       </div>
-    <p></p>
-  </div>
-  <div class="blogContainer">
+      <div class="blogContainer">
 
-    <div class="blogCard recentPosts">
-      <h3 class="noMargin">Check Out Some Recent Posts:</h3>
-      <ul class="noList linkList">
-                  <li class="linkList-links"><a href="leaflet-react-custom-icons.html">React Leaflet Custom Map Icons</a></br>
-           <p class="noMargin indented">Nov 19, 2019</p></li>
-                  <li class="linkList-links"><a href="use-const-even-when-you-think-you-shouldnt.html">Use 'const', Even When You Think You Shouldn't</a></br>
-           <p class="noMargin indented">Jan 23, 2019</p></li>
-                  <li class="linkList-links"><a href="an-easy-way-to-practice-with-twig-without-drupal.html">An Easy Way To Practice With Twig Without Drupal</a></br>
-           <p class="noMargin indented">Mar 28, 2018</p></li>
-                  <li class="linkList-links"><a href="hiding-progress-bar-steps-in-drupal-8-webform.html">Hiding Progress Bar Steps in Drupal 8 Webform</a></br>
-           <p class="noMargin indented">Mar 26, 2018</p></li>
-              </ul>
+        <div class="blogCard recentPosts">
+          <h3 class="noMargin">Check Out Some Recent Posts:</h3>
+          <ul class="noList linkList">
+                        <li class="linkList-links"><a href="leaflet-react-custom-icons.html">React Leaflet Custom Map Icons</a></br>
+            <p class="noMargin indented">Nov 19, 2019</p></li>
+                        <li class="linkList-links"><a href="use-const-even-when-you-think-you-shouldnt.html">Use 'const', Even When You Think You Shouldn't</a></br>
+            <p class="noMargin indented">Jan 23, 2019</p></li>
+                        <li class="linkList-links"><a href="an-easy-way-to-practice-with-twig-without-drupal.html">An Easy Way To Practice With Twig Without Drupal</a></br>
+            <p class="noMargin indented">Mar 28, 2018</p></li>
+                        <li class="linkList-links"><a href="hiding-progress-bar-steps-in-drupal-8-webform.html">Hiding Progress Bar Steps in Drupal 8 Webform</a></br>
+            <p class="noMargin indented">Mar 26, 2018</p></li>
+                      </ul>
 
-    </div>
-    
-    <div class="blogCard">
-      <p><a href="../blog.html">Back to blog posts</a></p>
-<p>It&#39;s been a little while since I wrote an update on my project. As I was working on the last one I realized I needed to get a better understanding of what JavaScript is all about. I&#39;ve been working through Code Academy&#39;s free JavaScript course and I&#39;m just about done with that. Once that&#39;s done I&#39;m going to continue with some more books and stuff for learning more about JS.</p>
+        </div>
+        <div class="blogCard">
+          <a href="/blog.html">Back to the blog</a>
+                <p>It&#39;s been a little while since I wrote an update on my project. As I was working on the last one I realized I needed to get a better understanding of what JavaScript is all about. I&#39;ve been working through Code Academy&#39;s free JavaScript course and I&#39;m just about done with that. Once that&#39;s done I&#39;m going to continue with some more books and stuff for learning more about JS.</p>
 <p>So on to the update.</p>
 <p>The first update was 1.1.1 and it&#39;s a pretty minor one just adding some user experience improvement. I found in 1.1.0 that if the user put the number 0 in as their value for the card, it would not register as having anything in it. So on the <code>textinput</code> function I updated the code from this:</p>
 <pre><code class="language-javascript">function textinput1(val , cardlocation) {
-if (val == 0 ){</code></pre>
+if (val == 0 ){
+</code></pre>
 <p>to this:</p>
 <pre><code class="language-javascript">function textinput1(val , cardlocation) {
-if (!val || /^\s*$/.test(val)){</code></pre>
+if (!val || /^\s*$/.test(val)){
+</code></pre>
 <p>That regex string tests to make sure that the input field is completely blank and not containing a 0 or even a string of 0&#39;s.</p>
 <p class="codepen" data-height="266" data-theme-id="0" data-slug-hash="greKwB" data-default-tab="html,result" data-user="rlahoda" data-embed-version="2">See the Pen <a href="http://codepen.io/rlahoda/pen/greKwB/">Flashcards v1.1.1</a> by Rob Lahoda (<a href="http://codepen.io/rlahoda">@rlahoda</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script src="//assets.codepen.io/assets/embed/ei.js" async=""></script>
@@ -130,7 +132,8 @@ if (!val || /^\s*$/.test(val)){</code></pre>
       type=&quot;text&quot;
     /&gt;
   &lt;/form&gt;
-&lt;/div&gt;</code></pre>
+&lt;/div&gt;
+</code></pre>
 <p>So the basic idea was to create a <code>div</code> with a <code>class=&#39;cardform&#39;</code>. Inside that would be nested a form. Inside that would be nested an <code>&lt;h3&gt;</code>, 2 <code>&lt;p&gt;</code> tags and 2 <code>&lt;input&gt;</code> tags. I&#39;m not going to embed the full 1.1.2 pen but if you want to view it, <a href="http://codepen.io/rlahoda/pen/EKLBOp?editors=1010">I&#39;m putting the link to it here</a>. I realized pretty quickly that I needed to step back and first work on a proof of concept to ensure that I actually was able to get this to work at all before I jumped in so deep. So I created a small, simple, ugly proof of concept. The basic concept was to create a script that would add a div with text to the container div. I wanted to have some css classes appended to the div when it was added and be able to auto increment some numbers to line up with the scripts for the live update of text and the hiding and showing of the front and back of the cards. Here&#39;s the function I came up with:</p>
 <pre><code class="language-javascript">var i = 1; //declare a variable that will be used as the auto increment value
 function myFunction() {
@@ -147,7 +150,8 @@ function myFunction() {
   //all of the contents for the div construction in it into the console so I
   //can verify that it&#39;s working correctly
   i++; //increment the variable by +1
-}</code></pre>
+}
+</code></pre>
 <p>I&#39;ve added a bunch of comments to the code to explain how it works so I won&#39;t try to get into that too much more. The basic idea is to use <code>document.createElement()</code> to create what you want and then find the location you want it to go with <code>document.getElementById()</code> and use <code>.appendChild()</code> to put your element in the right place. The end result is a really ugly looking stack of red and green divs that contain a small block of text and an incrementing number to show that it does indeed increment correctly. If you open the console for the pen you can also see that the generated div has all the correct information that I wanted: the css classes including the class with the incrementing number and the text with the incrementing number.</p>
 <p class="codepen" data-height="265" data-theme-id="0" data-default-tab="js,result" data-user="rlahoda" data-slug-hash="EKRZjv" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="JS Adding content test">
   <span>See the Pen <a href="https://codepen.io/rlahoda/pen/EKRZjv/">
@@ -155,30 +159,26 @@ function myFunction() {
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+          <a href="/blog.html">Back to the blog</a>
+        </div>
+        <div class="blogContainer">
+          <div class="blogCard recentPosts">
+            <h3 class="noMargin">Check Out Some Recent Posts:</h3>
+            <ul class="noList linkList">
+                            <li class="linkList-links"><a href="leaflet-react-custom-icons.html">React Leaflet Custom Map Icons</a></br>
+              <p class="noMargin indented">Nov 19, 2019</p></li>
+                            <li class="linkList-links"><a href="use-const-even-when-you-think-you-shouldnt.html">Use 'const', Even When You Think You Shouldn't</a></br>
+              <p class="noMargin indented">Jan 23, 2019</p></li>
+                            <li class="linkList-links"><a href="an-easy-way-to-practice-with-twig-without-drupal.html">An Easy Way To Practice With Twig Without Drupal</a></br>
+              <p class="noMargin indented">Mar 28, 2018</p></li>
+                            <li class="linkList-links"><a href="hiding-progress-bar-steps-in-drupal-8-webform.html">Hiding Progress Bar Steps in Drupal 8 Webform</a></br>
+              <p class="noMargin indented">Mar 26, 2018</p></li>
+                          </ul>
+          </div>
+        </div>
+      </div>
+    </main>
 
-<p><a href="../blog.html">Back to blog posts</a></p>
-    </div>
-
-
-  </div>
-
-</main>
-
-    <div class="blogContainer">
-    <div class="blogCard recentPosts">
-      <h3 class="noMargin">Check Out Some Recent Posts:</h3>
-      <ul class="noList linkList">
-                  <li class="linkList-links"><a href="leaflet-react-custom-icons.html">React Leaflet Custom Map Icons</a></br>
-           <p class="noMargin indented">Nov 19, 2019</p></li>
-                  <li class="linkList-links"><a href="use-const-even-when-you-think-you-shouldnt.html">Use 'const', Even When You Think You Shouldn't</a></br>
-           <p class="noMargin indented">Jan 23, 2019</p></li>
-                  <li class="linkList-links"><a href="an-easy-way-to-practice-with-twig-without-drupal.html">An Easy Way To Practice With Twig Without Drupal</a></br>
-           <p class="noMargin indented">Mar 28, 2018</p></li>
-                  <li class="linkList-links"><a href="hiding-progress-bar-steps-in-drupal-8-webform.html">Hiding Progress Bar Steps in Drupal 8 Webform</a></br>
-           <p class="noMargin indented">Mar 26, 2018</p></li>
-              </ul>
-</div>
-    </div>
     <footer>
   <div class="footerLinks__container">
     <h4 class="">Say Hi!</h4>
@@ -209,12 +209,12 @@ function myFunction() {
           <p class="">Linkedin</p></a>
         </li>
             </ul>
-            <p class="smallText">Copyright ©2018 Rob Lahoda - Logos are property of their respective owners.</p>
+            <p class="smallText">Copyright &copy; <script>document.write(new Date().getFullYear())</script> Rob Lahoda - Logos are property of their respective owners.</p>
 
 </div>
 <script src="/vendor/prism/prism.js"></script>
 </footer>
-<script type="text/javascript" src="/vendor/scroll.js"></script>
+    <script type="text/javascript" src="/vendor/scroll.js"></script>
 <script>
 /**
 * Function that tracks a click on an outbound link in Analytics.

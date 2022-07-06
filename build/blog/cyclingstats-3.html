@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  
+<head>
+  <script>
+    (function(i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function() {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-32142472-2', 'auto');
+    ga('send', 'pageview');
+  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'"> -->
+  <title>Rob Lahoda • Front End Web Developer</title>
+  <!-- <base href="https://rlahoda.github.io"> -->
+  <link rel="stylesheet" href="/css/styles.css">
+  <link href="/vendor/prism/prism.css" rel="stylesheet" />
+  <meta name="description" content="I'm a versatile, adaptable problem-solver. My strong mix of technical and creative skills give me a diverse perspective on the projects I work on.">
+  <meta name="subject" content="">
+
+  <meta property="og:url" content="https://rlahoda.github.io">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Rob Lahoda • Front End Web Developer">
+  <meta property="og:image" content="https://rlahoda.github.io/assets/images/social-twitter.jpg">
+  <meta property="og:description" content="I'm a versatile, adaptable problem-solver. My strong mix of technical and creative skills give me a diverse perspective on the projects I work on.">
+  <meta property="og:site_name" content="Rob Lahoda • Front End Web Developer">
+  <meta property="og:locale" content="en_US">
+  <meta property="article:author" content="">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@rlahoda">
+  <meta name="twitter:creator" content="@rlahoda">
+  <meta name="twitter:url" content="https://rlahoda.github.io">
+  <meta name="twitter:title" content="Rob Lahoda • Front End Web Developer">
+  <meta name="twitter:description" content="I'm a versatile, adaptable problem-solver. My strong mix of technical and creative skills give me a diverse perspective on the projects I work on.">
+  <meta name="twitter:image" content="https://rlahoda.github.io/assets/images/social-twitter.jpg">
+
+  <meta name="robots" content="index,follow"><!-- All Search Engines -->
+  <meta name="googlebot" content="index,follow"><!-- Google Specific -->
+
+  <!-- <script src="/vendor/greensock-js/src/minified/TweenMax.min.js" charset="utf-8"></script>
+  <script src="/vendor/greensock-js/src/minified/plugins/TextPlugin.min.js" charset="utf-8"></script>
+  <script src="/vendor/greensock-js/src/minified/easing/EasePack.min.js" charset="utf-8"></script> -->
+  <script src="/scripts/scripts-min.js" charset="utf-8"></script>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,700,900" rel="stylesheet">
+</head>
+
+  <body>
+    <nav class="navFixed">
+  <ul id="navList" class="navList">
+    <li class="navList__navItem" id="navList__homeLink"><a href="../">Home</a></li>
+    <li class="navList__navItem" id="navList__aboutLink"><a href="../about.html">About</a></li>
+    <li class="navList__navItem" id="navList__projectsLink"><a href="../projects.html">Projects</a></li>
+    <li class="navList__navItem" id="navList__projectsLink"><a href="../blog.html">Blog</a></li>
+    <li class="navList__navItem" id="navList__contactLink"><a href="../contact.html">Contact</a></li>
+  </ul>
+</nav>
+    <header>
+      <div class="pageTopImage">
+        
+              </div>
+    </header>
+
+    <main>
+      <div class="pageHeading">
+        <!-- <h1 class="bigTitle">
+          Blog</h1> -->
+        <div class="pageTagline__container">
+
+                  <h1 id="projectsTagline" class="pageTagline">CyclingStats Part 2</h1>
+        <h2>Oct 26, 2020</h2>
+        </div>
+        <p></p>
+      </div>
+      <div class="blogContainer">
+
+        <div class="blogCard recentPosts">
+          <h3 class="noMargin">Check Out Some Recent Posts:</h3>
+          <ul class="noList linkList">
+                        <li class="linkList-links"><a href="leaflet-react-custom-icons.html">React Leaflet Custom Map Icons</a></br>
+            <p class="noMargin indented">Nov 19, 2019</p></li>
+                        <li class="linkList-links"><a href="use-const-even-when-you-think-you-shouldnt.html">Use 'const', Even When You Think You Shouldn't</a></br>
+            <p class="noMargin indented">Jan 23, 2019</p></li>
+                        <li class="linkList-links"><a href="an-easy-way-to-practice-with-twig-without-drupal.html">An Easy Way To Practice With Twig Without Drupal</a></br>
+            <p class="noMargin indented">Mar 28, 2018</p></li>
+                        <li class="linkList-links"><a href="hiding-progress-bar-steps-in-drupal-8-webform.html">Hiding Progress Bar Steps in Drupal 8 Webform</a></br>
+            <p class="noMargin indented">Mar 26, 2018</p></li>
+                      </ul>
+
+        </div>
+        <div class="blogCard">
+          <a href="/blog.html">Back to the blog</a>
+                <p>After planning the content types, my next step is to start working on mockups for the design. The first two parts I built out were the main nav and the rider interfaces. I had some inspiration on the rider display screens from the start of everything so that came somewhat easily. The nav took a bit of thinking and looking at different possibilities, but I&#39;m pretty happy with the results so far.</p>
+<p>The colors are not final, but so far I&#39;m feeling them so we&#39;ll see if they continue or get changed.</p>
+<h3 id="nav">Nav</h3>
+<p>The base nav is pretty simple and clean. The goal was to make the search immediately available since it&#39;s one of the more important parts of the nav. The default for this would be that you can search all content but it would expand to let the user choose between different topics like races, people, regions, etc. On the far left is the menu button that will expand the full nav menu and allow access to much more of the site&#39;s contents. My assumption is that most people will be coming to the site to find something specific so having the search front-and-center is going to help the user find what they are looking for immediately.</p>
+<p><img src="/assets/images/cyclingstats-nav.png" alt=""></p>
+<p>The expanded nav is set up to give quick access to the landing pages for the different types of information that can be found. Mostly these will be links to taxonomy listings that will give a list of available data tagged with that taxonomy.</p>
+<p><img src="/assets/images/cyclingstats-nav-expanded.png" alt=""></p>
+<h3 id="individual-riders">Individual Riders</h3>
+<p>While the content type of a person is generic to handle all different types of people, the display will probably be specific to different roles. The most obvious role is a rider. This is for an individual competitor in a race. The individual can be a part of a team that will be linked as well. They will also have some base information that&#39;s available at the top, like their home country and other information. Then I have three tabs that will display different information for the individual. These might change and/or they might change order, but the plan at the moment is for a list of the races they&#39;ve participated in, their biography, and articles from around the web.</p>
+<p>The first display I came up with is the race results view. This has a list of years at the top that the individual has races entered for. This list will be links to further down the page to allow quick access to any part of the results. Each race will have a header linking back to the main page for that race as well as relevant information about the rider for that race. This includes their bib number, team, the date(s) of the race, etc. If the race is a multi-stage race, like the Tour de France, The display at the top will be for the overall results and then there will be expandable listings for their individual stage results below.</p>
+<p><img src="/assets/images/cyclingstats-rider-race-results.png" alt=""></p>
+<p>The next item is the rider&#39;s biography. This shows any relevant information about the individual that is available. I did a quick look at some other sites to get some ideas but this will probably expand and update over time.</p>
+<p><img src="/assets/images/cyclingstats-rider-bio.png" alt=""></p>
+<p>The third screen is to display a list of news articles for each user. This is probably something that will be created through an automated job or something to fetch articles periodically or something. I&#39;m not sure the way these will be entered initially, but it&#39;s a pretty straightforward display with the title, publication, and a short preview of the article text.</p>
+<p><img src="/assets/images/cyclingstats-rider-news.png" alt=""></p>
+<p>So those are my mockups so far. I&#39;m feeling pretty good about how they look but I know that they&#39;ll adjust and update over time. The next step will be to start planning out the race pages.
+If you have any suggestions or ideas for how these can be improved, feel free to reach out to me through any of my social media or other contact methods that you can find at the bottom of this page!</p>
+<p>If you want to follow along with my progress, you can see the <a href="/tags/cycling-stats/">full list of tagged posts</a>.</p>
+          <a href="/blog.html">Back to the blog</a>
+        </div>
+        <div class="blogContainer">
+          <div class="blogCard recentPosts">
+            <h3 class="noMargin">Check Out Some Recent Posts:</h3>
+            <ul class="noList linkList">
+                            <li class="linkList-links"><a href="leaflet-react-custom-icons.html">React Leaflet Custom Map Icons</a></br>
+              <p class="noMargin indented">Nov 19, 2019</p></li>
+                            <li class="linkList-links"><a href="use-const-even-when-you-think-you-shouldnt.html">Use 'const', Even When You Think You Shouldn't</a></br>
+              <p class="noMargin indented">Jan 23, 2019</p></li>
+                            <li class="linkList-links"><a href="an-easy-way-to-practice-with-twig-without-drupal.html">An Easy Way To Practice With Twig Without Drupal</a></br>
+              <p class="noMargin indented">Mar 28, 2018</p></li>
+                            <li class="linkList-links"><a href="hiding-progress-bar-steps-in-drupal-8-webform.html">Hiding Progress Bar Steps in Drupal 8 Webform</a></br>
+              <p class="noMargin indented">Mar 26, 2018</p></li>
+                          </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+  <div class="footerLinks__container">
+    <h4 class="">Say Hi!</h4>
+  <ul class="noList noListBlock footerLinks__list">
+              <li class="footerLinks__list--item">
+          <a class="footerLinks__link" href="mailto:rob@roblahoda.com" onclick="trackOutboundLink('rob@roblahoda.com'); return false;" target="_blank"><span class="icons footerLinks__link--icon" id="email"></span>
+          <p class="">Email</p></a>
+        </li>
+              <li class="footerLinks__list--item">
+          <a class="footerLinks__link" href="https://twitter.com/rlahoda" onclick="trackOutboundLink('https://twitter.com/rlahoda'); return false;" target="_blank"><span class="icons footerLinks__link--icon" id="twitter"></span>
+          <p class="">Twitter</p></a>
+        </li>
+              <li class="footerLinks__list--item">
+          <a class="footerLinks__link" href="https://github.com/rlahoda" onclick="trackOutboundLink('https://github.com/rlahoda'); return false;" target="_blank"><span class="icons footerLinks__link--icon" id="github"></span>
+          <p class="">Github</p></a>
+        </li>
+              <li class="footerLinks__list--item">
+          <a class="footerLinks__link" href="https://codepen.io/rlahoda/" onclick="trackOutboundLink('https://codepen.io/rlahoda/'); return false;" target="_blank"><span class="icons footerLinks__link--icon" id="codepen">
+          </span>
+          <p class="">Codepen</p></a>
+        </li>
+              <li class="footerLinks__list--item">
+          <a class="footerLinks__link" href="https://www.drupal.org/u/rlahoda/" onclick="trackOutboundLink('https://www.drupal.org/u/rlahoda/'); return false;" target="_blank"><span class="icons footerLinks__link--icon" id="drupal"></span>
+          <p class="">Drupal.org</p></a>
+        </li>
+              <li class="footerLinks__list--item">
+          <a class="footerLinks__link" href="https://www.linkedin.com/in/robert-lahoda/" onclick="trackOutboundLink('https://www.linkedin.com/in/robert-lahoda/'); return false;" target="_blank"><span class="icons footerLinks__link--icon" id="linkedin"></span>
+          <p class="">Linkedin</p></a>
+        </li>
+            </ul>
+            <p class="smallText">Copyright &copy; <script>document.write(new Date().getFullYear())</script> Rob Lahoda - Logos are property of their respective owners.</p>
+
+</div>
+<script src="/vendor/prism/prism.js"></script>
+</footer>
+    <script type="text/javascript" src="/vendor/scroll.js"></script>
+<script>
+/**
+* Function that tracks a click on an outbound link in Analytics.
+* This function takes a valid URL string as an argument, and uses that URL string
+* as the event label. Setting the transport method to 'beacon' lets the hit be sent
+* using 'navigator.sendBeacon' in browser that support it.
+*/
+var trackOutboundLink = function(url) {
+ ga('send', 'event', 'outbound', 'click', url, {
+   'transport': 'beacon',
+   'hitCallback': function(){document.location = url;}
+ });
+}
+</script>
+  </body>
+</html>

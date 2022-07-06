@@ -1,96 +1,100 @@
-const basePaths = {
-  src: "dev/",
-  dest: "build/"
-};
-const paths = {
-  images: {
-    src: basePaths.src + "assets/img/",
-    dest: basePaths.dest + "assets/img/"
-  },
-  templates: {
-    src: basePaths.src + "templates/"
-  },
-  twig: {
-    src: basePaths.src,
-    dest: basePaths.dest
-  },
-  scripts: {
-    src: basePaths.src + "scripts/",
-    dest: basePaths.dest + "scripts/"
-  },
-  css: {
-    src: basePaths.src + "scss/",
-    dest: basePaths.dest + "css/"
-  }
-};
-const globs = {
-  scripts: ["dev/**/*.js"],
-  styles: ["dev/scss/**/*.scss"],
-  images: ["dev/assets/**/*"],
-  vendor: ["dev/vendor/**/*"],
-  twig: ["dev/**/*.twig"],
-  json: ["dev/**/*.json"],
-  blog: ["dev/blog/**/*"]
-};
-
-// Load Gulp
-const gulp = require("gulp");
-
-// BroswerSync
+const { src, dest, parallel, series, watch } = require("gulp");
 const browserSync = require("browser-sync").create();
-const reload = browserSync.reload;
-
-// Twig stuff
+const postcss = require("gulp-postcss");
+const autoprefixer = require("autoprefixer");
+// const cssnano = require("cssnano");
+const sourcemaps = require("gulp-sourcemaps");
+const sass = require('gulp-sass')(require('sass'));
 const twig = require("gulp-twig");
 const data = require("gulp-data");
 const fs = require("fs");
 const path = require("path");
-var twigMarkdown = require("twig-markdown");
-var twig1 = require("twig");
-// var twigFoo = require("twig-foo");
-
+const twigMarkdown = require("twig-markdown");
+const twig1 = require("twig");
 twig1.extend(twigMarkdown);
 
-// SASS compiling
-const postcss = require("gulp-postcss");
-const sass = require("gulp-sass");
-const sourcemaps = require("gulp-sourcemaps");
-
-// JS concatenation and minification
 const concat = require("gulp-concat");
 const minify = require("gulp-minify");
 
-// Starts a webserver and opens a window that will update dynamically as you save your work
-gulp.task("browser-sync", function() {
+const paths = {
+  assets: {
+    src: "./dev/assets/**/*.*",
+    dest: "build/assets"
+  },
+  scripts: {
+    src: "./dev/scripts/**/*.*",
+    dest: "build/scripts"
+  },
+  vendor: {
+    src: "./dev/vendor/**/*.*",
+    dest: "build/vendor"
+  },
+  templates: {
+    src: "./dev/templates/**/*.*"
+  },
+  twig: {
+    src: "./dev/templates/blog/**/*.twig",
+    dest: "build/blog"
+  }
+}
+
+const startBrowserSync = (done) => {
   browserSync.init({
     server: {
-      baseDir: "./build/"
+      baseDir: "./build"
     }
   });
-});
-gulp.task("serve", function() {
-  browserSync({
-    server: {
-      baseDir: "./build/"
-    }
-  });
-});
+  done();
+}
 
-// Compiles the Twig templates
-gulp.task("blog", function() {
-  "use strict";
-  return gulp
-    .src("dev/templates/blog/*.twig")
+// generic copy function
+const copy = (source, target) =>
+  src(source).pipe(dest(target));
+
+const copyAssets = () => copy(paths.assets.src, paths.assets.dest)
+
+// Concatenate JS files into a single file and minify
+const concatJS = () => {
+  return (
+    src("./dev/scripts/*.js")
+    .pipe(concat("scripts.js"))
+    .pipe(minify())
+    .pipe(dest("./build/scripts"))
+  )
+}
+const copyJS = () => copy(paths.scripts.src, paths.scripts.dest)
+
+const copyVendor = () => copy(paths.vendor.src, paths.vendor.dest)
+
+// SCSS compile
+const scss = () => {
+  return (
+    src("./dev/scss/**/*.scss")
+      .pipe(sass())
+      .on("error", sass.logError)
+      // Use postcss with autoprefixer and compress the compiled file using cssnano
+      .pipe(postcss([autoprefixer()]))
+      // Now add/write the sourcemaps
+      .pipe(sourcemaps.write())
+      .pipe(dest("build/css"))
+  );
+}
+
+const processJS = () => series(
+  concatJS,
+  copyJS,
+  reload,
+)
+
+
+const compileBlog = () => {
+ return src(paths.twig.src)
     .pipe(twig())
-    .pipe(gulp.dest("./build/blog/"));
-});
+    .pipe(dest(paths.twig.dest));
+}
 
-// Adds the data from the JSON files into the Twig templates as they're being compiled
-gulp.task("twig-json", function(Twig) {
-  "use strict";
-  return gulp
-
-    .src("dev/templates/*.twig")
+const compilePages = () => {
+return src("dev/templates/*.twig")
     .pipe(
       data(function(file) {
         return JSON.parse(
@@ -99,75 +103,46 @@ gulp.task("twig-json", function(Twig) {
       })
     )
     .pipe(twig())
-    .pipe(gulp.dest("./build/"));
-});
+    .pipe(dest("./build/"));
+}
 
-//PostCSS process and SASS compilation
-gulp.task("css", function() {
-  var postcss = require("gulp-postcss");
-  var autoprefixer = require("autoprefixer");
+// Browsersync reload
+const reload =(done) => {
+  browserSync.reload();
+  done();
+}
 
-  return (
-    gulp
-      .src(["dev/scss/**/*.scss"])
-      .pipe(
-        sass({
-          errLogToConsole: true
-        })
-      )
-      // PostCSS tasks after Sass compilation
-      .pipe(sourcemaps.init())
-      .pipe(
-        postcss([
-          autoprefixer({
-            browsers: ["> 5%", "last 2 versions", "ie > 9"]
-          }) // Autoprefixes CSS properties for various browsers
-          // any other PostCSS plugins to be run can be added in here
-        ])
-      )
-      .pipe(sourcemaps.write("."))
-      .pipe(gulp.dest(paths.css.dest))
-      .pipe(browserSync.stream())
+const processTwig = () => series(
+  compileBlog,
+  compilePages
+)
+
+const watchTwig = () => watch("dev/templates/**/*.twig", { ignoreInitial: false }, processTwig)
+const watchJson = () => watch("dev/templates/**/*.json", { ignoreInitial: false }, processTwig)
+const watchMarkdown = () => watch("dev/templates/**/*.md", { ignoreInitial: false }, processTwig)
+const watchScss = () => watch("dev/scss/**/*.scss", { ignoreInitial: false }, scss);
+const watchJS = () => watch("dev/scripts/**/*.js", { ignoreInitial: false }, processJS);
+const watchHtml = () => watch("build/**/*.html", reload);
+
+// Exports
+exports.build = series(
+  scss,
+  copyAssets,
+  concatJS,
+  copyVendor,
+  compileBlog,
+  compilePages,
+)
+
+exports.default = series(
+    exports.build,
+    startBrowserSync,
+    parallel(
+      watchTwig,
+      watchScss,
+      watchJS,
+      watchHtml,
+      watchJson,
+      watchMarkdown,
+    )
   );
-});
-
-//Copy scripts to appropriate folder, this would be used for scripts you write yourself and just copies them straight over from the dev folder to the docs folder
-// gulp.task('scripts', function() {
-//   gulp.src('./dev/scripts/*.js')
-//     .pipe(gulp.dest('./scripts/'));
-// });
-
-//Copy vendor packages to appropriate folder, this would be used for 3rd party plugins like bootstrap and just copies them straight over from the dev folder to the docs folder
-gulp.task("vendor", function() {
-  gulp.src("./dev/vendor/**/*.*").pipe(gulp.dest("./build/vendor/"));
-});
-
-// Concatenate JS files into a single file and minify
-gulp.task("concat", function() {
-  return gulp
-    .src("./dev/scripts/*.js")
-    .pipe(concat("scripts.js"))
-    .pipe(minify())
-    .pipe(gulp.dest("./build/scripts"));
-});
-
-//Copy images to appropriate folder, this just copies them straight over from the dev folder to the docs folder
-gulp.task("images", function() {
-  gulp.src(globs.images).pipe(gulp.dest("./build/assets/"));
-});
-
-// Watch task, this watches the different folders and when there's a change, it triggers the appropriate function. The bottom one triggers the page refresh in your browser
-gulp.task("watch", ["browser-sync"], function() {
-  // gulp.watch(globs.scripts, ['scripts']);
-  gulp.watch(globs.styles, ["css"]);
-  gulp.watch(globs.scripts, ["concat"]);
-  gulp.watch(globs.twig, ["twig-json"]);
-  gulp.watch(globs.json, ["twig-json"]);
-  gulp.watch(globs.blog, ["blog"]);
-  gulp.watch(globs.vendor, ["vendor"]);
-  gulp.watch(globs.images, ["images"]);
-  gulp.watch("./**/*.html").on("change", browserSync.reload);
-});
-
-gulp.task("default", ["build", "watch"]);
-gulp.task("build", ["twig-json", "css", "concat", "vendor", "images", "blog"]);

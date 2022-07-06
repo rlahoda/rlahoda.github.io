@@ -1,32 +1,9 @@
 {% extends '../blogBase.twig' %}
 {% block heading %}
-<header>
-  <div class="pageTopImage">
-
-  </div>
-</header>
-
-<main>
-  <div class="pageHeading">
-    <!-- <h1 class="bigTitle">
-      Blog</h1> -->
-      <div class="pageTagline__container">
         <h1 id="projectsTagline" class="pageTagline">Putting My Work Out There</h1>
-      </div>
-    <p></p>
-  </div>
-  <div class="blogContainer">
+        <h2>Mar 3, 2016</h2>
 {% endblock %}
 {% block primarycontent %}
-
-    <div class="blogCard">
       {% markdown 'putting-my-work-out-there.md' %}{% endmarkdown %}
       <div class="video-responsive"><iframe width="1468" height="759" src="https://www.youtube.com/embed/kTEGsFJDnC8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-    </div>
-
-
-  </div>
-
-</main>
-
 {% endblock %}

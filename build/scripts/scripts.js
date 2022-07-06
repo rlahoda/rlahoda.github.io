@@ -749,6 +749,7 @@ function boxesHeaderRandom() {
     tl.to(elId, 2, { opacity: 1 });
   }
   tl.eventCallback("onComplete", boxesHeaderRandom);
+  
 }
 
 window.onload = function() {

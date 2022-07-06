@@ -31,7 +31,7 @@
   <meta property="og:url" content="https://rlahoda.github.io">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Rob Lahoda • Front End Web Developer">
-  <meta property="og:image" content="https://rlahoda.github.io/assets/img/social-twitter.jpg">
+  <meta property="og:image" content="https://rlahoda.github.io/assets/images/social-twitter.jpg">
   <meta property="og:description" content="I'm a versatile, adaptable problem-solver. My strong mix of technical and creative skills give me a diverse perspective on the projects I work on.">
   <meta property="og:site_name" content="Rob Lahoda • Front End Web Developer">
   <meta property="og:locale" content="en_US">
@@ -43,7 +43,7 @@
   <meta name="twitter:url" content="https://rlahoda.github.io">
   <meta name="twitter:title" content="Rob Lahoda • Front End Web Developer">
   <meta name="twitter:description" content="I'm a versatile, adaptable problem-solver. My strong mix of technical and creative skills give me a diverse perspective on the projects I work on.">
-  <meta name="twitter:image" content="https://rlahoda.github.io/assets/img/social-twitter.jpg">
+  <meta name="twitter:image" content="https://rlahoda.github.io/assets/images/social-twitter.jpg">
 
   <meta name="robots" content="index,follow"><!-- All Search Engines -->
   <meta name="googlebot" content="index,follow"><!-- Google Specific -->
@@ -66,50 +66,51 @@
   </ul>
 </nav>
     <header>
-  <div class="pageTopImage">
+      <div class="pageTopImage">
+        
+              </div>
+    </header>
 
-  </div>
-</header>
+    <main>
+      <div class="pageHeading">
+        <!-- <h1 class="bigTitle">
+          Blog</h1> -->
+        <div class="pageTagline__container">
 
-<main>
-  <div class="pageHeading">
-    <!-- <h1 class="bigTitle">
-      Blog</h1> -->
-      <div class="pageTagline__container">
-        <h1 id="projectsTagline" class="pageTagline">Use "const", Even When You Think You Shouldn't</h1>
+                  <h1 id="projectsTagline" class="pageTagline">Use "const", Even When You Think You Shouldn't</h1>
         <h2>Jan 23, 2019</h2>
+        </div>
+        <p></p>
       </div>
-    <p></p>
-  </div>
-  <div class="blogContainer">
+      <div class="blogContainer">
 
-    <div class="blogCard recentPosts">
-      <h3 class="noMargin">Check Out Some Recent Posts:</h3>
-      <ul class="noList linkList">
-                  <li class="linkList-links"><a href="leaflet-react-custom-icons.html">React Leaflet Custom Map Icons</a></br>
-           <p class="noMargin indented">Nov 19, 2019</p></li>
-                  <li class="linkList-links"><a href="use-const-even-when-you-think-you-shouldnt.html">Use 'const', Even When You Think You Shouldn't</a></br>
-           <p class="noMargin indented">Jan 23, 2019</p></li>
-                  <li class="linkList-links"><a href="an-easy-way-to-practice-with-twig-without-drupal.html">An Easy Way To Practice With Twig Without Drupal</a></br>
-           <p class="noMargin indented">Mar 28, 2018</p></li>
-                  <li class="linkList-links"><a href="hiding-progress-bar-steps-in-drupal-8-webform.html">Hiding Progress Bar Steps in Drupal 8 Webform</a></br>
-           <p class="noMargin indented">Mar 26, 2018</p></li>
-              </ul>
+        <div class="blogCard recentPosts">
+          <h3 class="noMargin">Check Out Some Recent Posts:</h3>
+          <ul class="noList linkList">
+                        <li class="linkList-links"><a href="leaflet-react-custom-icons.html">React Leaflet Custom Map Icons</a></br>
+            <p class="noMargin indented">Nov 19, 2019</p></li>
+                        <li class="linkList-links"><a href="use-const-even-when-you-think-you-shouldnt.html">Use 'const', Even When You Think You Shouldn't</a></br>
+            <p class="noMargin indented">Jan 23, 2019</p></li>
+                        <li class="linkList-links"><a href="an-easy-way-to-practice-with-twig-without-drupal.html">An Easy Way To Practice With Twig Without Drupal</a></br>
+            <p class="noMargin indented">Mar 28, 2018</p></li>
+                        <li class="linkList-links"><a href="hiding-progress-bar-steps-in-drupal-8-webform.html">Hiding Progress Bar Steps in Drupal 8 Webform</a></br>
+            <p class="noMargin indented">Mar 26, 2018</p></li>
+                      </ul>
 
-    </div>
-    
-    <div class="blogCard">
-      <p><a href="../blog.html">Back to blog posts</a></p>
-<p>If you&#39;re just starting out in Javascript (JS), you might be learning from some of the many great trainings that explain how JS has been done for many years. There are tons of great trainings to check out and I&#39;ll recommend some in a moment. When you go through these trainings, you probably see everywhere the use of <code>var</code> for creating variables. With the advent of ES6 (or ECMAScript 2015, the latest version of Javascript) there are a couple more fun variable types that we can use: <code>const</code> and let.</p>
+        </div>
+        <div class="blogCard">
+          <a href="/blog.html">Back to the blog</a>
+                <p>If you&#39;re just starting out in Javascript (JS), you might be learning from some of the many great trainings that explain how JS has been done for many years. There are tons of great trainings to check out and I&#39;ll recommend some in a moment. When you go through these trainings, you probably see everywhere the use of <code>var</code> for creating variables. With the advent of ES6 (or ECMAScript 2015, the latest version of Javascript) there are a couple more fun variable types that we can use: <code>const</code> and let.</p>
 <p>There are a lot of great tutorials that explain how to use the different types of variables and go into in-depth description of what they do and how they&#39;re different from <code>var</code>, but I want to focus specifically on <code>const</code> and one of the concepts that took me a while to understand.</p>
 <p>On the surface, <code>const</code> would seem to stand for &quot;constant&quot;, which it kind of is. Here&#39;s what <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const">MDN has to say about const</a>:</p>
 <blockquote>
 <p>Constants are block-scoped, much like variables defined using the let statement. The value of a constant cannot change through reassignment, and it can&#39;t be redeclared.</p>
 </blockquote>
 <p>So it seems pretty clear: &quot;the value of a constant cannot change through reassignment, and it can&#39;t be redeclared.&quot; So what does that mean?</p>
-<h3 id="const-can-t-be-reassigned">Const can&#39;t be reassigned</h3>
+<h3 id="const-cant-be-reassigned">Const can&#39;t be reassigned</h3>
 <p>Assigning a variable is when we tell a function what value a variable is going to have. Essentially it&#39;s the function saying &quot;here&#39;s what this variable holds.&quot; It&#39;s usually shown like this:</p>
-<pre><code class="language-JavaScript">const variable1 = 5;</code></pre>
+<pre><code class="language-JavaScript">const variable1 = 5;
+</code></pre>
 <p>If this was a <code>var</code> instead of a const, we can tell the function to assign different values at different times.</p>
 <pre><code class="language-JavaScript">var variable1 = 5;
 
@@ -117,7 +118,8 @@ console.log(variable1); //output is: &quot;5&quot;
 
 variable1 = 10;
 
-console.log(variable1); //output is: &quot;10&quot;</code></pre>
+console.log(variable1); //output is: &quot;10&quot;
+</code></pre>
 <p>This is possible because <code>var</code> is able to be redefined. <code>Const</code>, however, isn&#39;t. So trying the same function with <code>const</code> will just give you an error:</p>
 <pre><code class="language-JavaScript">const variable1 = 5;
 
@@ -125,8 +127,9 @@ console.log(variable1); //output is: &quot;5&quot;
 
 variable1 = 10;
 
-console.log(variable1); //output is: &quot;TypeError: invalid assignment to const `variable1&#39;&quot;</code></pre>
-<h3 id="const-can-t-be-redeclared">Const can&#39;t be redeclared</h3>
+console.log(variable1); //output is: &quot;TypeError: invalid assignment to const `variable1&#39;&quot;
+</code></pre>
+<h3 id="const-cant-be-redeclared">Const can&#39;t be redeclared</h3>
 <p>Declaring a variable is when a function says &quot;here&#39;s the name of a variable.&quot; Redeclaring is when the function later says another variable has that same name. Here&#39;s an example:</p>
 <pre><code class="language-JavaScript">function example() {
   var variable1 = 5;
@@ -136,7 +139,8 @@ console.log(variable1); //output is: &quot;TypeError: invalid assignment to cons
   var variable1 = 10;
 
   console.log(variable1); //output is: &quot;10&quot;
-}</code></pre>
+}
+</code></pre>
 <p>So in this little function, the same variable is created twice with two different values. This is possible because <code>var</code> is able to redeclared. If you tried it with <code>const</code>, however, you would get an error because the variable has already been declared once.</p>
 <pre><code class="language-Javascript">function example() {
   const variable1 = 5;
@@ -146,7 +150,8 @@ console.log(variable1); //output is: &quot;TypeError: invalid assignment to cons
   const variable1 = 10;
 
   console.log(variable1); //output is: &quot;SyntaxError: redeclaration of const variable1&quot;
-}</code></pre>
+}
+</code></pre>
 <p>It&#39;s not specified, but it&#39;s implied that you also can&#39;t change what type of content is being held by the <code>const</code>. This is pretty obvious because if you can&#39;t change the content of what&#39;s in it, why would you be able to change the type of content that&#39;s in it either.</p>
 <p>Ok, so now you&#39;re thinking: <em>&quot;cool, <code>const</code> is for &quot;constant&quot;, or unchanging values, no problem. I&#39;ll only use them when I have a value that isn&#39;t changing.&quot;</em> And you&#39;ll be right, sort of.</p>
 <h3 id="const-values-can-change-in-certain-circumstances">Const values can change in certain circumstances</h3>
@@ -163,38 +168,37 @@ console.log(variable1); //output is: &quot;TypeError: invalid assignment to cons
 }
 obj1.greeting = function() {
   console.log(&quot;hello &quot; + this.name + &quot; &quot; + this.lastName)
-}</code></pre>
+}
+</code></pre>
 <p>Maybe you have an array that you need to iterate over and process the data, then you&#39;re going to save it into another variable. You&#39;d think that since the second variable is going to &quot;change&quot; since the content adds with every iteration, but you can still use <code>const</code> for that.</p>
 <pre><code class="language-JavaScript">const array1 = [1,2,3,4,5,6];
 const array2 = array1.map((num) =&gt; {
   return num * 2;
 });
-console.log(array2);// output is: [2,4,6,8,10,12]</code></pre>
+console.log(array2);// output is: [2,4,6,8,10,12]
+</code></pre>
 <p>This means you can use <code>const</code> for probably the majority of variables that you&#39;re going to create when you&#39;re writing your functions.</p>
 <p>If you&#39;re interested in learning more about ES6 check out <a href="https://es6.io/">Wes Bos&#39; ES6 for everyone course</a> for some pretty helpful training. If you&#39;re just trying to get started in learning Javascript, there are a ton of different options. One I thought was really helpful was <a href="https://www.udemy.com/javascript-from-beginner-to-pro-best-course/">Javascript - From Beginner to Pro-Build real world JS apps </a> by <a href="https://twitter.com/AbhayTalreja">Abhay Talreja</a>. He does a great job of laying out how to use JS and what everything means. If you&#39;re just getting started, I&#39;d recommend that course before then moving on to Wes&#39; training because his is more geared for people who already know Javascript and are looking to understand the new features of ES6.</p>
-<p><a href="../blog.html">Back to blog posts</a></p>
-    </div>
+          <a href="/blog.html">Back to the blog</a>
+        </div>
+        <div class="blogContainer">
+          <div class="blogCard recentPosts">
+            <h3 class="noMargin">Check Out Some Recent Posts:</h3>
+            <ul class="noList linkList">
+                            <li class="linkList-links"><a href="leaflet-react-custom-icons.html">React Leaflet Custom Map Icons</a></br>
+              <p class="noMargin indented">Nov 19, 2019</p></li>
+                            <li class="linkList-links"><a href="use-const-even-when-you-think-you-shouldnt.html">Use 'const', Even When You Think You Shouldn't</a></br>
+              <p class="noMargin indented">Jan 23, 2019</p></li>
+                            <li class="linkList-links"><a href="an-easy-way-to-practice-with-twig-without-drupal.html">An Easy Way To Practice With Twig Without Drupal</a></br>
+              <p class="noMargin indented">Mar 28, 2018</p></li>
+                            <li class="linkList-links"><a href="hiding-progress-bar-steps-in-drupal-8-webform.html">Hiding Progress Bar Steps in Drupal 8 Webform</a></br>
+              <p class="noMargin indented">Mar 26, 2018</p></li>
+                          </ul>
+          </div>
+        </div>
+      </div>
+    </main>
 
-
-  </div>
-
-</main>
-
-    <div class="blogContainer">
-    <div class="blogCard recentPosts">
-      <h3 class="noMargin">Check Out Some Recent Posts:</h3>
-      <ul class="noList linkList">
-                  <li class="linkList-links"><a href="leaflet-react-custom-icons.html">React Leaflet Custom Map Icons</a></br>
-           <p class="noMargin indented">Nov 19, 2019</p></li>
-                  <li class="linkList-links"><a href="use-const-even-when-you-think-you-shouldnt.html">Use 'const', Even When You Think You Shouldn't</a></br>
-           <p class="noMargin indented">Jan 23, 2019</p></li>
-                  <li class="linkList-links"><a href="an-easy-way-to-practice-with-twig-without-drupal.html">An Easy Way To Practice With Twig Without Drupal</a></br>
-           <p class="noMargin indented">Mar 28, 2018</p></li>
-                  <li class="linkList-links"><a href="hiding-progress-bar-steps-in-drupal-8-webform.html">Hiding Progress Bar Steps in Drupal 8 Webform</a></br>
-           <p class="noMargin indented">Mar 26, 2018</p></li>
-              </ul>
-</div>
-    </div>
     <footer>
   <div class="footerLinks__container">
     <h4 class="">Say Hi!</h4>
@@ -225,12 +229,12 @@ console.log(array2);// output is: [2,4,6,8,10,12]</code></pre>
           <p class="">Linkedin</p></a>
         </li>
             </ul>
-            <p class="smallText">Copyright ©2018 Rob Lahoda - Logos are property of their respective owners.</p>
+            <p class="smallText">Copyright &copy; <script>document.write(new Date().getFullYear())</script> Rob Lahoda - Logos are property of their respective owners.</p>
 
 </div>
 <script src="/vendor/prism/prism.js"></script>
 </footer>
-<script type="text/javascript" src="/vendor/scroll.js"></script>
+    <script type="text/javascript" src="/vendor/scroll.js"></script>
 <script>
 /**
 * Function that tracks a click on an outbound link in Analytics.

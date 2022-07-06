@@ -1,5 +1,3 @@
-[Back to blog posts](../blog.html)
-
 Now that I've passed version 1, I'm at the place where I can start adding UX enhancements that will make the app more usable and intuitive. The first and most important one is hiding the card entry form. It defeats the point of a flashcard app if you can see what the front and back of the cards say because the form to enter the information is visible at the top. So I needed a way to hide the form so users can enter their information, then hide the cards and get practicing. I also wanted to enhance the experience of hiding and showing by having a button that you click with an arrow pointing up when the top is extended and one pointing down when it's hidden.
 
 The first part of hiding the top was to create a small button to sit below the entry form. (If the code looks strange to you, it's because I'm coding in HAML, feel free to view the compiled code in the pen below)
@@ -148,5 +146,3 @@ function textinput1(val, cardlocation) {
 ```
 
 The additions to the function that make the difference are the addition of an if/then step. Originally the function just added the contents of `val` into the html but now it first detects what the contents of `val` are. So `if (val == 0)` the function knows that the entry is blank and it inserts the text "Enter a Value" as well as changing the class to `card-unused`. If the function detects that `val` is not empty, it puts the contents of the variable into the html and changes the class to `card-used`.
-
-[Back to blog posts](../blog.html)

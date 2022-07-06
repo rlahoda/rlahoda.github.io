@@ -1,27 +1,27 @@
 {% set posts = [
-   {
-      "title": "React Leaflet Custom Map Icons",
-      "date": "Nov 19, 2019",
-      "link": "leaflet-react-custom-icons.html"
-    },
-    {
-      "title": "Use 'const', Even When You Think You Shouldn't",
-      "date": "Jan 23, 2019",
-      "link": "use-const-even-when-you-think-you-shouldnt.html"
-    },
-    {
-      "title": "An Easy Way To Practice With Twig Without Drupal",
-      "date": "Mar 28, 2018",
-      "link": "an-easy-way-to-practice-with-twig-without-drupal.html"
-    },
-    {
-      "title": "Hiding Progress Bar Steps in Drupal 8 Webform",
-      "date": "Mar 26, 2018",
-      "link": "hiding-progress-bar-steps-in-drupal-8-webform.html"
-    }
-   
-  ]
- %}
+{
+"title": "React Leaflet Custom Map Icons",
+"date": "Nov 19, 2019",
+"link": "leaflet-react-custom-icons.html"
+},
+{
+"title": "Use 'const', Even When You Think You Shouldn't",
+"date": "Jan 23, 2019",
+"link": "use-const-even-when-you-think-you-shouldnt.html"
+},
+{
+"title": "An Easy Way To Practice With Twig Without Drupal",
+"date": "Mar 28, 2018",
+"link": "an-easy-way-to-practice-with-twig-without-drupal.html"
+},
+{
+"title": "Hiding Progress Bar Steps in Drupal 8 Webform",
+"date": "Mar 26, 2018",
+"link": "hiding-progress-bar-steps-in-drupal-8-webform.html"
+}
+
+]
+%}
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -29,33 +29,58 @@
 
   <body>
     {% include 'partials/nav.twig' %}
-    {% block heading %}
-    {% endblock %}
+    <header>
+      <div class="pageTopImage">
+        {% block image %}
 
-    <div class="blogCard recentPosts">
-      <h3 class="noMargin">Check Out Some Recent Posts:</h3>
-      <ul class="noList linkList">
-        {% for post in posts %}
-          <li class="linkList-links"><a href="{{ post.link }}">{{ post.title }}</a></br>
-           <p class="noMargin indented">{{ post.date }}</p></li>
-        {% endfor %}
-      </ul>
+        {% endblock image %}
+      </div>
+    </header>
 
-    </div>
-    {% block primarycontent %}
-    {% endblock %}
-    <div class="blogContainer">
-    <div class="blogCard recentPosts">
-      <h3 class="noMargin">Check Out Some Recent Posts:</h3>
-      <ul class="noList linkList">
-        {% for post in posts %}
-          <li class="linkList-links"><a href="{{ post.link }}">{{ post.title }}</a></br>
-           <p class="noMargin indented">{{ post.date }}</p></li>
-        {% endfor %}
-      </ul>
-</div>
-    </div>
+    <main>
+      <div class="pageHeading">
+        <!-- <h1 class="bigTitle">
+          Blog</h1> -->
+        <div class="pageTagline__container">
+
+          {% block heading %}
+          {% endblock %}
+        </div>
+        <p></p>
+      </div>
+      <div class="blogContainer">
+
+        <div class="blogCard recentPosts">
+          <h3 class="noMargin">Check Out Some Recent Posts:</h3>
+          <ul class="noList linkList">
+            {% for post in posts %}
+            <li class="linkList-links"><a href="{{ post.link }}">{{ post.title }}</a></br>
+            <p class="noMargin indented">{{ post.date }}</p></li>
+            {% endfor %}
+          </ul>
+
+        </div>
+        <div class="blogCard">
+          <a href="/blog.html">Back to the blog</a>
+          {% block primarycontent %}
+          {% endblock %}
+          <a href="/blog.html">Back to the blog</a>
+        </div>
+        <div class="blogContainer">
+          <div class="blogCard recentPosts">
+            <h3 class="noMargin">Check Out Some Recent Posts:</h3>
+            <ul class="noList linkList">
+              {% for post in posts %}
+              <li class="linkList-links"><a href="{{ post.link }}">{{ post.title }}</a></br>
+              <p class="noMargin indented">{{ post.date }}</p></li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+
     {% include 'partials/footer.twig' %}
-{% include 'partials/scripts.twig' %}
+    {% include 'partials/scripts.twig' %}
   </body>
 </html>

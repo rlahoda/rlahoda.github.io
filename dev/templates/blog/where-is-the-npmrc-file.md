@@ -1,5 +1,3 @@
-[Back to blog posts](../blog.html)
-
 I've been through this a couple times now because I wanted to move my NPM global install location to a new spot where I wasn't constantly dealing with permissions issues and both times it was a bigger hassle than it probably should have been. I was able to find a [great guide](https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md) for how to change the default global installation location for NPM but there was one minor point of confusion. The author states:
 
 > Indicate to `npm` where to store globally installed packages. In your `~/.npmrc` file add:
@@ -24,5 +22,3 @@ export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
 ```
 
 Good luck!
-
-[Back to blog posts](../blog.html)

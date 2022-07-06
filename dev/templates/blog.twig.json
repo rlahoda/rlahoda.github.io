@@ -1,6 +1,26 @@
 {
   "posts": [
     {
+      "title": "CyclingStats Part 3",
+      "date": "October 26, 2020",
+      "link": "cyclingstats-3.html"
+    },
+    {
+      "title": "CyclingStats Part 2",
+      "date": "October 21, 2020",
+      "link": "cyclingstats-2.html"
+    },
+    {
+      "title": "CyclingStats Part 1",
+      "date": "October 20, 2020",
+      "link": "cyclingstats-1.html"
+    },
+    {
+      "title": "Getting Greensock Animation (GSAP) Running With React Hooks",
+      "date": "January 26, 2020",
+      "link": "2020-01-27-getting-greensock-animation-gsap-running-with-react-hooks.html"
+    },
+    {
       "title": "React Leaflet Custom Map Icons",
       "date": "Nov 19, 2019",
       "link": "leaflet-react-custom-icons.html"
@@ -79,6 +99,11 @@
       "title": "Flashcard Site – Update 1",
       "date": "Mar 11, 2016",
       "link": "flashcard-site-update-1.html"
+    },
+    {
+      "title": "Flashcard Site – Getting Started",
+      "date": "Mar 6, 2016",
+      "link": "flashcard-site-getting-started.html"
     },
     {
       "title": "Putting My Work Out There",
